@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MoRAM — Little By Little: Continual Learning via Incremental Mixture of Rank-1 Associative Memory Experts (arXiv:2506.21035).">
+  <title>Little By Little: Continual Learning via Incremental Mixture of Rank-1 Associative Memory Experts | Haodong Lu</title>
+  <link rel="canonical" href="https://artificer-ai-lab.github.io/MoRAM/">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/moram-nerfies/css/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script>
+    window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']], tags: 'ams' } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nerfiesNav">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu" id="nerfiesNav">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://jeff024.github.io/" title="Home"><span class="icon"><i class="fas fa-home"></i></span></a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">More research</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://jeff024.github.io/projects/">All projects</a>
+          <a class="navbar-item" href="https://zhaoc5.github.io/DyMoE/" rel="noopener noreferrer" target="_blank">LLaVA-DyMoE (CVPR 2026)</a>
+          <a class="navbar-item" href="https://arxiv.org/abs/2412.01004" rel="noopener noreferrer" target="_blank">CoDyRA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Little By Little: Continual Learning via Incremental Mixture of Rank-1 Associative Memory Experts</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://jeff024.github.io/">Haodong Lu</a><sup>1,2</sup>,</span>
+            <span class="author-block"><a href="https://zhaoc5.github.io/" rel="noopener noreferrer" target="_blank">Chongyang Zhao</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://minhui-xue.github.io/" rel="noopener noreferrer" target="_blank">Minhui Xue</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://www.linayao.com/" rel="noopener noreferrer" target="_blank">Lina Yao</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://people.csiro.au/m/k/kristen-moore" rel="noopener noreferrer" target="_blank">Kristen Moore</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://donggong1.github.io/" rel="noopener noreferrer" target="_blank">Dong Gong</a><sup>1,*</sup></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of New South Wales,</span>
+            <span class="author-block"><sup>2</sup>CSIRO</span>
+          </div>
+          <div class="is-size-7 has-text-centered" style="margin-top:0.35rem;"><sup>*</sup> Corresponding author.</div>
+          <div class="column has-text-centered" style="margin-top:0.75rem;">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://openreview.net/forum?id=P247k4ELcn" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                  <span class="icon"><img src="assets/img/projects/moram/icml-logo.svg" alt="ICML" style="width:1.1em;height:1.1em;display:block;"></span><span>ICML 2026</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2506.21035" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/Artificer-AI-Lab/MoRAM" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                  <span class="icon"><i class="fab fa-github"></i></span><span>GitHub</span>
+                </a>
+              </span>
+            </div>
+            <p class="moram-related-works has-text-centered" style="margin-top:1rem;">
+              <span class="has-text-weight-semibold">Please check out our other works</span>
+              <span class="moram-related-works-links">
+                <a href="https://zhaoc5.github.io/DyMoE/" target="_blank" rel="noopener noreferrer" title="LLaVA-DyMoE (CVPR 2026)"><span class="icon is-small moram-related-icon"><i class="fas fa-globe" aria-hidden="true"></i></span><span>LLaVA-DyMoE</span></a>
+                <a href="https://arxiv.org/abs/2412.01004" target="_blank" rel="noopener noreferrer" title="CoDyRA (arXiv)"><span class="icon is-small moram-related-icon"><i class="ai ai-arxiv" aria-hidden="true"></i></span><span>CoDyRA</span></a>
+                <a href="https://arxiv.org/abs/2403.18886" target="_blank" rel="noopener noreferrer" title="SEMA (CVPR 2025)"><span class="icon is-small moram-related-icon"><i class="ai ai-arxiv" aria-hidden="true"></i></span><span>SEMA</span></a>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div style="margin:1.75rem auto 0;padding:0 1.25rem;width:100%;max-width:1280px;box-sizing:border-box;">
+    <figure class="image" style="margin:0;width:100%;">
+      <img src="assets/img/projects/moram/moram_hero_v2_kvcard.svg"
+           alt="Animated MoRAM overview: a transformer with per-module parametric memory banks that grow across sequential tasks, showing per-token sparse retrieval routing to K/V memory slots."
+           style="width:100%;height:auto;display:block;">
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Continual learning (CL) with large pre-trained models is challenged by task interference and catastrophic forgetting. Existing LoRA-based Mixture-of-Experts (MoE) methods mitigate forgetting by adding new task-specific adapters and freezing old ones, but often suffer from redundancy, interference, and ambiguous routing due to <strong>coarse-grained</strong> experts and routing.</p>
+          <p>We propose <strong>MoRAM</strong> (<strong>M</strong>ixture of <strong>R</strong>ank-1 <strong>A</strong>ssociative <strong>M</strong>emory). Grounded in the view that weight matrices behave as <strong>linear associative memories</strong>, MoRAM grows capacity by incrementally adding <strong>atomic rank-1 memory experts</strong>. Treating rank-1 adapters as <strong>key–value pairs</strong> removes the need for an explicit MoE router: a <strong>self-activation</strong> mechanism lets each memory atom score its own relevance via its intrinsic key, turning adaptation into <strong>content-addressable retrieval</strong>. Experiments on <strong>CLIP</strong> and <strong>LLMs</strong> show that MoRAM improves the plasticity–stability trade-off and generalization while mitigating forgetting.</p>
+          <p class="has-text-centered is-italic" style="margin-top:1.25rem;">“Little by little, we gave you everything you ever dreamed of …” — <em>Little by little</em>, Oasis.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified publication-body">
+          <h2 class="title is-3">Current Pitfalls</h2>
+          <p><strong>Top — MoE-LoRA.</strong> Adding a new rank-\(r\) expert per task is convenient, but the expert is treated as an indivisible block. Three coupled pitfalls follow:
+            <strong>(①) intra-expert inter-rank interference</strong> — within an expert, only a few of the \(r\) ranks match the input while the rest co-fire as noise;
+            <strong>(②) inter-expert redundancy</strong> — to mask ①, the router learns to co-activate a duplicate expert on the same input, wasting capacity;
+            <strong>(③) routing collapse</strong> — at inference, overlapping experts and an external router make routing ambiguous, driving catastrophic forgetting on prior tasks.
+          </p>
+          <p><strong>Bottom — MoRAM.</strong> Each task <em>appends</em> \(r\) rank-1 atoms to the memory bank <em>little by little</em>; the LoRA update is reframed as a linear associative memory \(\Delta\mathbf{W}=\sum_{i}w_{i}\mathbf{B}_{i}\mathbf{A}_{i}^{\top}\) where each atom is a key–value entry. <strong>Self-activation</strong> \(s_{i}=\mathbf{A}_{i}\!\cdot\!\mathbf{x}\) scores every atom in parallel; a <strong>sparse top-\(k\) mask</strong> keeps only the most relevant; <strong>threshold pruning</strong> \(s_{i}\!\geq\!\delta\) drops the weakest survivors. The surviving sparse mixture mitigates each pitfall one-for-one:
+            <strong>(①) per-atom specialization</strong> — rank-1 atoms either fire or stay silent, eliminating within-expert noise;
+            <strong>(②) knowledge reuse</strong> — atoms learned on earlier tasks re-fire on related new inputs, so no duplicate experts are needed;
+            <strong>(③) forgetting mitigation</strong> — frozen \(\mathbf{A}_{i},\mathbf{B}_{i}\) keep prior atoms reachable by their own keys, so capacity grows without rewriting old memory.
+          </p>
+        </div>
+      </div>
+    </div>
+    <figure class="image" style="margin:1rem 0;width:100%;">
+      <img src="assets/img/projects/moram/moram_explainer.svg"
+           alt="Animated comparison: MoE-LoRA’s three pitfalls (intra-expert interference, inter-expert redundancy, routing collapse) vs. MoRAM’s three benefits (per-atom specialization, knowledge reuse, forgetting mitigation)."
+           style="width:100%;height:auto;display:block;">
+    </figure>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <p class="moram-caption"><em>Figure 1.</em> Animated comparison of MoE-LoRA pitfalls vs. MoRAM solutions. See the paper for full analysis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified publication-body">
+          <h2 class="title is-3">Method</h2>
+          <h3 class="title is-4">Overview</h3>
+          <p>Each new task <strong>freezes</strong> all earlier rank-1 atoms and adds \(r\) new ones. A <strong>sparse self-activated mixture</strong> over the full bank sets input-dependent weights so only a few ranks activate at once. <strong>Figure 2</strong> sketches growth from task \(t\) to \(t+1\): <strong>(a,c)</strong> conceptually, <strong>(b,d)</strong> the mixture computation. §3.2–§3.3 fill in the math.</p>
+          <figure class="image" style="margin:1rem 0;"><img src="assets/img/projects/moram/fig2.png" alt="Figure 2: MoRAM overview for tasks t and t+1"></figure>
+          <p class="moram-caption"><em>Figure 2.</em> Freeze past ranks, add \(r\) new ranks, sparse mixture over all atoms. <strong>(a,c)</strong> overview; <strong>(b,d)</strong> tasks \(t\) and \(t+1\).</p>
+
+          <h3 class="title is-4">Weights as Linear Associative Memory <span class="is-size-6 has-text-grey">(§3.2)</span></h3>
+          <p>To mitigate the coarse granularity and routing ambiguity of dense rank-\(r\) updates, the paper reframes LoRA not as monolithic blocks but as a <strong>linear associative memory</strong> over the weight matrix.</p>
+          <p><strong>Definition 1 (informal).</strong> A matrix \(\mathbf{W}\in\mathbb{R}^{d_{\text{out}}\times d_{\text{in}}}\) of rank \(m\) is viewed as \(m\) atomic key–value pairs \(\{(\mathbf{k}_{i},\mathbf{v}_{i})\}_{i=1}^{m}\) with \(\mathbf{k}_{i}\in\mathbb{R}^{d_{\text{in}}}\), \(\mathbf{v}_{i}\in\mathbb{R}^{d_{\text{out}}}\), and \(\mathbf{W}\approx\sum_{i=1}^{m}\mathbf{v}_{i}\mathbf{k}_{i}^{\top}\). For a hidden state \(\mathbf{x}\), the product \(\mathbf{W}\mathbf{x}\) acts like a content-addressable read: each inner product \(\mathbf{k}_{i}^{\top}\mathbf{x}\) scores relevance to slot \(i\) and gates the retrieved value \(\mathbf{v}_{i}\).</p>
+          <div class="moram-eqn has-text-centered has-background-light">
+            \[ \mathbf{y}=\mathbf{W}\mathbf{x}\approx\sum_{i=1}^{m}\mathbf{v}_{i}\,(\mathbf{k}_{i}^{\top}\mathbf{x}). \tag{2} \]
+          </div>
+          <p><strong>Remark.</strong> Unlike self-attention—where keys and values are <em>dynamic</em> functions of the input—here \(\mathbf{k}_{i}\) and \(\mathbf{v}_{i}\) are <em>static</em> parameters of the matrix, encoding patterns acquired during pre-training.</p>
+
+          <h3 class="title is-4">Mixture of Rank-1 Memory Experts <span class="is-size-6 has-text-grey">(§3.3.1)</span></h3>
+          <p><strong>Fine-grained rank-1 memory augmentation.</strong> The low-rank update \(\Delta\mathbf{W}\) is not one rank-\(r\) slab but a sum of \(r\) rank-1 key–value pairs: row \(\mathbf{A}_{i,:}\) acts as the <strong>Key</strong> (relevance to the input) and column \(\mathbf{B}_{:,i}\) as the <strong>Value</strong> (stored correction). Adaptation becomes <em>memory expansion</em>—a flexible set of atoms rather than a single rigid adapter.</p>
+          <div class="moram-eqn has-text-centered has-background-light">
+            \[ \Delta\mathbf{W}\,\mathbf{x}=\sum_{i=1}^{r}\mathbf{B}_{:,i}\,(\mathbf{A}_{i,:}\mathbf{x}). \tag{3} \]
+          </div>
+          <p>Standard LoRA (and MoE-LoRA at the adapter level) still <strong>densely</strong> mixes rank-1 components, which encourages <em>interference</em> on mismatched inputs and <em>routing collapse</em> by ignoring the natural role of \(\mathbf{A}\) as content-based retrieval keys in favor of indiscriminate activation or extra routers.</p>
+          <p><strong>MoRAM formulation.</strong> Adaptation parameters are a growing set of atoms \(\mathcal{M}_{t}=\{(\mathbf{B}_{:,i},\mathbf{A}_{i,:})\}_{i=1}^{r_{t}}\). For task \(t\), the effective update is a sparse, input-dependent mixture with weights \(\mathrm{w}_{i}\in\mathbb{R}\) (retrieval confidence for atom \(i\)):</p>
+          <div class="moram-eqn has-text-centered has-background-light">
+            \[ \Delta\mathbf{W}^{t}=\sum_{i=1}^{r_{t}} \mathrm{w}_{i}\,\mathbf{B}_{:,i}\mathbf{A}_{i,:}. \tag{4} \]
+          </div>
+          <p>This lets the model freeze old atoms for stability while adding new ones for plasticity, or combine several memories when concepts overlap—without an auxiliary router module.</p>
+
+          <h3 class="title is-4">Self-Activation for MoRAM Routing <span class="is-size-6 has-text-grey">(§3.3.2)</span></h3>
+          <p>Mixing weights come from each rank-1 adapter’s own key \(\mathbf{A}_{i,:}\), not from a separate MoE router over \((\mathbf{A}_{i,:},\mathbf{B}_{:,i})\) pairs—routing is content-addressable retrieval over static memory keys, which avoids extra router parameters and the forgetting they can introduce.</p>
+          <p><strong>Self-activated relevance scoring.</strong> For hidden state \(\mathbf{x}\in\mathbb{R}^{d_{\text{in}}}\) and \(r_{t}\) accumulated atoms after task \(t\), the raw score \(s_{i}\) for atom \(i\) is the key response \(\mathbf{A}_{i,:}\mathbf{x}\), \(\ell_{2}\)-normalized across all atoms:</p>
+          <div class="moram-eqn has-text-centered has-background-light">
+            \[ s_{i}=\frac{\mathbf{A}_{i,:}\mathbf{x}}{\sqrt{\sum_{j=1}^{r_{t}}(\mathbf{A}_{j,:}\mathbf{x})^{2}}}\,. \tag{5} \]
+          </div>
+          <p>The numerator is alignment with key \(i\); the denominator stabilizes scale across the memory bank. The paper finds this intrinsic scoring competitive with external routers (their Table&nbsp;4).</p>
+
+          <h3 class="title is-4">Sparse Expert Routing and Mixture <span class="is-size-6 has-text-grey">(§3.3.3)</span></h3>
+          <p>While Eq.&nbsp;(5) measures relevance, naive dense activation leads to low specialization and induces interference and computational overhead; MoRAM therefore uses sparse routing to sharpen the mixture.</p>
+          <p><strong>Sparse rank selection.</strong> To limit interference and cost, we enforce sparsity via top-\(k\) masking: only the \(k\) largest scores stay active; others are masked to \(-\infty\) before softmax so at most \(k\) of the \(r_{t}\) atoms receive gradient.</p>
+          <div class="moram-eqn has-text-centered has-background-light">
+            \[ [\mathrm{TopK}(\mathbf{s},k)]_{i}=\begin{cases} s_{i}, & \text{if } s_{i}\in\text{top-}k(\mathbf{s}),\\ -\infty, & \text{otherwise.} \end{cases} \tag{6} \]
+          </div>
+          <p><strong>Sharpness enhancement.</strong> To further encourage rank specialization and concentrate the update on the most relevant ranks, mixture weights use temperature-scaled softmax on the masked scores with \(\tau_{\text{MoRAM}}\); lower \(\tau_{\text{MoRAM}}\) sharpens which experts activate in the forward pass and routes gradients more selectively in the backward pass.</p>
+          <div class="moram-eqn has-text-centered has-background-light">
+            \[ \mathrm{w}_{i}=\mathrm{softmax}\!\left(\frac{\mathrm{TopK}(\mathbf{s},k)}{\tau_{\text{MoRAM}}}\right)_{\! i}. \tag{7} \]
+          </div>
+          <p><strong>Threshold-based expert selection.</strong> At inference, a cutoff \(\delta\) on normalized scores filters weak experts among the top-\(k\) set, reducing compute and noise:</p>
+          <div class="moram-eqn has-text-centered has-background-light">
+            \[ \mathrm{w}_{i}:=\mathbf{1}\{s_{i}\geq\delta\}\odot \mathrm{w}_{i}\,. \tag{8} \]
+          </div>
+          <p>This yields a highly sparse, input-dependent set comprising only the most significant memory experts.</p>
+
+          <h2 class="title is-3">Experiments and results</h2>
+          <h3 class="title is-4">Benchmarks</h3>
+          <p><strong>X-TAIL</strong> is a cross-domain, task-incremental protocol for CLIP-style models: a sequence of image-classification domains. We report <strong>Transfer</strong> (future domains before training), <strong>Average</strong> (mean over stages and domains), and <strong>Last</strong> (all seen domains after the full run)</p>
+          <p><strong>TRACE</strong> benchmarks continual learning in LLMs with <strong>eight</strong> mixed tasks (e.g. reasoning, summarization, code). We report <strong>Overall Performance (OP)</strong> after the final task and <strong>Backward Transfer (BWT)</strong> for forgetting; higher OP and lower BWT are better.</p>
+
+          <h3 class="title is-4">X-TAIL (CLIP)</h3>
+          <p>Comparisons on X-TAIL for each domain in terms of <strong>Transfer</strong>, <strong>Average</strong>, and <strong>Last</strong> accuracy (%). Section labels and the rightmost <strong>Average</strong> column follow the paper. MoRAM rows are highlighted.</p>
+          <div class="table-container">
+<table class="table is-bordered is-striped is-narrow is-size-7 is-fullwidth moram-paper-table">
+<thead><tr>
+<th scope="col">Method</th>
+<th scope="col" class="has-text-centered">Aircraft</th>
+<th scope="col" class="has-text-centered">Caltech</th>
+<th scope="col" class="has-text-centered">DTD</th>
+<th scope="col" class="has-text-centered">EuroSAT</th>
+<th scope="col" class="has-text-centered">Flowers</th>
+<th scope="col" class="has-text-centered">Food</th>
+<th scope="col" class="has-text-centered">MNIST</th>
+<th scope="col" class="has-text-centered">OxPet</th>
+<th scope="col" class="has-text-centered">Cars</th>
+<th scope="col" class="has-text-centered">SUN397</th>
+<th scope="col" class="has-text-centered">Average</th>
+</tr></thead><tbody>
+<tr><th colspan="12" class="moram-table-section has-text-left has-background-light">CLIP</th></tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2103.00020" target="_blank" rel="noopener noreferrer">Zero-shot</a></th>
+<td class="has-text-centered">23.5</td>
+<td class="has-text-centered">76.8</td>
+<td class="has-text-centered">37.3</td>
+<td class="has-text-centered">36.7</td>
+<td class="has-text-centered">63.6</td>
+<td class="has-text-centered">84.0</td>
+<td class="has-text-centered">46.7</td>
+<td class="has-text-centered">86.7</td>
+<td class="has-text-centered">66.1</td>
+<td class="has-text-centered">63.7</td>
+<td class="has-text-centered">58.5</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2103.00020" target="_blank" rel="noopener noreferrer">Fine-tune</a></th>
+<td class="has-text-centered">39.6</td>
+<td class="has-text-centered">84.7</td>
+<td class="has-text-centered">70.0</td>
+<td class="has-text-centered">94.7</td>
+<td class="has-text-centered">97.0</td>
+<td class="has-text-centered">85.8</td>
+<td class="has-text-centered">97.6</td>
+<td class="has-text-centered">93.4</td>
+<td class="has-text-centered">81.0</td>
+<td class="has-text-centered">74.7</td>
+<td class="has-text-centered">81.9</td>
+</tr>
+<tr><th colspan="12" class="moram-table-section has-text-left has-background-light">Transfer</th></tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2103.00020" target="_blank" rel="noopener noreferrer">CLIP zero-shot</a></th>
+<td class="has-text-centered">—</td>
+<td class="has-text-centered">76.8</td>
+<td class="has-text-centered">37.3</td>
+<td class="has-text-centered">36.7</td>
+<td class="has-text-centered">63.6</td>
+<td class="has-text-centered">84.0</td>
+<td class="has-text-centered">46.7</td>
+<td class="has-text-centered">86.7</td>
+<td class="has-text-centered">66.1</td>
+<td class="has-text-centered">63.7</td>
+<td class="has-text-centered">62.4</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/1606.09282" target="_blank" rel="noopener noreferrer">LwF</a></th>
+<td class="has-text-centered">—</td>
+<td class="has-text-centered">66.6</td>
+<td class="has-text-centered">26.9</td>
+<td class="has-text-centered">19.5</td>
+<td class="has-text-centered">51.0</td>
+<td class="has-text-centered">78.4</td>
+<td class="has-text-centered">26.6</td>
+<td class="has-text-centered">68.9</td>
+<td class="has-text-centered">35.5</td>
+<td class="has-text-centered">56.1</td>
+<td class="has-text-centered">47.7</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2109.01903" target="_blank" rel="noopener noreferrer">WiSE-FT</a></th>
+<td class="has-text-centered">—</td>
+<td class="has-text-centered">70.1</td>
+<td class="has-text-centered">31.9</td>
+<td class="has-text-centered">25.3</td>
+<td class="has-text-centered">56.3</td>
+<td class="has-text-centered">79.8</td>
+<td class="has-text-centered">29.9</td>
+<td class="has-text-centered">74.9</td>
+<td class="has-text-centered">45.6</td>
+<td class="has-text-centered">56.8</td>
+<td class="has-text-centered">52.3</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/1611.07725" target="_blank" rel="noopener noreferrer">iCaRL</a></th>
+<td class="has-text-centered">—</td>
+<td class="has-text-centered">71.7</td>
+<td class="has-text-centered">35.0</td>
+<td class="has-text-centered">43.0</td>
+<td class="has-text-centered">63.4</td>
+<td class="has-text-centered">86.9</td>
+<td class="has-text-centered">43.9</td>
+<td class="has-text-centered">87.8</td>
+<td class="has-text-centered">63.7</td>
+<td class="has-text-centered">60.0</td>
+<td class="has-text-centered">61.7</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2303.06628" target="_blank" rel="noopener noreferrer">ZSCL</a></th>
+<td class="has-text-centered">—</td>
+<td class="has-text-centered">73.3</td>
+<td class="has-text-centered">32.6</td>
+<td class="has-text-centered">36.8</td>
+<td class="has-text-centered">62.1</td>
+<td class="has-text-centered">83.8</td>
+<td class="has-text-centered">42.1</td>
+<td class="has-text-centered">83.6</td>
+<td class="has-text-centered">56.5</td>
+<td class="has-text-centered">60.2</td>
+<td class="has-text-centered">59.0</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2403.11549" target="_blank" rel="noopener noreferrer">MoE-Adapter</a></th>
+<td class="has-text-centered">—</td>
+<td class="has-text-centered">71.0</td>
+<td class="has-text-centered">34.9</td>
+<td class="has-text-centered">19.2</td>
+<td class="has-text-centered">63.0</td>
+<td class="has-text-centered">86.6</td>
+<td class="has-text-centered">20.0</td>
+<td class="has-text-centered">87.2</td>
+<td class="has-text-centered">63.7</td>
+<td class="has-text-centered">58.6</td>
+<td class="has-text-centered">56.0</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2406.18868" target="_blank" rel="noopener noreferrer">RAIL-Primal</a></th>
+<td class="has-text-centered">—</td>
+<td class="has-text-centered">76.8</td>
+<td class="has-text-centered">37.3</td>
+<td class="has-text-centered">36.7</td>
+<td class="has-text-centered">63.6</td>
+<td class="has-text-centered">84.0</td>
+<td class="has-text-centered">46.7</td>
+<td class="has-text-centered">86.7</td>
+<td class="has-text-centered">66.1</td>
+<td class="has-text-centered">63.7</td>
+<td class="has-text-centered">62.4</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2412.01004" target="_blank" rel="noopener noreferrer">CoDyRA</a></th>
+<td class="has-text-centered">—</td>
+<td class="has-text-centered">74.3</td>
+<td class="has-text-centered">36.8</td>
+<td class="has-text-centered">44.2</td>
+<td class="has-text-centered">69.9</td>
+<td class="has-text-centered">83.5</td>
+<td class="has-text-centered">42.8</td>
+<td class="has-text-centered">88.9</td>
+<td class="has-text-centered">64.6</td>
+<td class="has-text-centered">63.4</td>
+<td class="has-text-centered">63.2</td>
+</tr>
+<tr class="moram-table-highlight">
+<th scope="row">MoRAM</th>
+<td class="has-text-centered">—</td>
+<td class="has-text-centered"><strong>74.5</strong></td>
+<td class="has-text-centered"><strong>38.1</strong></td>
+<td class="has-text-centered"><strong>46.9</strong></td>
+<td class="has-text-centered"><strong>65.3</strong></td>
+<td class="has-text-centered"><strong>82.9</strong></td>
+<td class="has-text-centered"><strong>45.8</strong></td>
+<td class="has-text-centered"><strong>88.2</strong></td>
+<td class="has-text-centered"><strong>65.1</strong></td>
+<td class="has-text-centered"><strong>62.9</strong></td>
+<td class="has-text-centered"><strong>63.3</strong></td>
+</tr>
+<tr><th colspan="12" class="moram-table-section has-text-left has-background-light">Average</th></tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/1606.09282" target="_blank" rel="noopener noreferrer">LwF</a></th>
+<td class="has-text-centered">24.7</td>
+<td class="has-text-centered">79.7</td>
+<td class="has-text-centered">38.3</td>
+<td class="has-text-centered">36.9</td>
+<td class="has-text-centered">63.9</td>
+<td class="has-text-centered">81.0</td>
+<td class="has-text-centered">36.5</td>
+<td class="has-text-centered">71.9</td>
+<td class="has-text-centered">42.7</td>
+<td class="has-text-centered">56.7</td>
+<td class="has-text-centered">53.2</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2109.01903" target="_blank" rel="noopener noreferrer">WiSE-FT</a></th>
+<td class="has-text-centered">27.1</td>
+<td class="has-text-centered">76.5</td>
+<td class="has-text-centered">40.9</td>
+<td class="has-text-centered">31.3</td>
+<td class="has-text-centered">68.7</td>
+<td class="has-text-centered">81.6</td>
+<td class="has-text-centered">31.4</td>
+<td class="has-text-centered">74.7</td>
+<td class="has-text-centered">51.7</td>
+<td class="has-text-centered">58.4</td>
+<td class="has-text-centered">54.2</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/1611.07725" target="_blank" rel="noopener noreferrer">iCaRL</a></th>
+<td class="has-text-centered">25.4</td>
+<td class="has-text-centered">72.1</td>
+<td class="has-text-centered">37.5</td>
+<td class="has-text-centered">51.6</td>
+<td class="has-text-centered">65.1</td>
+<td class="has-text-centered">87.1</td>
+<td class="has-text-centered">59.1</td>
+<td class="has-text-centered">88.0</td>
+<td class="has-text-centered">63.7</td>
+<td class="has-text-centered">60.1</td>
+<td class="has-text-centered">61.0</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2303.06628" target="_blank" rel="noopener noreferrer">ZSCL</a></th>
+<td class="has-text-centered">36.0</td>
+<td class="has-text-centered">75.0</td>
+<td class="has-text-centered">40.7</td>
+<td class="has-text-centered">40.5</td>
+<td class="has-text-centered">71.0</td>
+<td class="has-text-centered">85.3</td>
+<td class="has-text-centered">46.3</td>
+<td class="has-text-centered">83.3</td>
+<td class="has-text-centered">60.7</td>
+<td class="has-text-centered">61.5</td>
+<td class="has-text-centered">60.0</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2403.11549" target="_blank" rel="noopener noreferrer">MoE-Adapter</a></th>
+<td class="has-text-centered">43.6</td>
+<td class="has-text-centered">77.9</td>
+<td class="has-text-centered">52.1</td>
+<td class="has-text-centered">34.7</td>
+<td class="has-text-centered">75.9</td>
+<td class="has-text-centered">86.3</td>
+<td class="has-text-centered">45.2</td>
+<td class="has-text-centered">87.4</td>
+<td class="has-text-centered">66.6</td>
+<td class="has-text-centered">60.2</td>
+<td class="has-text-centered">63.0</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2406.18868" target="_blank" rel="noopener noreferrer">RAIL-Primal</a></th>
+<td class="has-text-centered">42.4</td>
+<td class="has-text-centered">89.8</td>
+<td class="has-text-centered">55.7</td>
+<td class="has-text-centered">68.5</td>
+<td class="has-text-centered">84.0</td>
+<td class="has-text-centered">83.3</td>
+<td class="has-text-centered">65.3</td>
+<td class="has-text-centered">85.8</td>
+<td class="has-text-centered">67.9</td>
+<td class="has-text-centered">64.5</td>
+<td class="has-text-centered">70.7</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2412.01004" target="_blank" rel="noopener noreferrer">CoDyRA</a></th>
+<td class="has-text-centered">41.4</td>
+<td class="has-text-centered">81.0</td>
+<td class="has-text-centered">58.7</td>
+<td class="has-text-centered">77.8</td>
+<td class="has-text-centered">83.4</td>
+<td class="has-text-centered">84.6</td>
+<td class="has-text-centered">64.5</td>
+<td class="has-text-centered">90.4</td>
+<td class="has-text-centered">67.2</td>
+<td class="has-text-centered">64.4</td>
+<td class="has-text-centered">71.3</td>
+</tr>
+<tr class="moram-table-highlight">
+<th scope="row">MoRAM</th>
+<td class="has-text-centered"><strong>44.1</strong></td>
+<td class="has-text-centered"><strong>81.6</strong></td>
+<td class="has-text-centered"><strong>64.6</strong></td>
+<td class="has-text-centered"><strong>79.6</strong></td>
+<td class="has-text-centered"><strong>83.9</strong></td>
+<td class="has-text-centered"><strong>84.4</strong></td>
+<td class="has-text-centered"><strong>66.5</strong></td>
+<td class="has-text-centered"><strong>89.7</strong></td>
+<td class="has-text-centered"><strong>68.4</strong></td>
+<td class="has-text-centered"><strong>64.1</strong></td>
+<td class="has-text-centered"><strong>72.7</strong></td>
+</tr>
+<tr><th colspan="12" class="moram-table-section has-text-left has-background-light">Last</th></tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/1606.09282" target="_blank" rel="noopener noreferrer">LwF</a></th>
+<td class="has-text-centered">25.5</td>
+<td class="has-text-centered">72.1</td>
+<td class="has-text-centered">38.9</td>
+<td class="has-text-centered">55.4</td>
+<td class="has-text-centered">65.5</td>
+<td class="has-text-centered">87.3</td>
+<td class="has-text-centered">81.9</td>
+<td class="has-text-centered">88.6</td>
+<td class="has-text-centered">63.6</td>
+<td class="has-text-centered">61.5</td>
+<td class="has-text-centered">64.0</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2109.01903" target="_blank" rel="noopener noreferrer">WiSE-FT</a></th>
+<td class="has-text-centered">21.8</td>
+<td class="has-text-centered">76.8</td>
+<td class="has-text-centered">42.9</td>
+<td class="has-text-centered">20.8</td>
+<td class="has-text-centered">77.5</td>
+<td class="has-text-centered">84.9</td>
+<td class="has-text-centered">30.7</td>
+<td class="has-text-centered">76.6</td>
+<td class="has-text-centered">75.8</td>
+<td class="has-text-centered">72.5</td>
+<td class="has-text-centered">58.0</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/1611.07725" target="_blank" rel="noopener noreferrer">iCaRL</a></th>
+<td class="has-text-centered">25.5</td>
+<td class="has-text-centered">72.1</td>
+<td class="has-text-centered">38.9</td>
+<td class="has-text-centered">55.4</td>
+<td class="has-text-centered">65.5</td>
+<td class="has-text-centered">87.3</td>
+<td class="has-text-centered">81.9</td>
+<td class="has-text-centered">88.6</td>
+<td class="has-text-centered">63.6</td>
+<td class="has-text-centered">61.5</td>
+<td class="has-text-centered">64.0</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2303.06628" target="_blank" rel="noopener noreferrer">ZSCL</a></th>
+<td class="has-text-centered">33.1</td>
+<td class="has-text-centered">75.3</td>
+<td class="has-text-centered">43.5</td>
+<td class="has-text-centered">35.2</td>
+<td class="has-text-centered">74.6</td>
+<td class="has-text-centered">87.4</td>
+<td class="has-text-centered">50.4</td>
+<td class="has-text-centered">84.2</td>
+<td class="has-text-centered">77.3</td>
+<td class="has-text-centered">73.4</td>
+<td class="has-text-centered">63.4</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2403.11549" target="_blank" rel="noopener noreferrer">MoE-Adapter</a></th>
+<td class="has-text-centered">43.2</td>
+<td class="has-text-centered">78.7</td>
+<td class="has-text-centered">57.6</td>
+<td class="has-text-centered">32.8</td>
+<td class="has-text-centered">79.4</td>
+<td class="has-text-centered">86.0</td>
+<td class="has-text-centered">86.7</td>
+<td class="has-text-centered">87.8</td>
+<td class="has-text-centered">78.2</td>
+<td class="has-text-centered">74.2</td>
+<td class="has-text-centered">70.5</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2406.18868" target="_blank" rel="noopener noreferrer">RAIL-Primal</a></th>
+<td class="has-text-centered">41.7</td>
+<td class="has-text-centered">94.0</td>
+<td class="has-text-centered">66.0</td>
+<td class="has-text-centered">86.4</td>
+<td class="has-text-centered">97.2</td>
+<td class="has-text-centered">82.4</td>
+<td class="has-text-centered">93.1</td>
+<td class="has-text-centered">83.6</td>
+<td class="has-text-centered">75.0</td>
+<td class="has-text-centered">71.3</td>
+<td class="has-text-centered">79.1</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://arxiv.org/abs/2412.01004" target="_blank" rel="noopener noreferrer">CoDyRA</a></th>
+<td class="has-text-centered">37.7</td>
+<td class="has-text-centered">81.5</td>
+<td class="has-text-centered">65.1</td>
+<td class="has-text-centered">89.9</td>
+<td class="has-text-centered">91.4</td>
+<td class="has-text-centered">85.5</td>
+<td class="has-text-centered">96.8</td>
+<td class="has-text-centered">93.3</td>
+<td class="has-text-centered">77.3</td>
+<td class="has-text-centered">73.5</td>
+<td class="has-text-centered">79.2</td>
+</tr>
+<tr class="moram-table-highlight">
+<th scope="row">MoRAM</th>
+<td class="has-text-centered"><strong>37.7</strong></td>
+<td class="has-text-centered"><strong>81.5</strong></td>
+<td class="has-text-centered"><strong>70.7</strong></td>
+<td class="has-text-centered"><strong>92.4</strong></td>
+<td class="has-text-centered"><strong>95.0</strong></td>
+<td class="has-text-centered"><strong>86.0</strong></td>
+<td class="has-text-centered"><strong>97.6</strong></td>
+<td class="has-text-centered"><strong>92.6</strong></td>
+<td class="has-text-centered"><strong>81.0</strong></td>
+<td class="has-text-centered"><strong>74.7</strong></td>
+<td class="has-text-centered"><strong>80.9</strong></td>
+</tr>
+</tbody></table>
+          </div>
+          <h3 class="title is-4">TRACE (LLMs)</h3>
+          <p>Comparison on the TRACE benchmark: Overall Performance (OP, higher is better) and Backward Transfer (BWT, lower is better). Values are mean ± standard deviation over three runs. The MoRAM column is highlighted.</p>
+          <div class="table-container">
+<table class="table is-bordered is-striped is-narrow is-size-7 is-fullwidth moram-paper-table moram-trace-table">
+<thead><tr>
+<th scope="col"></th>
+<th scope="col" class="has-text-centered"><a href="https://arxiv.org/abs/2310.06762" target="_blank" rel="noopener noreferrer">FIX(ICL)</a></th>
+<th scope="col" class="has-text-centered"><a href="https://arxiv.org/abs/2310.06762" target="_blank" rel="noopener noreferrer">SeqLoRA</a></th>
+<th scope="col" class="has-text-centered">OGD</th>
+<th scope="col" class="has-text-centered">GEM</th>
+<th scope="col" class="has-text-centered"><a href="https://arxiv.org/abs/1612.00796" target="_blank" rel="noopener noreferrer">EWC</a></th>
+<th scope="col" class="has-text-centered"><a href="https://arxiv.org/abs/2112.08654" target="_blank" rel="noopener noreferrer">L2P</a></th>
+<th scope="col" class="has-text-centered"><a href="https://arxiv.org/abs/2204.04799" target="_blank" rel="noopener noreferrer">DualPrompt</a></th>
+<th scope="col" class="has-text-centered"><a href="https://arxiv.org/abs/2407.05229" target="_blank" rel="noopener noreferrer">HiDeLoRA</a></th>
+<th scope="col" class="has-text-centered"><a href="https://arxiv.org/abs/2310.14152" target="_blank" rel="noopener noreferrer">O-LoRA</a></th>
+<th scope="col" class="has-text-centered"><a href="https://arxiv.org/abs/2506.10355" target="_blank" rel="noopener noreferrer">TreeLoRA</a></th>
+<th scope="col" class="has-text-centered">MoRAM</th>
+</tr></thead><tbody>
+<tr><th colspan="12" class="moram-table-section has-text-left has-background-light">meta-llama / LLaMA-2-7B-Chat</th></tr>
+<tr>
+<th scope="row" class="has-text-weight-semibold">OP</th>
+<td class="has-text-centered">38.94 ± 0.3</td>
+<td class="has-text-centered">34.3 ± 1.2</td>
+<td class="has-text-centered">42.09 ± 1.6</td>
+<td class="has-text-centered">40.08 ± 1.6</td>
+<td class="has-text-centered">42.36 ± 1.2</td>
+<td class="has-text-centered">36.23 ± 0.8</td>
+<td class="has-text-centered">37.69 ± 1.2</td>
+<td class="has-text-centered">41.60 ± 0.8</td>
+<td class="has-text-centered">42.78 ± 0.8</td>
+<td class="has-text-centered">43.52 ± 1.0</td>
+<td class="has-text-centered moram-trace-moram-col"><strong>44.54 ± 0.9</strong></td>
+</tr>
+<tr>
+<th scope="row" class="has-text-weight-semibold">BWT</th>
+<td class="has-text-centered">–</td>
+<td class="has-text-centered">18.5 ± 0.8</td>
+<td class="has-text-centered">8.06 ± 1.2</td>
+<td class="has-text-centered">6.77 ± 1.2</td>
+<td class="has-text-centered">5.97 ± 0.8</td>
+<td class="has-text-centered">8.25 ± 0.8</td>
+<td class="has-text-centered">8.03 ± 0.8</td>
+<td class="has-text-centered">7.12 ± 0.4</td>
+<td class="has-text-centered">7.16 ± 0.4</td>
+<td class="has-text-centered">3.46 ± 0.4</td>
+<td class="has-text-centered moram-trace-moram-col"><strong>1.37 ± 0.3</strong></td>
+</tr>
+<tr><th colspan="12" class="moram-table-section has-text-left has-background-light">google / Gemma-2B-it</th></tr>
+<tr>
+<th scope="row" class="has-text-weight-semibold">OP</th>
+<td class="has-text-centered">32.3 ± 0.2</td>
+<td class="has-text-centered">31.89 ± 0.8</td>
+<td class="has-text-centered">32.85 ± 1.4</td>
+<td class="has-text-centered">26.48 ± 1.5</td>
+<td class="has-text-centered">28.35 ± 1.6</td>
+<td class="has-text-centered">31.14 ± 1.2</td>
+<td class="has-text-centered">32.42 ± 1.0</td>
+<td class="has-text-centered">33.25 ± 0.9</td>
+<td class="has-text-centered">33.73 ± 0.8</td>
+<td class="has-text-centered">33.41 ± 0.9</td>
+<td class="has-text-centered moram-trace-moram-col"><strong>36.27 ± 0.7</strong></td>
+</tr>
+<tr>
+<th scope="row" class="has-text-weight-semibold">BWT</th>
+<td class="has-text-centered">–</td>
+<td class="has-text-centered">15.28 ± 0.4</td>
+<td class="has-text-centered">12.27 ± 0.9</td>
+<td class="has-text-centered">18.25 ± 0.9</td>
+<td class="has-text-centered">16.96 ± 1.2</td>
+<td class="has-text-centered">15.77 ± 0.7</td>
+<td class="has-text-centered">14.25 ± 0.5</td>
+<td class="has-text-centered">13.66 ± 0.5</td>
+<td class="has-text-centered">12.36 ± 0.4</td>
+<td class="has-text-centered">8.50 ± 0.5</td>
+<td class="has-text-centered moram-trace-moram-col"><strong>2.74 ± 0.4</strong></td>
+</tr>
+<tr><th colspan="12" class="moram-table-section has-text-left has-background-light">meta-llama / LLaMA-3-1B-Instruct</th></tr>
+<tr>
+<th scope="row" class="has-text-weight-semibold">OP</th>
+<td class="has-text-centered">31.16 ± 0.4</td>
+<td class="has-text-centered">29.73 ± 1.6</td>
+<td class="has-text-centered">30.12 ± 2.0</td>
+<td class="has-text-centered">32.19 ± 2.0</td>
+<td class="has-text-centered">31.96 ± 1.6</td>
+<td class="has-text-centered">29.38 ± 1.2</td>
+<td class="has-text-centered">30.76 ± 1.2</td>
+<td class="has-text-centered">33.73 ± 1.2</td>
+<td class="has-text-centered">32.94 ± 0.8</td>
+<td class="has-text-centered">36.14 ± 0.7</td>
+<td class="has-text-centered moram-trace-moram-col"><strong>37.77 ± 0.8</strong></td>
+</tr>
+<tr>
+<th scope="row" class="has-text-weight-semibold">BWT</th>
+<td class="has-text-centered">–</td>
+<td class="has-text-centered">17.03 ± 1.2</td>
+<td class="has-text-centered">15.2 ± 1.6</td>
+<td class="has-text-centered">10.74 ± 1.6</td>
+<td class="has-text-centered">11.62 ± 1.2</td>
+<td class="has-text-centered">13.57 ± 0.8</td>
+<td class="has-text-centered">11.34 ± 0.8</td>
+<td class="has-text-centered">12.36 ± 0.8</td>
+<td class="has-text-centered">12.89 ± 1.2</td>
+<td class="has-text-centered">7.36 ± 0.8</td>
+<td class="has-text-centered moram-trace-moram-col"><strong>3.12 ± 0.8</strong></td>
+</tr>
+</tbody></table>
+          </div>
+          <h3 class="title is-4">Visualization of rank activations</h3>
+          <p>Because MoRAM routes through per-atom mixture weights, we can read off each rank-1 atom’s contribution as a <strong>rank activation map</strong>: a heatmap whose rows are rank indices (grouped by task, separated by dashed lines) and columns are image patches, with colour intensity proportional to activation value. Maps below are extracted from the \(K\) projection in CLIP’s image-encoder attention (layer 8) during continual fine-tuning on <strong>X-TAIL</strong>. Coloured boxes highlight semantically informative patch columns. Together the three figures illustrate <strong>atom specialization</strong>, <strong>forgetting mitigation</strong>, and <strong>knowledge reuse</strong>. For full analysis and protocol, see §4.2 and Appendix A.12 in the paper.</p>
+
+          <h4 class="title is-5">Rank activations across Tasks 1–2 (Fig. 3)</h4>
+          <p><strong>(a)</strong> Task 1 (Aircraft) input evaluated after learning Task 1 only — 16 ranks available. A handful of ranks (e.g. rank 12) fire strongly on specific patches while others stay near zero, showing clear <strong>specialization</strong>. <strong>(b)</strong> The <em>same</em> Task 1 input re-evaluated after Task 2 is added (32 ranks total). Task 1 ranks (1–16) retain virtually the same pattern; the newly added Task 2 ranks (17–32) remain mostly silent — evidence that new capacity does not disturb earlier atoms. <strong>(c)</strong> A Task 2 input evaluated after learning Task 2. Task 2 ranks now show strong, distinct activations, while some Task 1 ranks also fire where visual patterns overlap, indicating early <strong>knowledge reuse</strong>. Orange boxes highlight patch columns of interest across panels.</p>
+          <figure class="image moram-paper-figure">
+            <img src="assets/img/projects/moram/fig3.png" alt="Visualization of MoRAM rank activations on Tasks 1 and 2 (Fig. 3)">
+            <figcaption class="moram-caption"><em>Fig. 3.</em> Rank activation maps on X-TAIL Tasks 1–2. Rows = rank indices (grouped by task); columns = image patches; colour = activation value.</figcaption>
+          </figure>
+
+          <h4 class="title is-5" style="margin-top:2rem;">Forgetting mitigation across the full task stream (Fig. 6)</h4>
+          <p>The same Task 1 (Aircraft) input is tracked as the model grows from 16 ranks to 160 ranks over the full 10-task X-TAIL sequence. <strong>(a)</strong> After Task 1 (16 ranks). <strong>(b)</strong> After Task 2 (32 ranks). <strong>(c)</strong> After Task 10 (160 ranks). Despite the memory bank expanding by 10×, <strong>Task 1 ranks retain essentially the same activation pattern</strong> — strong, consistent firing on the same patch columns across all three snapshots. Ranks from Tasks 2–10 remain largely inactive on Task 1 data, confirming that the freeze-and-expand design prevents cross-task interference even as capacity grows.</p>
+          <figure class="image moram-paper-figure">
+            <img src="assets/img/projects/moram/fig6.png" alt="Extended rank-activation visualization: forgetting mitigation (Fig. 6)">
+            <figcaption class="moram-caption"><em>Fig. 6.</em> Forgetting mitigation: Task 1 rank activations stay stable from 16 ranks (after Task 1) to 160 ranks (after Task 10).</figcaption>
+          </figure>
+
+          <h4 class="title is-5" style="margin-top:2rem;">Knowledge reuse across tasks (Fig. 7)</h4>
+          <p>Blue boxes trace <strong>shared visual structure</strong> across domains. <strong>(a)</strong> Task 1 (Aircraft) data after learning Task 1 — blue boxes mark the patch groups where Task 1 ranks respond most. <strong>(b)</strong> Later-task data (Cars) evaluated with only Task 1 atoms — Task 1 ranks still fire on patches with comparable spatial structure (e.g. object body, background). <strong>(c)</strong> Task 9 (Cars) data after learning nine tasks (144 ranks). Task 1 ranks (bottom rows, blue box) still activate on patches that share visual structure with Aircraft, while Task 9-specific ranks handle novel object details. This decomposition — <strong>reused atoms for shared patterns, fresh atoms for new concepts</strong> — emerges naturally from the self-activation mechanism without any explicit reuse objective.</p>
+          <figure class="image moram-paper-figure">
+            <img src="assets/img/projects/moram/fig7.png" alt="Extended rank-activation visualization: knowledge reuse (Fig. 7)">
+            <figcaption class="moram-caption"><em>Fig. 7.</em> Knowledge reuse: Task 1 ranks (blue boxes) continue to activate on later-task data where visual patterns recur, alongside task-specific atoms.</figcaption>
+          </figure>
+
+
+          <h2 class="title is-3">BibTeX</h2>
+          <pre style="background:#f5f5f5;padding:1rem;border-radius:8px;overflow:auto;font-size:0.85rem;"><code>@inproceedings{lu2026little,
+  title     = {Little By Little: Continual Learning via Incremental Mixture of Rank-1 Associative Memory Experts},
+  author    = {Lu, Haodong and Zhao, Chongyang and Xue, Minhui and Yao, Lina and Moore, Kristen and Gong, Dong},
+  booktitle = {Forty-third International Conference on Machine Learning},
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=P247k4ELcn}
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered">
+      <p>Page template adapted from <a href="https://nerfies.github.io/" target="_blank" rel="noopener noreferrer">Nerfies</a> (<a href="https://github.com/nerfies/nerfies.github.io" target="_blank" rel="noopener noreferrer">source</a>).</p>
+      <p><a rel="license noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+$(function () {
+  $('.navbar-burger').on('click', function () {
+    $('.navbar-burger').toggleClass('is-active');
+    $('.navbar-menu').toggleClass('is-active');
+  });
+});
+</script>
+</body>
+</html>

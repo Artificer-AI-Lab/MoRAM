@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" role="img"
+     aria-label="Conventional MoE with LoRA Experts (MoE-LoRA) vs. Mixture of Rank-1 Atomic Memory (MoRAM). Top panel shows MoE-LoRA's three causal pathologies that emerge during training (① intra-expert interference, ② inter-expert redundancy) and manifest at inference (③ routing collapse, leading to catastrophic forgetting). Bottom panel shows MoRAM's three benefits, each mitigating one MoE-LoRA pathology: ① knowledge reuse, ② per-atom specialization, ③ forgetting mitigation.">
+  <defs>
+    <style><![CDATA[
+      /* ===========================================================
+         Animation loop: 42s
+         Four 5-second build-up stages, then a 20-second final hold, then a 2-second fade-out.
+         Stage 1  (0–5s, 0%–12%):  Setup — tokens + Training badge fade in
+         Stage 2  (5–10s, 12%–24%): MoRAM self-activation demo + MoE-LoRA ① pathology label
+         Stage 3 (10–15s, 24%–36%): ② pair — MoRAM knowledge reuse + MoE-LoRA inter-expert redundancy
+         Stage 4 (15–20s, 36%–48%): badge swap → Inference + ③ pair — MoRAM forgetting mitigation + MoE-LoRA routing collapse
+         Final  (20–40s, 48%–95%):  HOLD — everything visible for 20 seconds
+         Fade   (40–42s, 95%–100%): all elements fade for a seamless loop
+      */
+      text { font-family: 'Inter','Helvetica Neue','Arial',sans-serif; }
+      .title       { font-size: 22px; font-weight: 700; fill: #0b1220; text-anchor: middle; letter-spacing: 0.01em; }
+      .cap         { font-size: 15px; font-weight: 500; fill: #1f2937; text-anchor: middle; opacity: 0; }
+      .panel-title { font-size: 17px; font-weight: 700; fill: #0f172a; }
+      .panel-sub   { font-size: 13px; font-weight: 500; fill: #334155; }
+      .small       { font-size: 12px; fill: #6b7280; }
+      .task-label  { font-size: 13px; fill: #6b7280; text-anchor: middle; font-weight: 600; letter-spacing: 0.03em; }
+      .tok-label   { font-size: 16px; font-weight: 700; text-anchor: middle; }
+      .tok-desc    { font-size: 12px; font-style: italic; text-anchor: middle; }
+      /* LaTeX-math styling for inline variables and sub/superscripts.
+         .var  — italic single-letter scalar / function (A, B, r, R, d, i, …)
+         .vec  — bold upright math vector  (\mathbf{x}) — used for input vectors x, x_shared, x_novel
+         .math-sub — italic math-mode subscript (e.g. i in A_i)
+         .math-sup — italic math-mode superscript (e.g. r×d, 1×d)
+         .text-sub — upright text-mode subscript (e.g. "shared", "new") */
+      .var         { font-style: italic; font-family: 'Cambria Math','STIX Two Math','Latin Modern Math','Times New Roman',serif; }
+      .vec         { font-style: normal; font-weight: 800; font-family: 'Cambria Math','STIX Two Math','Latin Modern Math','Times New Roman',serif; }
+      .math-sup    { font-size: 0.72em; baseline-shift: super; font-style: italic; font-family: 'Cambria Math','STIX Two Math','Latin Modern Math','Times New Roman',serif; }
+      .math-sub    { font-size: 0.72em; baseline-shift: sub;   font-style: italic; font-family: 'Cambria Math','STIX Two Math','Latin Modern Math','Times New Roman',serif; }
+      .text-sub    { font-size: 0.72em; baseline-shift: sub;   font-style: normal; font-family: inherit; }
+
+      .matA, .matB { fill: #eef1f5; stroke: #cfd6e0; stroke-width: 0.8; rx: 1; }
+      .matA.current, .matB.current { fill: #dbe7fb; stroke: #3b82f6; }
+      .mat-divider { stroke: #cfd6e0; stroke-width: 0.5; }
+      .mat-divider.current { stroke: #93c5fd; }
+      .mat-letter  { font-size: 9px; font-weight: 700; fill: #475569; text-anchor: middle; }
+      .mat-letter.current { fill: #1e55aa; }
+
+      .expert-bbox { fill: none; stroke: #94a3b8; stroke-width: 1.1; rx: 6; }
+
+      /* Badges (training/inference) — badge swaps inside Stage 4 (15-20s) */
+      .badge-train { animation: badge-train 42s infinite linear; }
+      .badge-infer { animation: badge-infer 42s infinite linear; opacity: 0; }
+      @keyframes badge-train { 0%,1%{opacity:0} 4%,36%{opacity:1} 38%,100%{opacity:0} }
+      @keyframes badge-infer { 0%,38%{opacity:0} 40%,95%{opacity:1} 98%,100%{opacity:0} }
+
+      /* Captions (unused in markup; kept for completeness, one per stage) */
+      .cap-a { animation: cap-a 42s infinite linear; }
+      .cap-b { animation: cap-b 42s infinite linear; }
+      .cap-c { animation: cap-c 42s infinite linear; }
+      .cap-d { animation: cap-d 42s infinite linear; }
+      @keyframes cap-a { 0%,1%{opacity:0} 4%,11%{opacity:1} 13%,100%{opacity:0} }
+      @keyframes cap-b { 0%,13%{opacity:0} 16%,23%{opacity:1} 25%,100%{opacity:0} }
+      @keyframes cap-c { 0%,25%{opacity:0} 28%,35%{opacity:1} 37%,100%{opacity:0} }
+      @keyframes cap-d { 0%,37%{opacity:0} 40%,95%{opacity:1} 98%,100%{opacity:0} }
+
+      /* Stage 1 elements (tokens, badge-train above): fade in by ~4%, hold through Stage 4 + final */
+      .tok { opacity: 0; animation: tok-fade 42s infinite linear; }
+      @keyframes tok-fade { 0%,1%{opacity:0} 4%,95%{opacity:1} 98%,100%{opacity:0} }
+
+      /* Stage 2 (12-24%): MoRAM self-activation demo + ① pathology pair.
+         Order within Stage 2: score pulse → highlight → route. */
+      .route-shared { opacity: 0; animation: route-shared 42s infinite linear; }
+      .route-new    { opacity: 0; animation: route-new    42s infinite linear; }
+      @keyframes route-shared { 0%,15%{opacity:0} 17%,95%{opacity:0.85} 98%,100%{opacity:0} }
+      @keyframes route-new    { 0%,19%{opacity:0} 21%,95%{opacity:0.85} 98%,100%{opacity:0} }
+
+      /* Genuine-match highlights (MoE-LoRA panel) */
+      .hl-shared { opacity: 0; animation: hl-shared 42s infinite linear; }
+      .hl-new    { opacity: 0; animation: hl-new    42s infinite linear; }
+      @keyframes hl-shared { 0%,13%{opacity:0} 15%,95%{opacity:1} 98%,100%{opacity:0} }
+      @keyframes hl-new    { 0%,17%{opacity:0} 19%,95%{opacity:1} 98%,100%{opacity:0} }
+
+      /* MoRAM self-activation: all atom A_i keys pulse cyan when an input arrives.
+         Double pulse within Stage 2 — once for x_shared, once for x_novel. */
+      .score-step    { opacity: 0; animation: score-pulse 42s infinite linear; }
+      .score-overlay { fill: #7dd3fc; }
+      .score-label   { fill: #0369a1; font-style: italic; font-size: 13px; font-weight: 600; opacity: 0; animation: score-pulse 42s infinite linear; }
+      @keyframes score-pulse {
+        0%,12%   { opacity: 0; }
+        13%,15%  { opacity: 0.9; }    /* x_shared scoring */
+        16%,17%  { opacity: 0; }
+        18%,20%  { opacity: 0.9; }    /* x_novel scoring */
+        22%,100% { opacity: 0; }
+      }
+
+      /* MoRAM panel: highlight then route, same Stage 2 cadence. */
+      .hl-shared-moram   { opacity: 0; animation: hl-shared-moram   42s infinite linear; }
+      .hl-new-moram      { opacity: 0; animation: hl-new-moram      42s infinite linear; }
+      .route-shared-moram{ opacity: 0; animation: route-shared-moram 42s infinite linear; }
+      .route-new-moram   { opacity: 0; animation: route-new-moram    42s infinite linear; }
+      @keyframes hl-shared-moram    { 0%,13%{opacity:0} 15%,95%{opacity:1}    98%,100%{opacity:0} }
+      @keyframes hl-new-moram       { 0%,17%{opacity:0} 19%,95%{opacity:1}    98%,100%{opacity:0} }
+      @keyframes route-shared-moram { 0%,15%{opacity:0} 17%,95%{opacity:0.85} 98%,100%{opacity:0} }
+      @keyframes route-new-moram    { 0%,19%{opacity:0} 21%,95%{opacity:0.85} 98%,100%{opacity:0} }
+
+      /* MoE-LoRA pathologies:
+           ① intra-expert interference at end of Stage 2
+           ② inter-expert redundancy in Stage 3
+           ③ routing collapse in Stage 4 (after badge swap to Inference) */
+      .path-interf   { opacity: 0; animation: path-interf   42s infinite linear; }
+      .path-redund   { opacity: 0; animation: path-redund   42s infinite linear; }
+      .path-collapse { opacity: 0; animation: path-collapse 42s infinite linear; }
+      @keyframes path-interf   { 0%,19%{opacity:0} 22%,95%{opacity:0.85} 98%,100%{opacity:0} }
+      @keyframes path-redund   { 0%,25%{opacity:0} 28%,95%{opacity:0.85} 98%,100%{opacity:0} }
+      @keyframes path-collapse { 0%,41%{opacity:0} 44%,95%{opacity:0.55} 98%,100%{opacity:0} }
+
+      .fire-true  { fill: #fed7aa; opacity: 0.85; rx: 1; }
+      .fire-noise { fill: #fef3c7; opacity: 0.85; rx: 1; }
+      .ring-noise { fill: none; stroke: #ca8a04; stroke-width: 1.4; stroke-dasharray: 3 2; rx: 4; }
+      .ring-redund{ fill: none; stroke: #dc2626; stroke-width: 1.8; stroke-dasharray: 5 3; rx: 6; }
+      .ring-expert-fire { fill: none; stroke: #ea580c; stroke-width: 1.7; rx: 6; }
+      .ring-true  { fill: none; stroke: #ea580c; stroke-width: 1.8; rx: 4; }
+
+      /* Annotations — ① at end of Stage 2 (22%), ② in Stage 3 (28%), ③ in Stage 4 (44%).
+         MoRAM benefit annotations are synced 1-1 with their MoE-LoRA pathology counterparts. */
+      .anno              { font-size: 13px; font-weight: 600; font-style: italic; opacity: 0; }
+      .anno.tag-interf   { fill: #ea580c; animation: anno-interf   42s infinite linear; }
+      .anno.tag-redund   { fill: #db2777; animation: anno-redund   42s infinite linear; }
+      .anno.tag-collapse { fill: #7c3aed; animation: anno-collapse 42s infinite linear; }
+      .anno.tag-forget   { fill: #7c2d12; animation: anno-collapse 42s infinite linear; font-weight: 700; }
+      .anno.tag-reuse    { fill: #db2777; animation: anno-reuse    42s infinite linear; font-weight: 700; }
+      .anno.tag-spec     { fill: #ea580c; animation: anno-spec     42s infinite linear; font-weight: 700; }
+      .anno.tag-mit      { fill: #7c3aed; animation: anno-mit      42s infinite linear; font-weight: 700; }
+      @keyframes anno-interf   { 0%,19%{opacity:0} 22%,95%{opacity:1} 98%,100%{opacity:0} }
+      @keyframes anno-redund   { 0%,25%{opacity:0} 28%,95%{opacity:1} 98%,100%{opacity:0} }
+      @keyframes anno-collapse { 0%,41%{opacity:0} 44%,95%{opacity:1} 98%,100%{opacity:0} }
+      @keyframes anno-spec     { 0%,19%{opacity:0} 22%,95%{opacity:1} 98%,100%{opacity:0} }
+      @keyframes anno-reuse    { 0%,25%{opacity:0} 28%,95%{opacity:1} 98%,100%{opacity:0} }
+      @keyframes anno-mit      { 0%,41%{opacity:0} 44%,95%{opacity:1} 98%,100%{opacity:0} }
+
+      /* Inline mechanism callouts — share timing with their parent annotation */
+      .map-interf { opacity: 0; animation: anno-interf 42s infinite linear; font-size: 12px; font-style: italic; fill: #ea580c; text-anchor: middle; }
+      .map-redund { opacity: 0; animation: anno-redund 42s infinite linear; font-size: 12px; font-style: italic; fill: #db2777; text-anchor: middle; }
+      .map-collapse { opacity: 0; animation: anno-collapse 42s infinite linear; font-size: 12px; font-style: italic; fill: #7c3aed; text-anchor: middle; }
+      .map-forget   { opacity: 0; animation: anno-collapse 42s infinite linear; font-size: 12px; font-style: italic; fill: #7c2d12; text-anchor: middle; }
+      .map-reuse { opacity: 0; animation: anno-reuse 42s infinite linear; font-size: 12px; font-style: italic; fill: #db2777; }
+      .map-spec  { opacity: 0; animation: anno-spec  42s infinite linear; font-size: 12px; font-style: italic; fill: #ea580c; }
+      .map-mit   { opacity: 0; animation: anno-mit   42s infinite linear; font-size: 12px; font-style: italic; fill: #7c3aed; }
+
+      @media (prefers-reduced-motion: reduce) {
+        * { animation: none !important; }
+        .cap-d, .tok, .route-shared, .route-new, .hl-shared, .hl-new,
+        .path-interf, .path-redund, .path-collapse,
+        .anno, .map-reuse, .map-spec, .map-mit,
+        .badge-infer { opacity: 1; }
+        .badge-train { opacity: 0; }
+      }
+    ]]></style>
+
+    <linearGradient id="shared-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c7d2fe"/><stop offset="100%" stop-color="#a5b4fc"/>
+    </linearGradient>
+    <linearGradient id="new-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fed7aa"/><stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+
+    <marker id="ah"      markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#1f2937"/></marker>
+    <marker id="ah-warn" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#dc2626"/></marker>
+    <marker id="ah-gray" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#9ca3af"/></marker>
+
+    <symbol id="rank4-expert" viewBox="0 0 60 46">
+      <rect class="expert-bbox" x="0.5" y="0.5" width="59" height="45"/>
+      <text class="mat-letter" x="18" y="10">A</text>
+      <rect class="matA" x="4" y="13" width="28" height="18"/>
+      <line class="mat-divider" x1="4" y1="17.5" x2="32" y2="17.5"/>
+      <line class="mat-divider" x1="4" y1="22"   x2="32" y2="22"/>
+      <line class="mat-divider" x1="4" y1="26.5" x2="32" y2="26.5"/>
+      <rect class="matB" x="38" y="9" width="18" height="28"/>
+      <line class="mat-divider" x1="42.5" y1="9" x2="42.5" y2="37"/>
+      <line class="mat-divider" x1="47"   y1="9" x2="47"   y2="37"/>
+      <line class="mat-divider" x1="51.5" y1="9" x2="51.5" y2="37"/>
+      <text class="mat-letter" x="47" y="43">B</text>
+    </symbol>
+    <symbol id="rank4-expert-current" viewBox="0 0 60 46">
+      <rect class="expert-bbox" x="0.5" y="0.5" width="59" height="45" stroke="#3b82f6"/>
+      <text class="mat-letter current" x="18" y="10">A</text>
+      <rect class="matA current" x="4" y="13" width="28" height="18"/>
+      <line class="mat-divider current" x1="4" y1="17.5" x2="32" y2="17.5"/>
+      <line class="mat-divider current" x1="4" y1="22"   x2="32" y2="22"/>
+      <line class="mat-divider current" x1="4" y1="26.5" x2="32" y2="26.5"/>
+      <rect class="matB current" x="38" y="9" width="18" height="28"/>
+      <line class="mat-divider current" x1="42.5" y1="9" x2="42.5" y2="37"/>
+      <line class="mat-divider current" x1="47"   y1="9" x2="47"   y2="37"/>
+      <line class="mat-divider current" x1="51.5" y1="9" x2="51.5" y2="37"/>
+      <text class="mat-letter current" x="47" y="43">B</text>
+    </symbol>
+
+    <symbol id="rank1-atom" viewBox="0 0 30 26">
+      <rect class="matA" x="2" y="10" width="18" height="6"/>
+      <rect class="matB" x="22" y="2" width="6" height="22"/>
+    </symbol>
+    <symbol id="rank1-atom-current" viewBox="0 0 30 26">
+      <rect class="matA current" x="2" y="10" width="18" height="6"/>
+      <rect class="matB current" x="22" y="2" width="6" height="22"/>
+    </symbol>
+  </defs>
+
+  <rect width="960" height="760" fill="#ffffff"/>
+
+  <!-- Main title (two lines so it fits the 960px canvas) -->
+  <text class="title" x="480" y="26"><tspan x="480" dy="0">Conventional MoE with LoRA Experts (MoE-LoRA)</tspan><tspan x="480" dy="26">vs. Mixture of Rank-1 Atomic Memory (MoRAM)</tspan></text>
+
+  <!-- Per-stage subtitle removed; explanation is placed inline near each module. -->
+
+  <!-- ============================================================
+       TOP PANEL: MoE-LoRA
+       ============================================================ -->
+  <text class="panel-title" x="30" y="82">MoE-LoRA · adds new sets of rank-<tspan class="var">r</tspan> experts for each task</text>
+  <text class="panel-sub"   x="30" y="98">Each new task contributes 2 rank-<tspan class="var">r</tspan> experts (<tspan class="var">A</tspan> ∈ ℝ<tspan class="math-sup">r × d</tspan>, <tspan class="var">B</tspan> ∈ ℝ<tspan class="math-sup">d × r</tspan>, <tspan class="var">r</tspan> = 4); router <tspan class="var">R</tspan>(<tspan class="vec">x</tspan>) assigns experts — granularity is whole-expert</text>
+
+  <!-- Phase badge (top right) -->
+  <g class="badge-train" transform="translate(840, 70)">
+    <rect width="86" height="20" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+    <text x="43" y="14" font-size="11" font-weight="700" fill="#166534" text-anchor="middle">Training</text>
+  </g>
+  <g class="badge-infer" transform="translate(840, 70)">
+    <rect width="86" height="20" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.2"/>
+    <text x="43" y="14" font-size="11" font-weight="700" fill="#7f1d1d" text-anchor="middle">Inference</text>
+  </g>
+
+  <!-- ① and ② annotations above experts (inline mechanism explanation below each label) -->
+  <text class="anno tag-interf" x="410" y="116" text-anchor="middle">① intra-expert interference</text>
+  <text class="map-interf"      x="410" y="128" text-anchor="middle">(1 of 4 ranks matches; 3 co-fire as noise)</text>
+  <line class="anno tag-interf" x1="335" y1="132" x2="304" y2="138" stroke="#ea580c" stroke-width="0.7" stroke-dasharray="2 2"/>
+  <line class="anno tag-interf" x1="485" y1="132" x2="516" y2="138" stroke="#ea580c" stroke-width="0.7" stroke-dasharray="2 2"/>
+  <text class="anno tag-redund" x="660" y="116" text-anchor="middle">② inter-expert redundancy</text>
+  <text class="map-redund"      x="660" y="128" text-anchor="middle">(new expert co-learned to mask ①)</text>
+  <line class="anno tag-redund" x1="660" y1="132" x2="660" y2="138" stroke="#db2777" stroke-width="0.7" stroke-dasharray="2 2"/>
+
+  <!-- Experts (6) -->
+  <use href="#rank4-expert"         x="274" y="138" width="60" height="46"/>
+  <use href="#rank4-expert"         x="342" y="138" width="60" height="46"/>
+  <use href="#rank4-expert"         x="418" y="138" width="60" height="46"/>
+  <use href="#rank4-expert"         x="486" y="138" width="60" height="46"/>
+  <use href="#rank4-expert-current" x="562" y="138" width="60" height="46"/>
+  <use href="#rank4-expert-current" x="630" y="138" width="60" height="46"/>
+
+  <!-- Task labels + brackets -->
+  <text class="task-label" x="338" y="204">Task 1</text>
+  <text class="task-label" x="482" y="204">Task 2</text>
+  <text class="task-label" x="626" y="204" fill="#1e55aa">Task 3 (current)</text>
+  <path d="M 274,209 L 274,213 L 402,213 L 402,209" fill="none" stroke="#9ca8b8" stroke-width="0.8"/>
+  <path d="M 418,209 L 418,213 L 546,213 L 546,209" fill="none" stroke="#9ca8b8" stroke-width="0.8"/>
+  <path d="M 562,209 L 562,213 L 690,213 L 690,209" fill="none" stroke="#9ca8b8" stroke-width="0.8"/>
+
+  <!-- Input tokens (top panel) — both come from the SAME current task; the subscripts
+       describe feature characteristics, not task origin. -->
+  <text class="tok" x="105" y="216" font-size="11" font-weight="600" fill="#475569" text-anchor="middle" font-style="italic"><tspan x="105">two kinds of input tokens</tspan><tspan x="105" dy="14">of the current task</tspan></text>
+  <g class="tok">
+    <rect x="20" y="238" width="170" height="50" rx="6" fill="url(#shared-grad)" stroke="#4f46e5" stroke-width="1.4"/>
+    <text class="tok-label" x="105" y="258" fill="#312e81"><tspan class="vec">x</tspan><tspan class="text-sub">shared</tspan></text>
+    <text class="tok-desc"  x="105" y="276" fill="#4338ca"><tspan x="105">features similar to</tspan><tspan x="105" dy="11">old-task features</tspan></text>
+  </g>
+  <g class="tok">
+    <rect x="20" y="294" width="170" height="46" rx="6" fill="url(#new-grad)" stroke="#ea580c" stroke-width="1.4"/>
+    <text class="tok-label" x="105" y="314" fill="#9a3412"><tspan class="vec">x</tspan><tspan class="text-sub">novel</tspan></text>
+    <text class="tok-desc"  x="105" y="332" fill="#ea580c">novel features (current-task)</text>
+  </g>
+
+  <!-- Router (explicit "Router" label above the function notation R(x)) -->
+  <g class="tok">
+    <rect x="218" y="262" width="62" height="42" rx="6" fill="#f3f4f6" stroke="#374151" stroke-width="1.3"/>
+    <text x="249" y="278" font-size="12" font-weight="600" fill="#475569" text-anchor="middle">Router</text>
+    <text x="249" y="297" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle"><tspan class="var">R</tspan>(<tspan class="vec">x</tspan>)</text>
+  </g>
+
+  <!-- Token → Router arrows -->
+  <line class="route-shared" x1="190" y1="258" x2="216" y2="277" stroke="#4f46e5" stroke-width="1.4" marker-end="url(#ah)"/>
+  <line class="route-new"    x1="190" y1="314" x2="216" y2="292" stroke="#ea580c" stroke-width="1.4" marker-end="url(#ah)"/>
+
+  <!-- Router → experts (training routes) -->
+  <g class="route-shared">
+    <path d="M 280,278 C 290,218 290,198 304,184" fill="none" stroke="#4f46e5" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#ah)" opacity="0.85"/>
+    <path d="M 280,282 C 360,268 470,218 516,184" fill="none" stroke="#4f46e5" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#ah)" opacity="0.85"/>
+  </g>
+  <g class="route-new">
+    <path d="M 280,292 C 400,278 545,218 592,184" fill="none" stroke="#ea580c" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#ah)" opacity="0.85"/>
+  </g>
+
+  <!-- Geometry reference (expert at canvas y=138, viewBox 60x46):
+       A matrix canvas y range: 151-169, rows at y=151, 155.5, 160, 164.5 (h=4.5)
+       B matrix canvas y range: 147-175, cols at x = expert_x+38, +42.5, +47, +51.5 (w=4.5)
+       T1.E1 (x=274): B cols at 312, 316.5, 321, 325.5
+       T2.E2 (x=486): B cols at 524, 528.5, 533, 537.5
+       T3.E1 (x=562): B cols at 600, 604.5, 609, 613.5
+       T3.E2 (x=630): B cols at 668, 672.5, 677, 681.5 -->
+
+  <!-- Genuine-match highlights: x_shared fires rank 1 in T1.E1, rank 2 in T2.E2 -->
+  <g class="hl-shared">
+    <!-- T1.E1: row 1 of A, col 1 of B -->
+    <rect class="fire-true" x="278"   y="155.5" width="28" height="4.5"/>
+    <rect class="fire-true" x="316.5" y="147"   width="4.5" height="28"/>
+    <rect class="ring-expert-fire" x="274.5" y="138.5" width="59" height="45"/>
+    <!-- T2.E2: row 2 of A, col 2 of B -->
+    <rect class="fire-true" x="490"   y="160"   width="28" height="4.5"/>
+    <rect class="fire-true" x="533"   y="147"   width="4.5" height="28"/>
+    <rect class="ring-expert-fire" x="486.5" y="138.5" width="59" height="45"/>
+  </g>
+  <!-- Genuine-match highlight for x_novel @ T3.E1: rank 0 (row 0 of A, col 0 of B) -->
+  <g class="hl-new">
+    <rect class="fire-true" x="566" y="151" width="28" height="4.5"/>
+    <rect class="fire-true" x="600" y="147" width="4.5" height="28"/>
+    <rect class="ring-expert-fire" x="562.5" y="138.5" width="59" height="45"/>
+  </g>
+
+  <!-- ① intra-expert interference: the OTHER 3 ranks in each fired expert co-fire as noise -->
+  <g class="path-interf">
+    <!-- T1.E1: genuine is rank 1; noise = ranks 0, 2, 3 (rows + cols) -->
+    <rect class="fire-noise" x="278" y="151"   width="28" height="4.5"/>  <!-- row 0 -->
+    <rect class="fire-noise" x="278" y="160"   width="28" height="4.5"/>  <!-- row 2 -->
+    <rect class="fire-noise" x="278" y="164.5" width="28" height="4.5"/>  <!-- row 3 -->
+    <rect class="fire-noise" x="312"   y="147" width="4.5" height="28"/>  <!-- col 0 -->
+    <rect class="fire-noise" x="321"   y="147" width="4.5" height="28"/>  <!-- col 2 -->
+    <rect class="fire-noise" x="325.5" y="147" width="4.5" height="28"/>  <!-- col 3 -->
+    <rect class="ring-noise" x="274.5" y="138.5" width="59" height="45"/>
+    <!-- T2.E2: genuine is rank 2; noise = ranks 0, 1, 3 (rows + cols) -->
+    <rect class="fire-noise" x="490" y="151"   width="28" height="4.5"/>  <!-- row 0 -->
+    <rect class="fire-noise" x="490" y="155.5" width="28" height="4.5"/>  <!-- row 1 -->
+    <rect class="fire-noise" x="490" y="164.5" width="28" height="4.5"/>  <!-- row 3 -->
+    <rect class="fire-noise" x="524"   y="147" width="4.5" height="28"/>  <!-- col 0 -->
+    <rect class="fire-noise" x="528.5" y="147" width="4.5" height="28"/>  <!-- col 1 -->
+    <rect class="fire-noise" x="537.5" y="147" width="4.5" height="28"/>  <!-- col 3 -->
+    <rect class="ring-noise" x="486.5" y="138.5" width="59" height="45"/>
+  </g>
+
+  <!-- ② inter-expert redundancy: T3.E2 fires as a whole (new expert recruited) -->
+  <g class="path-redund">
+    <rect class="fire-noise" x="634" y="151" width="28" height="18"/>  <!-- A entire -->
+    <rect class="fire-noise" x="668" y="147" width="18" height="28"/>  <!-- B entire -->
+    <rect class="ring-redund" x="630.5" y="138.5" width="59" height="45"/>
+    <path d="M 280,288 C 470,318 600,268 660,184" fill="none" stroke="#dc2626" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#ah-warn)" opacity="0.85"/>
+  </g>
+
+  <!-- ③ routing collapse: chaotic fan-out arrows at inference -->
+  <g class="path-collapse">
+    <line x1="280" y1="275" x2="302" y2="184" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 2" marker-end="url(#ah-gray)"/>
+    <line x1="280" y1="279" x2="372" y2="184" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 2" marker-end="url(#ah-gray)"/>
+    <line x1="280" y1="283" x2="448" y2="184" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 2" marker-end="url(#ah-gray)"/>
+    <line x1="280" y1="287" x2="516" y2="184" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 2" marker-end="url(#ah-gray)"/>
+    <line x1="280" y1="291" x2="592" y2="184" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 2" marker-end="url(#ah-gray)"/>
+    <line x1="280" y1="295" x2="660" y2="184" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 2" marker-end="url(#ah-gray)"/>
+  </g>
+
+  <!-- ③ routing collapse label below router (inline mechanism explanation below it) -->
+  <text class="anno tag-collapse" x="249" y="350" text-anchor="middle">③ routing collapse</text>
+  <text class="map-collapse"      x="249" y="364" text-anchor="middle">(overlapping co-firings confuse the router)</text>
+  <line class="anno tag-collapse" x1="249" y1="342" x2="249" y2="303" stroke="#7c3aed" stroke-width="0.8" stroke-dasharray="2 2"/>
+
+  <!-- Forgetting risk summary with inline mechanism explanation -->
+  <text class="anno tag-forget" x="620" y="350" text-anchor="middle">⇒ catastrophic forgetting risk on prior-task data</text>
+  <text class="map-forget"      x="620" y="364" text-anchor="middle">(prior-task data may be rerouted to recently-trained experts)</text>
+
+  <!-- Panel divider -->
+  <line x1="20" y1="380" x2="940" y2="380" stroke="#e5e7eb"/>
+
+  <!-- ============================================================
+       BOTTOM PANEL: MoRAM
+       ============================================================ -->
+  <text class="panel-title" x="30" y="404">MoRAM · linear associative memory of rank-1 key-value atoms</text>
+  <text class="panel-sub"   x="30" y="420">Each new task appends 4 rank-1 memory entries (<tspan class="var">A</tspan><tspan class="math-sub">i</tspan> ∈ ℝ<tspan class="math-sup">1 × d</tspan> key, <tspan class="var">B</tspan><tspan class="math-sub">i</tspan> ∈ ℝ<tspan class="math-sup">d × 1</tspan> value); content-addressable retrieval via <tspan class="var">A</tspan><tspan class="math-sub">i</tspan> · <tspan class="vec">x</tspan> — no router</text>
+
+  <g class="badge-train" transform="translate(840, 392)">
+    <rect width="86" height="20" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+    <text x="43" y="14" font-size="11" font-weight="700" fill="#166534" text-anchor="middle">Training</text>
+  </g>
+  <g class="badge-infer" transform="translate(840, 392)">
+    <rect width="86" height="20" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.2"/>
+    <text x="43" y="14" font-size="11" font-weight="700" fill="#1e40af" text-anchor="middle">Inference</text>
+  </g>
+
+  <!-- Benefit annotations above the atom bank — numbering paired 1-1 with MoE-LoRA pathologies.
+       Mapping callouts are kept short to avoid horizontal overlap; the cross-method detail
+       lives in the self-activation inset below. -->
+  <text class="anno tag-spec"  x="636" y="448" text-anchor="middle">① per-atom specialization</text>
+  <text class="map-spec"       x="636" y="463" text-anchor="middle">(mitigates MoE-LoRA ①)</text>
+  <text class="anno tag-reuse" x="414" y="448" text-anchor="middle">② knowledge reuse</text>
+  <text class="map-reuse"      x="414" y="463" text-anchor="middle">(mitigates MoE-LoRA ②)</text>
+
+  <!-- 12 rank-1 atoms -->
+  <use href="#rank1-atom"         x="274" y="475" width="30" height="26"/>
+  <use href="#rank1-atom"         x="308" y="475" width="30" height="26"/>
+  <use href="#rank1-atom"         x="342" y="475" width="30" height="26"/>
+  <use href="#rank1-atom"         x="376" y="475" width="30" height="26"/>
+  <use href="#rank1-atom"         x="422" y="475" width="30" height="26"/>
+  <use href="#rank1-atom"         x="456" y="475" width="30" height="26"/>
+  <use href="#rank1-atom"         x="490" y="475" width="30" height="26"/>
+  <use href="#rank1-atom"         x="524" y="475" width="30" height="26"/>
+  <use href="#rank1-atom-current" x="570" y="475" width="30" height="26"/>
+  <use href="#rank1-atom-current" x="604" y="475" width="30" height="26"/>
+  <use href="#rank1-atom-current" x="638" y="475" width="30" height="26"/>
+  <use href="#rank1-atom-current" x="672" y="475" width="30" height="26"/>
+
+  <!-- A_i / B_i callouts (always visible since they explain the atom structure) -->
+  <text x="264" y="485" font-size="13" font-weight="700" fill="#1e55aa" text-anchor="end"><tspan class="var">A</tspan><tspan class="math-sub">i</tspan> (key)</text>
+  <line x1="266" y1="483" x2="276" y2="487" stroke="#1e55aa" stroke-width="1"/>
+  <text x="264" y="508" font-size="13" font-weight="700" fill="#0f766e" text-anchor="end"><tspan class="var">B</tspan><tspan class="math-sub">i</tspan> (value)</text>
+  <line x1="266" y1="506" x2="296" y2="480" stroke="#0f766e" stroke-width="1"/>
+
+  <!-- Task labels + brackets (unified bracket style) -->
+  <text class="task-label" x="340" y="519">Task 1</text>
+  <text class="task-label" x="488" y="519">Task 2</text>
+  <text class="task-label" x="636" y="519" fill="#1e55aa">Task 3 (current)</text>
+  <path d="M 274,524 L 274,528 L 406,528 L 406,524" fill="none" stroke="#9ca8b8" stroke-width="0.8"/>
+  <path d="M 422,524 L 422,528 L 554,528 L 554,524" fill="none" stroke="#9ca8b8" stroke-width="0.8"/>
+  <path d="M 570,524 L 570,528 L 702,528 L 702,524" fill="none" stroke="#9ca8b8" stroke-width="0.8"/>
+
+  <!-- ③ forgetting mitigation summary — left-aligned at x=20 so it doesn't cross into the
+       self-activation inset (which lives in the bottom-right at x=530+).  Mapping callout
+       drastically shortened: the "no router · no co-fired experts" detail is now visualised
+       by the inset diagram. -->
+  <text class="anno tag-mit" x="480" y="548" text-anchor="middle">③ forgetting mitigation — frozen <tspan class="var">A</tspan><tspan class="math-sub">i</tspan>, <tspan class="var">B</tspan><tspan class="math-sub">i</tspan> preserve prior-task atom routing</text>
+  <text class="map-mit"      x="480" y="564" text-anchor="middle">(mitigates MoE-LoRA ③)</text>
+
+  <!-- Input tokens (bottom panel) — both come from the SAME current task; the subscripts
+       describe feature characteristics, not task origin. -->
+  <text class="tok" x="105" y="566" font-size="11" font-weight="600" fill="#475569" text-anchor="middle" font-style="italic"><tspan x="105">two kinds of input tokens</tspan><tspan x="105" dy="14">of the current task</tspan></text>
+  <g class="tok">
+    <rect x="20" y="588" width="170" height="50" rx="6" fill="url(#shared-grad)" stroke="#4f46e5" stroke-width="1.4"/>
+    <text class="tok-label" x="105" y="608" fill="#312e81"><tspan class="vec">x</tspan><tspan class="text-sub">shared</tspan></text>
+    <text class="tok-desc"  x="105" y="626" fill="#4338ca"><tspan x="105">features similar to</tspan><tspan x="105" dy="11">old-task features</tspan></text>
+  </g>
+  <g class="tok">
+    <rect x="20" y="640" width="170" height="46" rx="6" fill="url(#new-grad)" stroke="#ea580c" stroke-width="1.4"/>
+    <text class="tok-label" x="105" y="660" fill="#9a3412"><tspan class="vec">x</tspan><tspan class="text-sub">novel</tspan></text>
+    <text class="tok-desc"  x="105" y="678" fill="#ea580c">novel features (current-task)</text>
+  </g>
+
+  <!-- Direct routes (no router) — drawn AFTER self-activation has identified the matching atoms -->
+  <g class="route-shared-moram">
+    <path d="M 190,608 C 240,540 270,510 315,500" fill="none" stroke="#4f46e5" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#ah)"/>
+    <path d="M 190,608 C 300,560 430,520 500,500" fill="none" stroke="#4f46e5" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#ah)"/>
+  </g>
+  <g class="route-new-moram">
+    <path d="M 190,660 C 340,668 480,580 580,500" fill="none" stroke="#ea580c" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#ah)"/>
+    <path d="M 190,660 C 380,688 590,600 648,500" fill="none" stroke="#ea580c" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- Self-activation scoring step: when an input x arrives, every atom A_i autonomously
+       scores it (dot product). Visualised as a brief cyan pulse on all 12 A_i key strips,
+       plus an italic step-label.  Then the matching atoms light up (hl-shared / hl-new). -->
+  <g class="score-step">
+    <!-- T1 atoms 1-4: A_i strips at x = atom_x + 2, width = 18, height = 6, y = 485 -->
+    <rect class="score-overlay" x="276" y="485" width="18" height="6"/>
+    <rect class="score-overlay" x="310" y="485" width="18" height="6"/>
+    <rect class="score-overlay" x="344" y="485" width="18" height="6"/>
+    <rect class="score-overlay" x="378" y="485" width="18" height="6"/>
+    <!-- T2 atoms 1-4 -->
+    <rect class="score-overlay" x="424" y="485" width="18" height="6"/>
+    <rect class="score-overlay" x="458" y="485" width="18" height="6"/>
+    <rect class="score-overlay" x="492" y="485" width="18" height="6"/>
+    <rect class="score-overlay" x="526" y="485" width="18" height="6"/>
+    <!-- T3 atoms 1-4 (current task) -->
+    <rect class="score-overlay" x="572" y="485" width="18" height="6"/>
+    <rect class="score-overlay" x="606" y="485" width="18" height="6"/>
+    <rect class="score-overlay" x="640" y="485" width="18" height="6"/>
+    <rect class="score-overlay" x="674" y="485" width="18" height="6"/>
+  </g>
+  <text class="score-label" x="480" y="438" text-anchor="middle">Self-activation: each <tspan class="var">A</tspan><tspan class="math-sub">i</tspan> autonomously scores <tspan class="vec">x</tspan></text>
+
+  <!-- Atom activations (sparse retrieved after scoring) — appear right after the score pulse,
+       BEFORE the routes draw to them. This is what makes the self-activation step explicit. -->
+  <g class="hl-shared-moram">
+    <rect class="fire-true" x="310" y="485" width="18" height="6"/>
+    <rect class="fire-true" x="330" y="477" width="6" height="22"/>
+    <rect class="ring-true" x="306" y="473" width="32" height="30"/>
+    <rect class="fire-true" x="492" y="485" width="18" height="6"/>
+    <rect class="fire-true" x="512" y="477" width="6" height="22"/>
+    <rect class="ring-true" x="488" y="473" width="32" height="30"/>
+  </g>
+  <g class="hl-new-moram">
+    <rect class="fire-true" x="572" y="485" width="18" height="6"/>
+    <rect class="fire-true" x="592" y="477" width="6" height="22"/>
+    <rect class="ring-true" x="568" y="473" width="32" height="30"/>
+    <rect class="fire-true" x="640" y="485" width="18" height="6"/>
+    <rect class="fire-true" x="660" y="477" width="6" height="22"/>
+    <rect class="ring-true" x="636" y="473" width="32" height="30"/>
+  </g>
+
+  <!-- ============================================================
+       LINEAR ASSOCIATIVE MEMORY (LAM) reference panel.
+       Both halves of MoRAM's central abstraction are made visible:
+         • Retrieve  — content-addressable, self-activated: every
+                       key A_i autonomously scores x; a sparse
+                       subset is read out as the selected memories
+         • Write     — sparse-mixture update using the retrieved
+                       weights: ΔW = Σ_i w_i B_i A_iᵀ, with w_i = 0
+                       for every atom outside the selected subset
+       Always visible throughout the loop.
+       ============================================================ -->
+  <g id="lam-inset">
+    <!-- Background panel -->
+    <rect x="530" y="575" width="410" height="110" rx="8" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.2"/>
+
+    <!-- Title -->
+    <text x="735" y="591" font-size="13" font-weight="700" fill="#075985" text-anchor="middle">Linear Associative Memory</text>
+    <!-- Subtitle: emphasises self-activation, no router, content addressability -->
+    <text x="735" y="604" font-size="10" font-style="italic" font-weight="700" fill="#b91c1c" text-anchor="middle">— self-activated · no router · content-addressable —</text>
+
+    <!-- ===== RETRIEVE side (FIRST): horizontal x → score → sparse → selected ===== -->
+    <text x="540" y="624" font-size="11" font-weight="700" fill="#0369a1">Retrieve</text>
+
+    <!-- Input x bubble -->
+    <rect x="605" y="615" width="26" height="16" rx="3" fill="#fee2e2" stroke="#dc2626" stroke-width="1.2"/>
+    <text x="618" y="627" font-size="12" font-weight="700" fill="#7f1d1d" text-anchor="middle"><tspan class="vec">x</tspan></text>
+
+    <!-- Arrow x → score box -->
+    <line x1="631" y1="623" x2="643" y2="623" stroke="#475569" stroke-width="1.2" marker-end="url(#ah)"/>
+
+    <!-- Score box: parallel scoring across all atom keys (the "distributed router") -->
+    <rect x="645" y="615" width="108" height="16" rx="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.2"/>
+    <text x="699" y="627" font-size="10" fill="#1e3a8a" text-anchor="middle"><tspan class="var">s</tspan><tspan class="math-sub">i</tspan> = <tspan class="var">A</tspan><tspan class="math-sub">i</tspan> · <tspan class="vec">x</tspan>  for all <tspan class="var">i</tspan></text>
+
+    <!-- Arrow score → sparse -->
+    <line x1="753" y1="623" x2="765" y2="623" stroke="#475569" stroke-width="1.2" marker-end="url(#ah)"/>
+
+    <!-- Sparse selector box -->
+    <rect x="767" y="615" width="48" height="16" rx="3" fill="#fef3c7" stroke="#ca8a04" stroke-width="1.2"/>
+    <text x="791" y="627" font-size="11" font-weight="700" fill="#854d0e" text-anchor="middle">sparse</text>
+
+    <!-- Arrow sparse → weights w_i -->
+    <line x1="815" y1="623" x2="827" y2="623" stroke="#475569" stroke-width="1.2" marker-end="url(#ah)"/>
+
+    <!-- Output box: mixture weights w_i (sparse) — feeds directly into the Write formula below -->
+    <rect x="829" y="615" width="106" height="16" rx="3" fill="#d1fae5" stroke="#059669" stroke-width="1.2"/>
+    <text x="882" y="627" font-size="10" font-weight="700" fill="#064e3b" text-anchor="middle">mixture weights <tspan class="var">w</tspan><tspan class="math-sub">i</tspan></text>
+
+    <!-- ===== WRITE side (SECOND): sparse mixture using w_i from retrieval ===== -->
+    <text x="540" y="652" font-size="11" font-weight="700" fill="#0369a1">Write</text>
+    <text x="576" y="652" font-size="12" fill="#0c4a6e">Δ<tspan class="var">W</tspan> = Σ<tspan class="math-sub">i</tspan> <tspan class="var">w</tspan><tspan class="math-sub">i</tspan> <tspan class="var">B</tspan><tspan class="math-sub">i</tspan> <tspan class="var">A</tspan><tspan class="math-sub">i</tspan><tspan class="math-sup">⊤</tspan></text>
+    <text x="708" y="652" font-size="10" font-style="italic" fill="#64748b">(sparse mixture · <tspan class="var">w</tspan><tspan class="math-sub">i</tspan> from retrieval above)</text>
+
+    <!-- Caption strip — emphasises distributed parallel scoring across atoms -->
+    <text x="735" y="678" font-size="9" font-style="italic" fill="#475569" text-anchor="middle">every atom's own key <tspan class="var">A</tspan><tspan class="math-sub">i</tspan> scores <tspan class="vec">x</tspan> in parallel — no centralised router</text>
+  </g>
+
+  <!-- ============================================================
+       LEGEND
+       ============================================================ -->
+  <g transform="translate(40, 720)">
+    <use href="#rank4-expert" x="0" y="-15" width="34" height="26"/>
+    <text class="small" x="42" y="5">rank-<tspan class="var">r</tspan> expert (<tspan class="var">A</tspan> ∈ ℝ<tspan class="math-sup">r × d</tspan>, <tspan class="var">B</tspan> ∈ ℝ<tspan class="math-sup">d × r</tspan>)</text>
+
+    <use href="#rank1-atom" x="250" y="-12" width="26" height="22"/>
+    <text class="small" x="282" y="5">rank-1 atom (<tspan class="var">A</tspan><tspan class="math-sub">i</tspan>, <tspan class="var">B</tspan><tspan class="math-sub">i</tspan>)</text>
+
+    <rect x="420" y="-3" width="14" height="12" rx="3" fill="#fed7aa" stroke="#ea580c" stroke-width="1.3"/>
+    <text class="small" x="440" y="5">genuine match (fires)</text>
+
+    <rect x="580" y="-3" width="14" height="12" rx="3" fill="#fef3c7" stroke="#ca8a04" stroke-width="1.3" stroke-dasharray="3 2"/>
+    <text class="small" x="600" y="5">co-fired irrelevant rank</text>
+
+    <line x1="770" y1="3" x2="790" y2="3" stroke="#dc2626" stroke-width="1.3" stroke-dasharray="4 3"/>
+    <text class="small" x="795" y="5">redundancy / collapse</text>
+  </g>
+</svg>

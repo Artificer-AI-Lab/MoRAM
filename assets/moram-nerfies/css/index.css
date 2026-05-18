@@ -1,0 +1,133 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.moram-related-works {
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #5a5a5a;
+}
+.moram-related-works-links {
+  display: block;
+  margin-top: 0.35rem;
+}
+.moram-related-works-links a {
+  color: hsl(204, 86%, 45%);
+  margin: 0 0.35rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  vertical-align: middle;
+}
+.moram-related-works-links a:hover {
+  text-decoration: underline;
+}
+.moram-related-works .moram-related-icon {
+  font-size: 0.72rem;
+  width: 0.95rem;
+  height: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .icon-link {
+  font-size: 25px;
+  color: #000;
+}
+.link-block a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+.publication-title {
+  font-family: 'Google Sans', sans-serif;
+}
+.publication-authors {
+  font-family: 'Google Sans', sans-serif;
+}
+.publication-venue {
+  color: #555;
+  width: fit-content;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+}
+.publication-authors a {
+  color: hsl(204, 86%, 53%) !important;
+}
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+.author-block {
+  display: inline-block;
+}
+.publication-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+.moram-paper-table.moram-trace-table td.moram-trace-moram-col {
+  background-color: rgba(30, 85, 170, 0.1);
+}
+.moram-paper-table tr.moram-table-highlight > th,
+.moram-paper-table tr.moram-table-highlight > td {
+  background-color: rgba(30, 85, 170, 0.07) !important;
+}
+.moram-table-section {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Display math: avoid scrollable regions on desktop (overflow-x:auto triggers that).
+   Allow horizontal scroll only on narrow viewports if an equation is wider than the column. */
+.moram-eqn {
+  padding: 1rem 0.75rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  max-width: 100%;
+  overflow-x: visible;
+  overflow-y: visible;
+}
+@media screen and (max-width: 768px) {
+  .moram-eqn {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Figure / image captions: match publication UI, slightly larger than body footnotes */
+.moram-caption {
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #5a5a5a;
+  margin-top: 0.625rem;
+  margin-bottom: 0;
+  letter-spacing: 0.01em;
+}
+.moram-caption em {
+  font-style: italic;
+  color: #444;
+}
+
+.moram-paper-figure {
+  margin: 1rem auto 0;
+  max-width: 960px;
+}
+.moram-paper-figure img {
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+}
+.moram-paper-figure figcaption.moram-caption {
+  text-align: left;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
