@@ -190,6 +190,7 @@
 </style>
 
 <script>
+document.addEventListener('DOMContentLoaded', function () {
 (function () {
   // 15s loop schedule (mid-points of each token-reveal window, ms):
   //   Task 1 tokens: 5.5%, 10.5%, 15.5%, 20.5%   →   2200, 4200, 6200, 8200
@@ -286,6 +287,7 @@
   if (obj.contentDocument && obj.contentDocument.readyState === 'complete') init();
   obj.addEventListener('load', init);
 })();
+});
 </script>
 
 <section class="section">
