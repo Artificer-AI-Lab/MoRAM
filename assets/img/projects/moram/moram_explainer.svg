@@ -426,9 +426,9 @@
     <text class="tok-desc"  x="105" y="626" fill="#4338ca"><tspan x="105">features similar to</tspan><tspan x="105" dy="11">old-task features</tspan></text>
   </g>
   <g class="tok">
-    <rect x="20" y="646" width="170" height="46" rx="6" fill="url(#new-grad)" stroke="#ea580c" stroke-width="1.4"/>
-    <text class="tok-label" x="105" y="666" fill="#9a3412"><tspan class="vec">x</tspan><tspan class="text-sub">novel</tspan></text>
-    <text class="tok-desc"  x="105" y="684" fill="#ea580c">novel features (current-task)</text>
+    <rect x="20" y="640" width="170" height="46" rx="6" fill="url(#new-grad)" stroke="#ea580c" stroke-width="1.4"/>
+    <text class="tok-label" x="105" y="660" fill="#9a3412"><tspan class="vec">x</tspan><tspan class="text-sub">novel</tspan></text>
+    <text class="tok-desc"  x="105" y="678" fill="#ea580c">novel features (current-task)</text>
   </g>
 
   <!-- Direct routes (no router) — drawn AFTER self-activation has identified the matching atoms -->
@@ -437,8 +437,8 @@
     <path d="M 190,608 C 300,560 430,520 500,500" fill="none" stroke="#4f46e5" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#ah)"/>
   </g>
   <g class="route-new-moram">
-    <path d="M 190,666 C 340,668 480,580 580,500" fill="none" stroke="#ea580c" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#ah)"/>
-    <path d="M 190,666 C 380,688 590,600 648,500" fill="none" stroke="#ea580c" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#ah)"/>
+    <path d="M 190,660 C 340,668 480,580 580,500" fill="none" stroke="#ea580c" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#ah)"/>
+    <path d="M 190,660 C 380,688 590,600 648,500" fill="none" stroke="#ea580c" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#ah)"/>
   </g>
 
   <!-- Self-activation scoring step: when an input x arrives, every atom A_i autonomously
