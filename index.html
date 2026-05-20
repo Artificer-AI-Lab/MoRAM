@@ -86,6 +86,11 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
+        <figure class="image" style="margin:0 0 1.5rem 0;width:100%;">
+          <img src="assets/img/projects/moram/moram_abstract.svg"
+               alt="High-level MoRAM teaser: token routed to model θ and its growing memory bank, with sparse dynamic retrieval over rank-1 atoms."
+               style="width:100%;height:auto;display:block;">
+        </figure>
         <div class="content has-text-justified">
           <p>Continual learning (CL) with large pre-trained models is challenged by task interference and catastrophic forgetting. Existing LoRA-based Mixture-of-Experts (MoE) methods mitigate forgetting by adding new task-specific adapters and freezing old ones, but often suffer from redundancy, interference, and ambiguous routing due to <strong>coarse-grained</strong> experts and routing.</p>
           <p>We propose <strong>MoRAM</strong> (<strong>M</strong>ixture of <strong>R</strong>ank-1 <strong>A</strong>ssociative <strong>M</strong>emory). Grounded in the view that weight matrices behave as <strong>linear associative memories</strong>, MoRAM grows capacity by incrementally adding <strong>atomic rank-1 memory experts</strong>. Treating rank-1 adapters as <strong>key–value pairs</strong> removes the need for an explicit MoE router: a <strong>self-activation</strong> mechanism lets each memory atom score its own relevance via its intrinsic key, turning adaptation into <strong>content-addressable retrieval</strong>. Experiments on <strong>CLIP</strong> and <strong>LLMs</strong> show that MoRAM improves the plasticity–stability trade-off and generalization while mitigating forgetting.</p>

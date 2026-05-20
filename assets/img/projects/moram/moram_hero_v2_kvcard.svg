@@ -35,17 +35,22 @@
       .block-canonical { fill: #fffdf7; stroke: #fed7aa; stroke-width: 1.4; }
       .block-label     { font-size: 20px; font-weight: 800; letter-spacing: 0.10em; fill: #92400e; }
       .module-box      { fill: #ffffff; stroke: #fdba74; stroke-width: 1.2; }
-      .module-name     { font-size: 24px; font-weight: 800; fill: #0f172a; }
-      .module-sub      { font-size: 17px; font-style: italic; fill: #475569; }
+      .module-name     { font-size: 17px; font-weight: 800; fill: #0f172a; }
+      .module-sub      { font-size: 12px; font-style: italic; fill: #475569; }
       .inline-bank-frame { fill: #fffbeb; stroke: #fbbf24; stroke-width: 1.2; }
       .inline-bank-frame.focus { stroke: #fb923c; stroke-width: 1.6; }
+      /* Pre-trained weight block: subtle gray to read as "frozen base". */
+      .pretrained-frame { fill: #f1f5f9; stroke: #94a3b8; stroke-width: 1.0; }
+      .pretrained-label { font-size: 13px; font-weight: 700; fill: #64748b; letter-spacing: 0.02em; }
+      .pretrained-sub   { font-size: 10px; font-style: italic; fill: #94a3b8; }
+      .bank-overlay-sub { font-size: 9px;  font-style: italic; fill: #9a3412; }
       .inline-bank-label { font-size: 16px; font-weight: 800; letter-spacing: 0.04em; fill: #92400e; }
       .inline-bank-dot   { fill: #fb923c; }
       .flow-arrow        { fill: none; stroke: #475569; stroke-width: 1.5; }
       .flow-label        { font-size: 20px; font-weight: 600; fill: #475569; font-style: italic; }
       .ghost-layer       { fill: #fef3c7; stroke: #fde68a; stroke-width: 1; }
-      .ghost-text        { font-size: 16px; font-weight: 700; fill: #92400e; }
-      .layers-label      { font-size: 18px; font-weight: 800; fill: #475569; letter-spacing: 0.02em; }
+      .ghost-text        { font-size: 12px; font-weight: 700; fill: #92400e; }
+      .layers-label      { font-size: 13px; font-weight: 800; fill: #475569; letter-spacing: 0.02em; }
       .zoom-callout      { fill: none; stroke: #fb923c; stroke-width: 1; stroke-dasharray: 4 3; opacity: 0.7; }
 
       /* === Memory bank atoms (Step 3) === */
@@ -70,20 +75,208 @@
       .atom-val-t3     { fill: #a78bfa; }
       .bank-key-legend { font-size: 17px; font-weight: 600; fill: #475569; }
       .kv-label { font-size: 18px; font-weight: 800; fill: #475569; opacity: 0.7; }
+      /* Overrides for the flat horizontal atom bars (height 18px). */
+      .kv-label--flat { font-size: 11px; opacity: 0.9; letter-spacing: 0.02em; }
+
+      /* === Transient cells inside the flat atom bars ===
+         s_i (activation, key·x) and w_i (sparse weight) are computed per
+         token, not stored parameters. Visual cues so they look different
+         from the solid key/value cells:
+           - dashed thin outline instead of solid fill
+           - very pale background so the magnitude bar reads cleanly
+           - smaller italic label to convey "scalar/runtime"
+      */
+      .atom-act-cell, .atom-weight-cell {
+        fill: #f8fafc;
+        stroke: #94a3b8;
+        stroke-width: 0.7;
+        stroke-dasharray: 2 1.5;
+      }
+      .atom-weight-cell { stroke: #cbd5e1; }
+      .atom-act-bar    { fill: #94a3b8; opacity: 0.7; }
+      /* Bar rect stays at full cell width; we drive the visible width with
+         transform: scaleX(w) so that scaleX = the atom's w_i scalar. */
+      .atom-weight-bar {
+        opacity: 0.85;
+        transform-box: fill-box;
+        transform-origin: left center;
+        transform: scaleX(0);
+      }
+      .atom-weight-bar-t1 { fill: #ea580c; }
+      .atom-weight-bar-t2 { fill: #db2777; }
+      .atom-weight-bar-t3 { fill: #7c3aed; }
+      /* Per-atom w_i timelines. Each keyframe stop sets scaleX = w (so visible
+         width = w × cell width). Values reflect MoRAM-style sparse top-k:
+         most atoms idle at ~0.08; the 1–2 selected atoms spike to ~0.5–1.0
+         within each token window; sums approximate 1.0 across revealed atoms. */
+      .atom-weight-bar-T1-1 { animation: w-T1-1 40s infinite linear; }
+      .atom-weight-bar-T1-2 { animation: w-T1-2 40s infinite linear; }
+      .atom-weight-bar-T1-3 { animation: w-T1-3 40s infinite linear; }
+      .atom-weight-bar-T1-4 { animation: w-T1-4 40s infinite linear; }
+      /* Full top-k coverage plan (top-1 + top-2/3/4 each across cases a/b/c):
+         T1-tok1 top-1 (c):    T1-1 (0.95)
+         T1-tok2 top-2 (c):    T1-2 (0.65), T1-3 (0.35)
+         T1-tok3 top-2 (c):    T1-1 (0.65), T1-4 (0.35)
+         T1-tok4 top-1 (c):    T1-3 (0.85)
+         T2-tok1 top-2 (a):    T1-1 (0.65), T1-3 (0.35)
+         T2-tok2 top-2 (b):    T1-2 (0.65), T2-1 (0.35)
+         T2-tok3 top-3 (c):    T2-1 (0.40), T2-2 (0.35), T2-3 (0.25)
+         T2-tok4 top-3 (a):    T1-4 (0.50), T1-1 (0.30), T1-3 (0.20)
+         T3-tok1 top-3 (b):    T1-1 (0.45), T2-2 (0.30), T3-1 (0.25)
+         T3-tok2 top-4 (c):    T3-1 (0.30), T3-2 (0.25), T3-3 (0.25), T3-4 (0.20)
+         T3-tok3 top-4 (a):    T1-1 (0.30), T1-3 (0.25), T2-1 (0.25), T2-4 (0.20)
+         T3-tok4 top-4 (b):    T1-3 (0.30), T2-2 (0.25), T3-2 (0.25), T3-4 (0.20)  */
+      @keyframes w-T1-1 {
+        0%,2%    { transform: scaleX(0); }
+        3%       { transform: scaleX(0.05); }
+        4%,7%    { transform: scaleX(0.95); }   /* T1-tok1 top-1 (c) */
+        8%,13%   { transform: scaleX(0.05); }
+        14%,17%  { transform: scaleX(0.72); }   /* T1-tok3 top-2 (c) */
+        18%,25%  { transform: scaleX(0.05); }
+        26%,29%  { transform: scaleX(0.65); }   /* T2-tok1 top-2 (a) */
+        30%,40%  { transform: scaleX(0.05); }
+        41%,44%  { transform: scaleX(0.25); }   /* T2-tok4 top-3 (a) */
+        45%,47%  { transform: scaleX(0.05); }
+        48%,51%  { transform: scaleX(0.68); }   /* T3-tok1 top-3 (b) — dominant */
+        52%,57%  { transform: scaleX(0.05); }
+        58%,61%  { transform: scaleX(0.65); }   /* T3-tok3 top-4 (a) — dominant */
+        62%,80%  { transform: scaleX(0.05); }
+        82%,100% { transform: scaleX(0); }
+      }
+      @keyframes w-T1-2 {
+        0%,2%    { transform: scaleX(0); }
+        3%,8%    { transform: scaleX(0.05); }
+        9%,12%   { transform: scaleX(0.85); }   /* T1-tok2 top-2 (c) */
+        13%,30%  { transform: scaleX(0.05); }
+        31%,34%  { transform: scaleX(0.62); }   /* T2-tok2 top-2 (b) */
+        35%,80%  { transform: scaleX(0.05); }
+        82%,100% { transform: scaleX(0); }
+      }
+      @keyframes w-T1-3 {
+        0%,2%    { transform: scaleX(0); }
+        3%,8%    { transform: scaleX(0.05); }
+        9%,12%   { transform: scaleX(0.15); }   /* T1-tok2 top-2 (c) */
+        13%,18%  { transform: scaleX(0.05); }
+        19%,22%  { transform: scaleX(0.88); }   /* T1-tok4 top-1 (c) */
+        23%,25%  { transform: scaleX(0.05); }
+        26%,29%  { transform: scaleX(0.35); }   /* T2-tok1 top-2 (a) */
+        30%,40%  { transform: scaleX(0.05); }
+        41%,44%  { transform: scaleX(0.13); }   /* T2-tok4 top-3 (a) */
+        45%,57%  { transform: scaleX(0.05); }
+        58%,61%  { transform: scaleX(0.15); }   /* T3-tok3 top-4 (a) */
+        62%      { transform: scaleX(0.05); }
+        63%,66%  { transform: scaleX(0.62); }   /* T3-tok4 top-4 (b) — dominant */
+        67%,80%  { transform: scaleX(0.05); }
+        82%,100% { transform: scaleX(0); }
+      }
+      @keyframes w-T1-4 {
+        0%,2%    { transform: scaleX(0); }
+        3%,13%   { transform: scaleX(0.05); }
+        14%,17%  { transform: scaleX(0.28); }   /* T1-tok3 top-2 (c) */
+        18%,40%  { transform: scaleX(0.05); }
+        41%,44%  { transform: scaleX(0.62); }   /* T2-tok4 top-3 (a) — dominant */
+        45%,80%  { transform: scaleX(0.05); }
+        82%,100% { transform: scaleX(0); }
+      }
+      .atom-weight-bar-T2-1 { animation: w-T2-1 40s infinite linear; }
+      .atom-weight-bar-T2-2 { animation: w-T2-2 40s infinite linear; }
+      .atom-weight-bar-T2-3 { animation: w-T2-3 40s infinite linear; }
+      .atom-weight-bar-T2-4 { animation: w-T2-4 40s infinite linear; }
+      @keyframes w-T2-1 {
+        0%,24%   { transform: scaleX(0); }
+        25%,30%  { transform: scaleX(0.05); }
+        31%,34%  { transform: scaleX(0.38); }  /* T2-tok2 top-2 (b) novel */
+        35%      { transform: scaleX(0.05); }
+        36%,39%  { transform: scaleX(0.65); }  /* T2-tok3 top-3 (c) novel — dominant */
+        40%,57%  { transform: scaleX(0.05); }
+        58%,61%  { transform: scaleX(0.12); }  /* T3-tok3 top-4 (a) */
+        62%,80%  { transform: scaleX(0.05); }
+        82%,100% { transform: scaleX(0); }
+      }
+      @keyframes w-T2-2 {
+        0%,24%   { transform: scaleX(0); }
+        25%,35%  { transform: scaleX(0.05); }
+        36%,39%  { transform: scaleX(0.22); }  /* T2-tok3 top-3 (c) novel */
+        40%,47%  { transform: scaleX(0.05); }
+        48%,51%  { transform: scaleX(0.20); }  /* T3-tok1 top-3 (b) */
+        52%,62%  { transform: scaleX(0.05); }
+        63%,66%  { transform: scaleX(0.20); }  /* T3-tok4 top-4 (b) */
+        67%,80%  { transform: scaleX(0.05); }
+        82%,100% { transform: scaleX(0); }
+      }
+      @keyframes w-T2-3 {
+        0%,24%   { transform: scaleX(0); }
+        25%,35%  { transform: scaleX(0.05); }
+        36%,39%  { transform: scaleX(0.13); }  /* T2-tok3 top-3 (c) novel */
+        40%,80%  { transform: scaleX(0.05); }
+        82%,100% { transform: scaleX(0); }
+      }
+      @keyframes w-T2-4 {
+        0%,24%   { transform: scaleX(0); }
+        25%,57%  { transform: scaleX(0.05); }
+        58%,61%  { transform: scaleX(0.08); }  /* T3-tok3 top-4 (a) */
+        62%,80%  { transform: scaleX(0.05); }
+        82%,100% { transform: scaleX(0); }
+      }
+      .atom-weight-bar-T3-1 { animation: w-T3-1 40s infinite linear; }
+      .atom-weight-bar-T3-2 { animation: w-T3-2 40s infinite linear; }
+      .atom-weight-bar-T3-3 { animation: w-T3-3 40s infinite linear; }
+      .atom-weight-bar-T3-4 { animation: w-T3-4 40s infinite linear; }
+      @keyframes w-T3-1 {
+        0%,46%   { transform: scaleX(0); }
+        47%      { transform: scaleX(0.05); }
+        48%,51%  { transform: scaleX(0.12); }   /* T3-tok1 top-3 (b) novel */
+        52%      { transform: scaleX(0.05); }
+        53%,56%  { transform: scaleX(0.62); }   /* T3-tok2 top-4 (c) novel — dominant */
+        57%,80%  { transform: scaleX(0.05); }
+        82%,100% { transform: scaleX(0); }
+      }
+      @keyframes w-T3-2 {
+        0%,46%   { transform: scaleX(0); }
+        47%,52%  { transform: scaleX(0.05); }
+        53%,56%  { transform: scaleX(0.17); }   /* T3-tok2 top-4 (c) novel */
+        57%,62%  { transform: scaleX(0.05); }
+        63%,66%  { transform: scaleX(0.10); }   /* T3-tok4 top-4 (b) */
+        67%,80%  { transform: scaleX(0.05); }
+        82%,100% { transform: scaleX(0); }
+      }
+      @keyframes w-T3-3 {
+        0%,46%   { transform: scaleX(0); }
+        47%,52%  { transform: scaleX(0.05); }
+        53%,56%  { transform: scaleX(0.13); }   /* T3-tok2 top-4 (c) novel */
+        57%,80%  { transform: scaleX(0.05); }
+        82%,100% { transform: scaleX(0); }
+      }
+      @keyframes w-T3-4 {
+        0%,46%   { transform: scaleX(0); }
+        47%,52%  { transform: scaleX(0.05); }
+        53%,56%  { transform: scaleX(0.08); }   /* T3-tok2 top-4 (c) novel */
+        57%,62%  { transform: scaleX(0.05); }
+        63%,66%  { transform: scaleX(0.08); }   /* T3-tok4 top-4 (b) */
+        67%,80%  { transform: scaleX(0.05); }
+        82%,100% { transform: scaleX(0); }
+      }
+      .atom-act-label, .atom-weight-label {
+        font-size: 11px;
+        font-weight: 600;
+        font-style: italic;
+        fill: #475569;
+        opacity: 0.85;
+      }
 
       /* === Sparse retrieval module === */
       .sim-module { opacity: 0; }
       .sim-module-box { fill: #fffbeb; stroke: #f97316; stroke-width: 1.4; stroke-dasharray: 5 3; }
       .sim-module-label { font-size: 20px; font-weight: 800; fill: #92400e; letter-spacing: 0.03em; }
       .sim-module-sub { font-size: 13px; font-weight: 600; fill: #78716c; font-style: italic; opacity: 0; }
-      .sim-keys-T1 { animation: skeys-T1 100s infinite linear; }
-      .sim-keys-T2 { animation: skeys-T2 100s infinite linear; }
-      .sim-keys-T3 { animation: skeys-T3 100s infinite linear; }
+      .sim-keys-T1 { animation: skeys-T1 40s infinite linear; }
+      .sim-keys-T2 { animation: skeys-T2 40s infinite linear; }
+      .sim-keys-T3 { animation: skeys-T3 40s infinite linear; }
       @keyframes skeys-T1 { 0%,2%{opacity:0} 3%,22%{opacity:1} 23%{opacity:0} }
       @keyframes skeys-T2 { 0%,24%{opacity:0} 25%,44%{opacity:1} 45%{opacity:0} }
       @keyframes skeys-T3 { 0%,46%{opacity:0} 47%,66%{opacity:1} 67%{opacity:0} }
       .sim-module-input { fill: none; stroke: #92400e; stroke-width: 1.5; stroke-dasharray: 5 3; }
-      .sim-module { animation: sim-mod 100s infinite linear; }
+      .sim-module { animation: sim-mod 40s infinite linear; }
       @keyframes sim-mod {
         0%,2%{opacity:0}
         3%,22%{opacity:1} 23%{opacity:0}
@@ -106,9 +299,144 @@
       .atom-T2-1, .atom-T2-2, .atom-T2-3, .atom-T2-4,
       .atom-T3-1, .atom-T3-2, .atom-T3-3, .atom-T3-4 { opacity: 0; }
 
-      .atom-T1-1, .atom-T1-2, .atom-T1-3, .atom-T1-4 { animation: g-T1 100s infinite linear; }
-      .atom-T2-1, .atom-T2-2, .atom-T2-3, .atom-T2-4 { animation: g-T2 100s infinite linear; }
-      .atom-T3-1, .atom-T3-2, .atom-T3-3, .atom-T3-4 { animation: g-T3 100s infinite linear; }
+      /* Per-atom opacity timelines — atoms dim (opacity 0.45) when not in the
+         current top-k, brighten to 1.0 when selected. Replaces the shared
+         g-T1/g-T2/g-T3 reveal keyframes. */
+      .atom-T1-1 { animation: a-T1-1 40s infinite linear; }
+      .atom-T1-2 { animation: a-T1-2 40s infinite linear; }
+      .atom-T1-3 { animation: a-T1-3 40s infinite linear; }
+      .atom-T1-4 { animation: a-T1-4 40s infinite linear; }
+      .atom-T2-1 { animation: a-T2-1 40s infinite linear; }
+      .atom-T2-2 { animation: a-T2-2 40s infinite linear; }
+      .atom-T2-3 { animation: a-T2-3 40s infinite linear; }
+      .atom-T2-4 { animation: a-T2-4 40s infinite linear; }
+      .atom-T3-1 { animation: a-T3-1 40s infinite linear; }
+      .atom-T3-2 { animation: a-T3-2 40s infinite linear; }
+      .atom-T3-3 { animation: a-T3-3 40s infinite linear; }
+      .atom-T3-4 { animation: a-T3-4 40s infinite linear; }
+      /* Activation windows mirror each atom's w-T*-* spikes. */
+      @keyframes a-T1-1 {
+        0%,2%    { opacity: 0; }
+        3%       { opacity: 0.45; }
+        4%,7%    { opacity: 1; }                /* T1-tok1 (c) */
+        8%,13%   { opacity: 0.45; }
+        14%,17%  { opacity: 1; }                /* T1-tok3 (c) */
+        18%,25%  { opacity: 0.45; }
+        26%,29%  { opacity: 1; }                /* T2-tok1 (a) */
+        30%,40%  { opacity: 0.45; }
+        41%,44%  { opacity: 1; }                /* T2-tok4 (a) */
+        45%,47%  { opacity: 0.45; }
+        48%,51%  { opacity: 1; }                /* T3-tok1 (b) */
+        52%,57%  { opacity: 0.45; }
+        58%,61%  { opacity: 1; }                /* T3-tok3 (a) */
+        62%,80%  { opacity: 0.45; }
+        82%,100% { opacity: 0; }
+      }
+      @keyframes a-T1-2 {
+        0%,2%    { opacity: 0; }
+        3%,8%    { opacity: 0.45; }
+        9%,12%   { opacity: 1; }                /* T1-tok2 */
+        13%,30%  { opacity: 0.45; }
+        31%,34%  { opacity: 1; }                /* T2-tok2 (b) */
+        35%,80%  { opacity: 0.45; }
+        82%,100% { opacity: 0; }
+      }
+      @keyframes a-T1-3 {
+        0%,2%    { opacity: 0; }
+        3%,8%    { opacity: 0.45; }
+        9%,12%   { opacity: 1; }                /* T1-tok2 (c) */
+        13%,18%  { opacity: 0.45; }
+        19%,22%  { opacity: 1; }                /* T1-tok4 (c) solo */
+        23%,25%  { opacity: 0.45; }
+        26%,29%  { opacity: 1; }                /* T2-tok1 (a) */
+        30%,40%  { opacity: 0.45; }
+        41%,44%  { opacity: 1; }                /* T2-tok4 (a) */
+        45%,57%  { opacity: 0.45; }
+        58%,61%  { opacity: 1; }                /* T3-tok3 (a) */
+        62%      { opacity: 0.45; }
+        63%,66%  { opacity: 1; }                /* T3-tok4 (b) */
+        67%,80%  { opacity: 0.45; }
+        82%,100% { opacity: 0; }
+      }
+      @keyframes a-T1-4 {
+        0%,2%    { opacity: 0; }
+        3%,13%   { opacity: 0.45; }
+        14%,17%  { opacity: 1; }                /* T1-tok3 (c) */
+        18%,40%  { opacity: 0.45; }
+        41%,44%  { opacity: 1; }                /* T2-tok4 (a) */
+        45%,80%  { opacity: 0.45; }
+        82%,100% { opacity: 0; }
+      }
+      @keyframes a-T2-1 {
+        0%,24%   { opacity: 0; }
+        25%,30%  { opacity: 0.45; }
+        31%,34%  { opacity: 1; }                /* T2-tok2 top-2 (b) novel */
+        35%      { opacity: 0.45; }
+        36%,39%  { opacity: 1; }                /* T2-tok3 top-3 (c) novel */
+        40%,57%  { opacity: 0.45; }
+        58%,61%  { opacity: 1; }                /* T3-tok3 top-4 (a) */
+        62%,80%  { opacity: 0.45; }
+        82%,100% { opacity: 0; }
+      }
+      @keyframes a-T2-2 {
+        0%,24%   { opacity: 0; }
+        25%,35%  { opacity: 0.45; }
+        36%,39%  { opacity: 1; }                /* T2-tok3 top-3 (c) novel */
+        40%,47%  { opacity: 0.45; }
+        48%,51%  { opacity: 1; }                /* T3-tok1 top-3 (b) */
+        52%,62%  { opacity: 0.45; }
+        63%,66%  { opacity: 1; }                /* T3-tok4 top-4 (b) */
+        67%,80%  { opacity: 0.45; }
+        82%,100% { opacity: 0; }
+      }
+      @keyframes a-T2-3 {
+        0%,24%   { opacity: 0; }
+        25%,35%  { opacity: 0.45; }
+        36%,39%  { opacity: 1; }                /* T2-tok3 top-3 (c) novel */
+        40%,80%  { opacity: 0.45; }
+        82%,100% { opacity: 0; }
+      }
+      @keyframes a-T2-4 {
+        0%,24%   { opacity: 0; }
+        25%,57%  { opacity: 0.45; }
+        58%,61%  { opacity: 1; }                /* T3-tok3 top-4 (a) */
+        62%,80%  { opacity: 0.45; }
+        82%,100% { opacity: 0; }
+      }
+      @keyframes a-T3-1 {
+        0%,46%   { opacity: 0; }
+        47%      { opacity: 0.45; }
+        48%,51%  { opacity: 1; }                /* T3-tok1 top-3 (b) novel */
+        52%      { opacity: 0.45; }
+        53%,56%  { opacity: 1; }                /* T3-tok2 top-4 (c) novel */
+        57%,80%  { opacity: 0.45; }
+        82%,100% { opacity: 0; }
+      }
+      @keyframes a-T3-2 {
+        0%,46%   { opacity: 0; }
+        47%,52%  { opacity: 0.45; }
+        53%,56%  { opacity: 1; }                /* T3-tok2 top-4 (c) novel */
+        57%,62%  { opacity: 0.45; }
+        63%,66%  { opacity: 1; }                /* T3-tok4 top-4 (b) */
+        67%,80%  { opacity: 0.45; }
+        82%,100% { opacity: 0; }
+      }
+      @keyframes a-T3-3 {
+        0%,46%   { opacity: 0; }
+        47%,52%  { opacity: 0.45; }
+        53%,56%  { opacity: 1; }                /* T3-tok2 top-4 (c) novel */
+        57%,80%  { opacity: 0.45; }
+        82%,100% { opacity: 0; }
+      }
+      @keyframes a-T3-4 {
+        0%,46%   { opacity: 0; }
+        47%,52%  { opacity: 0.45; }
+        53%,56%  { opacity: 1; }                /* T3-tok2 top-4 (c) novel */
+        57%,62%  { opacity: 0.45; }
+        63%,66%  { opacity: 1; }                /* T3-tok4 top-4 (b) */
+        67%,80%  { opacity: 0.45; }
+        82%,100% { opacity: 0; }
+      }
 
       @keyframes g-T1 { 0%,2%{opacity:0}  4%,80%{opacity:1} 82%,100%{opacity:0} }
       @keyframes g-T2 { 0%,24%{opacity:0} 26%,80%{opacity:1} 82%,100%{opacity:0} }
@@ -116,15 +444,15 @@
 
       /* Row scaffolding (label, sub, divider) appears just before the row's first atom */
       .row-grow-T1, .row-grow-T2, .row-grow-T3 { opacity: 0; }
-      .row-grow-T1 { animation: row-T1 100s infinite linear; }
-      .row-grow-T2 { animation: row-T2 100s infinite linear; }
-      .row-grow-T3 { animation: row-T3 100s infinite linear; }
+      .row-grow-T1 { animation: row-T1 40s infinite linear; }
+      .row-grow-T2 { animation: row-T2 40s infinite linear; }
+      .row-grow-T3 { animation: row-T3 40s infinite linear; }
       @keyframes row-T1 { 0%,1%{opacity:0}  2%,80%{opacity:1} 82%,100%{opacity:0} }
       @keyframes row-T2 { 0%,23%{opacity:0} 24%,80%{opacity:1} 82%,100%{opacity:0} }
       @keyframes row-T3 { 0%,45%{opacity:0} 46%,80%{opacity:1} 82%,100%{opacity:0} }
 
       /* Task chips: hidden until their phase, highlighted while active, dimmed afterward */
-      .chip-T1, .chip-T2, .chip-T3, .arrow-T2, .arrow-T3 { animation-duration: 100s; animation-iteration-count: infinite; animation-timing-function: linear; }
+      .chip-T1, .chip-T2, .chip-T3, .arrow-T2, .arrow-T3 { animation-duration: 40s; animation-iteration-count: infinite; animation-timing-function: linear; }
       .chip-T1 { animation-name: chip-T1; }
       .chip-T2 { animation-name: chip-T2; }
       .chip-T3 { animation-name: chip-T3; }
@@ -164,14 +492,14 @@
       .atom-icon-snow { fill: #7dd3fc; }
 
       /* Snowflake: visible when atom exists BUT hidden during that atom's fire windows */
-      .atom-icon-snow-T1-1 { animation: sf-T1-1 100s infinite linear; }
-      .atom-icon-snow-T1-2 { animation: sf-T1-2 100s infinite linear; }
-      .atom-icon-snow-T1-3 { animation: sf-T1-3 100s infinite linear; }
-      .atom-icon-snow-T1-4 { animation: sf-T1-4 100s infinite linear; }
-      .atom-icon-snow-T2-12 { animation: sf-T2-12 100s infinite linear; }
-      .atom-icon-snow-T2-rest { animation: g-T2 100s infinite linear; }
-      .atom-icon-snow-T3-12 { animation: sf-T3-12 100s infinite linear; }
-      .atom-icon-snow-T3-rest { animation: g-T3 100s infinite linear; }
+      .atom-icon-snow-T1-1 { animation: sf-T1-1 40s infinite linear; }
+      .atom-icon-snow-T1-2 { animation: sf-T1-2 40s infinite linear; }
+      .atom-icon-snow-T1-3 { animation: sf-T1-3 40s infinite linear; }
+      .atom-icon-snow-T1-4 { animation: sf-T1-4 40s infinite linear; }
+      .atom-icon-snow-T2-12 { animation: sf-T2-12 40s infinite linear; }
+      .atom-icon-snow-T2-rest { animation: g-T2 40s infinite linear; }
+      .atom-icon-snow-T3-12 { animation: sf-T3-12 40s infinite linear; }
+      .atom-icon-snow-T3-rest { animation: g-T3 40s infinite linear; }
       @keyframes sf-T1-1 { 0%,7%{opacity:0} 8%,13%{opacity:1} 14%,17%{opacity:0} 18%,80%{opacity:1} 82%,100%{opacity:0} }
       @keyframes sf-T1-2 { 0%,3%{opacity:0} 4%,8%{opacity:1} 9%,12%{opacity:0} 13%,80%{opacity:1} 82%,100%{opacity:0} }
       @keyframes sf-T1-3 { 0%,3%{opacity:0} 4%,8%{opacity:1} 9%,12%{opacity:0} 13%,18%{opacity:1} 19%,22%{opacity:0} 23%,80%{opacity:1} 82%,100%{opacity:0} }
@@ -180,12 +508,12 @@
       @keyframes sf-T3-12 { 0%,47%{opacity:0} 48%,52%{opacity:1} 53%,56%{opacity:0} 57%,80%{opacity:1} 82%,100%{opacity:0} }
 
       /* Fire: visible only during novel-token training windows per atom */
-      .atom-icon-fire-T1-1 { animation: af-T1-1 100s infinite linear; }
-      .atom-icon-fire-T1-2 { animation: af-T1-2 100s infinite linear; }
-      .atom-icon-fire-T1-3 { animation: af-T1-3 100s infinite linear; }
-      .atom-icon-fire-T1-4 { animation: af-T1-4 100s infinite linear; }
-      .atom-icon-fire-T2-12 { animation: af-T2-12 100s infinite linear; }
-      .atom-icon-fire-T3-12 { animation: af-T3-12 100s infinite linear; }
+      .atom-icon-fire-T1-1 { animation: af-T1-1 40s infinite linear; }
+      .atom-icon-fire-T1-2 { animation: af-T1-2 40s infinite linear; }
+      .atom-icon-fire-T1-3 { animation: af-T1-3 40s infinite linear; }
+      .atom-icon-fire-T1-4 { animation: af-T1-4 40s infinite linear; }
+      .atom-icon-fire-T2-12 { animation: af-T2-12 40s infinite linear; }
+      .atom-icon-fire-T3-12 { animation: af-T3-12 40s infinite linear; }
       /* T1-1: trained by tok-T1-1 (4-7%), tok-T1-3 (14-17%) */
       @keyframes af-T1-1 { 0%,3%{opacity:0} 4%,7%{opacity:1} 8%,13%{opacity:0} 14%,17%{opacity:1} 18%{opacity:0} }
       /* T1-2: trained by tok-T1-2 (9-12%) */
@@ -203,7 +531,7 @@
       .tok-note  { font-size: 21px; font-weight: 600; fill: #92400e; }
       .tok-note-reuse { fill: #6d28d9; }
 
-      .route-note { opacity: 0; animation: route-note 100s infinite linear; }
+      .route-note { opacity: 0; animation: route-note 40s infinite linear; }
       @keyframes route-note {
         0%,24%{opacity:0} 25%,66%{opacity:1} 68%,100%{opacity:0}
       }
@@ -220,18 +548,18 @@
       .route-to-t3 { stroke: #7c3aed; marker-end: url(#route-ah-t3); }
 
       /* All paths for the same token share one keyframe */
-      .route-T1-1a                        { animation: rt-T1-1 100s infinite linear; }
-      .route-T1-2a, .route-T1-2b         { animation: rt-T1-2 100s infinite linear; }
-      .route-T1-3a, .route-T1-3b         { animation: rt-T1-3 100s infinite linear; }
-      .route-T1-4a                        { animation: rt-T1-4 100s infinite linear; }
-      .route-T2-1a, .route-T2-1b         { animation: rt-T2-1 100s infinite linear; }
-      .route-T2-2a                        { animation: rt-T2-2 100s infinite linear; }
-      .route-T2-3a, .route-T2-3b         { animation: rt-T2-3 100s infinite linear; }
-      .route-T2-4a, .route-T2-4b         { animation: rt-T2-4 100s infinite linear; }
-      .route-T3-1a, .route-T3-1b         { animation: rt-T3-1 100s infinite linear; }
-      .route-T3-2a, .route-T3-2b         { animation: rt-T3-2 100s infinite linear; }
-      .route-T3-3a, .route-T3-3b         { animation: rt-T3-3 100s infinite linear; }
-      .route-T3-4a, .route-T3-4b         { animation: rt-T3-4 100s infinite linear; }
+      .route-T1-1a                        { animation: rt-T1-1 40s infinite linear; }
+      .route-T1-2a, .route-T1-2b         { animation: rt-T1-2 40s infinite linear; }
+      .route-T1-3a, .route-T1-3b         { animation: rt-T1-3 40s infinite linear; }
+      .route-T1-4a                        { animation: rt-T1-4 40s infinite linear; }
+      .route-T2-1a, .route-T2-1b         { animation: rt-T2-1 40s infinite linear; }
+      .route-T2-2a                        { animation: rt-T2-2 40s infinite linear; }
+      .route-T2-3a, .route-T2-3b         { animation: rt-T2-3 40s infinite linear; }
+      .route-T2-4a, .route-T2-4b         { animation: rt-T2-4 40s infinite linear; }
+      .route-T3-1a, .route-T3-1b         { animation: rt-T3-1 40s infinite linear; }
+      .route-T3-2a, .route-T3-2b         { animation: rt-T3-2 40s infinite linear; }
+      .route-T3-3a, .route-T3-3b         { animation: rt-T3-3 40s infinite linear; }
+      .route-T3-4a, .route-T3-4b         { animation: rt-T3-4 40s infinite linear; }
 
       @keyframes rt-T1-1 { 0%,3%{opacity:0}   4%,7%{opacity:0.8}   8%{opacity:0} }
       @keyframes rt-T1-2 { 0%,8%{opacity:0}   9%,12%{opacity:0.8}  13%{opacity:0} }
@@ -251,7 +579,7 @@
         fill: #ffffff;
         opacity: 0;
         pointer-events: none;
-        animation: bank-dim 100s infinite linear;
+        animation: bank-dim 40s infinite linear;
       }
       @keyframes bank-dim {
         0%,2%{opacity:0}
@@ -271,17 +599,17 @@
       .glow-t2 { fill: rgba(219,39,119,0.18); stroke: #db2777; }
       .glow-t3 { fill: rgba(124,58,237,0.18); stroke: #7c3aed; }
       /* Updated glow keyframes for new variable top-k mapping */
-      .glow-T1-1 { animation: gl-T1-1 100s infinite linear; }
-      .glow-T1-2 { animation: gl-T1-2 100s infinite linear; }
-      .glow-T1-3 { animation: gl-T1-3 100s infinite linear; }
-      .glow-T1-4 { animation: gl-T1-4 100s infinite linear; }
-      .glow-T2-1 { animation: gl-T2-1 100s infinite linear; }
-      .glow-T2-2 { animation: gl-T2-2 100s infinite linear; }
-      .glow-T2-3 { animation: gl-T2-3 100s infinite linear; }
-      .glow-T3-1 { animation: gl-T3-1 100s infinite linear; }
-      .glow-T3-2 { animation: gl-T3-2 100s infinite linear; }
-      .glow-T3-3 { animation: gl-T3-3 100s infinite linear; }
-      .glow-T3-4 { animation: gl-T3-4 100s infinite linear; }
+      .glow-T1-1 { animation: gl-T1-1 40s infinite linear; }
+      .glow-T1-2 { animation: gl-T1-2 40s infinite linear; }
+      .glow-T1-3 { animation: gl-T1-3 40s infinite linear; }
+      .glow-T1-4 { animation: gl-T1-4 40s infinite linear; }
+      .glow-T2-1 { animation: gl-T2-1 40s infinite linear; }
+      .glow-T2-2 { animation: gl-T2-2 40s infinite linear; }
+      .glow-T2-3 { animation: gl-T2-3 40s infinite linear; }
+      .glow-T3-1 { animation: gl-T3-1 40s infinite linear; }
+      .glow-T3-2 { animation: gl-T3-2 40s infinite linear; }
+      .glow-T3-3 { animation: gl-T3-3 40s infinite linear; }
+      .glow-T3-4 { animation: gl-T3-4 40s infinite linear; }
       /* T1-1: tok-T1-1(4-7), tok-T1-3(14-17), tok-T2-1(26-29), tok-T2-4(41-44), tok-T3-1(48-51) */
       @keyframes gl-T1-1 { 0%,3%{opacity:0} 4%,7%{opacity:.9} 8%,13%{opacity:0} 14%,17%{opacity:.9} 18%,25%{opacity:0} 26%,29%{opacity:.9} 30%,40%{opacity:0} 41%,44%{opacity:.9} 45%,47%{opacity:0} 48%,51%{opacity:.9} 52%{opacity:0} }
       /* T1-2: tok-T1-2(9-12), tok-T2-2(31-34), tok-T3-4(63-66) */
@@ -312,18 +640,18 @@
          T3 phase 44-62%: each token ~4.5% wide
       */
       .tok { opacity: 0; }
-      .tok-T1-1 { animation: tk-T1-1 100s infinite linear; }
-      .tok-T1-2 { animation: tk-T1-2 100s infinite linear; }
-      .tok-T1-3 { animation: tk-T1-3 100s infinite linear; }
-      .tok-T1-4 { animation: tk-T1-4 100s infinite linear; }
-      .tok-T2-1 { animation: tk-T2-1 100s infinite linear; }
-      .tok-T2-2 { animation: tk-T2-2 100s infinite linear; }
-      .tok-T2-3 { animation: tk-T2-3 100s infinite linear; }
-      .tok-T2-4 { animation: tk-T2-4 100s infinite linear; }
-      .tok-T3-1 { animation: tk-T3-1 100s infinite linear; }
-      .tok-T3-2 { animation: tk-T3-2 100s infinite linear; }
-      .tok-T3-3 { animation: tk-T3-3 100s infinite linear; }
-      .tok-T3-4 { animation: tk-T3-4 100s infinite linear; }
+      .tok-T1-1 { animation: tk-T1-1 40s infinite linear; }
+      .tok-T1-2 { animation: tk-T1-2 40s infinite linear; }
+      .tok-T1-3 { animation: tk-T1-3 40s infinite linear; }
+      .tok-T1-4 { animation: tk-T1-4 40s infinite linear; }
+      .tok-T2-1 { animation: tk-T2-1 40s infinite linear; }
+      .tok-T2-2 { animation: tk-T2-2 40s infinite linear; }
+      .tok-T2-3 { animation: tk-T2-3 40s infinite linear; }
+      .tok-T2-4 { animation: tk-T2-4 40s infinite linear; }
+      .tok-T3-1 { animation: tk-T3-1 40s infinite linear; }
+      .tok-T3-2 { animation: tk-T3-2 40s infinite linear; }
+      .tok-T3-3 { animation: tk-T3-3 40s infinite linear; }
+      .tok-T3-4 { animation: tk-T3-4 40s infinite linear; }
 
       @keyframes tk-T1-1 { 0%,2%{opacity:0}   3%,7%{opacity:1}   8%{opacity:0} }
       @keyframes tk-T1-2 { 0%,7%{opacity:0}   8%,12%{opacity:1}  13%{opacity:0} }
@@ -337,6 +665,126 @@
       @keyframes tk-T3-2 { 0%,51%{opacity:0}  52%,56%{opacity:1}  57%{opacity:0} }
       @keyframes tk-T3-3 { 0%,56%{opacity:0}  57%,61%{opacity:1}  62%{opacity:0} }
       @keyframes tk-T3-4 { 0%,61%{opacity:0}  62%,66%{opacity:1}  67%{opacity:0} }
+
+      /* === Per-task batched fire / snow icons ===
+         Replaces the prior per-atom staggered fire-snow timing. While task t
+         is training, every one of its atoms shows the fire icon; afterwards
+         every one of its atoms shows the snowflake. Hidden before the atoms
+         have been added to the bank.
+         Loop windows (40s):
+           Task 1 training : 3-22%   Task 1 frozen : 23-80%
+           Task 2 training : 25-44%  Task 2 frozen : 45-80%
+           Task 3 training : 47-66%  Task 3 frozen : 67-80%
+      */
+      .atom-icon-flat { font-size: 11px; opacity: 0; pointer-events: none; }
+      .atom-icon-flat.snow { fill: #7dd3fc; }
+      /* In-cell training/frozen indicators sitting at the right edge of
+         key and value cells. Same task-batch animation classes, just smaller
+         so they fit a 14 px tall cell. */
+      .atom-param-icon { font-size: 9px; opacity: 0; pointer-events: none; text-anchor: middle; }
+      .atom-param-icon.snow { fill: #7dd3fc; }
+      /* Inter-cell flow arrows: key → w → value */
+      .atom-flow-arrow {
+        font-size: 13px;
+        font-weight: 700;
+        fill: #1e293b;
+        text-anchor: middle;
+        pointer-events: none;
+      }
+      /* Per-atom input arrows: MLP inline bank → activated atom.
+         Dashed thin lines (matching the earlier routing-curve style) to read
+         as "data flow" rather than solid pipes. Hidden by default; each
+         atom's keyframe flips opacity to 1 during its top-k windows. */
+      .atom-input {
+        fill: none;
+        stroke-width: 1.6;
+        stroke-dasharray: 4 3;
+        opacity: 0;
+        pointer-events: none;
+      }
+      .atom-input-t1 { stroke: #ea580c; marker-end: url(#route-ah-t1); }
+      .atom-input-t2 { stroke: #db2777; marker-end: url(#route-ah-t2); }
+      .atom-input-t3 { stroke: #7c3aed; marker-end: url(#route-ah-t3); }
+      .input-arrow-T1-1 { animation: in-T1-1 40s infinite linear; }
+      .input-arrow-T1-2 { animation: in-T1-2 40s infinite linear; }
+      .input-arrow-T1-3 { animation: in-T1-3 40s infinite linear; }
+      .input-arrow-T1-4 { animation: in-T1-4 40s infinite linear; }
+      .input-arrow-T2-1 { animation: in-T2-1 40s infinite linear; }
+      .input-arrow-T2-2 { animation: in-T2-2 40s infinite linear; }
+      .input-arrow-T2-3 { animation: in-T2-3 40s infinite linear; }
+      .input-arrow-T2-4 { animation: in-T2-4 40s infinite linear; }
+      .input-arrow-T3-1 { animation: in-T3-1 40s infinite linear; }
+      .input-arrow-T3-2 { animation: in-T3-2 40s infinite linear; }
+      .input-arrow-T3-3 { animation: in-T3-3 40s infinite linear; }
+      .input-arrow-T3-4 { animation: in-T3-4 40s infinite linear; }
+      /* Binary visibility — mirrors per-atom selection windows. */
+      @keyframes in-T1-1 {
+        0%,3%{opacity:0} 4%,7%{opacity:0.9} 8%,13%{opacity:0}
+        14%,17%{opacity:0.9} 18%,25%{opacity:0}
+        26%,29%{opacity:0.9} 30%,40%{opacity:0}
+        41%,44%{opacity:0.9} 45%,47%{opacity:0}
+        48%,51%{opacity:0.9} 52%,57%{opacity:0}
+        58%,61%{opacity:0.9} 62%,100%{opacity:0}
+      }
+      @keyframes in-T1-2 {
+        0%,8%{opacity:0} 9%,12%{opacity:0.9} 13%,30%{opacity:0}
+        31%,34%{opacity:0.9} 35%,100%{opacity:0}
+      }
+      @keyframes in-T1-3 {
+        0%,8%{opacity:0} 9%,12%{opacity:0.9} 13%,18%{opacity:0}
+        19%,22%{opacity:0.9} 23%,25%{opacity:0}
+        26%,29%{opacity:0.9} 30%,40%{opacity:0}
+        41%,44%{opacity:0.9} 45%,57%{opacity:0}
+        58%,61%{opacity:0.9} 62%{opacity:0}
+        63%,66%{opacity:0.9} 67%,100%{opacity:0}
+      }
+      @keyframes in-T1-4 {
+        0%,13%{opacity:0} 14%,17%{opacity:0.9} 18%,40%{opacity:0}
+        41%,44%{opacity:0.9} 45%,100%{opacity:0}
+      }
+      @keyframes in-T2-1 {
+        0%,30%{opacity:0} 31%,34%{opacity:0.9} 35%{opacity:0}
+        36%,39%{opacity:0.9} 40%,57%{opacity:0}
+        58%,61%{opacity:0.9} 62%,100%{opacity:0}
+      }
+      @keyframes in-T2-2 {
+        0%,35%{opacity:0} 36%,39%{opacity:0.9} 40%,47%{opacity:0}
+        48%,51%{opacity:0.9} 52%,62%{opacity:0}
+        63%,66%{opacity:0.9} 67%,100%{opacity:0}
+      }
+      @keyframes in-T2-3 {
+        0%,35%{opacity:0} 36%,39%{opacity:0.9} 40%,100%{opacity:0}
+      }
+      @keyframes in-T2-4 {
+        0%,57%{opacity:0} 58%,61%{opacity:0.9} 62%,100%{opacity:0}
+      }
+      @keyframes in-T3-1 {
+        0%,47%{opacity:0} 48%,51%{opacity:0.9} 52%{opacity:0}
+        53%,56%{opacity:0.9} 57%,100%{opacity:0}
+      }
+      @keyframes in-T3-2 {
+        0%,52%{opacity:0} 53%,56%{opacity:0.9} 57%,62%{opacity:0}
+        63%,66%{opacity:0.9} 67%,100%{opacity:0}
+      }
+      @keyframes in-T3-3 {
+        0%,52%{opacity:0} 53%,56%{opacity:0.9} 57%,100%{opacity:0}
+      }
+      @keyframes in-T3-4 {
+        0%,52%{opacity:0} 53%,56%{opacity:0.9} 57%,62%{opacity:0}
+        63%,66%{opacity:0.9} 67%,100%{opacity:0}
+      }
+      .fire-batch-T1 { animation: fire-batch-T1 40s infinite linear; }
+      .fire-batch-T2 { animation: fire-batch-T2 40s infinite linear; }
+      .fire-batch-T3 { animation: fire-batch-T3 40s infinite linear; }
+      .snow-batch-T1 { animation: snow-batch-T1 40s infinite linear; }
+      .snow-batch-T2 { animation: snow-batch-T2 40s infinite linear; }
+      .snow-batch-T3 { animation: snow-batch-T3 40s infinite linear; }
+      @keyframes fire-batch-T1 { 0%,2%{opacity:0}  3%,22%{opacity:1}  23%,100%{opacity:0} }
+      @keyframes fire-batch-T2 { 0%,24%{opacity:0} 25%,44%{opacity:1}  45%,100%{opacity:0} }
+      @keyframes fire-batch-T3 { 0%,46%{opacity:0} 47%,66%{opacity:1}  67%,100%{opacity:0} }
+      @keyframes snow-batch-T1 { 0%,22%{opacity:0} 23%,80%{opacity:1}  82%,100%{opacity:0} }
+      @keyframes snow-batch-T2 { 0%,44%{opacity:0} 45%,80%{opacity:1}  82%,100%{opacity:0} }
+      @keyframes snow-batch-T3 { 0%,66%{opacity:0} 67%,80%{opacity:1}  82%,100%{opacity:0} }
 
       /* Reduced-motion: everything visible, no animation */
       @media (prefers-reduced-motion: reduce) {
@@ -395,373 +843,419 @@
     <!-- Arrows between chips -->
     <text class="arrow-T2" x="140" y="19" text-anchor="middle" font-size="16" fill="#94a3b8">&#x2192;</text>
     <text class="arrow-T3" x="288" y="19" text-anchor="middle" font-size="16" fill="#94a3b8">&#x2192;</text>
+    <!-- Trailing arrow + ellipsis: open-ended task stream (Task 4, 5, …).
+         dominant-baseline="central" so glyph centres sit on chip vertical center (y=14). -->
+    <text class="arrow-T3" x="436" y="14" text-anchor="middle" dominant-baseline="central" font-size="16" fill="#94a3b8">&#x2192;</text>
+    <text class="arrow-T3" x="460" y="14" text-anchor="middle" dominant-baseline="central" font-size="22" font-weight="800" fill="#94a3b8" letter-spacing="0.2em">&#x2026;</text>
   </g>
 
-  <!-- Shift figure left to align with title -->
-  <g transform="translate(-170,0)">
+  <!-- Centre the illustration block in the 1200-wide viewBox.
+       Figure spans local x=220–900 (width 680). Centring puts it at
+       world x=260–940 → translate(40,0). -->
+  <g transform="translate(40,0)">
 
   <!-- ====================== LAYOUT REGIONS (placeholders) ====================== -->
 
   <!-- LEFT: (input lane removed — token slot now below transformer) -->
   <!-- Token tiles: below transformer, centered at x=380 -->
   <!-- T1 tokens — all novel -->
-  <g class="tok tok-T1-1" transform="translate(355, 468)">
+  <g class="tok tok-T1-1" transform="translate(325, 468)">
     <rect class="atom atom-t1" width="50" height="36" rx="5"/>
     <text class="tok-label" x="25" y="24" text-anchor="middle">x</text>
     <text class="tok-note" x="25" y="56" text-anchor="middle">novel token</text>
   </g>
-  <g class="tok tok-T1-2" transform="translate(355, 468)">
+  <g class="tok tok-T1-2" transform="translate(325, 468)">
     <rect class="atom atom-t1" width="50" height="36" rx="5"/>
     <text class="tok-label" x="25" y="24" text-anchor="middle">x</text>
     <text class="tok-note" x="25" y="56" text-anchor="middle">novel token</text>
   </g>
-  <g class="tok tok-T1-3" transform="translate(355, 468)">
+  <g class="tok tok-T1-3" transform="translate(325, 468)">
     <rect class="atom atom-t1" width="50" height="36" rx="5"/>
     <text class="tok-label" x="25" y="24" text-anchor="middle">x</text>
     <text class="tok-note" x="25" y="56" text-anchor="middle">novel token</text>
   </g>
-  <g class="tok tok-T1-4" transform="translate(355, 468)">
+  <g class="tok tok-T1-4" transform="translate(325, 468)">
     <rect class="atom atom-t1" width="50" height="36" rx="5"/>
     <text class="tok-label" x="25" y="24" text-anchor="middle">x</text>
     <text class="tok-note" x="25" y="56" text-anchor="middle">novel token</text>
   </g>
   <!-- T2 tokens — 3 reuse old memory only, 1 novel -->
-  <g class="tok tok-T2-1" transform="translate(355, 468)">
+  <g class="tok tok-T2-1" transform="translate(325, 468)">
     <rect class="atom atom-t2" width="50" height="36" rx="5"/>
     <text class="tok-label" x="25" y="24" text-anchor="middle">x</text>
     <text class="tok-note tok-note-reuse" x="25" y="56" text-anchor="middle">similar to T1, reuses slot</text>
   </g>
-  <g class="tok tok-T2-2" transform="translate(355, 468)">
+  <g class="tok tok-T2-2" transform="translate(325, 468)">
     <rect class="atom atom-t2" width="50" height="36" rx="5"/>
     <text class="tok-label" x="25" y="24" text-anchor="middle">x</text>
-    <text class="tok-note tok-note-reuse" x="25" y="56" text-anchor="middle">similar to T1, reuses slot</text>
+    <text class="tok-note" x="25" y="56" text-anchor="middle">similar to T1, trains new slot</text>
   </g>
-  <g class="tok tok-T2-3" transform="translate(355, 468)">
+  <g class="tok tok-T2-3" transform="translate(325, 468)">
     <rect class="atom atom-t2" width="50" height="36" rx="5"/>
     <text class="tok-label" x="25" y="24" text-anchor="middle">x</text>
     <text class="tok-note" x="25" y="56" text-anchor="middle">novel, trains new slot</text>
   </g>
-  <g class="tok tok-T2-4" transform="translate(355, 468)">
+  <g class="tok tok-T2-4" transform="translate(325, 468)">
     <rect class="atom atom-t2" width="50" height="36" rx="5"/>
     <text class="tok-label" x="25" y="24" text-anchor="middle">x</text>
     <text class="tok-note tok-note-reuse" x="25" y="56" text-anchor="middle">similar to T1, reuses slot</text>
   </g>
   <!-- T3 tokens — 3 reuse old memory only, 1 novel -->
-  <g class="tok tok-T3-1" transform="translate(355, 468)">
+  <g class="tok tok-T3-1" transform="translate(325, 468)">
     <rect class="atom atom-t3" width="50" height="36" rx="5"/>
     <text class="tok-label" x="25" y="24" text-anchor="middle">x</text>
-    <text class="tok-note tok-note-reuse" x="25" y="56" text-anchor="middle">similar to T1/T2, reuses slot</text>
+    <text class="tok-note" x="25" y="56" text-anchor="middle">similar to T1/T2, trains new slot</text>
   </g>
-  <g class="tok tok-T3-2" transform="translate(355, 468)">
+  <g class="tok tok-T3-2" transform="translate(325, 468)">
     <rect class="atom atom-t3" width="50" height="36" rx="5"/>
     <text class="tok-label" x="25" y="24" text-anchor="middle">x</text>
     <text class="tok-note" x="25" y="56" text-anchor="middle">novel, trains new slot</text>
   </g>
-  <g class="tok tok-T3-3" transform="translate(355, 468)">
+  <g class="tok tok-T3-3" transform="translate(325, 468)">
     <rect class="atom atom-t3" width="50" height="36" rx="5"/>
     <text class="tok-label" x="25" y="24" text-anchor="middle">x</text>
     <text class="tok-note tok-note-reuse" x="25" y="56" text-anchor="middle">similar to T1/T2, reuses slot</text>
   </g>
-  <g class="tok tok-T3-4" transform="translate(355, 468)">
+  <g class="tok tok-T3-4" transform="translate(325, 468)">
     <rect class="atom atom-t3" width="50" height="36" rx="5"/>
     <text class="tok-label" x="25" y="24" text-anchor="middle">x</text>
-    <text class="tok-note tok-note-reuse" x="25" y="56" text-anchor="middle">similar to T1/T2, reuses slot</text>
+    <text class="tok-note" x="25" y="56" text-anchor="middle">similar to T1/T2, trains new slot</text>
   </g>
 
   <!-- CENTER: Transformer (canonical block + ghost stack) — FLOW BOTTOM-TO-TOP -->
-  <rect class="region-frame transformer-frame" x="220" y="108" width="320" height="350"/>
+  <rect class="region-frame transformer-frame" x="220" y="108" width="260" height="350"/>
 
-  <!-- × L layers label + ghost stack at TOP (data flows up, so more layers are above) -->
-  <text class="layers-label" x="380" y="135" text-anchor="middle">× L layers, each with own banks</text>
-  <rect class="ghost-layer" x="240" y="142" width="280" height="38" rx="8" opacity="0.45"/>
-  <text class="ghost-text"  x="380" y="167" text-anchor="middle" opacity="0.85">Block &#x2113; (Attn + MLP + memory banks)</text>
-  <text x="380" y="190" text-anchor="middle" font-size="18" font-weight="700" fill="#92400e" opacity="0.6">&#x22EE;</text>
+  <!-- × L layers label at top of the transformer column -->
+  <text class="layers-label" x="350" y="128" text-anchor="middle">× L layers, each with own banks</text>
 
-  <!-- Arrow UP from canonical block top → ghost layers -->
-  <line class="flow-arrow" x1="380" y1="226" x2="380" y2="214" marker-end="url(#flow-ah)"/>
+  <!-- Top "⋮" — ghost layers ABOVE the example -->
+  <text x="350" y="150" text-anchor="middle" font-size="20" font-weight="700" fill="#92400e" opacity="0.55">&#x22EE;</text>
 
-  <!-- Canonical block frame (houses attn + MLP) -->
-  <rect class="block-canonical" x="240" y="226" width="280" height="200" rx="10"/>
-  <!-- (canonical label removed) -->
+  <!-- Arrow UP from canonical block top → upper ghost layers -->
+  <line class="flow-arrow" x1="350" y1="175" x2="350" y2="160" marker-end="url(#flow-ah)"/>
 
-  <!-- MLP module (TOP of block — data exits here, going up) -->
+  <!-- Canonical block frame — labelled as the "example layer" -->
+  <rect class="block-canonical" x="240" y="175" width="220" height="200" rx="10"/>
+  <text class="ghost-text" x="250" y="193" text-anchor="start" opacity="0.75" font-style="italic">layer &#x2113;</text>
+
+  <!-- MLP module (TOP of block). The module-box IS the pre-trained MLP
+       weight W₀^MLP. BANK M_m straddles its right edge to show the rank-1
+       addition: half inside the block (the trainable bolt-on lives in this
+       module), half outside (its memory is zoomed-in to the right). -->
   <g class="module mlp-mod">
-    <rect class="module-box" x="255" y="250" width="250" height="62" rx="8"/>
-    <text class="module-name" x="270" y="271">MLP</text>
-    <text class="module-sub"  x="270" y="286">+ memory bank<tspan x="270" dy="16">(zoomed in &#x2192;)</tspan></text>
-    <!-- Inline MLP bank icon — focal point of the zoom callout -->
-    <g transform="translate(420, 260)">
-      <rect class="inline-bank-frame focus" width="78" height="42" rx="5"/>
-      <text class="inline-bank-label" x="39" y="13" text-anchor="middle">BANK <tspan font-style="italic">M</tspan><tspan font-size="9" dy="4" font-style="italic">m</tspan></text>
-      <circle class="inline-bank-dot" cx="15" cy="28" r="2.8"/>
-      <circle class="inline-bank-dot" cx="29" cy="28" r="2.8"/>
-      <circle class="inline-bank-dot" cx="43" cy="28" r="2.8"/>
-      <circle class="inline-bank-dot" cx="57" cy="28" r="2.8"/>
+    <rect class="module-box" x="255" y="199" width="190" height="62" rx="8"/>
+    <text class="module-name" x="270" y="225">MLP</text>
+    <text class="pretrained-label" x="270" y="248">W<tspan font-size="10" baseline-shift="sub">0</tspan><tspan font-size="10" baseline-shift="super">MLP</tspan>  pre-trained</text>
+
+    <!-- BANK M_m — straddles the right edge of the MLP block. Opaque fill
+         covers the module border underneath so the overlap reads cleanly. -->
+    <g transform="translate(405, 212)">
+      <rect class="inline-bank-frame focus" width="84" height="36" rx="6" fill="#fff7ed"/>
+      <text class="inline-bank-label" x="42" y="16" text-anchor="middle">BANK <tspan font-style="italic">M</tspan><tspan font-size="9" dy="4" font-style="italic">m</tspan></text>
     </g>
   </g>
 
   <!-- Arrow UP: attn → MLP -->
-  <line class="flow-arrow" x1="380" y1="336" x2="380" y2="318" marker-end="url(#flow-ah)"/>
+  <line class="flow-arrow" x1="350" y1="285" x2="350" y2="267" marker-end="url(#flow-ah)"/>
 
-  <!-- Attention module (BOTTOM of block — data enters here) -->
+  <!-- Attention module (BOTTOM). Same pattern as MLP: module-box is the
+       pre-trained W₀^attn; BANK M_a straddles its right edge. -->
   <g class="module attn-mod">
-    <rect class="module-box" x="255" y="340" width="250" height="62" rx="8"/>
-    <text class="module-name" x="270" y="361">Attention</text>
-    <text class="module-sub"  x="270" y="378">+ memory bank</text>
-    <!-- Inline attn bank icon -->
-    <g transform="translate(420, 350)">
-      <rect class="inline-bank-frame" width="78" height="42" rx="5"/>
-      <text class="inline-bank-label" x="39" y="13" text-anchor="middle">BANK <tspan font-style="italic">M</tspan><tspan font-size="9" dy="4" font-style="italic">a</tspan></text>
-      <circle class="inline-bank-dot" cx="15" cy="28" r="2.8"/>
-      <circle class="inline-bank-dot" cx="29" cy="28" r="2.8"/>
-      <circle class="inline-bank-dot" cx="43" cy="28" r="2.8"/>
-      <circle class="inline-bank-dot" cx="57" cy="28" r="2.8"/>
+    <rect class="module-box" x="255" y="289" width="190" height="62" rx="8"/>
+    <text class="module-name" x="270" y="315">Attention</text>
+    <text class="pretrained-label" x="270" y="338">W<tspan font-size="10" baseline-shift="sub">0</tspan><tspan font-size="10" baseline-shift="super">attn</tspan>  pre-trained</text>
+
+    <!-- BANK M_a — straddles the right edge of the Attention block -->
+    <g transform="translate(405, 302)">
+      <rect class="inline-bank-frame" width="84" height="36" rx="6" fill="#fffbeb"/>
+      <text class="inline-bank-label" x="42" y="16" text-anchor="middle">BANK <tspan font-style="italic">M</tspan><tspan font-size="9" dy="4" font-style="italic">a</tspan></text>
     </g>
   </g>
 
-  <!-- Arrow UP from below: token enters block -->
-  <line class="flow-arrow" x1="380" y1="460" x2="380" y2="406" marker-end="url(#flow-ah)"/>
+  <!-- Bottom "⋮" — ghost layers BELOW the example, between input x and the
+       canonical block. -->
+  <text x="350" y="415" text-anchor="middle" font-size="20" font-weight="700" fill="#92400e" opacity="0.55">&#x22EE;</text>
+
+  <!-- Arrow UP from below: token enters first ghost layers, then the example -->
+  <line class="flow-arrow" x1="350" y1="468" x2="350" y2="430" marker-end="url(#flow-ah)"/>
+  <line class="flow-arrow" x1="350" y1="395" x2="350" y2="378" marker-end="url(#flow-ah)"/>
 
   <!-- Zoom callout: dashed lines from MLP bank icon corners → zoomed-bank corners -->
-  <line class="zoom-callout" x1="498" y1="260" x2="620" y2="118"/>
-  <line class="zoom-callout" x1="498" y1="302" x2="620" y2="428"/>
+  <line class="zoom-callout" x1="489" y1="212" x2="600" y2="110"/>
+  <line class="zoom-callout" x1="489" y1="248" x2="600" y2="456"/>
 
-  <!-- RIGHT: Memory bank (zoomed) — DETAILED -->
-  <rect class="region-frame bank-frame" x="620" y="118" width="560" height="324"/>
+  <!-- RIGHT: Memory bank (zoomed). Width 300 — fits the atom column exactly. -->
+  <rect class="region-frame bank-frame" x="600" y="110" width="300" height="346"/>
 
   <!-- Bank header inside the frame -->
-  <text class="bank-header"  x="640" y="146">MEMORY BANK</text>
-  <text class="bank-context" x="640" y="162">grows with each task</text>
+  <text class="bank-header"  x="615" y="132">MEMORY BANK</text>
+  <text class="bank-context" x="615" y="150">rank-1 key&#x2013;value memory</text>
 
-  <!-- ============ SPARSE RETRIEVAL MODULE ============ -->
-  <!-- Token enters from transformer → this module computes sim(x, K) using memory keys -->
-  <g class="sim-module">
-    <!-- Input arrow from MLP exit to the module -->
-    <path class="sim-module-input" d="M500,280 C545,240 760,195 788,195" marker-end="url(#flow-ah)"/>
-    <!-- Module box — centered in bank frame (620+560)/2 = 900 -->
-    <rect class="sim-module-box" x="790" y="170" width="220" height="50" rx="8"/>
-    <text class="sim-module-label" x="900" y="192" text-anchor="middle">sparse retrieval</text>
-    <!-- Key range swaps per task phase -->
-    <text class="sim-module-sub sim-keys-T1" x="900" y="214" text-anchor="middle">via memory keys K&#x2081; ... K&#x2084;</text>
-    <text class="sim-module-sub sim-keys-T2" x="900" y="214" text-anchor="middle">via memory keys K&#x2081; ... K&#x2088;</text>
-    <text class="sim-module-sub sim-keys-T3" x="900" y="214" text-anchor="middle">via memory keys K&#x2081; ... K&#x2081;&#x2082;</text>
+  <!-- (Old bank header arrow removed — the per-atom input arrows below already
+       convey data flow from the MLP inline bank into the activated atom rows.) -->
+
+  <!-- ============ ATOMS — vertical stack ============
+       12 wide-flat (k,v) bars, pitch 18 px, atom box 480 × 15.
+       Rows are NOT labelled T1/T2/T3 any more; the colour banding
+       (orange = task 1, pink = task 2, purple = task 3) carries the
+       grouping. A "…" continuation marker follows atom 12. -->
+
+  <!-- ============ INPUT ARROWS — MLP module → activated atom ============
+       Source (540, 280) ≈ right edge of MLP module inside the transformer
+       frame. Each path opacity-fades in only while that atom is in the
+       current token's top-k (see in-T*-* keyframes). -->
+  <path class="atom-input atom-input-t1 input-arrow-T1-1" d="M489,230 C540,230 540,179 620,179"/>
+  <path class="atom-input atom-input-t1 input-arrow-T1-2" d="M489,230 C540,230 540,201 620,201"/>
+  <path class="atom-input atom-input-t1 input-arrow-T1-3" d="M489,230 C540,230 540,223 620,223"/>
+  <path class="atom-input atom-input-t1 input-arrow-T1-4" d="M489,230 C540,230 540,245 620,245"/>
+  <path class="atom-input atom-input-t2 input-arrow-T2-1" d="M489,230 C540,230 540,267 620,267"/>
+  <path class="atom-input atom-input-t2 input-arrow-T2-2" d="M489,230 C540,230 540,289 620,289"/>
+  <path class="atom-input atom-input-t2 input-arrow-T2-3" d="M489,230 C540,230 540,311 620,311"/>
+  <path class="atom-input atom-input-t2 input-arrow-T2-4" d="M489,230 C540,230 540,333 620,333"/>
+  <path class="atom-input atom-input-t3 input-arrow-T3-1" d="M489,230 C540,230 540,355 620,355"/>
+  <path class="atom-input atom-input-t3 input-arrow-T3-2" d="M489,230 C540,230 540,377 620,377"/>
+  <path class="atom-input atom-input-t3 input-arrow-T3-3" d="M489,230 C540,230 540,399 620,399"/>
+  <path class="atom-input atom-input-t3 input-arrow-T3-4" d="M489,230 C540,230 540,421 620,421"/>
+
+  <!-- Task 1 — atoms 1..4 (orange) -->
+  <g class="atom-T1-1" transform="translate(620, 170)">
+    <!-- atom envelope: 260 × 18, key | w | value layout. -->
+    <rect class="atom atom-t1" width="260" height="18" rx="3"/>
+    <!-- key_1 — stored parameter -->
+    <rect class="atom-key-t1" x="6" y="2" width="80" height="14" rx="2" opacity="0.5"/>
+    <text class="kv-label kv-label--flat" x="41" y="13" text-anchor="middle">key<tspan font-size="8" baseline-shift="sub">1</tspan></text>
+    <text class="atom-param-icon fire-batch-T1" x="79" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T1" x="79" y="13">&#x2744;</text>
+    <!-- w_1 — activation indicator -->
+    <rect class="atom-weight-cell" x="90" y="2" width="80" height="14" rx="2"/>
+    <rect class="atom-weight-bar atom-weight-bar-t1 atom-weight-bar-T1-1" x="92" y="4" width="76" height="10" rx="1"/>
+    <text class="atom-weight-label" x="130" y="13" text-anchor="middle">w<tspan font-size="9" baseline-shift="sub">1</tspan></text>
+    <!-- value_1 — stored parameter -->
+    <rect class="atom-val-t1" x="174" y="2" width="80" height="14" rx="2" opacity="0.35"/>
+    <text class="kv-label kv-label--flat" x="209" y="13" text-anchor="middle">value<tspan font-size="8" baseline-shift="sub">1</tspan></text>
+    <text class="atom-param-icon fire-batch-T1" x="247" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T1" x="247" y="13">&#x2744;</text>
+    <text class="atom-flow-arrow" x="88" y="13">&#x2192;</text>
+    <text class="atom-flow-arrow" x="172" y="13">&#x2192;</text>
+  </g>
+  <g class="atom-T1-2" transform="translate(620, 192)">
+    <rect class="atom atom-t1" width="260" height="18" rx="3"/>
+    <rect class="atom-key-t1" x="6" y="2" width="80" height="14" rx="2" opacity="0.5"/>
+    <text class="kv-label kv-label--flat" x="41" y="13" text-anchor="middle">key<tspan font-size="8" baseline-shift="sub">2</tspan></text>
+    <text class="atom-param-icon fire-batch-T1" x="79" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T1" x="79" y="13">&#x2744;</text>
+    <rect class="atom-weight-cell" x="90" y="2" width="80" height="14" rx="2"/>
+    <rect class="atom-weight-bar atom-weight-bar-t1 atom-weight-bar-T1-2" x="92" y="4" width="76" height="10" rx="1"/>
+    <text class="atom-weight-label" x="130" y="13" text-anchor="middle">w<tspan font-size="9" baseline-shift="sub">2</tspan></text>
+    <rect class="atom-val-t1" x="174" y="2" width="80" height="14" rx="2" opacity="0.35"/>
+    <text class="kv-label kv-label--flat" x="209" y="13" text-anchor="middle">value<tspan font-size="8" baseline-shift="sub">2</tspan></text>
+    <text class="atom-param-icon fire-batch-T1" x="247" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T1" x="247" y="13">&#x2744;</text>
+    <text class="atom-flow-arrow" x="88" y="13">&#x2192;</text>
+    <text class="atom-flow-arrow" x="172" y="13">&#x2192;</text>
+  </g>
+  <g class="atom-T1-3" transform="translate(620, 214)">
+    <rect class="atom atom-t1" width="260" height="18" rx="3"/>
+    <rect class="atom-key-t1" x="6" y="2" width="80" height="14" rx="2" opacity="0.5"/>
+    <text class="kv-label kv-label--flat" x="41" y="13" text-anchor="middle">key<tspan font-size="8" baseline-shift="sub">3</tspan></text>
+    <text class="atom-param-icon fire-batch-T1" x="79" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T1" x="79" y="13">&#x2744;</text>
+    <rect class="atom-weight-cell" x="90" y="2" width="80" height="14" rx="2"/>
+    <rect class="atom-weight-bar atom-weight-bar-t1 atom-weight-bar-T1-3" x="92" y="4" width="76" height="10" rx="1"/>
+    <text class="atom-weight-label" x="130" y="13" text-anchor="middle">w<tspan font-size="9" baseline-shift="sub">3</tspan></text>
+    <rect class="atom-val-t1" x="174" y="2" width="80" height="14" rx="2" opacity="0.35"/>
+    <text class="kv-label kv-label--flat" x="209" y="13" text-anchor="middle">value<tspan font-size="8" baseline-shift="sub">3</tspan></text>
+    <text class="atom-param-icon fire-batch-T1" x="247" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T1" x="247" y="13">&#x2744;</text>
+    <text class="atom-flow-arrow" x="88" y="13">&#x2192;</text>
+    <text class="atom-flow-arrow" x="172" y="13">&#x2192;</text>
+  </g>
+  <g class="atom-T1-4" transform="translate(620, 236)">
+    <rect class="atom atom-t1" width="260" height="18" rx="3"/>
+    <rect class="atom-key-t1" x="6" y="2" width="80" height="14" rx="2" opacity="0.5"/>
+    <text class="kv-label kv-label--flat" x="41" y="13" text-anchor="middle">key<tspan font-size="8" baseline-shift="sub">4</tspan></text>
+    <text class="atom-param-icon fire-batch-T1" x="79" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T1" x="79" y="13">&#x2744;</text>
+    <rect class="atom-weight-cell" x="90" y="2" width="80" height="14" rx="2"/>
+    <rect class="atom-weight-bar atom-weight-bar-t1 atom-weight-bar-T1-4" x="92" y="4" width="76" height="10" rx="1"/>
+    <text class="atom-weight-label" x="130" y="13" text-anchor="middle">w<tspan font-size="9" baseline-shift="sub">4</tspan></text>
+    <rect class="atom-val-t1" x="174" y="2" width="80" height="14" rx="2" opacity="0.35"/>
+    <text class="kv-label kv-label--flat" x="209" y="13" text-anchor="middle">value<tspan font-size="8" baseline-shift="sub">4</tspan></text>
+    <text class="atom-param-icon fire-batch-T1" x="247" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T1" x="247" y="13">&#x2744;</text>
+    <text class="atom-flow-arrow" x="88" y="13">&#x2192;</text>
+    <text class="atom-flow-arrow" x="172" y="13">&#x2192;</text>
   </g>
 
-  <!-- Annotation: why tokens route to old slots -->
-  <text class="route-note" x="900" y="237" text-anchor="middle"
-        font-size="13" font-style="italic" fill="#64748b"
-        >tokens semantically similar to earlier tasks &#x2192; routed to existing slots</text>
-
-  <!-- Row dividers (dashed, between task groups) — appear with the task they separate -->
-  <line class="bank-row-divider row-grow-T2" x1="635" y1="304" x2="1165" y2="304"/>
-  <line class="bank-row-divider row-grow-T3" x1="635" y1="369" x2="1165" y2="369"/>
-
-  <!-- Task row labels — appear with their task -->
-  <text class="bank-row-label row-label-t1 row-grow-T1" x="645" y="277">T1</text>
-  <text class="bank-row-label row-label-t2 row-grow-T2" x="645" y="342">T2</text>
-  <text class="bank-row-label row-label-t3 row-grow-T3" x="645" y="407">T3</text>
-
-  <!-- ============ ATOMS ============ -->
-  <!-- T1 row, y=185-235 -->
-  <g class="atom-T1-1" transform="translate(688, 249)">
-    <rect class="atom atom-t1" width="80" height="50" rx="6"/>
-    <rect class="atom-key-t1" x="3" y="3" width="35" height="44" rx="4" opacity="0.5"/>
-    <text class="kv-label" x="20" y="22" text-anchor="middle">K<tspan font-size="11" baseline-shift="sub">1</tspan></text>
-    <line x1="40" y1="6" x2="40" y2="44" stroke="#ea580c" stroke-width="1" opacity="0.4"/>
-    <rect class="atom-val-t1" x="42" y="3" width="35" height="44" rx="4" opacity="0.35"/>
-    <text class="kv-label" x="60" y="22" text-anchor="middle">V<tspan font-size="11" baseline-shift="sub">1</tspan></text>
+  <!-- Task 2 — atoms 5..8 (pink) -->
+  <g class="atom-T2-1" transform="translate(620, 258)">
+    <rect class="atom atom-t2" width="260" height="18" rx="3"/>
+    <rect class="atom-key-t2" x="6" y="2" width="80" height="14" rx="2" opacity="0.5"/>
+    <text class="kv-label kv-label--flat" x="41" y="13" text-anchor="middle">key<tspan font-size="8" baseline-shift="sub">5</tspan></text>
+    <text class="atom-param-icon fire-batch-T2" x="79" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T2" x="79" y="13">&#x2744;</text>
+    <rect class="atom-weight-cell" x="90" y="2" width="80" height="14" rx="2"/>
+    <rect class="atom-weight-bar atom-weight-bar-t2 atom-weight-bar-T2-1" x="92" y="4" width="76" height="10" rx="1"/>
+    <text class="atom-weight-label" x="130" y="13" text-anchor="middle">w<tspan font-size="9" baseline-shift="sub">5</tspan></text>
+    <rect class="atom-val-t2" x="174" y="2" width="80" height="14" rx="2" opacity="0.35"/>
+    <text class="kv-label kv-label--flat" x="209" y="13" text-anchor="middle">value<tspan font-size="8" baseline-shift="sub">5</tspan></text>
+    <text class="atom-param-icon fire-batch-T2" x="247" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T2" x="247" y="13">&#x2744;</text>
+    <text class="atom-flow-arrow" x="88" y="13">&#x2192;</text>
+    <text class="atom-flow-arrow" x="172" y="13">&#x2192;</text>
   </g>
-  <g class="atom-T1-2" transform="translate(808, 249)">
-    <rect class="atom atom-t1" width="80" height="50" rx="6"/>
-    <rect class="atom-key-t1" x="3" y="3" width="35" height="44" rx="4" opacity="0.5"/>
-    <text class="kv-label" x="20" y="22" text-anchor="middle">K<tspan font-size="11" baseline-shift="sub">2</tspan></text>
-    <line x1="40" y1="6" x2="40" y2="44" stroke="#ea580c" stroke-width="1" opacity="0.4"/>
-    <rect class="atom-val-t1" x="42" y="3" width="35" height="44" rx="4" opacity="0.35"/>
-    <text class="kv-label" x="60" y="22" text-anchor="middle">V<tspan font-size="11" baseline-shift="sub">2</tspan></text>
+  <g class="atom-T2-2" transform="translate(620, 280)">
+    <rect class="atom atom-t2" width="260" height="18" rx="3"/>
+    <rect class="atom-key-t2" x="6" y="2" width="80" height="14" rx="2" opacity="0.5"/>
+    <text class="kv-label kv-label--flat" x="41" y="13" text-anchor="middle">key<tspan font-size="8" baseline-shift="sub">6</tspan></text>
+    <text class="atom-param-icon fire-batch-T2" x="79" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T2" x="79" y="13">&#x2744;</text>
+    <rect class="atom-weight-cell" x="90" y="2" width="80" height="14" rx="2"/>
+    <rect class="atom-weight-bar atom-weight-bar-t2 atom-weight-bar-T2-2" x="92" y="4" width="76" height="10" rx="1"/>
+    <text class="atom-weight-label" x="130" y="13" text-anchor="middle">w<tspan font-size="9" baseline-shift="sub">6</tspan></text>
+    <rect class="atom-val-t2" x="174" y="2" width="80" height="14" rx="2" opacity="0.35"/>
+    <text class="kv-label kv-label--flat" x="209" y="13" text-anchor="middle">value<tspan font-size="8" baseline-shift="sub">6</tspan></text>
+    <text class="atom-param-icon fire-batch-T2" x="247" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T2" x="247" y="13">&#x2744;</text>
+    <text class="atom-flow-arrow" x="88" y="13">&#x2192;</text>
+    <text class="atom-flow-arrow" x="172" y="13">&#x2192;</text>
   </g>
-  <g class="atom-T1-3" transform="translate(928, 249)">
-    <rect class="atom atom-t1" width="80" height="50" rx="6"/>
-    <rect class="atom-key-t1" x="3" y="3" width="35" height="44" rx="4" opacity="0.5"/>
-    <text class="kv-label" x="20" y="22" text-anchor="middle">K<tspan font-size="11" baseline-shift="sub">3</tspan></text>
-    <line x1="40" y1="6" x2="40" y2="44" stroke="#ea580c" stroke-width="1" opacity="0.4"/>
-    <rect class="atom-val-t1" x="42" y="3" width="35" height="44" rx="4" opacity="0.35"/>
-    <text class="kv-label" x="60" y="22" text-anchor="middle">V<tspan font-size="11" baseline-shift="sub">3</tspan></text>
+  <g class="atom-T2-3" transform="translate(620, 302)">
+    <rect class="atom atom-t2" width="260" height="18" rx="3"/>
+    <rect class="atom-key-t2" x="6" y="2" width="80" height="14" rx="2" opacity="0.5"/>
+    <text class="kv-label kv-label--flat" x="41" y="13" text-anchor="middle">key<tspan font-size="8" baseline-shift="sub">7</tspan></text>
+    <text class="atom-param-icon fire-batch-T2" x="79" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T2" x="79" y="13">&#x2744;</text>
+    <rect class="atom-weight-cell" x="90" y="2" width="80" height="14" rx="2"/>
+    <rect class="atom-weight-bar atom-weight-bar-t2 atom-weight-bar-T2-3" x="92" y="4" width="76" height="10" rx="1"/>
+    <text class="atom-weight-label" x="130" y="13" text-anchor="middle">w<tspan font-size="9" baseline-shift="sub">7</tspan></text>
+    <rect class="atom-val-t2" x="174" y="2" width="80" height="14" rx="2" opacity="0.35"/>
+    <text class="kv-label kv-label--flat" x="209" y="13" text-anchor="middle">value<tspan font-size="8" baseline-shift="sub">7</tspan></text>
+    <text class="atom-param-icon fire-batch-T2" x="247" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T2" x="247" y="13">&#x2744;</text>
+    <text class="atom-flow-arrow" x="88" y="13">&#x2192;</text>
+    <text class="atom-flow-arrow" x="172" y="13">&#x2192;</text>
   </g>
-  <g class="atom-T1-4" transform="translate(1048, 249)">
-    <rect class="atom atom-t1" width="80" height="50" rx="6"/>
-    <rect class="atom-key-t1" x="3" y="3" width="35" height="44" rx="4" opacity="0.5"/>
-    <text class="kv-label" x="20" y="22" text-anchor="middle">K<tspan font-size="11" baseline-shift="sub">4</tspan></text>
-    <line x1="40" y1="6" x2="40" y2="44" stroke="#ea580c" stroke-width="1" opacity="0.4"/>
-    <rect class="atom-val-t1" x="42" y="3" width="35" height="44" rx="4" opacity="0.35"/>
-    <text class="kv-label" x="60" y="22" text-anchor="middle">V<tspan font-size="11" baseline-shift="sub">4</tspan></text>
-  </g>
-
-  <!-- T2 row, y=250-300 -->
-  <g class="atom-T2-1" transform="translate(688, 314)">
-    <rect class="atom atom-t2" width="80" height="50" rx="6"/>
-    <rect class="atom-key-t2" x="3" y="3" width="35" height="44" rx="4" opacity="0.5"/>
-    <text class="kv-label" x="20" y="22" text-anchor="middle">K<tspan font-size="11" baseline-shift="sub">5</tspan></text>
-    <line x1="40" y1="6" x2="40" y2="44" stroke="#db2777" stroke-width="1" opacity="0.4"/>
-    <rect class="atom-val-t2" x="42" y="3" width="35" height="44" rx="4" opacity="0.35"/>
-    <text class="kv-label" x="60" y="22" text-anchor="middle">V<tspan font-size="11" baseline-shift="sub">5</tspan></text>
-  </g>
-  <g class="atom-T2-2" transform="translate(808, 314)">
-    <rect class="atom atom-t2" width="80" height="50" rx="6"/>
-    <rect class="atom-key-t2" x="3" y="3" width="35" height="44" rx="4" opacity="0.5"/>
-    <text class="kv-label" x="20" y="22" text-anchor="middle">K<tspan font-size="11" baseline-shift="sub">6</tspan></text>
-    <line x1="40" y1="6" x2="40" y2="44" stroke="#db2777" stroke-width="1" opacity="0.4"/>
-    <rect class="atom-val-t2" x="42" y="3" width="35" height="44" rx="4" opacity="0.35"/>
-    <text class="kv-label" x="60" y="22" text-anchor="middle">V<tspan font-size="11" baseline-shift="sub">6</tspan></text>
-  </g>
-  <g class="atom-T2-3" transform="translate(928, 314)">
-    <rect class="atom atom-t2" width="80" height="50" rx="6"/>
-    <rect class="atom-key-t2" x="3" y="3" width="35" height="44" rx="4" opacity="0.5"/>
-    <text class="kv-label" x="20" y="22" text-anchor="middle">K<tspan font-size="11" baseline-shift="sub">7</tspan></text>
-    <line x1="40" y1="6" x2="40" y2="44" stroke="#db2777" stroke-width="1" opacity="0.4"/>
-    <rect class="atom-val-t2" x="42" y="3" width="35" height="44" rx="4" opacity="0.35"/>
-    <text class="kv-label" x="60" y="22" text-anchor="middle">V<tspan font-size="11" baseline-shift="sub">7</tspan></text>
-  </g>
-  <g class="atom-T2-4" transform="translate(1048, 314)">
-    <rect class="atom atom-t2" width="80" height="50" rx="6"/>
-    <rect class="atom-key-t2" x="3" y="3" width="35" height="44" rx="4" opacity="0.5"/>
-    <text class="kv-label" x="20" y="22" text-anchor="middle">K<tspan font-size="11" baseline-shift="sub">8</tspan></text>
-    <line x1="40" y1="6" x2="40" y2="44" stroke="#db2777" stroke-width="1" opacity="0.4"/>
-    <rect class="atom-val-t2" x="42" y="3" width="35" height="44" rx="4" opacity="0.35"/>
-    <text class="kv-label" x="60" y="22" text-anchor="middle">V<tspan font-size="11" baseline-shift="sub">8</tspan></text>
+  <g class="atom-T2-4" transform="translate(620, 324)">
+    <rect class="atom atom-t2" width="260" height="18" rx="3"/>
+    <rect class="atom-key-t2" x="6" y="2" width="80" height="14" rx="2" opacity="0.5"/>
+    <text class="kv-label kv-label--flat" x="41" y="13" text-anchor="middle">key<tspan font-size="8" baseline-shift="sub">8</tspan></text>
+    <text class="atom-param-icon fire-batch-T2" x="79" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T2" x="79" y="13">&#x2744;</text>
+    <rect class="atom-weight-cell" x="90" y="2" width="80" height="14" rx="2"/>
+    <rect class="atom-weight-bar atom-weight-bar-t2 atom-weight-bar-T2-4" x="92" y="4" width="76" height="10" rx="1"/>
+    <text class="atom-weight-label" x="130" y="13" text-anchor="middle">w<tspan font-size="9" baseline-shift="sub">8</tspan></text>
+    <rect class="atom-val-t2" x="174" y="2" width="80" height="14" rx="2" opacity="0.35"/>
+    <text class="kv-label kv-label--flat" x="209" y="13" text-anchor="middle">value<tspan font-size="8" baseline-shift="sub">8</tspan></text>
+    <text class="atom-param-icon fire-batch-T2" x="247" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T2" x="247" y="13">&#x2744;</text>
+    <text class="atom-flow-arrow" x="88" y="13">&#x2192;</text>
+    <text class="atom-flow-arrow" x="172" y="13">&#x2192;</text>
   </g>
 
-  <!-- T3 row, y=315-365 -->
-  <g class="atom-T3-1" transform="translate(688, 379)">
-    <rect class="atom atom-t3" width="80" height="50" rx="6"/>
-    <rect class="atom-key-t3" x="3" y="3" width="35" height="44" rx="4" opacity="0.5"/>
-    <text class="kv-label" x="20" y="22" text-anchor="middle">K<tspan font-size="11" baseline-shift="sub">9</tspan></text>
-    <line x1="40" y1="6" x2="40" y2="44" stroke="#7c3aed" stroke-width="1" opacity="0.4"/>
-    <rect class="atom-val-t3" x="42" y="3" width="35" height="44" rx="4" opacity="0.35"/>
-    <text class="kv-label" x="60" y="22" text-anchor="middle">V<tspan font-size="11" baseline-shift="sub">9</tspan></text>
+  <!-- Task 3 — atoms 9..12 (purple) -->
+  <g class="atom-T3-1" transform="translate(620, 346)">
+    <rect class="atom atom-t3" width="260" height="18" rx="3"/>
+    <rect class="atom-key-t3" x="6" y="2" width="80" height="14" rx="2" opacity="0.5"/>
+    <text class="kv-label kv-label--flat" x="41" y="13" text-anchor="middle">key<tspan font-size="8" baseline-shift="sub">9</tspan></text>
+    <text class="atom-param-icon fire-batch-T3" x="79" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T3" x="79" y="13">&#x2744;</text>
+    <rect class="atom-weight-cell" x="90" y="2" width="80" height="14" rx="2"/>
+    <rect class="atom-weight-bar atom-weight-bar-t3 atom-weight-bar-T3-1" x="92" y="4" width="76" height="10" rx="1"/>
+    <text class="atom-weight-label" x="130" y="13" text-anchor="middle">w<tspan font-size="9" baseline-shift="sub">9</tspan></text>
+    <rect class="atom-val-t3" x="174" y="2" width="80" height="14" rx="2" opacity="0.35"/>
+    <text class="kv-label kv-label--flat" x="209" y="13" text-anchor="middle">value<tspan font-size="8" baseline-shift="sub">9</tspan></text>
+    <text class="atom-param-icon fire-batch-T3" x="247" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T3" x="247" y="13">&#x2744;</text>
+    <text class="atom-flow-arrow" x="88" y="13">&#x2192;</text>
+    <text class="atom-flow-arrow" x="172" y="13">&#x2192;</text>
   </g>
-  <g class="atom-T3-2" transform="translate(808, 379)">
-    <rect class="atom atom-t3" width="80" height="50" rx="6"/>
-    <rect class="atom-key-t3" x="3" y="3" width="35" height="44" rx="4" opacity="0.5"/>
-    <text class="kv-label" x="20" y="22" text-anchor="middle">K<tspan font-size="11" baseline-shift="sub">10</tspan></text>
-    <line x1="40" y1="6" x2="40" y2="44" stroke="#7c3aed" stroke-width="1" opacity="0.4"/>
-    <rect class="atom-val-t3" x="42" y="3" width="35" height="44" rx="4" opacity="0.35"/>
-    <text class="kv-label" x="60" y="22" text-anchor="middle">V<tspan font-size="11" baseline-shift="sub">10</tspan></text>
+  <g class="atom-T3-2" transform="translate(620, 368)">
+    <rect class="atom atom-t3" width="260" height="18" rx="3"/>
+    <rect class="atom-key-t3" x="6" y="2" width="80" height="14" rx="2" opacity="0.5"/>
+    <text class="kv-label kv-label--flat" x="41" y="13" text-anchor="middle">key<tspan font-size="8" baseline-shift="sub">10</tspan></text>
+    <text class="atom-param-icon fire-batch-T3" x="79" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T3" x="79" y="13">&#x2744;</text>
+    <rect class="atom-weight-cell" x="90" y="2" width="80" height="14" rx="2"/>
+    <rect class="atom-weight-bar atom-weight-bar-t3 atom-weight-bar-T3-2" x="92" y="4" width="76" height="10" rx="1"/>
+    <text class="atom-weight-label" x="130" y="13" text-anchor="middle">w<tspan font-size="9" baseline-shift="sub">10</tspan></text>
+    <rect class="atom-val-t3" x="174" y="2" width="80" height="14" rx="2" opacity="0.35"/>
+    <text class="kv-label kv-label--flat" x="209" y="13" text-anchor="middle">value<tspan font-size="8" baseline-shift="sub">10</tspan></text>
+    <text class="atom-param-icon fire-batch-T3" x="247" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T3" x="247" y="13">&#x2744;</text>
+    <text class="atom-flow-arrow" x="88" y="13">&#x2192;</text>
+    <text class="atom-flow-arrow" x="172" y="13">&#x2192;</text>
   </g>
-  <g class="atom-T3-3" transform="translate(928, 379)">
-    <rect class="atom atom-t3" width="80" height="50" rx="6"/>
-    <rect class="atom-key-t3" x="3" y="3" width="35" height="44" rx="4" opacity="0.5"/>
-    <text class="kv-label" x="20" y="22" text-anchor="middle">K<tspan font-size="11" baseline-shift="sub">11</tspan></text>
-    <line x1="40" y1="6" x2="40" y2="44" stroke="#7c3aed" stroke-width="1" opacity="0.4"/>
-    <rect class="atom-val-t3" x="42" y="3" width="35" height="44" rx="4" opacity="0.35"/>
-    <text class="kv-label" x="60" y="22" text-anchor="middle">V<tspan font-size="11" baseline-shift="sub">11</tspan></text>
+  <g class="atom-T3-3" transform="translate(620, 390)">
+    <rect class="atom atom-t3" width="260" height="18" rx="3"/>
+    <rect class="atom-key-t3" x="6" y="2" width="80" height="14" rx="2" opacity="0.5"/>
+    <text class="kv-label kv-label--flat" x="41" y="13" text-anchor="middle">key<tspan font-size="8" baseline-shift="sub">11</tspan></text>
+    <text class="atom-param-icon fire-batch-T3" x="79" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T3" x="79" y="13">&#x2744;</text>
+    <rect class="atom-weight-cell" x="90" y="2" width="80" height="14" rx="2"/>
+    <rect class="atom-weight-bar atom-weight-bar-t3 atom-weight-bar-T3-3" x="92" y="4" width="76" height="10" rx="1"/>
+    <text class="atom-weight-label" x="130" y="13" text-anchor="middle">w<tspan font-size="9" baseline-shift="sub">11</tspan></text>
+    <rect class="atom-val-t3" x="174" y="2" width="80" height="14" rx="2" opacity="0.35"/>
+    <text class="kv-label kv-label--flat" x="209" y="13" text-anchor="middle">value<tspan font-size="8" baseline-shift="sub">11</tspan></text>
+    <text class="atom-param-icon fire-batch-T3" x="247" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T3" x="247" y="13">&#x2744;</text>
+    <text class="atom-flow-arrow" x="88" y="13">&#x2192;</text>
+    <text class="atom-flow-arrow" x="172" y="13">&#x2192;</text>
   </g>
-  <g class="atom-T3-4" transform="translate(1048, 379)">
-    <rect class="atom atom-t3" width="80" height="50" rx="6"/>
-    <rect class="atom-key-t3" x="3" y="3" width="35" height="44" rx="4" opacity="0.5"/>
-    <text class="kv-label" x="20" y="22" text-anchor="middle">K<tspan font-size="11" baseline-shift="sub">12</tspan></text>
-    <line x1="40" y1="6" x2="40" y2="44" stroke="#7c3aed" stroke-width="1" opacity="0.4"/>
-    <rect class="atom-val-t3" x="42" y="3" width="35" height="44" rx="4" opacity="0.35"/>
-    <text class="kv-label" x="60" y="22" text-anchor="middle">V<tspan font-size="11" baseline-shift="sub">12</tspan></text>
+  <g class="atom-T3-4" transform="translate(620, 412)">
+    <rect class="atom atom-t3" width="260" height="18" rx="3"/>
+    <rect class="atom-key-t3" x="6" y="2" width="80" height="14" rx="2" opacity="0.5"/>
+    <text class="kv-label kv-label--flat" x="41" y="13" text-anchor="middle">key<tspan font-size="8" baseline-shift="sub">12</tspan></text>
+    <text class="atom-param-icon fire-batch-T3" x="79" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T3" x="79" y="13">&#x2744;</text>
+    <rect class="atom-weight-cell" x="90" y="2" width="80" height="14" rx="2"/>
+    <rect class="atom-weight-bar atom-weight-bar-t3 atom-weight-bar-T3-4" x="92" y="4" width="76" height="10" rx="1"/>
+    <text class="atom-weight-label" x="130" y="13" text-anchor="middle">w<tspan font-size="9" baseline-shift="sub">12</tspan></text>
+    <rect class="atom-val-t3" x="174" y="2" width="80" height="14" rx="2" opacity="0.35"/>
+    <text class="kv-label kv-label--flat" x="209" y="13" text-anchor="middle">value<tspan font-size="8" baseline-shift="sub">12</tspan></text>
+    <text class="atom-param-icon fire-batch-T3" x="247" y="13">&#x1F525;</text>
+    <text class="atom-param-icon snow snow-batch-T3" x="247" y="13">&#x2744;</text>
+    <text class="atom-flow-arrow" x="88" y="13">&#x2192;</text>
+    <text class="atom-flow-arrow" x="172" y="13">&#x2192;</text>
   </g>
 
-  <!-- ============ ROUTING PATHS ============ -->
-  <!-- Curves from sparse retrieval module bottom-center (900,216) → target atom top borders -->
-  <!-- Columns: col1=728, col2=848, col3=968, col4=1088 -->
+  <!-- Continuation marker after the 12 atoms — appears once Task 3 has filled the bank. -->
+  <text class="atom-ellipsis row-grow-T3" x="750" y="448" text-anchor="middle"
+        font-size="20" font-weight="800" fill="#94a3b8" letter-spacing="0.2em">&#x2026;</text>
 
-  <!-- T1-tok1: top-1 → T1-1 (novel) -->
-  <path class="route route-to-t1 route-T1-1a" d="M900,220 C900,226 748,230 728,251" />
-  <!-- T1-tok2: top-2 → T1-2, T1-3 (novel) -->
-  <path class="route route-to-t1 route-T1-2a" d="M900,220 C900,226 868,230 848,251" />
-  <path class="route route-to-t1 route-T1-2b" d="M900,220 C920,226 958,230 968,251" />
-  <!-- T1-tok3: top-2 → T1-1, T1-4 (novel) -->
-  <path class="route route-to-t1 route-T1-3a" d="M900,220 C900,226 748,230 728,251" />
-  <path class="route route-to-t1 route-T1-3b" d="M900,220 C940,226 1068,230 1088,251" />
-  <!-- T1-tok4: top-1 → T1-3 (novel) -->
-  <path class="route route-to-t1 route-T1-4a" d="M900,220 C920,226 958,230 968,251" />
+  <!-- Routing curves removed: each atom's w_i bar now shows top-k routing
+       directly (high bar = selected atom for the current token). -->
 
-  <!-- T2-tok1: top-2 → T1-1, T1-3 (old memory only) -->
-  <path class="route route-to-t1 route-T2-1a" d="M900,220 C900,226 748,230 728,251" />
-  <path class="route route-to-t1 route-T2-1b" d="M900,220 C920,226 958,230 968,251" />
-  <!-- T2-tok2: top-1 → T1-2 (old memory only) -->
-  <path class="route route-to-t1 route-T2-2a" d="M900,220 C900,226 868,230 848,251" />
-  <!-- T2-tok3: top-2 → T2-1, T2-2 (novel — trains on new memory) -->
-  <path class="route route-to-t2 route-T2-3a" d="M900,220 C898,260 748,290 728,316" />
-  <path class="route route-to-t2 route-T2-3b" d="M900,220 C900,260 858,290 848,316" />
-  <!-- T2-tok4: top-2 → T1-4, T1-1 (old memory only) -->
-  <path class="route route-to-t1 route-T2-4a" d="M900,220 C940,226 1068,230 1088,251" />
-  <path class="route route-to-t1 route-T2-4b" d="M900,220 C900,226 748,230 728,251" />
+  <!-- Old right-edge fire/snow icons removed. Each atom now carries its own
+       fire/snow markers inside the key and value cells. -->
 
-  <!-- T3-tok1: top-2 → T1-1, T2-1 (old memory only) -->
-  <path class="route route-to-t1 route-T3-1a" d="M900,220 C900,226 748,230 728,251" />
-  <path class="route route-to-t2 route-T3-1b" d="M900,220 C898,260 748,290 728,316" />
-  <!-- T3-tok2: top-2 → T3-1, T3-2 (novel — trains on new memory) -->
-  <path class="route route-to-t3 route-T3-2a" d="M900,220 C898,290 748,355 728,381" />
-  <path class="route route-to-t3 route-T3-2b" d="M900,220 C900,290 858,355 848,381" />
-  <!-- T3-tok3: top-2 → T1-3, T2-2 (old memory only) -->
-  <path class="route route-to-t1 route-T3-3a" d="M900,220 C920,226 958,230 968,251" />
-  <path class="route route-to-t2 route-T3-3b" d="M900,220 C900,260 858,290 848,316" />
-  <!-- T3-tok4: top-2 → T2-1, T1-2 (old memory only) -->
-  <path class="route route-to-t2 route-T3-4a" d="M900,220 C898,260 748,290 728,316" />
-  <path class="route route-to-t1 route-T3-4b" d="M900,220 C900,226 868,230 848,251" />
+  <!-- ====================== LEGEND — 2×2 matrix card beneath the bank ====================== -->
+  <g transform="translate(600, 460)" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
 
-  <!-- Per-atom snowflake icons (bottom-right corner, overlapping border) -->
-  <!-- T1 row: atoms at (688,185) 80x50 → icon at (atom_x+72, atom_y+52) -->
-  <text class="atom-icon atom-icon-snow atom-icon-snow-T1-1" x="760" y="301">&#x2744;</text>
-  <text class="atom-icon atom-icon-snow atom-icon-snow-T1-2" x="880" y="301">&#x2744;</text>
-  <text class="atom-icon atom-icon-snow atom-icon-snow-T1-3" x="1000" y="301">&#x2744;</text>
-  <text class="atom-icon atom-icon-snow atom-icon-snow-T1-4" x="1120" y="301">&#x2744;</text>
-  <!-- T2 row: atoms at (688,250) -->
-  <text class="atom-icon atom-icon-snow atom-icon-snow-T2-12" x="760" y="366">&#x2744;</text>
-  <text class="atom-icon atom-icon-snow atom-icon-snow-T2-12" x="880" y="366">&#x2744;</text>
-  <text class="atom-icon atom-icon-snow atom-icon-snow-T2-rest" x="1000" y="366">&#x2744;</text>
-  <text class="atom-icon atom-icon-snow atom-icon-snow-T2-rest" x="1120" y="366">&#x2744;</text>
-  <!-- T3 row: atoms at (688,315) -->
-  <text class="atom-icon atom-icon-snow atom-icon-snow-T3-12" x="760" y="431">&#x2744;</text>
-  <text class="atom-icon atom-icon-snow atom-icon-snow-T3-12" x="880" y="431">&#x2744;</text>
-  <text class="atom-icon atom-icon-snow atom-icon-snow-T3-rest" x="1000" y="431">&#x2744;</text>
-  <text class="atom-icon atom-icon-snow atom-icon-snow-T3-rest" x="1120" y="431">&#x2744;</text>
+    <!-- Panel background — 300 wide × 80 tall -->
+    <rect x="0" y="0" width="300" height="80" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
 
-  <!-- Per-atom fire icons (same position, renders on top during training) -->
-  <text class="atom-icon atom-icon-fire-T1-1" x="760" y="301">&#x1F525;</text>
-  <text class="atom-icon atom-icon-fire-T1-2" x="880" y="301">&#x1F525;</text>
-  <text class="atom-icon atom-icon-fire-T1-3" x="1000" y="301">&#x1F525;</text>
-  <text class="atom-icon atom-icon-fire-T1-4" x="1120" y="301">&#x1F525;</text>
-  <text class="atom-icon atom-icon-fire-T2-12" x="760" y="366">&#x1F525;</text>
-  <text class="atom-icon atom-icon-fire-T2-12" x="880" y="366">&#x1F525;</text>
-  <text class="atom-icon atom-icon-fire-T3-12" x="760" y="431">&#x1F525;</text>
-  <text class="atom-icon atom-icon-fire-T3-12" x="880" y="431">&#x1F525;</text>
+    <!-- TOP-LEFT — rank-1 memory atom -->
+    <rect x="12" y="12" width="20" height="14" rx="3" fill="#ea580c" opacity="0.55"/>
+    <rect x="34" y="12" width="20" height="14" rx="3" fill="#fb923c" opacity="0.4"/>
+    <text x="60" y="20" font-size="11" font-weight="700" fill="#334155">key<tspan font-size="8" baseline-shift="sub">i</tspan> / value<tspan font-size="8" baseline-shift="sub">i</tspan></text>
+    <text x="60" y="32" font-size="9" font-style="italic" fill="#94a3b8">rank-1 memory atom</text>
 
-  <!-- Dim overlay — covers all atoms, fades in during token-active windows -->
-  <rect class="bank-dim" x="680" y="242" width="460" height="209"/>
+    <!-- TOP-RIGHT — w_i retrieval weight -->
+    <rect x="162" y="12" width="40" height="14" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.7" stroke-dasharray="2 1.5"/>
+    <rect x="165" y="14" width="24" height="10" rx="2" fill="#ea580c" opacity="0.85"/>
+    <text x="210" y="20" font-size="11" font-weight="700" fill="#334155">w<tspan font-size="8" baseline-shift="sub">i</tspan>  memory atom</text>
+    <text x="210" y="32" font-size="9" font-style="italic" fill="#94a3b8">retrieval weight</text>
 
-  <!-- Standalone glow rects — on top of dim overlay, pop when atom is selected -->
-  <!-- T1 row -->
-  <rect class="glow glow-t1 glow-T1-1" x="688" y="249" width="80" height="50" rx="6"/>
-  <rect class="glow glow-t1 glow-T1-2" x="808" y="249" width="80" height="50" rx="6"/>
-  <rect class="glow glow-t1 glow-T1-3" x="928" y="249" width="80" height="50" rx="6"/>
-  <rect class="glow glow-t1 glow-T1-4" x="1048" y="249" width="80" height="50" rx="6"/>
-  <!-- T2 row -->
-  <rect class="glow glow-t2 glow-T2-1" x="688" y="314" width="80" height="50" rx="6"/>
-  <rect class="glow glow-t2 glow-T2-2" x="808" y="314" width="80" height="50" rx="6"/>
-  <!-- T3 row -->
-  <rect class="glow glow-t3 glow-T3-1" x="688" y="379" width="80" height="50" rx="6"/>
-  <rect class="glow glow-t3 glow-T3-2" x="808" y="379" width="80" height="50" rx="6"/>
+    <!-- BOTTOM-LEFT — training -->
+    <text x="22" y="60" font-size="14" text-anchor="middle">&#x1F525;</text>
+    <text x="38" y="58" font-size="11" font-weight="700" fill="#334155">training</text>
+    <text x="38" y="70" font-size="9" font-style="italic" fill="#94a3b8">current-task atoms</text>
 
-  <!-- ====================== FOOTER LEGEND ====================== -->
-  <g transform="translate(630, 454)">
-    <!-- K|V glyph + definition -->
-    <rect width="56" height="30" rx="5" fill="#fed7aa" stroke="#ea580c" stroke-width="1.8"/>
-    <rect x="3" y="3" width="24" height="24" rx="3" fill="#ea580c" opacity="0.5"/>
-    <text x="15" y="19" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">K</text>
-    <rect x="29" y="3" width="24" height="24" rx="3" fill="#ea580c" opacity="0.35"/>
-    <text x="41" y="19" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">V</text>
-    <text font-size="18" font-weight="600" fill="#475569" x="66" y="14">memory slot</text>
-    <text font-size="14" fill="#64748b" x="66" y="30">K = key, V = value</text>
-    <!-- fire + snowflake -->
-    <text font-size="20" x="260" y="14">&#x1F525;</text>
-    <text font-size="18" font-weight="600" fill="#475569" x="284" y="14">training</text>
-    <text font-size="20" fill="#7dd3fc" x="370" y="14">&#x2744;</text>
-    <text font-size="18" font-weight="600" fill="#475569" x="394" y="14">frozen</text>
+    <!-- BOTTOM-RIGHT — frozen -->
+    <text x="172" y="60" font-size="14" fill="#7dd3fc" text-anchor="middle">&#x2744;</text>
+    <text x="188" y="58" font-size="11" font-weight="700" fill="#334155">frozen</text>
+    <text x="188" y="70" font-size="9" font-style="italic" fill="#94a3b8">prior-task atoms</text>
   </g>
   </g>
 </svg>
