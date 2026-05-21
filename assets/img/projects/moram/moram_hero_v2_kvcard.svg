@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 544" role="img"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 490" role="img"
      aria-label="MoRAM hero diagram: a transformer with a parametric memory bank per attention/MLP module, growing little by little across tasks via per-token routing, with sparse top-k selection and pruning.">
   <defs>
     <style><![CDATA[
       text { font-family: 'Inter','Helvetica Neue',Arial,sans-serif; fill: #0f172a; }
 
       /* === Typography === */
-      .title       { font-size: 30px; font-weight: 800; letter-spacing: -0.015em; fill: #020617; }
-      .title .acc  { fill: #ea580c; }
-      .subtitle    { font-size: 22px; font-weight: 500; fill: #334155; letter-spacing: 0.01em; }
       .region-h    { font-size: 20px; font-weight: 800; letter-spacing: 0.10em; fill: #334155; text-transform: uppercase; }
       .task-chip-text { font-size: 17px; font-weight: 800; letter-spacing: 0.05em; fill: #ffffff; }
       .small-note  { font-size: 17px; font-weight: 600; fill: #475569; }
@@ -816,15 +813,9 @@
   <!-- White background for dark-mode readability -->
   <rect width="100%" height="100%" fill="#ffffff"/>
 
-  <!-- ====================== TITLE BAR ====================== -->
-  <text class="title" x="20" y="32">
-    <tspan class="acc">MoRAM:</tspan> Learning Mixture of Rank-1 Associative Memories Little by Little
-  </text>
-  <text class="subtitle" x="20" y="52">for Continual Post-Training of Large Pre-Trained Models</text>
-
   <!-- ====================== TASK PROGRESS CHIPS ====================== -->
   <!-- Three chips horizontally, centered above the main content -->
-  <g transform="translate(20, 64)">
+  <g transform="translate(260, 10)">
     <!-- T1 chip -->
     <g class="chip-T1">
       <rect class="task-chip task-chip-t1" x="0"   y="0" width="130" height="28" rx="14"/>
@@ -852,7 +843,7 @@
   <!-- Centre the illustration block in the 1200-wide viewBox.
        Figure spans local x=220–900 (width 680). Centring puts it at
        world x=260–940 → translate(40,0). -->
-  <g transform="translate(40,0)">
+  <g transform="translate(40,-54)">
 
   <!-- ====================== LAYOUT REGIONS (placeholders) ====================== -->
 

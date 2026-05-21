@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 35 850 225" role="img"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 75 850 185" role="img"
      aria-label="MoRAM abstract: a token enters a model, which interacts with a growing memory pool — retrieves top-k atoms via self-activation, and appends new rank-1 atoms little by little.">
   <defs>
     <style><![CDATA[
       text { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; fill: #0f172a; }
 
       /* === Token === */
-      .token-box   { fill: #fff7ed; stroke: #ea580c; stroke-width: 1.6; }
-      .token-x     { font-size: 22px; font-weight: 700; font-style: italic; fill: #c2410c; }
-      .token-cap   { font-size: 10px; font-weight: 600; fill: #94a3b8; letter-spacing: 0.04em; }
+      .token-cap       { font-size: 10px; font-weight: 600; fill: #94a3b8; letter-spacing: 0.04em; }
 
       /* === Model θ === */
       .model-box      { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.6; }
@@ -81,6 +79,71 @@
       @keyframes fire-8  { 0%,59% {opacity:0}  60%,67% {opacity:1} 68%,100% {opacity:0} }
       @keyframes fire-9  { 0%,67% {opacity:0}  68%,75% {opacity:1} 76%,100% {opacity:0} }
       @keyframes fire-10 { 0%,75% {opacity:0}  76%,88% {opacity:1} 90%,100% {opacity:0} }
+
+      /* === Input queue ===
+         3 blocks queued left-to-right feed into the model one by one.
+         Subscripts increment as the stream progresses through the 15s cycle.
+         5 phases (20% each): labels advance, rightmost block slides out. */
+      .q-rect  { fill: #fff7ed; stroke: #ea580c; stroke-width: 1.2; }
+      .q-label { font-size: 12px; font-weight: 700; font-style: italic; fill: #c2410c; opacity: 0; }
+      .q-feed  { opacity: 0; }
+
+      .vis-a { animation: vis-a 15s infinite; }
+      .vis-b { animation: vis-b 15s infinite; }
+      .vis-c { animation: vis-c 15s infinite; }
+      .vis-d { animation: vis-d 15s infinite; }
+      .vis-e { animation: vis-e 15s infinite; }
+      @keyframes vis-a { 0%,19% {opacity:1} 20%,100% {opacity:0} }
+      @keyframes vis-b { 0%,19% {opacity:0} 20%,39% {opacity:1} 40%,100% {opacity:0} }
+      @keyframes vis-c { 0%,39% {opacity:0} 40%,59% {opacity:1} 60%,100% {opacity:0} }
+      @keyframes vis-d { 0%,59% {opacity:0} 60%,79% {opacity:1} 80%,100% {opacity:0} }
+      @keyframes vis-e { 0%,79% {opacity:0} 80%,99% {opacity:1} 100% {opacity:0} }
+
+      .qf-a { animation: feed-a 15s infinite; }
+      .qf-b { animation: feed-b 15s infinite; }
+      .qf-c { animation: feed-c 15s infinite; }
+      .qf-d { animation: feed-d 15s infinite; }
+      .qf-e { animation: feed-e 15s infinite; }
+      @keyframes feed-a {
+        0%     { transform:translateX(0);    opacity:1 }
+        14%    { transform:translateX(0);    opacity:1 }
+        19%    { transform:translateX(78px); opacity:0 }
+        20%,100% { transform:translateX(0);  opacity:0 }
+      }
+      @keyframes feed-b {
+        0%,18%   { transform:translateX(0);    opacity:0 }
+        20%      { transform:translateX(0);    opacity:1 }
+        34%      { transform:translateX(0);    opacity:1 }
+        39%      { transform:translateX(78px); opacity:0 }
+        40%,100% { transform:translateX(0);    opacity:0 }
+      }
+      @keyframes feed-c {
+        0%,38%   { transform:translateX(0);    opacity:0 }
+        40%      { transform:translateX(0);    opacity:1 }
+        54%      { transform:translateX(0);    opacity:1 }
+        59%      { transform:translateX(78px); opacity:0 }
+        60%,100% { transform:translateX(0);    opacity:0 }
+      }
+      @keyframes feed-d {
+        0%,58%   { transform:translateX(0);    opacity:0 }
+        60%      { transform:translateX(0);    opacity:1 }
+        74%      { transform:translateX(0);    opacity:1 }
+        79%      { transform:translateX(78px); opacity:0 }
+        80%,100% { transform:translateX(0);    opacity:0 }
+      }
+      @keyframes feed-e {
+        0%,78%   { transform:translateX(0);    opacity:0 }
+        80%      { transform:translateX(0);    opacity:1 }
+        94%      { transform:translateX(0);    opacity:1 }
+        99%      { transform:translateX(78px); opacity:0 }
+        100%     { transform:translateX(0);    opacity:0 }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .q-label, .q-feed { animation: none !important; }
+        .vis-a, .qf-a { opacity: 1 !important; }
+        .vis-b, .vis-c, .vis-d, .vis-e,
+        .qf-b, .qf-c, .qf-d, .qf-e { opacity: 0 !important; }
+      }
 
       /* === Flow arrows ===
          Marching-ants effect: the stroke is broken into a dash pattern and
@@ -237,10 +300,6 @@
       @keyframes halo-8  { 0%,67% {opacity:0} 68%,71% {opacity:1} 72%,100% {opacity:0} }
       @keyframes halo-9  { 0%,82% {opacity:0} 83%,86% {opacity:1} 87%,100% {opacity:0} }
       @keyframes halo-10 { 0%,82% {opacity:0} 83%,86% {opacity:1} 87%,100% {opacity:0} }
-
-      /* === Bottom title === */
-      .tagline-acc { fill: #ea580c; font-weight: 800; }
-      .tagline     { font-size: 17px; font-weight: 800; fill: #0f172a; letter-spacing: -0.005em; }
     ]]></style>
     <marker id="arr-r" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
       <polygon points="0 0, 8 4, 0 8" fill="#475569"/>
@@ -254,15 +313,55 @@
   </defs>
 
   <!-- White background covering the entire visible viewBox -->
-  <rect x="0" y="35" width="850" height="225" fill="#ffffff"/>
+  <rect x="0" y="75" width="850" height="185" fill="#ffffff"/>
 
-  <!-- ====================== TOKEN ====================== -->
-  <rect class="token-box" x="40" y="147" width="50" height="36" rx="5"/>
-  <text class="token-x"   x="65" y="172" text-anchor="middle">x</text>
-  <text class="token-cap" x="65" y="198" text-anchor="middle">INPUT TOKEN</text>
+  <!-- ====================== INPUT QUEUE ====================== -->
+  <!-- 3 blocks queued left-to-right. The rightmost block periodically
+       slides into the model. All subscripts increment between feeds. -->
 
-  <!-- Arrow: token → model -->
-  <line class="flow-input" x1="95" y1="165" x2="167" y2="165" marker-end="url(#arr-orange)"/>
+  <!-- Persistent left and middle queue slot rects -->
+  <rect class="q-rect" x="12" y="156" width="28" height="18" rx="3"/>
+  <rect class="q-rect" x="44" y="156" width="28" height="18" rx="3"/>
+
+  <!-- Left slot labels (highest subscript, newest in queue) -->
+  <text class="q-label vis-a" x="26" y="169" text-anchor="middle">x₃</text>
+  <text class="q-label vis-b" x="26" y="169" text-anchor="middle">x₄</text>
+  <text class="q-label vis-c" x="26" y="169" text-anchor="middle">x₅</text>
+  <text class="q-label vis-d" x="26" y="169" text-anchor="middle">x₆</text>
+  <text class="q-label vis-e" x="26" y="169" text-anchor="middle">x₇</text>
+
+  <!-- Middle slot labels -->
+  <text class="q-label vis-a" x="58" y="169" text-anchor="middle">x₂</text>
+  <text class="q-label vis-b" x="58" y="169" text-anchor="middle">x₃</text>
+  <text class="q-label vis-c" x="58" y="169" text-anchor="middle">x₄</text>
+  <text class="q-label vis-d" x="58" y="169" text-anchor="middle">x₅</text>
+  <text class="q-label vis-e" x="58" y="169" text-anchor="middle">x₆</text>
+
+  <!-- Right slot: feed blocks (lowest subscript, feeds into model) -->
+  <g class="q-feed qf-a">
+    <rect class="q-rect" x="76" y="156" width="28" height="18" rx="3"/>
+    <text class="q-label" style="opacity:1" x="90" y="169" text-anchor="middle">x₁</text>
+  </g>
+  <g class="q-feed qf-b">
+    <rect class="q-rect" x="76" y="156" width="28" height="18" rx="3"/>
+    <text class="q-label" style="opacity:1" x="90" y="169" text-anchor="middle">x₂</text>
+  </g>
+  <g class="q-feed qf-c">
+    <rect class="q-rect" x="76" y="156" width="28" height="18" rx="3"/>
+    <text class="q-label" style="opacity:1" x="90" y="169" text-anchor="middle">x₃</text>
+  </g>
+  <g class="q-feed qf-d">
+    <rect class="q-rect" x="76" y="156" width="28" height="18" rx="3"/>
+    <text class="q-label" style="opacity:1" x="90" y="169" text-anchor="middle">x₄</text>
+  </g>
+  <g class="q-feed qf-e">
+    <rect class="q-rect" x="76" y="156" width="28" height="18" rx="3"/>
+    <text class="q-label" style="opacity:1" x="90" y="169" text-anchor="middle">x₅</text>
+  </g>
+
+  <!-- Arrow: queue → model (marching ants) -->
+  <line class="flow-input" x1="106" y1="165" x2="167" y2="165" marker-end="url(#arr-orange)"/>
+  <text class="token-cap" x="56" y="192" text-anchor="middle">INPUT</text>
 
   <!-- ====================== MODEL θ ====================== -->
   <rect class="model-box" x="170" y="80" width="160" height="160" rx="12"/>
@@ -371,9 +470,4 @@
   <!-- Pool sub-caption removed — title already says "rank-1 key-value memories",
        and the curve at y=195 needs the space clear to be visible. -->
 
-  <!-- ====================== TOP TITLE ====================== -->
-  <text class="tagline" x="425" y="50" text-anchor="middle">
-    <tspan x="425"><tspan class="tagline-acc">MoRAM</tspan> &#x2014; Augmenting the Foundation Model</tspan>
-    <tspan x="425" dy="21">with a Little-by-Little Growing Mixture of Rank-1 Key&#x2013;Value Memories</tspan>
-  </text>
 </svg>

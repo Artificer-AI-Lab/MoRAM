@@ -18,29 +18,6 @@
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nerfiesNav">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu" id="nerfiesNav">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://jeff024.github.io/" title="Home"><span class="icon"><i class="fas fa-home"></i></span></a>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">More research</a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://jeff024.github.io/projects/">All projects</a>
-          <a class="navbar-item" href="https://zhaoc5.github.io/DyMoE/" rel="noopener noreferrer" target="_blank">LLaVA-DyMoE (CVPR 2026)</a>
-          <a class="navbar-item" href="https://arxiv.org/abs/2412.01004" rel="noopener noreferrer" target="_blank">CoDyRA</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -95,12 +72,63 @@
 
 <!-- Visual abstract: static high-level teaser of MoRAM. -->
 <section class="hero">
-  <div style="margin:0.5rem auto 0;padding:0 1.25rem;width:100%;max-width:960px;box-sizing:border-box;">
+  <div style="margin:0.5rem auto 0;padding:0 1.25rem;width:100%;max-width:1200px;box-sizing:border-box;">
     <figure class="image" style="margin:0;">
       <img src="assets/img/projects/moram/moram_abstract.svg"
            alt="MoRAM abstract: a token enters a model, which interacts with a growing memory pool — retrieves top-k atoms via self-activation, and appends new rank-1 atoms little by little."
            style="width:100%;height:auto;display:block;">
     </figure>
+  </div>
+</section>
+
+<section class="section" style="padding-bottom:1rem;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Continual learning (CL) with large pre-trained models aims to incrementally acquire knowledge without catastrophic forgetting. Existing LoRA-based Mixture-of-Experts (MoE) methods expand capacity by adding isolated new experts while freezing old ones, but still suffer from redundancy, interference, routing ambiguity, and consequent forgetting.</p>
+          <p>We investigate the issues stemming from <em>coarse-grained</em> expert granularity. Coarse-grained experts (e.g., high-rank LoRA) encode low-specialty information, leading to expert duplication/interference and routing degradation/confusion as experts accumulate.</p>
+          <p>In this work, we propose <strong>MoRAM</strong> (<strong>M</strong>ixture <strong>o</strong>f <strong>R</strong>ank-1 <strong>A</strong>ssociative <strong>M</strong>emory). Grounded in the view that weight matrices act as linear associative memories, MoRAM achieves CL as gradual incrementing of reusable <em>atomic rank-1 experts as memory</em>. Each rank-1 adapter acts as a fine-grained <em>MoE</em> expert or an associative <em>memory</em> unit. By viewing rank-1 adapters as key–value memory pairs, we eliminate explicit MoE-LoRA routers with self-activation, where each memory atom evaluates its relevance via its intrinsic key. The inference process thus becomes a robust, content-addressable retrieval over the incrementally accumulated memory.</p>
+          <p>Extensive experiments on CLIP and LLMs show that MoRAM significantly outperforms state-of-the-art methods, achieving a better plasticity–stability trade-off, stronger generalization, and reduced forgetting.</p>
+          <p class="has-text-centered is-italic" style="margin-top:1.25rem;">"Little by little, we gave you everything you ever dreamed of …" — <em>Little by little</em>, Oasis.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div style="margin:0 auto;padding:0 1.25rem;width:100%;max-width:1200px;box-sizing:border-box;">
+    <figure class="image" id="moram-hero-figure" style="margin:0;width:100%;">
+      <object id="moram-hero-svg"
+              type="image/svg+xml"
+              data="assets/img/projects/moram/moram_hero_v2_kvcard.svg?v=6"
+              aria-label="Animated MoRAM overview: a transformer with per-module parametric memory banks that grow across sequential tasks, showing per-token sparse retrieval routing to K/V memory slots."
+              style="width:100%;height:auto;display:block;">
+      </object>
+    </figure>
+    <div class="moram-hero-controls" id="moram-hero-controls" role="toolbar" aria-label="Animation controls" hidden>
+      <div class="moram-hero-controls__inner">
+        <button type="button" class="moram-hero-btn moram-hero-btn--icon" data-action="prev" aria-label="Previous phase">
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M11 2 L4 8 L11 14 Z" fill="currentColor"/></svg>
+        </button>
+        <button type="button" class="moram-hero-btn moram-hero-btn--play" data-action="toggle" aria-label="Play / pause">
+          <svg class="moram-hero-icon moram-hero-icon--play" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3.5 2 L13 8 L3.5 14 Z" fill="currentColor"/></svg>
+          <svg class="moram-hero-icon moram-hero-icon--pause" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" style="display:none;"><rect x="3.5" y="2.5" width="3" height="11" rx="0.6" fill="currentColor"/><rect x="9.5" y="2.5" width="3" height="11" rx="0.6" fill="currentColor"/></svg>
+        </button>
+        <button type="button" class="moram-hero-btn moram-hero-btn--icon" data-action="next" aria-label="Next phase">
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M5 2 L12 8 L5 14 Z" fill="currentColor"/></svg>
+        </button>
+        <div class="moram-hero-divider" aria-hidden="true"></div>
+        <div class="moram-hero-chips" role="tablist" aria-label="Jump to phase">
+          <button type="button" class="moram-hero-chip" data-phase="0" role="tab" aria-selected="false">Task 1</button>
+          <button type="button" class="moram-hero-chip" data-phase="1" role="tab" aria-selected="false">Task 2</button>
+          <button type="button" class="moram-hero-chip" data-phase="2" role="tab" aria-selected="false">Task 3</button>
+        </div>
+      </div>
+    </div>
+    <p class="moram-caption has-text-centered" style="margin-top:0.5rem;"><em>Architecture overview: per-module memory banks grow across tasks via sparse self-activated routing.</em></p>
   </div>
 </section>
 
@@ -292,56 +320,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>Continual learning (CL) with large pre-trained models aims to incrementally acquire knowledge without catastrophic forgetting. Existing LoRA-based Mixture-of-Experts (MoE) methods expand capacity by adding isolated new experts while freezing old ones, but still suffer from redundancy, interference, routing ambiguity, and consequent forgetting.</p>
-          <p>We investigate the issues stemming from <em>coarse-grained</em> expert granularity. Coarse-grained experts (e.g., high-rank LoRA) encode low-specialty information, leading to expert duplication/interference and routing degradation/confusion as experts accumulate.</p>
-          <p>In this work, we propose <strong>MoRAM</strong> (<strong>M</strong>ixture <strong>o</strong>f <strong>R</strong>ank-1 <strong>A</strong>ssociative <strong>M</strong>emory). Grounded in the view that weight matrices act as linear associative memories, MoRAM achieves CL as gradual incrementing of reusable <em>atomic rank-1 experts as memory</em>. Each rank-1 adapter acts as a fine-grained <em>MoE</em> expert or an associative <em>memory</em> unit. By viewing rank-1 adapters as key–value memory pairs, we eliminate explicit MoE-LoRA routers with self-activation, where each memory atom evaluates its relevance via its intrinsic key. The inference process thus becomes a robust, content-addressable retrieval over the incrementally accumulated memory.</p>
-          <p>Extensive experiments on CLIP and LLMs show that MoRAM significantly outperforms state-of-the-art methods, achieving a better plasticity–stability trade-off, stronger generalization, and reduced forgetting.</p>
-          <p class="has-text-centered is-italic" style="margin-top:1.25rem;">“Little by little, we gave you everything you ever dreamed of …” — <em>Little by little</em>, Oasis.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div style="margin:1.5rem auto 0;padding:0 1.25rem;width:100%;max-width:1000px;box-sizing:border-box;">
-    <figure class="image" id="moram-hero-figure" style="margin:0;width:100%;">
-      <object id="moram-hero-svg"
-              type="image/svg+xml"
-              data="assets/img/projects/moram/moram_hero_v2_kvcard.svg"
-              aria-label="Animated MoRAM overview: a transformer with per-module parametric memory banks that grow across sequential tasks, showing per-token sparse retrieval routing to K/V memory slots."
-              style="width:100%;height:auto;display:block;">
-      </object>
-    </figure>
-    <div class="moram-hero-controls" id="moram-hero-controls" role="toolbar" aria-label="Animation controls" hidden>
-      <div class="moram-hero-controls__inner">
-        <button type="button" class="moram-hero-btn moram-hero-btn--icon" data-action="prev" aria-label="Previous phase">
-          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M11 2 L4 8 L11 14 Z" fill="currentColor"/></svg>
-        </button>
-        <button type="button" class="moram-hero-btn moram-hero-btn--play" data-action="toggle" aria-label="Play / pause">
-          <svg class="moram-hero-icon moram-hero-icon--play" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3.5 2 L13 8 L3.5 14 Z" fill="currentColor"/></svg>
-          <svg class="moram-hero-icon moram-hero-icon--pause" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" style="display:none;"><rect x="3.5" y="2.5" width="3" height="11" rx="0.6" fill="currentColor"/><rect x="9.5" y="2.5" width="3" height="11" rx="0.6" fill="currentColor"/></svg>
-        </button>
-        <button type="button" class="moram-hero-btn moram-hero-btn--icon" data-action="next" aria-label="Next phase">
-          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M5 2 L12 8 L5 14 Z" fill="currentColor"/></svg>
-        </button>
-        <div class="moram-hero-divider" aria-hidden="true"></div>
-        <div class="moram-hero-chips" role="tablist" aria-label="Jump to phase">
-          <button type="button" class="moram-hero-chip" data-phase="0" role="tab" aria-selected="false">Task 1</button>
-          <button type="button" class="moram-hero-chip" data-phase="1" role="tab" aria-selected="false">Task 2</button>
-          <button type="button" class="moram-hero-chip" data-phase="2" role="tab" aria-selected="false">Task 3</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <div class="content has-text-justified publication-body">
@@ -359,16 +337,17 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div style="margin:0 auto;padding:0 1.25rem;width:100%;max-width:1200px;box-sizing:border-box;">
     <figure class="image" style="margin:1rem 0;width:100%;">
       <img src="assets/img/projects/moram/moram_explainer.svg"
            alt="Animated comparison: MoE-LoRA’s three pitfalls (intra-expert interference, inter-expert redundancy, routing collapse) vs. MoRAM’s three benefits (per-atom specialization, knowledge reuse, forgetting mitigation)."
            style="width:100%;height:auto;display:block;">
     </figure>
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <p class="moram-caption"><em>Figure 1.</em> Animated comparison of MoE-LoRA pitfalls vs. MoRAM solutions. See the paper for full analysis.</p>
-      </div>
-    </div>
+    <p class="moram-caption has-text-centered"><em>Figure 1.</em> Animated comparison of MoE-LoRA pitfalls vs. MoRAM solutions. See the paper for full analysis.</p>
   </div>
 </section>
 
@@ -989,13 +968,5 @@ document.addEventListener('DOMContentLoaded', function () {
   </div>
 </footer>
 
-<script>
-$(function () {
-  $('.navbar-burger').on('click', function () {
-    $('.navbar-burger').toggleClass('is-active');
-    $('.navbar-menu').toggleClass('is-active');
-  });
-});
-</script>
 </body>
 </html>
