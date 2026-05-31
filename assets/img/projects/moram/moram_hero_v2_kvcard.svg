@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 490" role="img"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="200 -44 830 534" role="img"
      aria-label="MoRAM hero diagram: a transformer with a parametric memory bank per attention/MLP module, growing little by little across tasks via per-token routing, with sparse top-k selection and pruning.">
   <defs>
     <style><![CDATA[

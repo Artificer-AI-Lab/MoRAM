@@ -41,17 +41,17 @@
           <div class="column has-text-centered" style="margin-top:0.75rem;">
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://openreview.net/forum?id=P247k4ELcn" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                <a href="https://openreview.net/forum?id=P247k4ELcn" class="external-link button is-small is-rounded is-dark" target="_blank" rel="noopener noreferrer">
                   <span class="icon"><img src="assets/img/projects/moram/icml-logo.svg" alt="ICML" style="width:1.1em;height:1.1em;display:block;"></span><span>ICML 2026</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2506.21035" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                <a href="https://arxiv.org/abs/2506.21035" class="external-link button is-small is-rounded is-dark" target="_blank" rel="noopener noreferrer">
                   <span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/Artificer-AI-Lab/MoRAM" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Artificer-AI-Lab/MoRAM" class="external-link button is-small is-rounded is-dark" target="_blank" rel="noopener noreferrer">
                   <span class="icon"><i class="fab fa-github"></i></span><span>GitHub</span>
                 </a>
               </span>
@@ -74,7 +74,7 @@
 
 <!-- Visual abstract: static high-level teaser of MoRAM. -->
 <section class="hero">
-  <div style="margin:0.5rem auto 0;padding:0 1.25rem;width:100%;max-width:1000px;box-sizing:border-box;">
+  <div style="margin:0.5rem auto 0;padding:0 1.25rem;width:100%;max-width:850px;box-sizing:border-box;">
     <figure class="image" style="margin:0;">
       <img src="assets/img/projects/moram/moram_abstract.svg"
            alt="MoRAM abstract: a token enters a model, which interacts with a growing memory pool — retrieves top-k atoms via self-activation, and appends new rank-1 atoms little by little."
@@ -83,25 +83,21 @@
   </div>
 </section>
 
-<section class="section" style="padding-bottom:1rem;">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>Continual learning (CL) with large pre-trained models aims to incrementally acquire knowledge without catastrophic forgetting. Existing LoRA-based Mixture-of-Experts (MoE) methods expand capacity by adding isolated new experts while freezing old ones, but still suffer from redundancy, interference, routing ambiguity, and consequent forgetting.</p>
-          <p>We investigate the issues stemming from <em>coarse-grained</em> expert granularity. Coarse-grained experts (e.g., high-rank LoRA) encode low-specialty information, leading to expert duplication/interference and routing degradation/confusion as experts accumulate.</p>
-          <p>In this work, we propose <strong>MoRAM</strong> (<strong>M</strong>ixture <strong>o</strong>f <strong>R</strong>ank-1 <strong>A</strong>ssociative <strong>M</strong>emory). Grounded in the view that weight matrices act as linear associative memories, MoRAM achieves CL as gradual incrementing of reusable <em>atomic rank-1 experts as memory</em>. Each rank-1 adapter acts as a fine-grained <em>MoE</em> expert or an associative <em>memory</em> unit. By viewing rank-1 adapters as key–value memory pairs, we eliminate explicit MoE-LoRA routers with self-activation, where each memory atom evaluates its relevance via its intrinsic key. The inference process thus becomes a robust, content-addressable retrieval over the incrementally accumulated memory.</p>
-          <p>Extensive experiments on CLIP and LLMs show that MoRAM significantly outperforms state-of-the-art methods, achieving a better plasticity–stability trade-off, stronger generalization, and reduced forgetting.</p>
-          <p class="has-text-centered is-italic" style="margin-top:1.25rem;">"Little by little, we gave you everything you ever dreamed of …" — <em>Little by little</em>, Oasis.</p>
-        </div>
-      </div>
-    </div>
+<div class="moram-quote-break" style="margin:1.5rem auto 0.5rem;max-width:700px;padding:0 1.25rem;text-align:center;">
+  <div style="display:flex;align-items:center;gap:1rem;">
+    <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#ea580c40,#ea580c,#ea580c40,transparent);"></div>
   </div>
-</section>
+  <p style="margin:0.75rem 0;font-family:'Georgia',serif;font-size:1rem;font-style:italic;color:#334155;letter-spacing:0.02em;line-height:1.6;">
+    "Little by little, we gave you everything you ever dreamed of …"
+    <br><span style="font-style:normal;font-size:0.85rem;color:#64748b;letter-spacing:0.05em;">— <em>Little by Little</em>, Oasis</span>
+  </p>
+  <div style="display:flex;align-items:center;gap:1rem;">
+    <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#ea580c40,#ea580c,#ea580c40,transparent);"></div>
+  </div>
+</div>
 
 <section class="hero teaser">
-  <div style="margin:0 auto;padding:0 1.25rem;width:100%;max-width:1200px;box-sizing:border-box;">
+  <div style="margin:0 auto;padding:0 1.25rem;width:100%;max-width:850px;box-sizing:border-box;">
     <figure class="image" id="moram-hero-figure" style="margin:0;width:100%;">
       <object id="moram-hero-svg"
               type="image/svg+xml"
@@ -131,6 +127,23 @@
       </div>
     </div>
     <p class="moram-caption has-text-centered" style="margin-top:0.5rem;"><em>Architecture overview: per-module memory banks grow across tasks via sparse self-activated routing.</em></p>
+  </div>
+</section>
+
+<section class="section" style="padding-bottom:1rem;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Continual learning (CL) with large pre-trained models aims to incrementally acquire knowledge without catastrophic forgetting. Existing LoRA-based Mixture-of-Experts (MoE) methods expand capacity by adding isolated new experts while freezing old ones, but still suffer from redundancy, interference, routing ambiguity, and consequent forgetting.</p>
+          <p>We investigate the issues stemming from <em>coarse-grained</em> expert granularity. Coarse-grained experts (e.g., high-rank LoRA) encode low-specialty information, leading to expert duplication/interference and routing degradation/confusion as experts accumulate.</p>
+          <p>In this work, we propose <strong>MoRAM</strong> (<strong>M</strong>ixture <strong>o</strong>f <strong>R</strong>ank-1 <strong>A</strong>ssociative <strong>M</strong>emory). Grounded in the view that weight matrices act as linear associative memories, MoRAM achieves CL as incremental expansion of reusable <em>atomic rank-1 experts as memory</em>. Each rank-1 adapter acts as a fine-grained <em>MoE</em> expert or an associative <em>memory</em> unit.</p>
+          <p>By viewing rank-1 experts as key–value memory pairs, we eliminate explicit MoE-LoRA routers with self-activation, where each memory atom evaluates its relevance via its intrinsic key. The inference process thus becomes a content-addressable retrieval and recall over the incrementally accumulated memory of learning snapshots.</p>
+          <p>Extensive experiments on CLIP and LLMs show that MoRAM significantly outperforms state-of-the-art methods, achieving a better plasticity–stability trade-off, stronger generalization, and reduced forgetting.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -343,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </section>
 
 <section class="section" style="padding-top:0;">
-  <div style="margin:0 auto;padding:0 1.25rem;width:100%;max-width:1000px;box-sizing:border-box;">
+  <div style="margin:0 auto;padding:0 1.25rem;width:100%;max-width:850px;box-sizing:border-box;">
     <figure class="image" style="margin:1rem 0;width:100%;">
       <img src="assets/img/projects/moram/moram_explainer.svg"
            alt="Animated comparison: MoE-LoRA’s three pitfalls (intra-expert interference, inter-expert redundancy, routing collapse) vs. MoRAM’s three benefits (per-atom specialization, knowledge reuse, forgetting mitigation)."
