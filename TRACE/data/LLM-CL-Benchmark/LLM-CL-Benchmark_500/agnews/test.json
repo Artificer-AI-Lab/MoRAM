@@ -1,0 +1,402 @@
+[
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: N.Korea Says Met U.S. Officials, No Nuclear Progress (Reuters)\nText: Reuters - North Korean and U.S. officials met this\\week in New York but made no progress on restarting six-party\\talks on the North's nuclear programs, a North Korean Foreign\\Ministry spokesman said on Saturday.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: UPDATE 1-Rookie Johnson shares Buick lead with Funk\nText: Rookie Zach Johnson produced the day #39;s joint best score, a five-under-par 65, to join Fred Funk at the top of the leaderboard after the second round of the \\$4.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Berlusconi confident of acquittal\nText: Judges in the corruption trial of Silvio Berlusconi withdrew yesterday to decide their verdict and the prime minister said he was confident he would not be convicted.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Russia wants new business partnership with old ally India (AFP)\nText: AFP - Russia is seeking a new economic partnership to boost a decades-old friendship with India, envisaging sophisticated arms sales, high-end technology swaps and political support on the world stage.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Colts' Carthon Hopes to Follow Dad in NFL (AP)\nText: AP - Ran Carthon tried to avoid playing football after seeing the pain it inflicted on his father, Maurice. Bloodlines, his friends and reality forced a changed of heart.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Sun settles Kodak patent suit\nText: Sun Microsystems says it will pay Kodak \\$92 million to settle a high-profile patent suit involving Sun #39;s Java programming technology.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Texans follow Astros #39; lead\nText: The News sports editor. HOUSTON - The Houston Astros weren #39;t the only team in the Bayou City toasting a watershed achievement Sunday afternoon.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle:  #39;Blog #39; To Be Included in 2005 Dictionary\nText: The most requested online definition this year was  quot;blog quot; -- a word not even yet officially in the dictionary, Merriam-Webster says.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Season could be over for Manninger\nText: Austrian goalkeeper Alex Manninger could miss the rest of the season after dislocating his shoulder in Wednesday #39;s World Cup qualifying draw with Northern Ireland.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Jets: Abraham is likely to miss 3 games\nText: Though coach Herman Edwards ruled defensive end John Abraham out for only this Sunday #39;s game against the Steelers with a sprained lateral collateral ligament in his right knee, he #39;ll be \nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: GM, Daimler Go Green\nText: Team-up will help the companies compete and fill gaps in both firms' portfolios.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Survey: Napster, iTunes beat other download brands (MacCentral)\nText: MacCentral - Market research company Ipsos-Insight on Tuesday announced the results of TEMPO, a quarterly survey of digital music behaviors. According to the report, consumers aged 12 and older in the United States were as likely to be aware of Apple Computer Inc.'s iTunes Music Store and Napster 2.0 when it came to recognizing digital music download brands -- each music service registered 20 percent of what TEMPO refers to as \"top-of-mind\" awareness.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Chavez rejects CD as opposition\nText: Venezuela #39;s President Hugo Chavez has announced that he will no longer recognize the Democratic Coordination or CD as the opposition coalition.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Osaka school killer of 8, yakuza boss executed\nText: TOKYO - Mamoru Takuma, convicted for murdering eight children at an Osaka elementary school in 2001, has been executed, informed sources said Tuesday.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Zurich abandons bid for 2014 Winter Olympics\nText: Zurich has decided to quit the bid for the 2014 Winter Olympics, according to a statement released bythe Swiss Olympic Association on Tuesday.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Defence contractors chase \\$23bn deal\nText: EUROPES biggest defence contractors will have the chance to bid for a \\$23 billion (12 billion) air refuelling contract for the US Air Force that has been withdrawn from Boeing.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: RealNetworks Gets in Content Business (AP)\nText: AP - RealNetworks Inc. survived the dot-com collapse and an assault from Microsoft Corp. Now it's trying to remake itself into a provider of paid Internet content.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: 'Dream Team' Out of Gold Race After Loss to Argentina\nText:  ATHENS (Reuters) - The U.S. men's basketball team was  beaten by Argentina Friday, denying it an Olympic gold medal  for the first time since 1992 when NBA players started  competing.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Go save Hubble\nText: NASA should use the space shuttle and spacewalking astronauts to mount one last repair flight to the Hubble Space Telescope, and extend the life of one of the greatest scientific instruments ever made.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Carter could prove real plus for Nets\nText: The Nets reported deal for Vince Carter very much surprises me given New Jersey #39;s cost-slashing moves in the offseason that saw the exits of Kenyon Martin and Kerry Kittles.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: FDA stifled dangerous Vioxx results - expert\nText: Washington - An expert with the United States Food and Drug Administration (FDA) has said on Thursday he was pressured by his agency to stifle study results showing the potential dangers of the anti-inflammatory drug Vioxx.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Barbarians at the Digital Gate\nText: How spyware, a program that creeps onto a computers hard drive unannounced, is wrecking the Internet.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: French Hostage Transfer Sparks Release Hopes\nText:  PARIS (Reuters) - Hopes of a swift end to the French  hostage crisis rose early Friday, after the Le Figaro newspaper  that employs one of the two captives said the men were now  being held by Iraqi guerrillas willing to negotiate their  release.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Ex-teller wins bias case against Citizens\nText: A former part-time teller and Mexican immigrant won more than \\$100,000 after the Massachusetts Commission Against Discrimination determined Citizens Bank discriminated against her when it bypassed her for a full-time job in favor of a less experienced white co-worker.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Gates: Microsoft to offer anti-spyware\nText: Company Chairman Bill Gates says \"this malware thing is so bad\" the software giant plans to offer its own tools.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: E.U. Regulators Approve Oracle's PeopleSoft Bid\nText: European Union antitrust regulators on Tuesday cleared Oracle Corp.'s hostile \\$7.7 billion bid for rival business software maker PeopleSoft Inc., removing one of the last major hurdles to the contested takeover proposal.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Minn. Test Drives New License Technology (AP)\nText: AP - Minnesota next week will begin issuing a first-of-its-kind driver's license designed to thwart counterfeiters  #151; an issue that has taken on greater urgency since the Sept. 11 attacks.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Hackers, spoofers and malware--oh my!\nText: IE exploit code could boost risk of browser mishaps. Microsoft says teamwork makes for better defenses.\\\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: US Space Agency Improves Shuttle Safety, Management\nText: The US space agency, NASA, continues work on improving the safety of the space shuttle, before the fleet of orbiters resumes its visits to the international space station next year.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Creators of private spaceship announce plans for second launch &lt;b&gt;...&lt;/b&gt;\nText: The creators of a private rocket plane will go ahead with plans for another launch next week in a quest to claim a multimillion-dollar prize, despite a harrowing flight in which the spacecraft rolled dramatically while hurtling toward \nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: New MSN Search May Be a Google Killer!\nText: New MSN Search May Be a Google Killer!\\\\The Second Look at MSN's Search technology is available for public beta testing. I've given it a spin myself and must say that I'm impressed. Although they have no ads on the SERP's of the preview site, I'm sure they will load it ...\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Sorenstam wins Hammons Classic\nText: Annika Sorenstam won her fifth LPGA Tour event of the year, closing with a 1-under 70 Sunday for a four-shot victory at the John Q. Hammons Classic.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Dollar Briefly Hits 4-Wk Low Vs Euro\nText:  LONDON (Reuters) - The dollar dipped to a four-week low  against the euro on Monday before rising slightly on  profit-taking, but steep oil prices and weak U.S. data  continued to fan worries about the health of the world's  largest economy.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: UEFA Cup Round-up\nText: Newcastle eased their way into the UEFA Cup group stages on Thursday night as Alan Shearer and Patrick Kluivert hit the goals trail again in a 5-1 victory over Bnei Sachnin in Israel.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Briefly: Sun expands pay-as-you go supercomputing\nText: roundup Plus: SGI works on Linux performance software...Good Technology supported by HP, Samsung...RealNetworks loss widens on litigation.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Credit Card Delinquencies at a 4-Year Low\nText:  NEW YORK (Reuters) - Americans paid their credit card bills  on time at a record high level in June, sending credit card  delinquencies to their lowest level in four years, Moody's  Investors Service said on Monday.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Notables\nText: Every Baltimore starter reached base at least twice. Orioles' Brian Roberts set the AL record for doubles in a season by a switch hitter with 47 -- also tying Cal Ripken Jr.'s team record from 1983.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: NASA puts off space shuttle flights until at least May\nText: WASHINGTON: The US space agency NASA has put off resumption of space shuttle flights from March until at least May, the agency has said.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Promoting a Shared Vision\nText: As Michael Kaleko kept running into people who were getting older and having more vision problems, he realized he could do something about it.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Smith lifts Missouri with all-around effort\nText: COLUMBIA, Mo. -- Brad Smith threw for 233 yards and three touchdowns and ran for 63 yards and another score to help No. 18 Missouri rout Arkansas State, 52-20, last night in the season opener for both teams.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: No. 19 Iowa Dominates Kent St., 39-7 (AP)\nText: AP - Drew Tate threw two touchdowns in his first start and No. 19 Iowa turned in a dominating defensive performance to beat Kent State 39-7 in the season opener Saturday.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: NFL Suspends Seattle Receiver Four Games (AP)\nText: AP - Seattle receiver Koren Robinson was suspended without pay Monday for the next four games for violating the NFL's substance-abuse policy.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Intel in new chip breakthrough\nText: Intel creates a more powerful memory chip without increasing its size, confounding the firm's critics.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Iraq #39;s Chalabi escapes attempt on his life\nText: Gunmen opened fire Wednesday on a convoy carrying former Iraqi Governing Council member Ahmad Chalabi in an apparent assassination attempt that wounded two of his bodyguards, Chalabi #39;s spokesman said.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: IBM Releasing New Power5-Based Servers\nText: RESEARCH TRIANGLE PARK - IBM is rolling out a new line of Power5-processor based servers that it says outperform rivals from Sun and HP.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Microsoft Plans Heavy Hype for 'Halo 2'\nText: \"Halo 2\" appears to be one of the most hotly hyped and heavily anticipated video games ever, and Microsoft is planning a Tuesday release that may rival the best of Hollywood's movie glitz. &lt;FONT face=\"verdana,MS Sans Serif,arial,helvetica\" size=\"-2\"\\ color=\"#666666\"&gt;&lt;B&gt;-washingtonpost.com&lt;/B&gt;&lt;/FONT&gt;\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: American Airlines revenue weakens\nText: American Airlines holding company AMR Corp. (AMR: Research, Estimates) on Wednesday said the airline #39;s August revenue was weaker than expected after hurricanes and high fuel prices \nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Martha Stewart Living posts bigger loss\nText: Martha Stewart Living Omnimedia Inc., still reeling from the personal legal woes of its imprisoned founder, former chairwoman and CEO, posted a wider loss in the third quarter \nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Boeing, IBM Strategic Alliance Boosts Net-Centric Technology\nText: From the 1950 #39;s until the present, one of the dominant companies in the world #39;s computer industry. Offers a variety of data processing hardware systems, system and application software, and information technology services.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Sun and Kodak settle out of court\nText: As we reported previously, Kodak filed a lawsuit against Sun Microsystems claiming that the company had infringed on its patents by implementing  quot;ask for help quot; functionality in its Java programming language, which gave a huge boost to the company #39;s yearly \nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Four Infineon executives plead guilty\nText: Four Infineon executives pled guilty for price fixing computer memory chips and will face a prison sentence of four to six months along with \\$250,000 in fines, reported the US Department of Justice on Thursday.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Major League Baseball Box Score\nText: COLORADO (7) VS ARIZONA (1) - MID 6TH - IN PROGRESS COLORADO ab rh rbi bb so lob avg A Miles 2b 4 0 1 0 0 0 1 .302 R Clayton ss 2 0 2 0 1 0 0 .\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Judge: Ex-Baylor Player Unfit for Trial (AP)\nText: AP - A former Baylor University basketball player charged with murdering a teammate was ruled incompetent to stand trial Thursday.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Stock Futures Flat Before GDP, Fed Speech\nText:  NEW YORK (Reuters) - U.S. stock futures were nearly  unchanged on Friday as investors awaited key data on the  economy that could determine the market's early direction.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: US confirms commitment to defend Taiwan\nText: Mr Powell says that while the US recognises the one-China policy, it will offer to assist Taiwan if it is threatened. A US State Department spokesman says the issue came up during talks with China #39;s visiting military chief, General Liang Guanglie.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Islamic Scholar, Visa Withheld, Gives Up U.S. Post\nText:  GENEVA (Reuters) - A prominent Swiss-based Islamic scholar  on Tuesday gave up plans to teach at a leading U.S. university  after waiting in vain for a visa and accused the Bush  administration of trying to silence him.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Oil Price Steadies After 5 Percent Slide\nText:  LONDON (Reuters) - Oil steadied on Thursday after  Wednesday's 5 percent retreat from record highs, as traders  concluded that China's surprise interest rate rise would not do  much to dampen fuel demand growth.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Stocks Rise as Crude Falls More Than \\$2\nText:  NEW YORK (Reuters) - U.S. stocks rose on Wednesday as crude  oil futures fell more than \\$2 a barrel on a big jump in U.S.  petroleum supply, easing worries about the impact of energy  costs on corporate profits and economic growth.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: IBM unveils notebook with fingerprint reader\nText: IBM on Monday introduced a biometric notebook computer with an integrated fingerprint reader,which it says can recognize the user of the computer.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Two top Nokia executives resign\nText: HELSINKI: Nokia said the respected head of its networks unit had resigned and another top networks official left in the second major departure of top management in two weeks at the world #39;s largest mobile phone maker.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Notebook: Bears #39; Urlacher to miss 4-6 weeks\nText: Just when their defense was playing at a high level and sparking a three-game winning streak, the Chicago Bears lost standout linebacker Brian Urlacher.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: KarstadtQuelle Sells Stake in Venture\nText: Troubled German retailer KarstadtQuelle AG said Monday it is selling its 82 percent stake in a three-year-old joint venture with coffeehouse chain Starbucks Coffee International to the US company.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Update 1: United Needs to Cut \\$500M More in Costs\nText: United Airlines, in a bankruptcy court filing in advance of a status hearing Friday, has revealed it needs to cut \\$500 million more in costs than previously stated.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Asian Shares Hit by Metals Tumble, Oil (Reuters)\nText: Reuters - A sharp slide in global metals\\markets hammered industrial and mining stocks such as JFE\\Holdings and BHP Billiton Thursday, while oil prices crawled\\back toward record highs.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Hewitt advances to Long Island final\nText: Lleyton Hewitt is one match away from winning his second consecutive ATP title, with the Australian reaching the final of the TD Waterhouse Cup at Long Island.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Government to sell stake in oil business\nText: The Canadian government is getting out of the oil-and-gas business by selling off its stake in Petro-Canada for about \\$3.1 billion.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Microsoft enters the Internet search market  at last\nText: After years of licensing search technology from Yahoo and seeing its Web search market share slowly but steadily decline, Microsoft has finally developed its own search engine and is expected to unveil it later this week.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: ETA Seals Off Madrid with 5 Bombs, 2 Police Hurt (Reuters)\nText: Reuters - The Basque separatist group ETA set off\\five bombs at petrol stations around Madrid on Friday, putting\\a stranglehold on the city at the start of a long holiday\\weekend.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Taiwan's Leader Urges China to Begin Talks (AP)\nText: AP - Taiwan's leader used his National Day speech Sunday to urge China to begin peace talks so the two rivals can avoid war. Chinese and Taiwanese leaders haven't met since the Communists took over China in 1949 and Taiwan began resisting the mainland's rule. China insists that Taiwan is a Chinese province and has threatened to attack if it refuses to unify eventually.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Keeping Mad Cow Out of Cosmetics\nText: Since mad cow disease turned up in the United States late last year, traced to a cow imported from Canada, federal regulators have issued rules to prevent the spread of the fatal disease, focusing on limiting beef imports, testing and other measures to protect the domestic herd.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: ST Tele-TM Intl to buy 47.7 in Idea\nText: Mumbai: Singapore Technologies Telemedia and TM International have announced that their consortium has signed definitive agreements for the acquisition of 47.7 per cent stake in Idea Cellular.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Imagining An iPod Challenger\nText: NEW YORK - If ever there was a company that could challenge Apple Computer for the dominant position in the still-young digital music space, it should be Sony.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Mr Downer shoots his mouth off\nText: Just what Alexander Downer was thinking when he declared on radio last Friday that  quot;they could fire a missile from North Korea to Sydney quot; is unclear. The provocative remark, just days before his arrival yesterday on his second visit to the North Korean ...\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Advanced Micro Devices meets reduced forecast for third quarter\nText: SAN FRANCISCO - Advanced Micro Devices Inc. reported a third-quarter profit from a loss a year-earlier on today, but sales fell from the second quarter in line with the chip maker #39;s recently reduced outlook.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Tracking Service Aims to Ease Product Returns (Ziff Davis)\nText: Ziff Davis - A Texas company tries to take a little bit of the sting out of the biggest online retail nightmare: returns.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Video game pioneer shoots for next level with cell phones (USATODAY.com)\nText: USATODAY.com - Video game pioneer Trip Hawkins is going mobile. His latest act, a Silicon Valley company called Digital Chocolate, is developing games and \"lifestyle\" applications for portable phones. He hopes the new venture will turn out like the first he founded, Electronic Arts, the leading video game maker. His most recent gaming company, 3D0, went out of business after a decade. Hawkins spoke with USA TODAY's Edward C. Baigat last week's DemoMobile conference in La Jolla, Calif.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Child Abuse Leads to Adult Heart Disease\nText: By Ed Edelson, HealthDay Reporter    HealthDayNews -- Children who are abused or neglected grow up to be adults with a significantly greater risk of heart disease, a new study says.    It's the first study to show a direct link between a wide range of childhood problems and ischemic heart disease -- blockage of the arteries that leads to heart attacks and other major problems, said Maxia Dong, a medical epidemiologist at the U.S...\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Colombia militant gunned down\nText: A top leader of Colombia #39;s right-wing paramilitaries has been assassinated, throwing into further doubt the ongoing peace process with the government.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: WTO rules against US gambling laws\nText: The World Trade Organization says the US ban on cross-border gambling violates international trade laws; the United States said it would appeal.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Russian space agency: Space station crew could be forced to return &lt;b&gt;...&lt;/b&gt;\nText: MOSCOW Space officials in Russia are joining American officials in talking about the potential consequences of the food shortage aboard the international space station.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Bush Tries to Mend Ties With Latin America\nText: President Bush, trying to mend relations with Latin America, pledged Sunday to make a fresh push for stalled immigration reforms and defended the U.S. invasion of Iraq, saying that \"history will prove it right.\"\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Dow Chemical reports 86 percent increase in profit\nText: DETROIT - Dow Chemical Co. #39;s third-quarter earnings soared 86 percent to beat Wall Street forecasts, thanks largely to improved margins.\nAnswer:",
+        "answer": "Business"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Suicide Car Bomber Hits Baghdad Checkpoint Again (Reuters)\nText: Reuters - A suicide car bomber struck an entrance\\to Baghdad's Green Zone government compound Tuesday, 24 hours\\after an almost identical attack at the same checkpoint on the\\first anniversary of Saddam Hussein's arrest.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Downing provides return on McClaren #39;s gamble\nText: IN A week in which one of their former players rechristened himself G8 to distance himself from the past, Middlesbroughs attempts to rewrite history took another step forward in Athens.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Stellar Putting Gives Europe a 2 - 0 Ryder Cup Lead\nText: Inspired by a brilliant putting display, holders Europe secured the first two points in the opening fourball matches against the United States at the 35th Ryder Cup Friday.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Nalbandian Is Stunned at the Chica Open\nText:  BEIJING (Reuters) - Resurgent Finn Jarkko Nieminen  overpowered David Nalbandian 6-2, 2-6, 6-2 at the China Open on  Friday as the seeds continued to tumble in Beijing.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Wardian, Feldman Right at Home in Parks Marathon\nText: Michael Wardian rounded the corner onto Woodmont Avenue in Bethesda, smiling broadly and waving to the cheering crowd. Making his way to the finish line, Wardian ran comfortably, looking more like someone finishing a training run rather than a race.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: National Guard HQ attacked near Baghdad\nText: A mortar attack on an Iraqi National Guard headquarters north of Baghdad killed at least four National Guards and injured 80 others, officials said Tuesday.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: California Official Rules on Gay Marriage\nText: SAN FRANCISCO - California's constitution permits laws against gay marriage, the state's attorney general declared Friday in a long-awaited legal opinion that sought to avoid offending either side of the debate.    While acknowledging that \"committed and loving relationships between two individuals deserve recognition under California law,\" Attorney General Bill Lockyer said it was up to the voters or the Legislature to decide questions about whether gay couples should be allowed to marry...\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Blair: Time for Excuses on Africa Is Over (Reuters)\nText: Reuters - British Prime Minister\\Tony Blair is to say Thursday that the time for excuses on\\Africa is over as he chairs a meeting in Ethiopia he hopes will\\turn the continent's problems into a global priority.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: India hospital injections fears\nText: India's health minister tells parliament that nearly 70 of injections at government hospitals are unsafe.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Hague Court Imposes Defense Counsel on Milosevic\nText:  THE HAGUE (Reuters) - Judges at The Hague tribunal on  Thursday imposed a defense counsel on former Yugoslav President  Slobodan Milosevic to avoid further delays in his war crimes  trial.\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Coming to a TV near you: Ads for desktop Linux\nText: Linspire CEO points out that recent TV ads serve as indication of acceptance in mainstream populace.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Lokomotiv Moscow captures league title\nText: Moscow, Russia (Sports Network) - Lokomotiv Moscow won the Russian Premier League championship on the final day of the season with a 2-0 victory over Shinnik Yaroslavl.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Stocks Climb on Strong Economic Data\nText: NEW YORK - Newly optimistic investors sent stocks sharply higher Friday, propelling the Dow Jones industrials up more than 100 points, after economic data showed strength in manufacturing and construction. Wall Street greeted the departure of PeopleSoft Inc.'s chief executive by buying up technology shares...\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: USC, Miami Top BCS Standings, Not Okla.\nText: Southern California took the top spot Monday in the season's first Bowl Championship Series standings, and surprisingly Miami is ahead of Oklahoma in a close race for the second spot.    Oklahoma is No...\nAnswer:",
+        "answer": "World"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: First Look: Intuit's QuickBooks for Newbies\nText: New Simple Start Edition accounting software targets small businesses still using pencil and paper.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Ballesteros Hoping to Play Full Season Next Year\nText:  MADRID (Reuters) - Severiano Ballesteros said on Friday he  has made such a dramatic recovery from his back problems that  he hopes to play a full season next year on both sides of the  Atlantic.\nAnswer:",
+        "answer": "Sports"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Anti-Spyware Spending Set To Skyrocket\nText: The spyware plague will trigger a 2,500 percent increase in enterprise spending by 2008, a market-research firm reports. By Gregg Keizer.\nAnswer:",
+        "answer": "Science or Technology"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: World, Sports, Business, Science or Technology \nTitle: Unit Trust Fan Targets Health Care\nText:  NEW YORK (Reuters) - Businessman Sam Katz tried to tap into  Warren Buffet's gravy train a decade ago with a plan to make  the legendary investor's lofty Berkshire Hathaway shares more  accessible to the small investor.\nAnswer:",
+        "answer": "Business"
+    }
+]

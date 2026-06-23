@@ -1,0 +1,402 @@
+[
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: ABeam Consulting\nText:  ABeam Consulting an IT consulting services firm based in Japan. This company's previous name is Deloitte Tohmatsu Consulting which is a member of Deloitte Touche Tohmatsu: Japan branch office. After the Enron scandal this company changed its name ABeam Consulting. ABeam has operations throughout the Americas Asia and Europe.The company's primary business areas are the SAP ERP solution lease accounting internal control and M&A consulting.\nAnswer:",
+        "answer": "Company"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Klick Health\nText:  Klick Health is a digital marketing agency located in Toronto Ontario. The company offers marketing operational and learning services such as custom web application development consulting content and creative development web analytics e-Learning course development and learning management systems website design and web usability consultation to the healthcare industry.\nAnswer:",
+        "answer": "Company"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Brother Sister\nText:  Brother Sister is an album by Brand New Heavies released in 1994. It spawned several singles including Spend Some Time which spent two weeks at number two on the American dance charts. A cover of Maria Muldaur's Midnight at the Oasis became popular in the UK but was not included in the US version of the album.Brother Sister was lead singer N'Dea Davenport's last album with Brand New Heavies before leaving to complete her solo album (which she had put on hold to join the Heavies).\nAnswer:",
+        "answer": "Album"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: The Charlatan (film)\nText:  The Charlatan (Hungarian: A Kuruzsló) is a 1917 Hungarian film directed by Michael Curtiz.\nAnswer:",
+        "answer": "Film"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Patrimony (novel)\nText:  Patrimony (2007) is a science fiction novel by Alan Dean Foster. The book is the thirteenth chronologically in the Pip and Flinx series.\nAnswer:",
+        "answer": "Written Work"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Grave of the Fireflies (novel)\nText:  Grave of the Fireflies (火垂るの墓 Hotaru no Haka) is a 1967 semi-autobiographical novel by Japanese novelist Akiyuki Nosaka. It is based on his experiences before during and after the firebombing of Kobe in 1945. One of his sisters died as the result of a sickness his adoptive father died during the firebombing proper and another sister died of malnutrition in Fukui.\nAnswer:",
+        "answer": "Written Work"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Corylus johnsonii\nText:  Corylus johnsonii is an extinct species of hazel known from fossil fruits found in the Klondike Mountain Formation deposits of Northern Washington State dated to the early Eocene Ypresian stage (56 to 48 million years ago). Based on described features C.\nAnswer:",
+        "answer": "Plant"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Church of St James Halse\nText:  The Church of St James in Halse Somerset Somerset England dates from the Norman period and is dedicated St James the Less. It has been designated as a Grade I listed building.The church includes some 12th and 13th century work including the tower but the current building was mainly built in the 15th century. The north aisle was built around 1546 and the church was restored in 1900.\nAnswer:",
+        "answer": "Building"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Magos Herrera (album)\nText:  Magos Herrera is a Japanese compilation album by the Latin jazz Mexican singer Magos Herrera. Released on April 21 2004 in Japan the album included songs from her previous albums Orquideas Susurrantes and Pais Maravilla.\nAnswer:",
+        "answer": "Album"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Heliotropium indicum\nText:  Heliotropium indicum commonly known as Indian heliotrope is an annual hirsute plant that is a common weed in waste places and settled areas. It is native to Asia.\nAnswer:",
+        "answer": "Plant"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Anatrachyntis sesamivora\nText:  Anatrachyntis sesamivora is a moth in the Cosmopterigidae family. It was described by Meyrick in 1933 and is known from Java Indonesia.\nAnswer:",
+        "answer": "Animal"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Alvaradoia disjecta\nText:  Alvaradoia disjecta is a moth of the Noctuidae family. It is found in eastern Spain and in south-eastern France.The wingspan is 20–28 mm. Adults are mainly on wing from June to July but have also been recorded in the beginning of September suggesting a second generation.The larvae feed on the leaves Santolina chamaecyparissus.\nAnswer:",
+        "answer": "Animal"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Journal of Higher Education Outreach and Engagement\nText:  The Journal of Higher Education Outreach and Engagement is a peer-reviewed open-access academic journal published by the University of Georgia. It was established in 1996 as the Journal of Public Service and Outreach. The journal covers issues concerning service learning and university outreach to surrounding communities. The journal publishes research articles essays descriptions of nascent university-community partnership projects book reviews and dissertation overviews.\nAnswer:",
+        "answer": "Written Work"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Matt Garnaut\nText:  Matthew Stuart Matt Garnaut (born 7 November 1973) is a former Australian sportsman who played Australian rules football for the East Perth Football Club in the West Australian Football League (WAFL) and cricket for Western Australia.\nAnswer:",
+        "answer": "Athlete"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Aleksandr Igorevich Borisov\nText:  Aleksandr Igorevich Borisov (Russian: Александр Игоревич Борисов; born 11 July 1987) is a Russian professional footballer. He last played for FC Salyut Belgorod.\nAnswer:",
+        "answer": "Athlete"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: European School Bergen\nText:  The European School Bergen (in Dutch: Europese School Bergen) (or ESB) is one of the 14 Type 1 European Schools. It is located in the town of Bergen in the Dutch province of North Holland.\nAnswer:",
+        "answer": "Educational Institution"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Eddy Riva\nText:  Eddy Riva (born 17 April 1973 in Thionville Moselle) is a French race walker.\nAnswer:",
+        "answer": "Athlete"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Markid Kharabehsi\nText:  Markid Kharabehsi (Persian: مركيدخرابه سي‎ also Romanized as Markīd Kharābehsī; also known as Khairābād Masjid Kharaba-Marchit Kharābeh Kharābeh Markīt Margīd Markīd Markīd-e Khvābahsī Markīd Kharābeh and Masjed Kheyrābād) is a village in Zolbin Rural District Yamchi District Marand County East Azerbaijan Province Iran. At the 2006 census its population was 55 in 15 families.\nAnswer:",
+        "answer": "Village"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Walter Aircraft Engines\nText:  Walter Aircraft Engines was a company that manufactured aircraft engines particularly the M601 turboprop. Based in Prague Czech Republic the company has been a subsidiary of GE Aviation since July 2008.\nAnswer:",
+        "answer": "Company"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Microselene\nText:  Microselene is a genus of moths of the Noctuidae family.\nAnswer:",
+        "answer": "Animal"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Sohel Hossain\nText:  Sohel Hossain is a First class and List A cricketer from Bangladesh. He was born on 27 August 1979 in Narayanganj Dhaka and is a right-handed batsman and bowler. Sometimes referred to on scoresheets by his nickname Pappu he played for Dhaka Division between 2000/01 and 2001/02. His only first class fifty came against Chittagong Division while he also scored 55 against Sylhet Division in a one day game.\nAnswer:",
+        "answer": "Athlete"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Louis Rosier\nText:  Louis Rosier (5 November 1905 in Chapdes-Beaufort – 29 October 1956 in Neuilly-sur-Seine) was a racing driver from France.\nAnswer:",
+        "answer": "Athlete"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Bluelove\nText:  Bluelove is the second Korean mini album of South Korean rock band CN Blue. It was released on May 19 2010 by FNC Entertainment and distributed by Mnet Media. Before the album was release Love Light (Korean: 사랑 빛) was released as the first digital single on May 10 2010. After it was released Love was promoted as the lead single.\nAnswer:",
+        "answer": "Album"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Michałowo Gmina Goworowo\nText:  Michałowo [mixaˈwɔvɔ] is a village in the administrative district of Gmina Goworowo within Ostrołęka County Masovian Voivodeship in east-central Poland.\nAnswer:",
+        "answer": "Village"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Kim Barnett\nText:  Kim John Barnett (born 17 July 1960) is a retired English cricketer.Barnett was a batsman who played internationally for England between 1988 and 1989. He mainly played for Derbyshire from 1979 to 1998 and Gloucestershire from 1999 to 2002. He also played for South African teams Boland and Impalas.He was primarily a batsman but could also deploy effective leg spin and topped the English first-class bowling averages in 1994 with 13.30 albeit with only thirteen wickets to his name.\nAnswer:",
+        "answer": "Athlete"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Morrow High School (Georgia)\nText:  Morrow High School is the eastern most secondary school in Clayton County United States. Part of Clayton County Public Schools it is located in Morrow Georgia at 2299 Old Rex Morrow Road. The school's teams are known as the Mustangs..\nAnswer:",
+        "answer": "Educational Institution"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Bulbophyllum hapalanthos\nText:  Bulbophyllum hapalanthos is a species of orchid in the genus Bulbophyllum.\nAnswer:",
+        "answer": "Plant"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Cochliostema\nText:  Cochliostema is a genus of plants with two species in the family Commelinaceae (the spiderwort and dayflower family). The genus occurs from southern Nicaragua to southern Ecuador.\nAnswer:",
+        "answer": "Plant"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Bakersfield City School District\nText:  Bakersfield City School District is a Pre-Kindergarten - 8th grade public school district in Bakersfield California. The district has 43 schools and serves the city of Bakersfield.\nAnswer:",
+        "answer": "Educational Institution"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Bantry General Hospital\nText:  Bantry General Hospital is a public hospital located in Bantry County Cork Ireland. It is managed by the Irish Government's Health Service Executive and provides acute-care hospital services including a 24-hour emergency department for the population of West Cork. In 2008 the hospital served 11302 out-patients and 2953 in-patients with an average stay of 9.2 nights. 86.1% of admissions were made via the accident and emergency department.\nAnswer:",
+        "answer": "Building"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Mary Renault\nText:  Mary Renault (/ˈrɛnoʊlt/; 4 September 1905 – 13 December 1983) born Eileen Mary Challans was an English writer best known for her historical novels set in Ancient Greece. In addition to vivid fictional portrayals of Theseus Socrates Plato and Alexander the Great she wrote a non-fiction biography of Alexander.\nAnswer:",
+        "answer": "Artist"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Denise Scott Brown\nText:  Denise Scott Brown (née Lakofski; born October 3 1931) is an American architect planner writer educator and principal of the firm Venturi Scott Brown and Associates in Philadelphia. Denise Scott Brown and her husband and partner Robert Venturi are regarded among the most influential architects of the twentieth century both through their architecture and planning and theoretical writing and teaching.\nAnswer:",
+        "answer": "Artist"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Los Mackieavelikos\nText:  Los Mackieavelikos is the fifth studio album by Puerto Rican reggaeton duo Yaga & Mackie. It also features their singles Veo Veo and Pa' Frontiarle A Cualquiera feat. Arcangel.\nAnswer:",
+        "answer": "Album"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Budy Gmina Bobrowo\nText:  Budy [ˈbudɨ] is a village in the administrative district of Gmina Bobrowo within Brodnica County Kuyavian-Pomeranian Voivodeship in north-central Poland. It lies approximately 3 kilometres (2 mi) south-east of Bobrowo 6 km (4 mi) west of Brodnica and 54 km (34 mi) north-east of Toruń.\nAnswer:",
+        "answer": "Village"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: John McLaughlin (footballer born 1936)\nText:  John McLaughlin (born 13 November 1936 in Lennoxtown Scotland) is a Scottish footballer who played as a forward in the Football League.\nAnswer:",
+        "answer": "Athlete"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: All Saints' Church Hertford\nText:  All Saints' Church Hertford is located in Queens Road Hertford Hertfordshire England. It is an active Anglican parish church in the deanery of Hertford and Ware the archdeaconry of Hertford. and the diocese of St Albans. It is the civic church of the town and of the county. The church is designated by English Heritage as a Grade II* listed building. It is the largest church in Hertfordshire other than St Albans Cathedral and can seat up to 1000 people.\nAnswer:",
+        "answer": "Building"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Phryganopteryx formosa\nText:  Phryganopteryx formosa is a moth in the Arctiidae family. It was described by Toulgoët in 1958. It is found in Madagascar.\nAnswer:",
+        "answer": "Animal"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Melchior Lengyel\nText:  Melchior Lengyel (12 January 1880 – 23 October 1974) was a Hungarian writer dramatist and film screenwriter.\nAnswer:",
+        "answer": "Artist"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Ghayal (1990 film)\nText:  Ghayal is a 1990 Indian Hindi action film starring Sunny Deol and Meenakshi Seshadri. The film was produced by Dharmendra and directed by Rajkumar Santoshi. The film won seven Filmfare Awards including the Best Movie award. Ghayal clashed with Aamir Khan's Dil. Ghayal did excellent at the box office it was rated Super Hit. It was also the second highest grossing Bollywood film of 1990.\nAnswer:",
+        "answer": "Film"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Corny Lake (Minnesota)\nText:  Corny Lake is an 11 acre lake in Cook County Minnesota which is tributary to the Poplar River.\nAnswer:",
+        "answer": "Natural Place"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: August Girl\nText:  August Girl is the eighth album by Fiona Sit and was released on July 8 2011.It was released two years after the previous album Read Me. The album includes contributions from Hanjin Tan Khalil Fong Wyman Wong Edward Chan and Abrahim Chan. The album also contains two Mandarin songs including the theme song from TV drama Painted Skin Only Love in a duet with Hinson Chou.[citation needed]\nAnswer:",
+        "answer": "Album"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: From the Vaults (Nazareth album)\nText:  From the Vaults is a compilation album by the Scottish hard rock band Nazareth released in 1993\nAnswer:",
+        "answer": "Album"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Dotloop\nText:  dotloop is a SaaS real estate technology company based in Cincinnati Ohio. According to a recent AGBeat article dotloop is “a fully-integrated wholly web-based negotiation platform allowing users to create adjust approve and sign documents and contracts in one seamless online environment.”\nAnswer:",
+        "answer": "Company"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Williamson Swamp Creek\nText:  The Williamson Swamp Creek is a 52.4-mile-long (84.3 km) tributary of the Ogeechee River in the U.S. state of Georgia. Rising in northwestern Washington County 12 miles (19 km) north of Sandersville it flows southeast past Davisboro and enters Jefferson County ending at the Ogeechee River 5 miles (8 km) southeast of Wadley.\nAnswer:",
+        "answer": "Natural Place"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Mohammad Ayub Dogar\nText:  Mohammad Ayub (Urdu: محمدايوب‎; born 11 October 1985) is a First-class Pakistani cricketer. He is a right handed batsman. He has represented Punjab and the Sialkot Stallions. He has selected for Test series against Sri Lanka in 2012 season.\nAnswer:",
+        "answer": "Athlete"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Vukašin Brajić\nText:  Vukašin Brajić (Serbian Cyrillic: Вукашин Брајић; pronounced [ʋukǎʃin brǎːjitɕ]; born 9 February 1984) is a Bosnian Serb pop-rock singer who rose to fame after participating in the first season (2008–09) of Operacija trijumf the Serbian version of Star Academy in which he came in second place.\nAnswer:",
+        "answer": "Artist"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Descurainia pinnata\nText:  Descurainia pinnata is a species of flowering plant in the mustard family known by the common name western tansymustard. It is native to North America where it is widespread and found in varied habitats. It is especially successful in deserts. It is a hardy plant which easily becomes weedy and can spring up in disturbed barren sites with bad soil. This is a hairy heavily branched mustardlike annual which is quite variable in appearance.\nAnswer:",
+        "answer": "Plant"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Little Nerang Dam\nText:  The Little Nerang Dam is a secondary source of water supply to Gold Coast City in Queensland Australia. It was completed in 1962 and is managed by Gold Coast Water. It is located on the Little Nerang Creek directly upstream from the Hinze Dam. Its catchment includes the Springbrook Plateau.\nAnswer:",
+        "answer": "Natural Place"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Global Underground 028: Shanghai\nText:  Global Underground 028: Shanghai is a DJ mix album in the Global Underground series compiled and mixed by Nick Warren. The album peaked at #14 on the Billboard Top Electronic Albums. Though Warren was inspired by the Shanghai scene the album's music came from producers of thirteen different nationalities.Warren’s 2003 Reykjavik mix was supposed to be his last for Global Underground.\nAnswer:",
+        "answer": "Album"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Batman: Year 100\nText:  Batman: Year 100 is a four-issue American comic book mini-series starring Batman published in 2006 by DC Comics. It was written and illustrated by Paul Pope and colored by José Villarrubia.\nAnswer:",
+        "answer": "Written Work"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: California Car (railcar)\nText:  The California Car is the first generation of Superliner derived bi-level intercity railcars owned by the California Department of Transportation (Caltrans) and operated by Amtrak under the Amtrak California brand on intercity corridor routes in Northern and Central California. The cars were built in the mid-1990s for the Caltrans Division of Rail by Morrison-Knudsen.\nAnswer:",
+        "answer": "Mean of Transportation"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Moments (Tripper Getem album)\nText:  Moments is the third studio album by American rapper Tripper Getem released on October 2 2012 through Unlimited Records & TBDM Entertainment. A near 2 year hiatus since his previous album This Is Tripper. The album was rumored for an April or July release date. The official cover was leaked on August 8 2012. A revised cover was released on August 22 2012.\nAnswer:",
+        "answer": "Album"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Ophichthus melope\nText:  Ophichthus melope is an eel in the family Ophichthidae (worm/snake eels). It was described by John E. McCosker and Richard Heinrich Rosenblatt in 1998.\nAnswer:",
+        "answer": "Animal"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Palácio do Jaburu\nText:  The Palácio do Jaburu (English: Palace of the Jabiru) is the official residence of the Vice-President of Brazil. The palace was designed along with the rest of the city of Brasília by Oscar Niemeyer and inaugurated in 1977. It is located near the Palácio da Alvorada in Brasília. The name comes from a common bird of the region the Jabiru.The Jaburu was projected in 1973 and inaugurated in 1977 - seventeen years after the inauguration of Brasília.\nAnswer:",
+        "answer": "Building"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Oskar Kallis\nText:  Oskar Kallis (Tallinn November 23 1892 - Yalta 1 January 1918) was one of the main representatives of the Estonian national romanticism. He studied in 1907 and 1913 to 1916 in the studio of the artist Ants Laikmaa and in 1912-1913 studied design at the Estonian Artist Society (Eesti Kunstiselts). He participated in 1917 in the establishment of the artistic association Vikerla.\nAnswer:",
+        "answer": "Artist"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Greenwoodochromis christyi\nText:  Greenwoodochromis christyi is a species of fish in the Cichlidae family. It is endemic to Lake Tanganyika.\nAnswer:",
+        "answer": "Animal"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Meconopsis betonicifolia\nText:  Meconopsis betonicifolia also known as Meconopsis baileyi and the Himalayan blue poppy was first discovered in 1912 by Lt. Col. Frederick Marshman Bailey.M. betonicifolia is hardy in most of the United Kingdom and it has striking large blue flowers but it probably owes much of its success to the fact that unlike most Meconopsis it is perennial.\nAnswer:",
+        "answer": "Plant"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Faster Louder Better!\nText:  Faster Louder Better! is the first official release from Calgary's The Skitzos on Longshot Music. It was released October 2 2007 to wide Albertan acclaim on red white or black 7 vinyl. It has gone on to sell out and is currently only available as a collectors item in Western Canada.\nAnswer:",
+        "answer": "Album"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: DSB Class MX\nText:  The DSB Class MX is a lightweight diesel-electric locomotive built by the Swedish company Nydqist & Holm AB between 1960 and 1962 for the Danish State Railways\nAnswer:",
+        "answer": "Mean of Transportation"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Alexander H. Stephens\nText:  Alexander Hamilton Stephens (February 11 1812 – March 4 1883) was an American politician from Georgia and Vice President of the Confederate States of America during the American Civil War. He also served as a U.S. Representative from Georgia (both before the Civil War and after Reconstruction) and as the 50th Governor of Georgia from 1882 until his death in 1883.\nAnswer:",
+        "answer": "Office Holder"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Attack of the 5 Ft. 2 In. Women\nText:  National Lampoon's Attack of the 5 Ft. 2 In. Women is a 1994 Showtime television movie that parodies two sensational news stories from the 1990s: The Tonya Harding-Nancy Kerrigan incident and the John and Lorena Bobbitt incident. The movie is presented as a double feature with Julie Brown starring in both segments. The title is a takeoff of Attack of the 50 Foot Woman.\nAnswer:",
+        "answer": "Film"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Hector Hetherington\nText:  Professor Sir Hector (James Wright) Hetherington GBE DL (21 July 1888 - 15 January 1965) was a Scottish philosopher who was Vice-Chancellor of the University of Liverpool from 1927 to 1936 and Principal of the University of Glasgow until 1961.\nAnswer:",
+        "answer": "Office Holder"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Insel der Rosen\nText:  Insel der Rosen is an East German film. It was released in 1958.\nAnswer:",
+        "answer": "Film"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: War and Decision\nText:  War and Decision: Inside the Pentagon at the Dawn of the War on Terrorism is a memoir written by Douglas Feith former Undersecretary of Defense for Policy in which he presents a history of the beginning of the War on Terrorism and the campaigns in Afghanistan and Iraq. The book was released on April 8 2008.\nAnswer:",
+        "answer": "Written Work"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Joseph S. McHarg House\nText:  The Joseph S. McHarg House is located in the West End of Davenport Iowa United States. The Greek Revival residence has been listed on the National Register of Historic Places since 1985.\nAnswer:",
+        "answer": "Building"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Where You Live\nText:  Where You Live is Tracy Chapman's seventh studio album and was released September 13 2005. The album was co-produced by Tchad Blake. It produced two singles: Change and America.\nAnswer:",
+        "answer": "Album"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Marián Šuchančok\nText:  Marián Šuchančok (born 13 July 1971) is a retired Slovak international footballer who played as a defender for clubs in Slovakia Greece and Austria.\nAnswer:",
+        "answer": "Athlete"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Manegaon Maharashtra\nText:  Manegaon is a village and Gram panchayat in Jalgaon Jamod tehsil of Buldhana of Maharashtra. Situated on the right bank of river Purna it serves as a gateway to Jalgaon Jamod tehsil as one travels from State Highway 196 from Nandura to Jalgaon Jamod. Its location attached to a state highway makes it an important place for other villages in vicinity for transportation to other places.\nAnswer:",
+        "answer": "Village"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Orígenes\nText:  Orígenes is the ninth studio album recorded by Mexican singer Alejandro Fernández. Produced by Kiko Campos and Pedro Ramírez with this album he returns to his origins recording an album of Mexican music but this time with his own style.\nAnswer:",
+        "answer": "Album"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Princeton Glacier\nText:  The Princeton Glacier is a glacier in the Sargent Icefield Kenai Peninsula in Alaska.The glacier was named in 1909 for Princeton University by George Perkins of the U.S. Coast and Geodetic Survey.The glacier's terminus is a little over a mile from Nassau Fjord and Prince William Sound.\nAnswer:",
+        "answer": "Natural Place"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: The Harafish\nText:  The Harafish (Arabic: الحرافيش‎) (in orig. Arabic Malhamat al-harafish) is a novel written by Naguib Mahfouz. It comprises a series of episodes in a dozen generations of a family from the Egyptian urban rabble (the harafish). Many of the members of this family become clan chiefs in an alley in the city; some of them are benefactors to the other members of the harafish; some are more corrupt. Neither the location within Egypt nor the time of the events is ever identified.\nAnswer:",
+        "answer": "Written Work"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Chase the Sun (Shannon Lawson album)\nText:  Chase the Sun is the debut album of American country music artist Shannon Lawson. It was released in 2002 (see 2002 in country music) on the MCA Nashville label and it produced two singles: Dream Your Way to Me and Goodbye on a Bad Day which respectively reached #45 and #28 on the Billboard country charts while the album peaked at #35 on the Top Country Albums charts.\nAnswer:",
+        "answer": "Album"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Sharon Lubinski\nText:  Sharon Lubinski is the United States Marshal for the District of Minnesota. Lubinski is the first openly lesbian United States Marshal.\nAnswer:",
+        "answer": "Office Holder"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Terebra argosyia\nText:  Terebra argosyia is a species of sea snail a marine gastropod mollusk in the family Terebridae the auger snails.\nAnswer:",
+        "answer": "Animal"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Here's Looking at Me!\nText:  Here's Looking At Me! is a compilation music album by Alvin and the Chipmunks. It was released on CD and cassette by Sony in 1994 and was one of two 35th anniversary compilation albums by The Chipmunks despite being released 36 years after the group's debut. Various tracks on 'Here's Looking At Me' were re-recordings and various changes to previous recordings were made notably the omittance of Billy Ray Cyrus' speaking role in 'Achy Breaky Heart' from Chipmunks in Low Places.\nAnswer:",
+        "answer": "Album"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Picochlorum\nText:  In taxonomy Picochlorum is a genus of algae specifically of the Trebouxiophyceae.\nAnswer:",
+        "answer": "Plant"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Iris milesii\nText:  Iris milesii is a native of Northwest India with another population possible in China though there have been no recent sightings there. It grows on forest edges open groves and damp places. The pale reddish flowers are 7 to 8 cm (2.8 to 3.1 in) in diameter blooming in April-May.\nAnswer:",
+        "answer": "Plant"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Roșeni River\nText:  The Roșeni River is a tributary of the Bistriţa River in Romania. It flows into Lake Izvorul Muntelui.\nAnswer:",
+        "answer": "Natural Place"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Michał Seweryński\nText:  Michał Seweryński (born 1 July 1939 in Łódź) is a professor of the University of Łódź. Doctor honoris causa of the University of Lyon 3. Expert on Polish and international labour law. The author of about 130 scientific publications and reports at international congresses. Visiting professor at universities in France Canada Switzerland Spain and Japan. Between 2006 and 2007 Minister of Science and Higher Education in Poland.A member of Polish and foreign scientific societies.\nAnswer:",
+        "answer": "Office Holder"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Mandarin Oriental Las Vegas\nText:  Mandarin Oriental Las Vegas is a luxury five-star hotel located within CityCenter and is operated by Mandarin Oriental Hotel Group. Living spaces are characterized by an Eastern approach to design. The hotel’s lobby is located on the 23rd floor.The Residences at Mandarin Oriental Las Vegas features approximately 225 condominium residences situated on the upper floors of the 392-room hotel tower with a private owner's lobby and clubroom.\nAnswer:",
+        "answer": "Building"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Ilario Casolano\nText:  Ilario Casolano (1588 – 14 May 1661) was an Italian painter of the Baroque period.He was called Cristofano Casolano by Giovanni Baglione. He was like his father Alessandro Casolano was a pupil of Cavalière Cristoforo Roncalli. He assisted his father in some of his frescoes and after his death finished the fresco of the Assumption of the Virgin. He painted several pictures for the churches in Rome.\nAnswer:",
+        "answer": "Artist"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Višnjevac Osijek-Baranja County\nText:  Višnjevac is a village in Croatia. It is connected by the D2 highway. The population is 6712.\nAnswer:",
+        "answer": "Village"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Trigonostoma scalare\nText:  Trigonostoma scalare is a species of sea snail a marine gastropod mollusk in the family Cancellariidae the nutmeg snails.\nAnswer:",
+        "answer": "Animal"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Martín Travieso\nText:  Martín Travieso Jr. (1882 — 1971) was a Puerto Rican politician senator lawyer and judge. He was a member of the Senate of Puerto Rico from 1917 to 1921. He also served as Mayor of San Juan from 1921 to 1923.\nAnswer:",
+        "answer": "Office Holder"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: USS Dewey (DDG-105)\nText:  USS Dewey (DDG-105) is an Arleigh Burke-class guided missile destroyer in the United States Navy. Dewey is the third Navy ship named after Admiral of the Navy George Dewey hero of the Battle of Manila Bay during the Spanish-American War. The ship is part of Destroyer Squadron 21 of Carrier Strike Group Three which is currently headed by the aircraft carrier USS John C. Stennis (CVN-74).She was authorized on 13 September 2002 and was built by Northrop Grumman Ship Systems.\nAnswer:",
+        "answer": "Mean of Transportation"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Bimal Gurung\nText:  Bimal Gurung (Nepali: विमल गुरुङ) is the leader of Gorkha Janmukti Morcha (GJM) a party that is demanding the formation of a Gorkhaland state within West Bengal in India.\nAnswer:",
+        "answer": "Office Holder"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Jeep J8\nText:  The Jeep J8 is a military vehicle based on the Jeep Wrangler platform. The model was introduced at the Defence Systems & Equipment International (DSEi) trade show on September 13 2007. Targeted for use by the militaries in overseas markets the J8 is not designed to meet U.S. emission standards. The J8 is assembled in Egypt and in Israel.\nAnswer:",
+        "answer": "Mean of Transportation"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Gonuiyeh Ravar\nText:  Gonuiyeh (Persian: گنوئيه‎ also Romanized as Gonū’īyeh) is a village in Heruz Rural District Kuhsaran District Ravar County Kerman Province Iran. At the 2006 census its population was 216 in 46 families.\nAnswer:",
+        "answer": "Village"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Alden Roche\nText:  Alden Roche (born April 9 1945 in New Orleans Louisiana) is a former defensive end who played nine seasons in the National Football League. Roche attended Southern University.\nAnswer:",
+        "answer": "Athlete"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Bats: Human Harvest\nText:  Bats: Human Harvest is a 2007 Sci-Fi Channel original movie directed by Jamie Dixon and starring David Chokachi Tomas Arana Bill Cusack and Melissa De Sousa.\nAnswer:",
+        "answer": "Film"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Andrew Whiteman\nText:  Andrew Whiteman (born David Andrew Patrick Whiteman) is a Canadian musician and songwriter. Forming the Bourbon Tabernacle Choir in Toronto out of high school he eventually left the band in 1993 after eight years.\nAnswer:",
+        "answer": "Artist"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Lake Wales High School\nText:  Lake Wales High School is a high school located in Lake Wales Florida serving the city of Lake Wales and nearby communities such as Frostproof Florida Dundee Florida and Winter Haven Florida.\nAnswer:",
+        "answer": "Educational Institution"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Binn Mhór\nText:  Binn Mhór (Irish for great peak) is a 661-metre (2169 ft) mountain in County Galway Ireland. It the third highest peak in the Maumturks range which lie within the Connemara region.Binn Mhór lies just to the east of the mountain pass named Maumeen known for its chapel and holy well.\nAnswer:",
+        "answer": "Natural Place"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Athyra\nText:  Athyra is the sixth book in Steven Brust's Vlad Taltos series set in the fantasy world of Dragaera. Originally published in 1993 by Ace Books it was reprinted in 2003 along with Orca in the omnibus The Book of Athyra. Following the trend of the Vlad Taltos books it is named after one of the Great Houses and features that House as an important element to its plot.\nAnswer:",
+        "answer": "Written Work"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Crag Lough\nText:  Crag Lough is an inland lake at the southern edge of Northumberland National Park2.5 miles (4.0 km) north of Bardon Mill and 0.5 miles (0.8 km) north of the B6318 Military Road road in Northumberland northern England. At this point Hadrian's Wall is at the top of a line of crags with Crag Lough at the foot of the crags.\nAnswer:",
+        "answer": "Natural Place"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Nelson's collared lemming\nText:  Nelson's collared lemming (Dicrostonyx nelsoni) is a species of rodent in the family Cricetidae.It is found in western and southwestern Alaska in the United States.\nAnswer:",
+        "answer": "Animal"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Mae West Peaks\nText:  Mae West Peaks is a pair of summits in Cochise County Arizona. The taller of the two was formerly known as Lime Peak and the elevation and coordinates in the infobox refer to this peak. They are in the Little Dragoon Mountains northwest of Texas Canyon and 3.3 miles (5.3 km) west-southwest of the ghost town of Johnson Arizona.These summits were named for their shape which were thought to be reminiscent of the figure of the actress Mae West.\nAnswer:",
+        "answer": "Natural Place"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Seven Springs (Enfield Virginia)\nText:  Seven Springs situated on the Mehixen Swamp near the Pamunkey River in upper King William County Virginia is an historic home. Set in rolling farm country near the town of Manquin the property lies within a community rich in colonial revolutionary and civil war history.\nAnswer:",
+        "answer": "Building"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Cassius McDonald Barnes\nText:  Cassius McDonald Barnes (August 25 1845 – February 18 1925) was a soldier in the Union army in the American Civil War and a lawyer and Republican politician who served as the 4th Governor of Oklahoma Territory.\nAnswer:",
+        "answer": "Office Holder"
+    },
+    {
+        "prompt": "What is the topic of the following paragraph? Choose one from the option.\nOption: Company, Educational Institution, Artist, Athlete, Office Holder, Mean of Transportation, Building, Natural Place, Village, Animal, Plant, Album, Film, Written Work \nTitle: Umar Qaid\nText:  Umar Qaid is a 1975 Bollywood action film directed by Sikandar Khanna. The film stars Sunil Dutt Jeetendra Vinod Mehra Moushumi Chatterjee Reena Roy etc.\nAnswer:",
+        "answer": "Film"
+    }
+]

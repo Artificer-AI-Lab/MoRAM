@@ -1,0 +1,402 @@
+[
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: A compound in breast milk has been found to destroy many skin warts, raising hopes it also might prove effective against cervical cancer and other lethal diseases caused by the same virus.\nsentence 2: Breast milk may help fight cervical cancer.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Hadley said Jordan was chosen as the site of the meeting between Bush and al-Maliki because of its support for the unity government in Iraq and the fact that Bush would be in the region.\nsentence 2: Bush will meet al-Maliki in Hadley.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Gabriel Garcia Marquez is the author of \"One Hundred Years of Solitude\", \"The Autumn of the Patriarch\" and other novels.\nsentence 2: Gabriel Garcia Marquez is a novelist and writer.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: According to officials, João Bernardo Vieira, the president of Guinea-Bissau, was shot to death on Monday in his palace by renegade soldiers. \"President Vieira was killed by the army as he tried to flee his house which was being attacked by a group of soldiers close to the chief of staff Tagme Na Waie, early this morning,\" Zamora Induta, a military spokesman, said to Agence France-Presse, insisting that \"this was not a coup d'etat.\"\nsentence 2: Bernardo Vieira was the president of Guinea-Bissau.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: An auto analyst for Bombay's Angel Broking, Vaishali Jajoo, predicted that the Nano will add only three percent to Tata's revenues even if it can sell a quarter of a million such cars per annum. \"That doesn't make a significant difference to the top line,\" Jajoo said. \"And for the bottom line, it will take five to six years to break even.\" Environmentalists say that the car will exacerbate traffic problems already rife in India, and help increase pollution levels. Tata, however, stated that its vehicle is the least polluting car in the country.\nsentence 2: Angel Broking is based in Bombay.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: P. Prayong, who like Kevala belongs to the Theravada sect of Buddhism, chose India over other Buddhist majority nations as it is the birthplace of Gautama Buddha.\nsentence 2: P. Prayong is a member of Theravada.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Increased storage isn't all Microsoft will be offering its Hotmail users--they can also look forward to free anti-virus protection.\nsentence 2: Microsoft won't offer increased storage to its users.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: About half were along a 20-mile stretch of Santa Monica Bay from Topanga Canyon Boulevard to the Palos Verdes Peninsula.\nsentence 2: The coastline of Santa Monica Bay is 50 miles long.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: COLOMBO (Reuters) - At least five people were killed and 11 wounded when a suspected Tamil Tiger suicide bomber blew herself up inside a police station in the Sri Lankan capital on Wednesday, shattering more than two years of relative peace.\nsentence 2: People were killed in Tamil suicide attacks.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Plans are being drawn up to build a £3.3m working replica of the boat that took Charles Darwin around the world at Milford Haven in Pembrokeshire. Fundraising for the project, which would mark the 200th anniversary of Darwin's birth in 2009, is under way. The aim is to built a seaworthy vessel identical to the HMS Beagle on the outside, but with a modern interior. Darwin, who showed how natural selection could explain evolution, sailed on the Beagle between 1831-36.\nsentence 2: Charles Darwin took a voyage on a ship named HMS Beagle.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Jerry Reinsdorf (born February 25 1936 in Brooklyn, New York) is the owner of Chicago White Sox and the Chicago Bulls. Recently, he helped the White Sox win the 2005 World Series and, in the process, collected his seventh championship ring overall (the first six were all with the Bulls in the 1990s), becoming the third owner in the history of North American sports to win a championship in two different sports.\nsentence 2: Jerry Reinsdorf has won 7 championships.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The sunset, touching distant hills with ribbons of fire across the waters of the Dead Sea, brings a sense of unreality to culminate a day's visit to the lowest point on earth, some 400 meters below sea level.\nsentence 2: The lowest point on earth is at the Dead Sea.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The Cyrillic alphabet is an alphabet used for several East and South Slavic languages; (Belarusian, Bulgarian, Macedonian, Russian, Rusyn, Serbian, and Ukrainian) and many other languages of the former Soviet Union, Asia and Eastern Europe. It has also been used for other languages in the past. Not all letters in the Cyrillic alphabet are used in every language which is written with it.\nsentence 2: Cyrillic is an alphabet used for certain Slavic languages, such as Russian.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Prince Charles, Britain's heir to the throne, has announced that he is to wed his lover of 34 years, Camilla Parker Bowles. In a press statement, the Prince of Wales said \"Mrs Parker Bowles and I are absolutely delighted. It will be a very special day for us and our families.\" Mrs Parker Bowles will use the title \"HRH The Duchess of Cornwall\" after their marriage, and it is intended that following the Prince's accession to the throne, Mrs Parker Bowles will use the title \"HRH The Princess Consort\". The pair are to marry on 8th April 2005 at a private civil ceremony in Windsor Castle, which will be an occasion primarily for friends and family. There will then be a service of prayer and dedication in St. George's Chapel, to be conducted by the Archbishop of Canterbury, Dr. Rowan Williams.\nsentence 2: Camilla Parker Bowles is engaged to Britain's heir.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Coextensive with the metropolitan district of Jakarta Raya, it lies at the mouth of the Ciliwung ( Liwung River ) on the northwest coast of Java.\nsentence 2: Jakarta lies at the mouth of the Ciliwung ( Liwung River ) on the northwest coast of the island of Java.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The publishing companies Bloomsbury (U.K.) and Scholastic (U.S.) released cover art for the seventh Harry Potter book, Harry Potter and the Deathly Hallows. \"The structures around Harry show evident destruction and in the shadows behind him, we see outlines of other people,\" David Saylor, Scholastic's art director, said in a statement describing the U.S. version. \"For the first time, the cover is a wraparound. On the back cover spidery hands are outstretched toward Harry. Only when the book is opened does one see a powerful image of \"He-Who-Must-Not-Be-Named\", his glowing red eyes peering out from his hood.\"\nsentence 2: Rowling is the author of \"Harry Potter\".\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The harvest of sea-weeds is not allowed in the Puget Sound because of marine vegetation's vital role in providing habitat to important species.\nsentence 2: Marine vegetation is  harvested.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: A smaller proportion of Yugoslavia's Italians were settled in Slovenia (at the 1991 national census, some 3000 inhabitants of Slovenia declared themselves as ethnic Italians).\nsentence 2: Slovenia has 3,000 inhabitants.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: A number of the items that he auctioned off over the two day period have been seen on his reality TV show The Osbournes, which featured home life with Sharon, Ozzy and their two children. Amongst some of the higher-priced items were a carved walnut Victorian-style custom built pool table which raised $11,250, a painting from Edourad Drouot which fetched $10,500, a pair of Ozzy's famous round glasses which raised $5,250 and a dog bed given to Sharon by Elton John which sold for $2,375.\nsentence 2: \"The Osbournes\" is the name of a reality show starring Ozzy Osbourne.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The official visit of the Argentine minister marks a further step in the normalisation of UK-Argentine relations.\nsentence 2: Relations between Argentina and Great Britain are growing more cooperative.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Amazon shares fell nearly 4 percent following the results as the company said operating income would drop as much as 42 percent in the second quarter.\nsentence 2: Shares of Amazon fell 4 percent.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: When Albright was the US ambassador to the United Nations, Lesley Stahl of \"60 Minutes\" asked her about the sanctions and the deaths of Iraqi children. Albright said it was America's responsibility to make sure the Gulf War did not have to be fought again.\nsentence 2: Albright said that to punish Saddam Hussein, the deaths of those children were \"worth it.\"\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: PERSPECTIVE ON BOSNIA; A BALKANS PEACE THAT CANNOT LAST\nsentence 2: Bosnia is located in the former Yugoslavia.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Mount Olympus towers up from the center of the earth.\nsentence 2: Mount Olympus is in the center of the earth.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Confident that those grading papers would understand answers written in text-speak, Haque stressed that in some exams, including English, text abbreviations would be penalized.\nsentence 2: Haque wants to include English in some exams.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: New York boasts the largest number of billionaires, with 40 residing in the Big Apple. The world's youngest billionaire is 22-year-old Hind Hariri, daughter of assassinated former Lebanese Prime Minister Rafik Hariri.\nsentence 2: The number of billionaires increases.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: VCU School of the Arts In Qatar is located in Doha, the capital city of Qatar.\nsentence 2: Qatar is located in Doha.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The Qin (from which the name China is derived) established the approximate boundaries and basic administrative system that all subsequent dynasties were to follow.\nsentence 2: Qin Shi Huang was the first Chinese Emperor.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Yachtsman Melvyn Percy became so fed up with the standard of service when preparing his boat for the 3000-mile Atlantic crossing that he decided to set up his own company on the Clyde to provide Scots sailors with professional advice and practical assistance. Minerva Rigging, based at Kip Marina just south of Gourock, now employs five full-time staff and is the Scottish agent for Kemp, one of Europe's leading yacht spar and mast manufacturers.\nsentence 2: Melvyn Percy set up Minerva Rigging at Kip Marina.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Compuware claims that Allan Tortorice and Jim Hildner were among several former employees who revealed trade secrets after they moved to IBM.\nsentence 2: Trade secrets were stolen.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Andreessen, who helped define the Internet revolution as part of team that created the first Internet browser (Mosaic) and his co-founding Netscape, told a packed hall at the San Francisco Marriott hotel Thursday that he is \"extremely committed\" to his startup Loudcloud.\nsentence 2: The Internet browser Mosaic was created at the San Francisco Marriott hotel.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Today's best estimate of giant panda numbers in the wild is about 1,100 individuals living in up to 32 separate populations mostly in China's Sichuan Province, but also in Shaanxi and Gansu provinces.\nsentence 2: There are 32 pandas in the wild in China.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The 26-member International Energy Agency said, Friday, that member countries would release oil to help relieve the U.S. fuel crisis caused by Hurricane Katrina.\nsentence 2: An international oil agency will make 60 million barrels of oil and gasoline available to the marketplace.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: While Bush was in the air, the White House was evacuated, with many employees running away from the premises on orders from Secret Service agents.\nsentence 2: The U.S. military evacuated U.S. citizens.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Hodler claimed there were also irregularities in the campaigns organized by Atlanta for the 1996 Summer Games, Sydney for the Summer Olympics in 2000 and Salt Lake City for the 2002 Winter Games.\nsentence 2: Before Salt Lake City, Winter Olympic Games took place in Nagano.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: In support of the Earth Island Institute rebuttal, Greenpeace founder Don White made the following - unfortunately prophetic - public statement on 8/18/93.\nsentence 2: Don White is the founder of Greenpeace.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: And, despite its own suggestions to the contrary, Oracle will sell PeopleSoft and JD Edwards financial software through reseller channels to new customers.\nsentence 2: Oracle sells financial software.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: On Jan. 27, 1756, composer Wolfgang Amadeus Mozart was born in Salzburg, Austria.\nsentence 2: Wolfgang Amadeus Mozart was born in Salzburg.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Recent satellite pictures of Yellowstone National Park in Wyoming from 2004 through 2006 are showing that an ancient volcano is starting to rise once again. Molten rock is currently pushing up the remains of the volcano's caldera, which sits over the top of Yellowstone lake, but scientists are stressing that there is no immediate threat of an eruption or explosion. The molten rock field is estimated to be the size of the city of Los Angeles, California.\nsentence 2: There is a volcano in Yellowstone.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Cairo is now home to some 15 million people - a burgeoning population that produces approximately 10,000 tonnes of rubbish per day, putting an enormous strain on public services. In the past 10 years, the government has tried hard to encourage private investment in the refuse sector, but some estimate 4,000 tonnes of waste is left behind every day, festering in the heat as it waits for someone to clear it up. It is often the people in the poorest neighbourhoods that are worst affected. But in some areas they are fighting back. In Shubra, one of the northern districts of the city, the residents have taken to the streets armed with dustpans and brushes to clean up public areas which have been used as public dumps.\nsentence 2: 15 million tonnes of rubbish are produced daily in Cairo.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Quebec woman and her mother accused of plotting to kill a four-year-old girl.\nsentence 2: Quebec woman murdered a four-year-old girl.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Rotorua has banned criminals with five or more dishonesty convictions from entering the Central Business District (CBD). The criminals will be issued with trespass notices banning them from the main streets of Rotorua. Eleven out of twelve councillors, including the Rotorua mayor, supported the by-law along with support from the police. Kevin Winters, Mayor of Rotorua, said \"The ban also had the support of local businesses, who wanted an end to the thefts, assaults, shoplifting and other street crime on Rotorua streets. Crime was an issue in the area. Five strikes and you're out.\"\nsentence 2: The Central Business District (CBD) is part of Rotorua.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: NEW YORK —  Somali pirates attacked and damaged an American ship carrying humanitarian aid Tuesday, but the ship and crew were safe under Navy escort, the military and shipping company said. The pirates fired rocket-propelled grenades and automatic weapons at the Liberty Sun as it carried food for famine-wracked African nations, said the vessel's owner, Liberty Maritime Corp. The ship was en route from Houston to Mombasa, Kenya, with a roughly 20-member crew, officials said. .\nsentence 2: Pirates damaged the ship Liberty Maritime.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Asprin, an inexpensive drug helps protect survivors of heart attack and stroke from subsequent heart attacks and death, and even helps reduce the number of deaths that occur within the first hours following a heart attack.\nsentence 2: People experienced adverse effects while taking aspirin.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Los Angeles County probation officials say they are now studying how other counties recover juvenile detention costs, after admitting they mistakenly billed parents for days when youths were held in probation camps and halls. By law, California counties can bill parents and legal guardians for some daily costs of detaining youths, but only those whose parents can afford to pay. Last year, more than 20,000 youths were admitted to probation camps and halls, and L.A. County billed parents a daily charge of $11.94 for camps, $23.63 for halls.\nsentence 2: In Los Angeles County all parents have to pay the detention costs of their children.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Take consumer products giant Procter and Gamble. Even with a $1.8 billion Research and Development budget, it still manages 500 active partnerships each year, many of them with small companies.\nsentence 2: Procter and Gamble spends $1.8 billion for Research and Development.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The Croatian intent is even more problematic because the border between Slovenian and Croatian territorial waters has not yet been established. The dispute about this border began in 1991 when both countries became independent.\nsentence 2: There is a territorial waters dispute.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Despite CNOOC's all-cash bid, Unocal said its recommendation to shareholders in favor of the $16.4 billion offer of cash and stock from Chevron remains in effect.\nsentence 2: Unocal said it would evaluate the CNOOC offer.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Italian film-maker, Fellini was awarded an honorary Oscar for lifetime achievement. He died on October 31, 1993.\nsentence 2: An Italian director is awarded an honorary Oscar.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Another factor in the rising cost of paper is the increased cost of wood pulp, from which paper is made\nsentence 2: The cost of paper is rising.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Kozlowski and the company's former chief financial officer, Mark Swartz, were sentenced, on Monday, to up to 25 years in prison.\nsentence 2: Kozlowski was sentenced, Monday, to serve up to 25 years in prison.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The memo, written by Marc Allen Connelly (who was general counsel to the funeral services commission at the time) and sent to Dick McNeil (the Bush-appointed chairman of the funeral commission), stated that Connelly \"received information\" from Texas state officials that two of the funeral commissioners worked for SCI.\nsentence 2: Marc Allen Connelly worked for SCI.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: NIH's FY05 budget request of $28.8 billion includes $2 billion for the National Institute of General Medical Sciences, a 3.4-percent increase, and $1.1 billion for the National Center for Research Resources, and a 7.2-percent decrease from FY04 levels.\nsentence 2: A request was reduced to $1.1 billion\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: A cataclysmic starquake is thought to have caused a flare of radiation that ripped past the Earth on December 27, battering instruments on satellites and lighting up our atmosphere.\nsentence 2: The flash of radiation on December 27,  lit up the Earth's atmosphere.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The mistaken spelling, Miller explained, was made in a section of her notes unrelated to the interviews with Libby.  Other notes documented 3 interviews with Libby, conducted in the year 2003, that in her NYT column she wrote: June 23) ... Mr. Libby raised the subject of Mr. Wilson's wife for the first time. I wrote in my notes, inside parentheses, \"Wife works in bureau?\" I told Mr. Fitzgerald that I believed this was the first time I had been told that Mr. Wilson's wife might work for the C.I.A.\nsentence 2: Judith Miller works for the New York Times.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Foreign Carmakers Gain in Russia. The likes of Daewoo, Ford, Renault, and more can't produce fast enough.\nsentence 2: European cars sell in Russia.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The court in Angers handed down sentences ranging from four months suspended to 28 years for, among others, Philppe V., the key accused. The court found that he, along with his son Franck V. and Franck's former spouse, Patricia M., was one the instigators of a sex ring that abused 45 children, mostly in the couple's flat. The abuses of children aged between six months and 12 years took place in a poor and deprived area of the western french town of Angers. Many of the defendants were poor and lived on benefits and some were mentally impaired. About 20 of them admitted to the charges, while others claimed to have never heard of a sex ring.\nsentence 2: Franck V. comes from Angers.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Dana Reeve, the widow of the actor Christopher Reeve, has died of lung cancer at age 44, according to the Christopher Reeve Foundation.\nsentence 2: Christopher Reeve had an accident.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Microsoft for instance, one of the world's largest software companies, lost more than an estimated 500 million dollars last year because of software theft.\nsentence 2: Microsoft would spend 500 million dollars.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Egypt on Thursday strongly criticized Israeli new Foreign Minister Avigdor Lieberman for his remarks that he refused to recognize the peace efforts initiated in 2007 in the U.S. city of Annapolis to restore the peace talks with the Palestinians, reported the state MENA news agency. Lieberman's remarks is \"regrettable,\" Egyptian Foreign Ministry spokesman Hossam Zaki was quoted as saying, adding \"his remarks are the first blow to the peace efforts to come from the Israeli new government.\"\nsentence 2: Hossam Zaki is the new Foreign Minister of Israel.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The beleaguered Euro-Disney theme park outside Paris is doing so poorly it might have to close unless it gets help soon from its lenders, the chairman of Walt Disney Co. said in an interview published Friday.\nsentence 2: Euro-Disney is a theme park outside Paris.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Released in 1995, Tyson returned to boxing, winning the World Boxing Council title in 1996. The same year, however, he lost to Evander Holyfield, and in a 1997 rematch bit Holyfield's ear, for which he was temporarily banned from boxing.\nsentence 2: In 1996 Mike Tyson bit Holyfield's ear.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: It is hoped that women, who constitute more than half of the population, will vote for other women and ensure that their issues are represented in parliament.\nsentence 2: Women are poorly represented in parliament.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: FMLN reports to our people, and to the people of the world, that the massacre against the Salvadoran Workers National Union Federation [Fenastras] was carried out by Colonel Elena Fuente, as the head of the morbid death squad of the army's 1st Infantry Brigade, in response to our military attack on the army staff.\nsentence 2: Fenastras was attacked by FMLN.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: NASA's two Great Observatories, the Hubble Space Telescope and the Chandra X-ray Observatory, have independently provided what could be the best direct evidence yet for the existence of an event horizon, the defining feature of a black hole.\nsentence 2: Hubble discovers black holes.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Wal-Mart Stores has asked a US federal appeals court to review a judge's order approving class-action status for a sex-discrimination lawsuit.\nsentence 2: The judge approves of sex-discrimination.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The latest attacks targeted the U-S embassy and a top prosecutor's office in the Uzbek capital.\nsentence 2: Yesterday's terrorist bombings killed two people at the entrance to the Israeli Embassy in Uzbekistan's capital.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: \"Bea Arthur and I first met when we did 'Mame' together in 1965. She became and has remained 'My Bosom Buddy' ever since. I am deeply saddened by her passing, but also relieved that she is released from the pain. I spoke to Matt, her son, yesterday and I was aware that her time was imminent. She was a rare and unique performer and a dear, dear friend.\" Arthur passed away at her home on Saturday at the age of 86. Angela Lansbury is appearing in the current revival of Blithe Spirit which began preview performances on Thursday, February 26, 2009 and had an official opening on Sunday, March 15, 2009 at The Shubert Theatre (225 West 44th Street).\nsentence 2: The actress Angela Lansbury is 86 years old.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Bangladesh, one of the world's poorest countries, suffered a devastating drought and famine in 1974, which killed 1.5 million people. While trying to help starving villagers, he met a 21-year-old woman named Sufia Begum, who was burdened by a tiny yet crushing debt, Yunus recalled in his autobiography, \"Banker to the Poor.\"\nsentence 2: 1.5 million people were killed during the drought and famine devastation in 1974 in Bangladesh.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The government of El Salvador strongly condemns the terrorist attacks carried out with explosives, today, against the Salvadoran Workers National Union Federation, in which several persons were wounded and others died.\nsentence 2: Terrorist attacks were carried out in El Salvador.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: As a result of these weaknesses, computer systems and the operations that rely on the systems were highly vulnerable to tampering, disruption, and misuse from both internal and external sources.\nsentence 2: Non-authorized personnel illegally entered into computer networks.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: As regards the headquarters building, the Swiss are stipulating that they would transfer it to the WTO for a value of about 51 million swiss franks.\nsentence 2: The WTO headquarters are in Switzerland.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: About 33.5 million people live in this massive conurbation. I would guess that 95% of the 5,000 officially foreign-capital firms in Japan are based in Tokyo.\nsentence 2: About 33.5 miilion people live in Tokyo.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The capital of Slovenia is Ljubljana, with 270,000 inhabitants.\nsentence 2: Slovenia has 270,000 inhabitants.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Swansea striker Lee Trundle has negotiated a lucrative image-rights deal with the League One club.\nsentence 2: Lee Trundle is in business with the League One club.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: There has been a lot of concern over the rise of drug-resistant bacteria.\nsentence 2: Bacteria is winning the war against antibiotics.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The girl was found in Drummondville.\nsentence 2: Drummondville contains the girl.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The humane organization, Caritas, quoting its branch in Iraq, announced today, in Germany, that several Iraqi hospitals, especially Saddam Hospital, which is considered the biggest hospital in Iraq, were hit in the American-British bombing of the Iraqi capital.\nsentence 2: Caritas announced that several Iraqi hospitals, (excluding Saddam Hospital,) were hit in the shelling of Baghdad.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: But the message delivered by their performance piece was mostly sad and raw. After just three weeks on the road, one of the two Italian artists, Pippa Bacca, 33, was killed by a driver who offered her a ride. Her naked body was found on April 11 in some bushes near a Turkish village after a suspect led investigators to the site. Although an official cause of death has not been given, local Turkish authorities said Ms. Bacca had been raped and strangled.\nsentence 2: Pippa Bacca was an Italian peace activist.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Hepburn's platinum, diamond and sapphire brooch had been estimated to fetch just $20,000, but sold for $120,000, six times its estimated price.\nsentence 2: Hepburn's diamond and sapphire brooch fetched $120,000.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Sunday's earthquake was felt in the southern Indian city of Madras on the mainland, as well as other parts of south India. The Naval meteorological office in Port Blair said it was the second biggest aftershock after the Dec. 26 earthquake.\nsentence 2: The city of Madras is located in Southern India.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Charles de Gaulle died in 1970 at the age of eighty. He was thus fifty years old when, as an unknown officer recently promoted to the (temporary) rank of brigadier general, he made his famous broadcast from London rejecting the capitulation of France to the Nazis after the debacle of May-June 1940.\nsentence 2: Charles de Gaulle died in 1970.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: JERUSALEM (AP) -- In a spiritual climax to his 22-year papacy, Pope John Paul II on Tuesday began the first official visit by a Roman Catholic pontiff to Israel, fulfilling his dream of visiting the land where Christ was born and died.\nsentence 2: Pope John Paul II was born in Poland.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Russian cosmonaut Valery Polyakov set the record for the longest continuous amount of time spent in space, a staggering 438 days, between 1994 and 1995.\nsentence 2: Russians hold record for longest stay in space.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Senator Dick Lugar, the ranking Republican member of the Senate Committee on Foreign Relations, spoke in favor of the bill, saying that the United States' embargo on Cuba had \"failed to achieve its stated purpose of bringing democracy to the Cuban people.\" Senator Bob Menendez of New Jersey, a Democrat and a second generation Cuban-American, opposes the bill, arguing that free travel by Europeans, Canadians and the citizens of other Latin American countries has not helped to democratize the island nation. \"The regime has not opened up,\" said Sen. Menendez. \"On the contrary, it has used resources to become more oppressive.\"\nsentence 2: Dick Lugar is a member of the Cuban-American community.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Mice given a substance found in red wine lived longer despite a fatty diet, a study shows.\nsentence 2: Mice fed with red wine lived longer despite a fatty diet.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Leakey believed Kenya's rich wildlife, which underpins a tourist industry worth Dollars 450m (Pounds 308m) a year, could be managed in a profitable and sustainable manner.\nsentence 2: African countries encourage keeping animals alive to attract tourists.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The trial began today for a Pennsylvania state trooper accused of killing his girlfriend's estranged husband. Kevin Foley, 43, is accused of cutting the throat of John Yelenic, a dentist who was in the final stages of finalizing a divorce from his wife, Michele. According to prosecutors, Foley \"loathed Dr. Yelenic\" so much that he asked another fellow trooper to help him commit the alleged murder, which occurred in Yelenic's Blairsville home.\nsentence 2: Yelenic molested his adopted son.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: High dietary intake of potassium from fruits and vegetables throughout one's life helps to preserve bone mass, thereby preventing bone loss that can lead to osteoporosis.\nsentence 2: Dietary intake of potassium prevents osteoporosis.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: IBM stole trade secrets to copy two of its programs -- File-AID, a file manager, and Abend-AID, a program that helps users locate the source of glitches.\nsentence 2: Trade secrets were stolen.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: As a result, peptic ulcer disease has been transformed from a chronic, frequently disabling condition to one that can be cured by a short regimen of antibiotics and other medicines.\nsentence 2: Antibiotics are used against peptic ulcer.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The number of Danes opposed to swapping the krone for the euro has increased slightly to 35.3 percent, up from 34.6 percent in April, according to a poll published on Thursday by Danske Bank.\nsentence 2: The introduction of the euro has been opposed.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Kevin Whitaker, who heads the Cuban affairs office at the Department of State, spoke with Lazo on two occasions about the effort to give his sons visas.\nsentence 2: Kevin Whitaker is a manager of the Department of State.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Romano Prodi will meet the US President George Bush in his capacity as president of the European commission.\nsentence 2: Romani Prodi is the US President.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: The Federal Bureau of Investigation started an independent probe of the circumstances shortly after the White House made plain that President Bill Clinton considered industrial espionage a particular threat to US economic interests.\nsentence 2: A US probe of the investigation started at the instigation of the Commerce Department.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Following the successful bid to bring the 2010 Ryder Cup to Wales, the Wales Tourist Board has wasted little time in commissioning work to ensure that the benefits accruing from the event are felt throughout the country.\nsentence 2: Wales to host 2010 Ryder Cup.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: A U.S. Court of Appeals on Friday has declared unconstitutional California Assembly Bills 1792 & 1793, the California \"ultraviolent video games law\" that sought to ban the sale or rental of violent video games to minors. Federal judge Consuelo M. Callahan has ruled that the 2005 statewide ban, which has yet to be enforced, violates minors' rights under the US Constitution's First and 14th amendment because even the most graphic on-screen mayhem, video game content represents free speech that cannot be censored without proper justification.\nsentence 2: California Assembly Bills 1792 & 1793 are laws against ultraviolent video games.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Tropical Storm Irene on August 11, 2005 at 16:15 UTC. Tropical Storm Irene will increase in strength over the next several days, possibly developing into   a hurricane that will hit the east coast of the United States, said the National Hurricane Center of Miami, Florida in a report today.  Irene was located approximately 975 kilometers south-southeast of Bermuda at 16:00 UTC today. Forecasters say that the storm is now moving in a west-  northwest direction with top sustained winds of 40 miles per hour.\nsentence 2: A storm called Irene is going to approach the east coast of the US.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Zahi Hawass, Egypt's pre-eminent archaeologist, revealed the first ancient artifacts which may lead to the discovery of Cleopatra and Marc Antony's resting place.  The expedition has found amulets, 22 bronze coins cast with Cleopatra's image and her name, a royal statue, an alabaster mask resembling Marc Antony, and a statue bust of Cleopatra. \"If you look at the face of Mark Antony, many believed he had this cleft on his chin and that's why I thought this could be Mark Antony,\" said Hawass.  \"In my opinion, if this tomb is found, it will be one of the most important discoveries of the 21st century because of the love between Cleopatra and Mark Antony, and because of the sad story of their death. This is the perfect place for them to be hidden,\" said Hawass.\nsentence 2: Cleopatra and Marc Antony lived in Egypt.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: contradiction, entailment \nsentence 1: Mount Redoubt, a volcano in Alaska, erupted on Saturday, sending out clouds of ash thousands of feet high. According to the Federal Aviation Administration, the Ted Stevens Anchorage International Airport was shut down after ash reached the airport. Jeremy Lindseth, a spokesman for the airport, said that only small amount of ash reached the airport, but was significant enough to disrupt operations, as ash can cause engine problems for aircraft. He said that he was uncertain of how many flights were affected due to the eruption.\nsentence 2: The Ted Stevens Anchorage International Airport is the employer of Jeremy Lindseth.\nAnswer:",
+        "answer": "entailment"
+    }
+]

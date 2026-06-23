@@ -1,0 +1,402 @@
+[
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: even horror fans will most likely not find what they 're seeking with trouble every day ; the movie lacks both thrills and humor . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: nonsensical , dull `` cyber-horror '' flick is a grim , hollow exercise in flat scares and bad acting . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: the longer the movie goes , the worse it gets , but it 's actually pretty good in the first few minutes . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: preaches to two completely different choirs at the same time , which is a pretty amazing accomplishment . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: feels too formulaic and too familiar to produce the transgressive thrills of early underground work . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: does paint some memorable images ... , but makhmalbaf keeps her distance from the characters \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: it feels like an after-school special gussied up with some fancy special effects , and watching its rote plot points connect is about as exciting as gazing at an egg timer for 93 minutes . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: a painfully funny ode to bad behavior . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: challenging , intermittently engrossing and unflaggingly creative . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: unfortunately , it 's not silly fun unless you enjoy really bad movies . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: that is a compliment to kuras and miller . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: a full world has been presented onscreen , not some series of carefully structured plot points building to a pat resolution . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: byler reveals his characters in a way that intrigues and even fascinates us , and he never reduces the situation to simple melodrama . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: escaping the studio , piccoli is warmly affecting and so is this adroitly minimalist movie . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: ( t ) here 's only so much anyone can do with a florid , overplotted , anne rice rock 'n' roll vampire novel before the built-in silliness of the whole affair defeats them . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: having had the good sense to cast actors who are , generally speaking , adored by the movie-going public , khouri then gets terrific performances from them all . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: if steven soderbergh 's ` solaris ' is a failure it is a glorious failure . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: it 's a stunning lyrical work of considerable force and truth . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: a nightmare date with a half-formed wit done a great disservice by a lack of critical distance and a sad trust in liberal arts college bumper sticker platitudes . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: late marriage 's stiffness is unlikely to demonstrate the emotional clout to sweep u.s. viewers off their feet . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: it moves quickly , adroitly , and without fuss ; it does n't give you time to reflect on the inanity -- and the cold war datedness -- of its premise . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: the lower your expectations , the more you 'll enjoy it . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: an interesting story with a pertinent ( cinematically unique ) message , told fairly well and scored to perfection , i found myself struggling to put my finger on that elusive `` missing thing . '' \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: a romantic comedy enriched by a sharp eye for manners and mores . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: a rarity among recent iranian films : it 's a comedy full of gentle humor that chides the absurdity of its protagonist 's plight . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: however it may please those who love movies that blare with pop songs , young science fiction fans will stomp away in disgust . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: if you can stomach the rough content , it 's worth checking out for the performances alone . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: sticky sweet sentimentality , clumsy plotting and a rosily myopic view of life in the wwii-era mississippi delta undermine this adaptation . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: its well of thorn and vinegar ( and simple humanity ) has long been plundered by similar works featuring the insight and punch this picture so conspicuously lacks . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: thanks to scott 's charismatic roger and eisenberg 's sweet nephew , roger dodger is one of the most compelling variations on in the company of men . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: this flick is about as cool and crowd-pleasing as a documentary can get . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: visually imaginative , thematically instructive and thoroughly delightful , it takes us on a roller-coaster ride from innocence to experience without even a hint of that typical kiddie-flick sentimentality . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: montias ... pumps a lot of energy into his nicely nuanced narrative and surrounds himself with a cast of quirky -- but not stereotyped -- street characters . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: a very long movie , dull in stretches , with entirely too much focus on meal preparation and igloo construction . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: rarely has leukemia looked so shimmering and benign . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: the plot convolutions ultimately add up to nothing more than jerking the audience 's chain . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: combining quick-cut editing and a blaring heavy metal much of the time , beck seems to be under the illusion that he 's shooting the latest system of a down video . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: the lion king was a roaring success when it was released eight years ago , but on imax it seems better , not just bigger . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: this is a good script , good dialogue , funny even for adults . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: harrison 's flowers puts its heart in the right place , but its brains are in no particular place at all . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: aside from minor tinkering , this is the same movie you probably loved in 1994 , except that it looks even better . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: once the 50 year old benigni appears as the title character , we find ourselves longing for the block of wood to come back . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: `` the time machine '' is a movie that has no interest in itself . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: instead , he shows them the respect they are due . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: a psychological thriller with a genuinely spooky premise and an above-average cast , actor bill paxton 's directing debut is a creepy slice of gothic rural americana . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: though it 's become almost redundant to say so , major kudos go to leigh for actually casting people who look working-class . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: it just may inspire a few younger moviegoers to read stevenson 's book , which is a treasure in and of itself . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: a coarse and stupid gross-out . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: a giggle a minute . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: a string of rehashed sight gags based in insipid vulgarity . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: ... a magnificent drama well worth tracking down . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: this is so bad . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: beautifully observed , miraculously unsentimental comedy-drama . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: this is a train wreck of an action film -- a stupefying attempt by the filmmakers to force-feed james bond into the mindless xxx mold and throw 40 years of cinematic history down the toilet in favor of bright flashes and loud bangs . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: ( grant 's ) bumbling magic takes over the film , and it turns out to be another winning star vehicle . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: but what are adults doing in the theater at all ? \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: the fly-on-the-wall method used to document rural french school life is a refreshing departure from the now more prevalent technique of the docu-makers being a visible part of their work . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: if there 's one thing this world needs less of , it 's movies about college that are written and directed by people who could n't pass an entrance exam . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: determined to be fun , and bouncy , with energetic musicals , the humor did n't quite engage this adult . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: davis ... is so enamored of her own creation that she ca n't see how insufferable the character is . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: fun , flip and terribly hip bit of cinematic entertainment . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: it ca n't decide if it wants to be a mystery/thriller , a romance or a comedy . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: i 've always dreamed of attending cannes , but after seeing this film , it 's not that big a deal . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: add yet another hat to a talented head , clooney 's a good director . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: it is great summer fun to watch arnold and his buddy gerald bounce off a quirky cast of characters . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: chokes on its own depiction of upper-crust decorum . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: it proves quite compelling as an intense , brooding character study . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: a woman 's pic directed with resonance by ilya chaiken . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: it 's as if you 're watching a movie that was made in 1978 but not released then because it was so weak , and it has been unearthed and released now , when it has become even weaker . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: manages to be both repulsively sadistic and mundane . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: this movie is maddening . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: stealing harvard aspires to comedic grand larceny but stands convicted of nothing more than petty theft of your time . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: but this films lacks the passion required to sell the material . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: an unwise amalgam of broadcast news and vibes . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: for all its technical virtuosity , the film is so mired in juvenile and near-xenophobic pedagogy that it 's enough to make one pine for the day when godard can no longer handle the rigors of filmmaking . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: the story and structure are well-honed . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: the inspirational screenplay by mike rich covers a lot of ground , perhaps too much , but ties things together , neatly , by the end . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: his healthy sense of satire is light and fun ... \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: it 's a grab bag of genres that do n't add up to a whole lot of sense . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: prurient playthings aside , there 's little to love about this english trifle . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: it 's hampered by a lifetime-channel kind of plot and a lead actress who is out of her depth . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: ( w ) hile long on amiable monkeys and worthy environmentalism , jane goodall 's wild chimpanzees is short on the thrills the oversize medium demands . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: moody , heartbreaking , and filmed in a natural , unforced style that makes its characters seem entirely convincing even when its script is not . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: a sequence of ridiculous shoot - 'em - up scenes . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: as a first-time director , paxton has tapped something in himself as an actor that provides frailty with its dark soul . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: nothing 's at stake , just a twisty double-cross you can smell a mile away -- still , the derivative nine queens is lots of fun . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: it has charm to spare , and unlike many romantic comedies , it does not alienate either gender in the audience . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: ... is an arthritic attempt at directing by callie khouri . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: despite all evidence to the contrary , this clunker has somehow managed to pose as an actual feature movie , the kind that charges full admission and gets hyped on tv and purports to amuse small children and ostensible adults . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: so refreshingly incisive is grant that for the first time he 'll probably appeal more to guys than to their girlfriends who drag them to this movie for the hugh factor . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: allows us to hope that nolan is poised to embark a major career as a commercial yet inventive filmmaker . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: verbinski implements every hack-artist trick to give us the ooky-spookies . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: though perry and hurley make inspiring efforts to breathe life into the disjointed , haphazard script by jay scherick and david ronn , neither the actors nor director reginald hudlin can make it more than fitfully entertaining . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: even if you do n't think ( kissinger 's ) any more guilty of criminal activity than most contemporary statesmen , he 'd sure make a courtroom trial great fun to watch . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: there is no pleasure in watching a child suffer . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: exquisitely nuanced in mood tics and dialogue , this chamber drama is superbly acted by the deeply appealing veteran bouquet and the chilling but quite human berling . \nAnswer:",
+        "answer": "Good"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: unflinchingly bleak and desperate \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: samira makhmalbaf 's new film blackboards is much like the ethos of a stream of consciousness , although , it 's unfortunate for the viewer that the thoughts and reflections coming through are torpid and banal \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: at once half-baked and overheated . \nAnswer:",
+        "answer": "Bad"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: Good, Bad \nText: it 's a scattershot affair , but when it hits its mark it 's brilliant . \nAnswer:",
+        "answer": "Good"
+    }
+]

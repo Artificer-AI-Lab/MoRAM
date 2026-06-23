@@ -1,0 +1,402 @@
+[
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How long does it take for an iPhone 6 Plus to charge?\nsecond sentence: Will the iPhone 6 Plus outsell the smaller iPhone 6?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How important is freedom?\nsecond sentence: Why is freedom important to you?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What will be the best place in Sydney to buy any fire-resistant Roller Shutter?\nsecond sentence: Where can I found fire-resistant roller shutters in Sydney?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Are certain famous people or companies part of the Illuminati?\nsecond sentence: Are big YouTubers part of the illuminati?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What were the books studied by aiims topper 2016?\nsecond sentence: What books should I study for my PG entrance in AIIMS?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What two famous songs are similar but have never, to date, been accused of plagiarizing the other?\nsecond sentence: Famous pop music that has been plagiarized?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: My parents think I am rude for being so introverted, is there anything wrong with being an introvert?\nsecond sentence: Am I wrong if I'm kind of an introvert?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What is a breezer?\nsecond sentence: What is the difference between wine, vodka, breezer, beer, alcohol, and rum?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What is the historical background of Chinese workers in Australian gold mines, and how does gold production compare to production in Indonesia?\nsecond sentence: What is the historical background of Chinese workers on Australian gold mines, and how does gold production the compare to the production in Brazil?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How cold can the Gobi Desert get, and how do its average temperatures compare to the ones in the Sahara?\nsecond sentence: How cold can the Gobi Desert get, and how do its average temperatures compare to the ones in the Chihuahuan Desert?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How people accept homoeopathy?\nsecond sentence: Why not people accept homeopathy?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Vegetables: Is broccoli that is turning yellow safe to eat?\nsecond sentence: How can eat more vegetables when I don't like many vegetables?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Why does alkoxide ion acts as a base in alcoholic medium?\nsecond sentence: A fair coin is flipped ten times. What is the probability of getting exactly 5 heads?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What are examples of barriers to communication?\nsecond sentence: What are some examples of barriers in communication?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What is the best novel of all time?\nsecond sentence: What are the top classic novels worth reading?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How do semiconductors differ from conductors and insulators?\nsecond sentence: How does a semiconductor differ from conductor and insulator?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Can I deactivate my Quora account?\nsecond sentence: How do I deactivate Quora account?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What are the best books to learn Java?\nsecond sentence: What is the best book for learning Java?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Where does the word 'kowtow' come from?\nsecond sentence: Where does the word black come from?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What is x category security?\nsecond sentence: What is 'Z' and 'Z+' category security?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What are the best rock song quotes?\nsecond sentence: What are some of best Rock songs of all time?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Is it possible to connect two TVs to a Tata Sky?\nsecond sentence: Is there a way I can hack Tata sky HD and get channels for free?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Is CAT after b.tech in mechanical engineering useful?\nsecond sentence: What opportunities exist after completing a B.Tech in mechanical engineering?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What do you think about Narendra Modi's decision about banning 500Rs & 1000Rs notes? And what will be the effects, Do this make corruption free India?\nsecond sentence: What do you think about banning 500 and 1000 rupee notes in India?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Can a pit beat a wolf?\nsecond sentence: Would a wolf beat a pit bull?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What are the tips for self studying?\nsecond sentence: What are the smart tips for self studying?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Will Muslim population overcome Hindu population in India in future?\nsecond sentence: If the muslim population increases by current rate, when shall India turn into an islamic country?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How will China respond if India stop sharing water with Pakistan (Indus Waters Treaty)?\nsecond sentence: What will be the total effect on Pakistan and India if India cancels the Indus Water Treaty?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Is instant hot water safe?\nsecond sentence: The weather is very hot and dry, its 42 degrees celsius outside. Is it safe to go out side to a water park or something?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How many characters or people are mentioned in the Bible?\nsecond sentence: Why is Mary not mentioned much in the Bible?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Why must we always sleep at night?\nsecond sentence: Why do we sleep during the night?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: If I visit someone's profile will it show up in the visited you and visitors section even after my account has been deleted?\nsecond sentence: If I visit someone's profile will it show up in the visited you and visitors section even after my account has been deleted on okcupid?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Which are the best emotional english poems [5 mins] to recite?\nsecond sentence: What are some best poem in English?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: I had an incident during massage. Masseuse left the room immediately. I feel so sorry for her. What do I do?\nsecond sentence: What is the difference between a masseuse, a masseur, and a massage therapist?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Should India strike Pakistan now after Uri terror attack?\nsecond sentence: Why doesn’t PM Narendra Modi attack Pakistan, even after the recent Uri attack in India?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Why doesn't anyone reply to my questions on Quora?\nsecond sentence: How come my questions always get ignored on Quora?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What are the safety precautions on handling shotguns proposed by the NRA in Rhode Island?\nsecond sentence: What are the safety precautions on handling shotguns proposed by the NRA in Arkansas?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Can you suggest a best budget phone below 15k?\nsecond sentence: What is the best phone to buy below 15k?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Why do athletes bite medals when they finish on the podium?\nsecond sentence: Why do athletes bite their medals?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What would you think of a Presidential Pardon by President Obama of Hillary Clinton?\nsecond sentence: What would be the fallout from Pres. Obama's pardon of Hillary Clinton?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What’s the easiest way to learn JavaScript?\nsecond sentence: What is easiest way to learn JavaScript?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Can we login mac we chat without any QR code?\nsecond sentence: Is there an app that reads QR codes on the Mac deskdop?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: \"My inbox shows 1 unread email even though I have no unread emails. I am using Google chrome. I tried searching \"\"is: unread in:anywhere\"\". But this doesn't work. Could anyone tell me how to fix this?\"\nsecond sentence: Been 1 month, Jabong didn't deliver my product yet. Tried contacting them multiple times but they don't even reply to emails. What should I do?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What does the infinity tattoo mean?\nsecond sentence: What does X tattoo mean?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What is the Dedekind Cut and the construction of real numbers?\nsecond sentence: How do Dedekind cuts help us in constructing real numbers from rational numbers?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Why was 'Right to Property' removed from Fundamental Rights in India?\nsecond sentence: What were the consequences of making right to property a legal right from fundamental right?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What is 3.5cm (width) by 1.5cm (ht.) in pixels at 200 dpi resolution?\nsecond sentence: I need to resize a photo to 3.5cm X 3.5cm with 45-50 KB file size. How do I do it?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What is Modernism? What are some characteristics?\nsecond sentence: What is modernism and what are some characteristics?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: \"Why is plaster of Paris called \"\"plaster of Paris\"\" and not by any other name like cement concrete?\"\nsecond sentence: Why is plaster of Paris called plaster of Paris?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: C and Java Programming Language If Condition?\nsecond sentence: Is Java a programming language?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How can I search my friends on Quora?\nsecond sentence: How can I search a friend on Quora?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How will issuing of new 2000 Rs notes help curb black money and corruption?\nsecond sentence: How will banning the present 500/1000 notes fight black money if it can be exchanged?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How can atrial fibrillation cause a stroke?\nsecond sentence: How is atrial fibrillation connected to strokes?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How do I forget someone whom I once loved deeply?\nsecond sentence: How do you forget about someone?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Will Hillary Clinton run for president again?\nsecond sentence: Will Hillary Clinton run for president in 2016?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How cold can the Gobi Desert get, and how do its average temperatures compare to the ones in the Great Victoria Desert?\nsecond sentence: How cold can the Gobi Desert get, and how do its average temperatures compare to the ones in the Thar Desert?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What are some great Firefox add-ons?\nsecond sentence: What are some examples of essential Firefox add-ons?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Who are the 7 Chiranjiv (like Aswathama)?\nsecond sentence: What exactly Aswathama said to Duryodhana after he killed Upapandavas?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: \"In the Discovery Channel programme \"\"Wheeler Dealers\"\", why does Edd China always wear a long sleeve shirt underneath his t-Shirts?\"\nsecond sentence: What TV show was this on discovery channel?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Can male muslim date a foreign girl?\nsecond sentence: Would a foreigner date an Indian girl?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Why does my hair stop growing after it reaches my mid breast section?\nsecond sentence: Does hair grow back after extreme stress?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Why do objects burn while entering from outer space to Earth's atmosphere?\nsecond sentence: Why do objects in space entering the Earth’s atmosphere catch fire?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How can I know if my wife is a cheater?\nsecond sentence: How do I know if my wife cheats?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Where can I sell my exclusive paintings online in india?\nsecond sentence: Where can I sell my paintings online?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How do sodium sulfate and hydrochloric acid react?\nsecond sentence: How do magnesium chloride and hydrochloric acid react together?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What do I do once my friend betrays me?\nsecond sentence: What can I do after my friend betrayed me?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Why can I not get out of bed?\nsecond sentence: \"How do I actually \"\"get out\"\" of bed?\"\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How do I trade binary options?\nsecond sentence: What is binary options trading?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Does God worship Himself?\nsecond sentence: Do animals believe in God?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Can someone hack my snapchat password?\nsecond sentence: How do I get someone's Snapchat password?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How do I improve this writing?\nsecond sentence: What is the best way to improve your writing style?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How does a great white shark adapt to its enviroment?\nsecond sentence: What are the adaptations of a great white shark?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How do I stop caring about what people think about me?\nsecond sentence: Why do I care so much about what other people think of me?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How and when was the telephone invented?\nsecond sentence: How was the telephone invented?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Which are the best 5 novels a girl must read?\nsecond sentence: What are some good romantic novels?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What is Quora's policy on expressing opinions and proselytizing to answer questions?\nsecond sentence: What is the molecular orbital configuration of the first excited state of hydrogen molecule?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Would I need a different nail gun for dry walling, framing, and flooring or is there some model that can do all of these?\nsecond sentence: How laminate flooring is different from other flooring?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How do I know if I have been blocked on an android phone?\nsecond sentence: How does a person know if you are being blocked on a smart phone?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What are the best personality development institutes in Delhi?\nsecond sentence: Which is the best institute for personality development and soft skills?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What are biotic and abiotic factors? How do they differ?\nsecond sentence: What is the relationship between biotic and abiotic factors? What are some examples?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What is the cut off for GBO at SRCC for general category?\nsecond sentence: How do I prepare for SRCC gbo exam in one month?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Does it look like Donald Trump has a new toupee this campaign?\nsecond sentence: Is it true that Donald Trump wears a wig?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What did you regret after graduating from college?\nsecond sentence: Is there somehting you regret after graduating from college?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How can I find my goal?\nsecond sentence: How do I find my life's goal?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Where can I hire an email hacker?\nsecond sentence: How can I hire a professional hacker?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How should I spend the 10 days before the GRE?\nsecond sentence: My Kaplan’s practice tests average score is 302 (160Q, 142V). How can I get 310+? 15 days to go for GRE.\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Why do people believe in flat earth?\nsecond sentence: Why do people believe the earth is flat when clearly earth is round from space?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What is the best site for soccer predictions?\nsecond sentence: What's the best soccer handicapping site?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What should I look out for when looking to purchase a used Jeep Wrangler?\nsecond sentence: I am considering buy a Jeep Wrangler and I live in Chicago. What are the pros and cons of owning one living in a big city?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Why MS Dhoni leave captaincy of ODI & T-20?\nsecond sentence: Why does M.S Dhoni left captaincy for ODI and T20?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How much equity should I get at a post-Series A startup as the first recruiting hire?\nsecond sentence: Startups: I just got asked to be the COO of a young startup in San Francisco. How much equity should I get?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How do I become a real estate agent in Wisconsin?\nsecond sentence: How do you become a real estate agent?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How is the brain different from the mind?\nsecond sentence: What is the mind and how is it different from the brain?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What are the best high-end preschools in Gary, IN? What makes them good or special?\nsecond sentence: What are the best high-end preschools in Minneapolis? What makes them good or special?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How should I focus on studies?\nsecond sentence: How could I focus on my studies?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: What is it like to get a master's in artificial intelligence from the University of Georgia?\nsecond sentence: Is A.I. an existential threat to humanity?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How do I trace a phone call?\nsecond sentence: How do I to trace a phone call in real time with good accuracy?\nAnswer:",
+        "answer": "True"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How do jinns and shaitans differ?\nsecond sentence: What is the definition of jinns and shaitans?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: Who are some new YouTubers in and around Kolkata?\nsecond sentence: What is the best way to celebrate new year alone in Kolkata?\nAnswer:",
+        "answer": "False"
+    },
+    {
+        "prompt": "Whether the \"first sentence\" and the \"second sentence\" have the same meaning? Choose one from the option.\nOption: False, True \nfirst sentence: How can I stop binge eating?\nsecond sentence: How do I stop emotional eating/binge eating?\nAnswer:",
+        "answer": "True"
+    }
+]

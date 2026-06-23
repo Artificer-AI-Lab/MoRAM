@@ -1,0 +1,402 @@
+[
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: High altitudes affect humidity levels\nText: I purchased my first humidor with one of these tubes while living in Albuquerque at 6200' altitude. I could never get it to stay at approx 70 % but instead, would drop down to approx 60%. I recently moved to central California and have noticed that it now reads properly.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Not much help for investors\nText: I bought this book because I thought it would help me to understand how to do business in Asia. Instead, I found many \"newsy\" stories of \"those corrupt Asians\" -- not particularly helpful in making decisions there or working with people there. Yes, Asia is corrupt; but then, so is Australia or the USA. Probably Asia is more corrupt in some respects -- but this is not the defining mode for seeing business relationships there. I enjoyed reading this book because it does read like a novel. But, I much prefered George Haley's \"New Asian Emperors: the Overseas Chinese, their Strategies and Competitive Advantages\" as an aid to understanding business and relationships and this is the book that I am recommending my company read. Backman's book too often stoops to being sensational and \"scoopy\" and sometimes just appears plain racist and offensive.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Excellent Product for the price...\nText: Although I own Photoshop 7.0 for the Mac, I use it so rarely that it takes too much time for me to re-learn the functions. Photoshop Elements brings a host of the most used features from the full version, into a streamlined easy to use application. It works very well on my Mac and does everything I need a photo editing application to do....without clutter and confusion.\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: VERY DISAPPOINTING!!!!!!!!!!!!!!!!!!!!!!!!!!!\nText: MOST DEFINATLY NOT THE GAME I GREW UP WITH!!!! THIS VERSION OF HUNGRY HIPPOS IS TERRIBLY DISAPPOINTING!!!! DON'T BUY IT!!! IT WILL NOT STAY TOGETHER FOR EVEN A FEW MINUTES OF PLAY!! THE \"MARBLES\" ARE CHEEP HOLLLOW PLASIC BALLS AND THE HIPPOS DISCONNECT FROM THE GAME WITH EVEN HIT. IF THEY AREN'T FALLING OFF THE GAME THEN THEY WILL STICK. WE HAVE NEVER BEEN ABLE TO PLAY A COMPLETE GAME (NOT EVEN PART OF A GAME) WITHOUT GIVING UP IN FRUSTRATION. (...)\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Lint Lizard DOES NOT WORK!\nText: I would not recommend the Lint Lizard to anyone. We have a two year old (top of the line) front loader, and the Lint Lizard wouldn't clean anything beyond the shallowest area of my dryer vent... and even THEN I had to maneuver it JUST RIGHT to get MOST of the built up dust. The hose is curved and very stiff, so it makes it hard (if not impossible) to move around in the proper direction. I gave up. I am returning the Lint Lizard and I'm going to give the \"Gardus LintEater Rotary Dryer Vent Cleaning System\" a try -- it has a 4 1/2 out of 5 rating on Amazon.\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Haven't used it yet\nText: I purchased this product for my husbands birthday July 22. Unfortunatly, it didn't work. We sent it in they replaced the circuit board and sent it back to us. Still didn't work. We have, now a second time, sent it back and asked for a new one. Don't know how well the detector works as it hasn't since purchased!\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: A Fine Little Book!\nText: This is a wonderful book that describes the last days of Czar Nicholas II and his family. The emphasis is on the children --- son Alexis and daughters Anastasia, Maria, Tatyana, and Olga.The book is based on the recollections of the children's tutor, Pierre Gilliard, who accompanied them in exile for a time. It is filled with photographs, letters, and other memorobilia from Monsieur Gilliard's collection. These provide a delightful side to the tragic story of the last days of the Romanovs.It is a pity that this wonderful book is out of print.\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: not very detailed\nText: this book fails to offer any advice for following up after a first interview (beyond the standard thank you letter). Whether to write, call, etc.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Disappointed!\nText: A wonderful first half outlining the special bond between the hero and heroine as they grew up. I couldn't wait for them to be reunited. But as adults they didn't have the same chemistry and the plot becomes very contrived. Ultimately I had to force myself to finish this one.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: She came back pretty hard\nText: Considering her last effort went un-noticed by the public, this is a far cry better. She has hooked up with a sure fire winner in LaFace Records. The material produced by Babyface is by far the best and she seems most at ease with it. Some of her hip-hop efforts should have been left off the cd as they take away from the R&B feel of the total project and are really out of place. I recommend this cd to those who can appreciate good listening music.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Must have music book\nText: I've been teaching music for many years and I have piles of music books and CD's.I often come back to my Wee Sing books because of the simplicity and becausethey very often contain the songs that I am looking for. If you were to buyone book to teach to young children about God this would be it. I recommend allof the Wee Sing books to those who want to teach.\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: It's A Good Game\nText: It's not a masterpiece game, but Land Of The Dead: Road To Fiddler's Green is a good game. The graphics aren't that good at all, but the gameplay is cool. I was expecting more, but this is the best you'll get for a game that wasn't really talked about.If you're looking for a good cheap game to play, this game is perfect to play.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Do not waste your time...\nText: This movie is horrible from beginning to end. To anyone with half a brain: I recommend you do not see this movie. A mindless trip into teeny bopper land. The only reason to maybe watch, is to play the \" Let's see how many movies they ripped off\" game. It just goes to show how fast Hollywood is cranking out movies, and not checking the quality.\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Unsatisfied\nText: We bought the gel inserts and my husband only was wearing one and now it looks like a pancake. There is no more gel inside of it.\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: A Great Book if You're a Fairly New Frequent Flyer\nText: I found this book complete and useful. However, 90% of the book contained Frequent Flyer info that is self evident to anyone who has spent over two or three years as a frequent flyer. There were a few good nuggets towards the end on methods to transfer miles and points between programs.For new flyers however, lots of the book was very relevant. A key element is concentrating miles in one program which they strongly emphasize.In short, great for new frequent flyers; very average for high flyers.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Loved It!!!\nText: I absolutely loved this book. I especially love how Cussler mixes history with science and adventure. It made this book really awesome. Plus that was cool how Cussler did a little cameo appearance at the end of the book.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Would be great if it worked\nText: Great idea, but poor quality. Minutes after starting to use it, something came loose and regardless of how many times attempted to fix, would not work again. Some buttons worked and others did not.\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: good product but dosnt fit\nText: product shipped fast packaged well looks good well made, however it dosnt fit the rail on my gun not the sellers fault but to potential buyers research and make sure it is going to fit your model gun, for the price cant go wrong just the laser is worth it so will probably purchase a mount and use the laser. to the seller if possible add a clearer description on what types of firearms the mount will fit i did a search with my model firearm and your laser and mount came up in the search thats why i made the purchase. but again not giving a negative review just my own personal experience and again mostly to my own error i do reccomend this product but only once you researched a lil to make sure its going to fit your gun.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Generally good.\nText: Not as high level as I would have liked, but generally a good book. Pictures are black and white, not so good for geology.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: How not to write a book.\nText: I concur with most of the other reviews, this book is trash. For the record, I do admire Jesse Livermore. However, this author editorialized on literally almost every page. He exhibits this antipathy toward Livermore that detracts from what little information is actually there. I have a journalism degree, and was taught not to let my personal opinion show in my writing. Apparently this author never studied writing.\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Satisfaction with product\nText: We have enjoyed our Black and Decker Firestorm tool kit. The batteries lasted over three years before needing replaced. The battery charger needed replaced after two years. This all purpose tool set has received a lot of use. We have no complaint about this product.\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: not quite a downer\nText: not bad but lack the action that I expected more of a good tv movie instead of the big screen.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: almost SILENT - useless!\nText: I ordered this because of the complaints about the 'old fashioned' mechanical timers. This is almost silent. YES as you let time go by the beeps increase in frequency...going from \"beep...beep...beep\" to beepbeepbeepbeep.But heaven help you if you are in another room or even across the room. I had this timer set on a shelf less than 2 feet away from me, the tv news is on and the TV drowned out the timer. I may well return this, even though the packaging was shredded in the effort to extract it. I want my 15 year old mechanical back!!!!\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Good author, good book\nText: Although 'Heaven's Fire' is my favorite so far by this author, 'Silken Threads' was good, too. I definitely like it better than it's sequel, 'The Sun and the Moon'. The characters were likable and the romance was worth the wait. FWIW- This book definitely has adult themes and doesn't mince words when describing the sordid side of medieval life.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Deceiving\nText: There is no mention on the product about which ipods this is compatable.We have multiple levels of ipods at home.The adapter only fits certain generations of ipods. So it was useless on our current video ipod or nano.It did fit on our 2nd generaton ipod that is non-functional. I think it is horrible that there was not a clear mention of compatability. So now I have to return it.\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: This really works\nText: Since taping this to the inside of my glass front door, I haven't been bothered by prosthelytizers for several months. Worth every penny to stop the bell ringing idiots.\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Too big for small wrists\nText: I bought this watch as a gift for my fiance. It is stylish, nicely weighted, and elegant. Unfortunatly the face is big enough, and the band inflexible enough, that for small wrists, there is a large gap between the watch and the arm at the junction between the face and band, making it look and feel clunky. Had to return it.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: \"Hated It\"\nText: Not worth reading. I'm on page 59 of this 184 page book and it's horrible. I have been forcing myself to read it in hopes that it will get better. But now that I see the other reviews, I can safely say it won't.\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Not for Everyone\nText: Larry F's films are not for everyone. I was expecting more out of Wendigo, but I was not dissapointed. Mr. Fesseden's films deal with the monster inside of us all, the darker side of humanity. I own this DVD along with No Telling, and I recommend them both. I do understand that this film does not suit everyone's tastes.I liked it and would recommend it.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Florid, Lurid and other -ids\nText: This is not a boring book, oh no, but it has some major faults. Here's one, which pretty much killed the last part of the book for me, and hence, no real payoff: **SPOILER WARNING** the reveal of the bigbad vamp, the one we've heard but not quite seen, the one pushing all the buttons, the one that ~ heck, it would have been more satisfying if Steakley had just said, \"Aw, it's Dracula\" ~ ?? Yeah that one. Turns out he's actually NO ONE WE'VE EVEN HEARD OF UP TO THAT POINT IN THE BOOK. So when Felix says, \"The bastard's name is...\" you will respond with, \"I'm sorry, WHO?\".No punch. A lynch-pin disclosure in the book and it lacks any dramatic impact. Steakley tries to tell us all about him then, in the few paragraphs before he gets wasted by Team Crow anyway, but you won't care.Why didn't he make it one of the George Bushes? J.R. Ewing? That would have been more interesting.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Scary?!\nText: I bought this CD because I wanted the sound of rain hitting a patio. However, the sound is inconsistent. It starts pretty loudly but about 20 minutes later, both the rain and especially the thunder die off. Also, the sound isn't smooth. It sounds like several separate storms patched together without any transition.My main problems, though, are the non-storm noises. I knew from the sampler of this series that there is a little dog barking in the background, but I thought it was quiet enough to ignore. The barking is present, no surprise. What I can't accept is a faint, disjointed SINGING like a ghost trapped in an insane asylum. Listen closely, and you will hear this phenomenon around 5:50, 6:10, and 9:00. I kept telling myself I was imagining things. Then I leaned over the player and there it was right in my ear: this short passage of yelling like some demon-possessed maniac out in the storm. I was freaked out. Do not buy this piece of junk!\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Disappointing book, lot of errors, insuficient information.\nText: The bad surprise of this book is a lot of errors like typographical, wrong named or wrong wrote corners of circuits (more than a half at Interlagos !), some inexact text information, wrong lap record (Monaco 97 in a wet race !).A excess of photos of some cars (Ferrari and Sauber !), and some lacklustre and out of focus photos (start at Spain). Facts flinged at random in the circuits drawings. It is missing a datasheet with a annual summary of the winners, speed, fast lap, pole position; also the former circuits drawings (in small picture) to show the modifications through the years. The beautiful 2 page circuits drawings, some photos of the past and a fair price it is not enough to avoid the disappointment with this book, which it is not in the same high level of the other books of the celebrated author.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: amazon book purchase\nText: theres some highlighting in the first couple of chapters but other than that its in good quality.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Disappointed!\nText: What a disappointment this set was to me. It is so adorable in the picture and would have been perfect for my daughters room. I ended up returning it because when it arrived the construction was so poor. There were many flaws in the paint and one of the parts was cracked. I ended up buying a Level of Discovery table instead and am very happy with the quality and construction of it.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Good Reading for Developing and Maintaining a Positive Attitude\nText: This book was interesting reading for me.It explains how the laws of attraction work,and how you can develop this skill to drawthe energy closer to you andmake your dreams and/or wishes possible.I actually won quite a large amount of moneyrecently. Maybe it was a coincidence or maybe thisattraction attitude I developed is working?It takes time to develop this way of thinking.You have to have a positive \"mindset\" and follow itdaily for it to work.I also liked \"The Secret\" on DVD. It was this book thatinspired it I believe.There are many who believe in the LOA and there are somewho doubt it. If you have an open mind, you may find thatthis book will show you the way to prosperity.It is an old book, but the principles remain the same.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: My order was canceled, what should I review, bad service?\nText: My order was cancelled after I was told it was shipped. I received a full refund, but I needed the switch not the money. I am still looking for another provider.However this is a great product, I use one at my office.\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Good elementary facts on the Faith movement.\nText: This thin booklet will give you just some of the introductory facts on the Word of Faith movement. Since it only has about 40-50 pages, it won't sink its teeth very deep into the subject, but it's a good start if you want to know more about the Word of Faith. I would recommend \"Christianity in Crisis\" if you want a more in-depth analysis. But start here with \"The Facts\", and plus it's very inexpensive.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Not for Mac use\nText: I liked the unit until I tried to interface it with my IMac. You have to have the outdated version of ITunes (version 1.0) and Itisn't compatible with the latest operating system - OSX.This I found out after going through an awful customer service hotline at Samsung. Very difficult to get through.So in all reality it is not Mac compatible. Even the service tech finally admitted It.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Solid Rock!\nText: 3 1/2 stars = Very GoodDetroit's Dirty Americans comes from a city with a long time honored tradition of rock/hard rock/heavy metal. From Mitch Ryder & the Detroit Wheels, to Alice Cooper & Iggy Pop, to Ted Nugent, & then back to rock with Bob Seeger. Detroit has produced some of the best American rock & roll, not to mention Motown.Dirty Americans fall closest to Ted Nugent out of the above listed bands. Their first album \"Strange Generation\" kind of reminds me of G n' R, if they were from Detroit. It is an album filled with gritty 70's style hard rock/heavy metal. Dirty, grinding, & real. Energy runs through these songs that spell out loud & proud, we're a Detroit band, & we honor our rock n' roll forefathers of Detroit. It is a very good album, a sincere album, but short of being great. But it demonstrates that Dirty Americans may have the potential for greatness. Only time & a willing audience for the shrinking market for this kind of music this band makes will tell.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: AND THE REAL WINNER IS........\nText: CLAY AIKEN!!!! This record is fantastic. I love to listen to Clay's voice. I listen to this CD over and over again. The only thing I would change would be to make Bridge Over Troubled Water more like Clay's stage performance. I don't know, mabe I just love to watch Clay perform that's why I like that version better.I have already ordered 4 copies of his album when it comes out. I can hardly waite.\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Not user friendly\nText: The individual boxes are extremely difficult to open and may spill contents while attempting to open. Inside each of the six boxes are one T - shaped card and many individual cards that apparently are dividers. However, they are either too narrow or too wide depending on which aspect is used. They were secured with masking tape that when removed damaged them. I probably should have returned them for refund but they will serve the purpose for which they were purchased. I am disappointed.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Exellent read - action packed and meticulously researched\nText: This was an awesome read. The book is more about the operation than the politics (although that is covered as well). You really feel like you are on the ground with these guys. I've watched the movie a million times, but the book blows it away. The movie does a great job of following the book - but there are just so many more details in the book and the context much more robust. I found it a little confusing figuring out where they teams were at. There are some maps in the book, but I still got confused - but I get lost in my own house. This was a serious engagement and these men fought courageously and with great skill. It is simply amazing that they made it out alive.\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Not worthy of Grisham\nText: This is not one of Grisham's better works. He tends to write well and so it is worth reading; but, it is sooooo predictible.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Love This CD!\nText: I know Julia Sarr through a friend and stayed with her in Paris for a short while. She is as wonderful a person on the outside as she is on the inside - and her voice is pure magic! Who knew that Senegalese rythym could blend so well with Flamenco guitar? It's a great work by two wonderful and talented people, and my hat goes off to them!\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Decent, but too tight\nText: The swim cap was very durable and high quality, but it is REALLY tight. I don't have an abnormally large head, but this thing feels very constricting.Hopefully it stretches a bit with more wear.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: No substitute for the Women's Utility\nText: Ironclad makes great gloves, and these are no exception. The problem is in the fit. Ironclad's old women's fit gloves,the Women's Utility (no longer available), were amazing. I went through two pairs a year doing barn chores, gardening, and hauling firewood. The fingers of these new gloves are significantly longer,leaving half-inch flaps at the ends of my fingers--just like most gloves, but not Ironclad's old women's fit. If you've got long fingers, these are great gloves. If, like me, you need gloves made for short fingers (a lot of women), keep looking.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: The Appoinment\nText: The Appointment is a well written novel - invokes images reminsicent of Joyce and Virginia Woolf.I feel Romania with full oppression syndrome now - Herta awakens subtle fear with minute emotional description - makes you look over your shoulder while reading.I loved the book.First class.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: It Was All Right\nText: I would recommend it for Dallas Cowboys Haters over the age of 40. Younger readers might not get it.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Not impressed\nText: I had to read this book for a literature class. I found the book at my local library in the teen section. The story is creative and interesting but the editor did a very poor job on this book. It was really more annoying to read than anything because I felt like I should be editing the book as I read. There were long, over descriptive sentances that I had to go back and read over again to understand. There were even sentances in the book that made no sense at all; Just a bunch of words put together. It's really frustrating to have to read such a poorly written book and it's sad because the story could have been really good.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Very high quality\nText: This is a very well made and designed unit, very durable, and a big step above the usual fanny pack. It also has a nice long and wide web belt, which is a comfort for us larger adults. I got it for a family member who likes to carry his camera, a water bottle, reading glasses, cell phone, and medications when we are out and about at area attractions where you do a lot of walking. I like this so much, I am going to order one for myself. Much handier that dragging a purse everywhere.\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Too bad as a musical\nText: This version of phantom is far worse than Andrew Lloyd Webber's. I watched this one first and unfortunately the music was so boring that I fell in sleep. The lyric is also without power. Do not waste money and time on this one.\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Under dire circumstances\nText: Only under the most dire circumstances would I have read a Danielle Steel book. But since it was the only book available to me at the time, I read it. And it was good.Ms. Steel is criticized for \"telling\" the story, not \"showing\" it (one of the mantras of The Literati). And, yep, that's right. Not only does she break all the rules of writing as put forth in How-To books, but she leaves numerous threads unresolved. So much for the technical aspects!In fiction, you have to suspend disbelief. This is especially true for this book. Why would a half-Jewish nun be shipped from Prague to Paris? Oh yes, to keep the story going and to add a number of derring-do scenes. Completely illogical.But then again, as a kid, I loved Grimm's Fairy Tales and that's what we have here -- a morality play.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: They are yellow and sticky\nText: Sticky traps are not for control they're to be able to tellHow severe an infestation you have, they do work wellIn that regard.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Too dark\nText: I expected the story to be dark (and it was), but the cinematography yielded a film that was so dark that I often couldn't see what was happening on the screen.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: 300 pages too long.\nText: This book had a good beginning and a good ending but dragged at times. I enjoyed Eye of the Needle more.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Questions on Accuracy\nText: I am very satisfied with it, however.....I am concerned about its accuracy since it dials a weight around ten pounds heavier than an electronic scale I have and one at the sports club. Which is the correct one ? I bought this one because it was advertised as being of \"medical grade accuracy\".\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Thomson's take on \"Big Sleep\" a convincing love-letter\nText: David Thomson is arguably the most gifted writer on the cinema -- his \"Biogrpahical Dictionary of Film\" one of the subject's most valued reference guides. Singling out Howard Hawks' film version of Raymond Chandler's \"The Big Sleep\" as the most entertaining movie ever made is clearly a bold move on Thomson's part, but his arguments are steadfast and persuasive. Anyone choosing to read this work will emerge with a deeper understanding of the great detective film and an irresistable desire to see it again as soon as possible.\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Not what you expect\nText: I saw the movie first and loved it, then went out bought the book and read it. Hated the book!!!! It was nothing like the movie, relationships that you thought would be described better in the book did not even exist! If you have seen the movie and love it don't read the book it will ruin your experience. However, if you have not yet seen the movie then you will probablly enjoy the book.\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: dubliners\nText: I would have liked to know that the quality of the used book was as poor as it is - very disappointing. Certainly readable, but as my daughter said, \"You paid money for that\"!!!! Will not buy used books in the future.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: why am i still reading these?\nText: God knows why I'm still reading these stupid books they're terrible. but anyways, I just have to say that this is probably the worst book yet in the series and don't make the same mistake I did by wasting your money on it.\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: A VIEW TO A KILL VHS LTBX EDTION\nText: A MUST SEE IN LETTER BOX VHS OR DVD.BUY THIS VIDEO IT,S WORTH SEEING ROGER MOORE IN HIS FINAL BOND APEARENCE.ENTERTAINING.FUN\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Not what it seems\nText: I didn't buy this here. I got it at a cosmetic store. I have hair about the length to your bra strap in back. I had a brush somewhat like this one before but not interchangeable brushes. This one does not work!! I dryed my hair half way then put the bigger brush on. This is where the problem lies!! It only attaches at the top where there is a release button. So, as I was drying my hair you HAVE to put firm pressure on the end to make sure the other part of the brush does not come lose. I am returning mine tomorrow. I think I will exchange it for one that is not interchangeable, because then it will be more secure to the handle.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: How about the beach?\nText: After picking up Moon Safari and 10,000hz and being greatly impressed by both, it was time to search for more Air music. Premiers Symptomes is a more ambient offering, with only \"Brakes On\" packing a bit of a punch. However, this is no critiscm of the EP, as the set of songs provide a relaxing and enjoyable journey. Don't buy if you expect to purchase another Moon Safari because this is different. However, if you are a Moon Safari fan, this is most definately worth a look.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Razor Battery\nText: I was leary about purchasing the battery because it cost so little. But I called the vendor and asked if it was a new battery and not used or re-conditioned. The vendor assured me it was a new battery. It has performed well so far.\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: OLD CLASSIC TV SHOWS\nText: I bought these videos for my sister for christmas. We always remembered watching the series on and off as kids and liked it. She was very excited to see I got her the first three seasons. She loves to watch DVD's.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: ChiTowns Finest On Only a Few Tracks\nText: Twista is one of my favorite artists, but this album falls way short of that of his others. The beats are way different and he is only on a few tracks. If you are going to buy this just because of Twista, don't do it. You would be better off buying the new Three 6 Mafia:When the Smoke Clears!\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: ITEM NOT DELIVERED\nText: THIS PURCHASE WAS CHARGED TO MY CREDIT CARD ON DEC 21 BUT NEVER DELIVERED. I SENT YOU AN EMAIL ABOUT THIS MATTER.\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: New software doesn't update properly\nText: Got this US version on July 2009 and everything about this device is right on. Until I updated to new software version 2.3.My blog and news subscriptions won't update unless I reset or restart the device. After several calls with Kindle Tech, they said that there is a bug in the new software that they are working on. For now I am stuck with this device that I have to do a restart a dozen times a day to get updates. The whole soul of a wireless reader that auto update itself is gone with this experience I have.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Best starter CD to start a CD collection.\nText: As a whole, easily the best album ever produced. All 18 tracks are absoulte classics and contains the reasonably hard to find Christmas In Hollis. DMC and Run bounce lyrics of each other to prefection and with Jam Master backing them up on the wheels of steel you will discover why RUn DMXC are the KINGS from Queens.\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Kindle edition is terrible\nText: The book is great but the enormous number of typos in the Kindle edition makes it almost unreadable. i strongly recommend the book to anybody interested in the origins of psychoanalysis. However, you should do yourself a favor and buy an alternative edition.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: The man was much more interesting\nText: In \"Her Majesty's Spymaster,\" Stephen Budiansky attempts to show the truth behind the Walsingham myth, by pulling together countless quotes from letters, diaries, and marginalia. Unfortunately, the attempt is lost in the telling. Even though the picture he shapes for us is a much closer representation than Hollywood gives us, the method of his delivery has much to be desired.In fact, the book is so loaded down with quotes and excerpts that it lacks any real tone or voice of its own. The end result is nothing more than a mish-mash of historical references and quips that are merely slung together in chronological order with no sense of purpose, and lacking any new insight or greater understanding of Walsingham's life or career.If you're looking for an interesting, in-depth narration of Walsingham's expansive service, this isn't it. If you want to remember why you hated history class in middle school, look no further.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Great product\nText: I made 4 calendars as Christmas gifts for relatives. I found the kit very easy to use, and felt it printed high quality looking pics. I did not like the binding which was too weak to hold a calendar with 15 heavy pages. I ended up taking my finished calendars to Kinko's. For less than $5 each, they added better binding and put protective plastic sheets between the pages. The end product looked very professional and fun.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Horrible Compatibility Problems\nText: I just received my adapter in the mail today, and will be sending it back tomorrow. It turns out, the adapter is not compatible with ANY ROUTERS made by NetGear. In fact, Microsoft reccomends that you ONLY use a LinkSys or Microsoft router. Since I don't have the money to throw away my old router and buy a new one, this product is totally useless to me, and probably will be to you unless you have a LinkSys or Microsoft router.\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Good Addition\nText: I will definitely use this again. I had such a difficult time finding it in my local grocery store, so I ordered it. I used it for a marinade and let it sit in the fridge for about an hour. Worked very well.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: make sure you get the cable you need!\nText: Badly worded. To me, \"tamaya female to mini tamaya female adaptor\" means \"if you have a device that presents a tamaya female socket and you put this adaptor on it, you'll convert your cable so that it now presents a mini tamaya female socket.\".No, that's not what this does. This is a cable that has a tamaya female on one end and a mini tamaya female on the other end, ie it's really a tamaya male to mini tamaya female converter cable. A more detailed description or better photographs would have saved me from wasting money on the wrong cable :-(\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Glosses over reality\nText: In his noble effort to encourage peace, the author has written an indictment of US policies, while glossing over the realities of the present world order. He presents Islam in an irenic way, ignoring the fact that the Islamic resurgence is fomenting violence all over the world. This book is a one-sided view, based more on rhetoric than reality. Don't waste your money on it.\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Great Voice,but....\nText: I have a lot more respect for this gal then for Britiney Spears. But it seems like she has a good voice, but is still singing bubblegum pop and Mickey Mouse Club lyrics. And her image is still that of a bearly-wearing-any-clothes immodest jerk. If your gonna buy it, do it for the voice.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Bridge functionality extremely limited\nText: I bought this item, because, on the back of the box, it shows the WG602 being used as a bridge to connect to a WGT624 access point. This is extremely misleading, and well, plain wrong, as a couple of other reviewers have pointed out. I was on the phone with extremely unhelpful tech support (that they outsourced to India, I believe), and it took several hours of run-around for the support guy to actually admit that the two products are not compatible (he had to ask someone else). Had he researched this properly in the beginning, hours would have been saved. I was eventually informed (after being told to upgrade firware, change numerous settings, etc.) that the WG602 would only bridge to another WG602. THE BACK OF THE BOX IS WRONG! Don't buy this if you're looking for a bridge that's compatible with any other AP.\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: enjoyable quick read\nText: Haven't read many books by L'Amour, but what I have read, I've enjoyed. This was fast-paced, with all the usual elements - gunfights, Indians, intrigue, romance, survival - all tied together in a good story.Nice twist at the end.Not really sure where the name Heller comes from though??\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: BE CAREFUL NOT TO PLACE ON SKIN AROUND SCAR\nText: Ive been using this product for about 2 weeks now and yes the scar is lightening up day by day, but I am also dark in complexion and the skin around my scar is also lightening. When applying the gel just be careful to not get it on the non scarred skin.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Good Knive, however handles out of the box look worn!!\nText: The knives are very good, however every handle on the 5 Stars looks worn (almost scratched). I thought it may have been shipping damage since the knives do move around in the box. However, I took a trip to the many stores to see in what they look like at retail stores. Every store (including Williams and Sonoma) had very worn looking handles. I check display and from brand new boxes. There is something wrong with either the composite they are using or the process. BEFORE you order any 5 star knives check them out in person to avoid frustration with the handles. Henckels is a great company and these are great knives, but be forewarned the handles on all of the knive look dirty (especially the [end] of the handle).\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: I loved it\nText: Lyke the first review said about them not being the Owners, weather or not they have in the past I dunno.. But wot I do know is that this bbook was awsome... Kermeen wrote it with such beautiful detail, making the reader feel part of the story... reading it made Me feel as if I was there seeing, hearing, and feeling all that she spoke of... I loved it and would recomend it to anyone that loves \"Ghost Stories\"....\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Wife loves it\nText: Gave this cart to my wife, she loves it's light weight and storability. It folds to be neatly put away in very little space. Great product and well worth it.\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Heavy Duty Grinder for the Metal shop\nText: I own two other 4 1/2 inch grinders besides this one. My Made in China $24 grinder that I was using with a cupped wire brush finally bit the dust. I went looking for Quality this time around and wanted to purchase Made in USA. But this Bosch won out, over a Dewalt, because it was the only one that was a \"true\" all ball / needle bearing construction. It has lots of power and the paddle switch saved my bacon when on a trial run using a metal cutting disk, the disk caught and shattered (I AWAYS wear safety glasses and gloves when grinding). On my other grinders with a thumb switch... that 1/2 second to find the switch & flip it off... would have been too long. Draw backs, the grinder seems to have more vibration and noise than my 8 year old, Made in Japan Ryobi, not to be confused with the new Ryobi, Made in China! Bill G.\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: The best you're likely to do\nText: This brief study on the mysterious pre-Roman Ogham script from Ireland comes in an Irish/English language format. The dearth of literature on this ancient writing system makes this so-so account about the best book one is likely to find.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Interesting read\nText: I saw the mini series based on this book years ago. I was always interested in finding out what really happened. Will never know what really happened on the island but the book did keep my interest.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Prepare to buy another pair after a year\nText: My pair of etymotic stopped functioning after 13 months. Coincidentally Etymotics warranty period is for 1 year after purchase....Why is this the case when companies such as Monster provide a 3 year warranty? I contacted Etymotic hoping they would at least repair my earphones and they suggested I buy a new pair...I'm not going to buy another pair and I am staying away from Etymotic.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Da Bomb\nText: My daughter who is 11 finds the game entertaining and fun. Although some of the cards are things she doesn't know she can still play the game simply by stringing clues together. The only thing we don't like is the cranium pop light should make a noise when time is up, not just stop blinking.\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Lights Ups!\nText: Bought this for my 7-year old grandson for Christmas. Impressed with the easy-store case. He has many other K'nex kits, but he loves the fact that this one lights. He can numerous things with the kit. I would recommend it...however, the pieces are VERY small and not good around smaller children.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Not the video in the picture\nText: The video I received wasINCRA LS Positioner Instructional DVDby Incra. I don't think it was a mistake, because the part number on the DVD case matched the part # here VDOV1.Well, you get this with the LS positioner free, no need to order this if you have the LS, and no reason to order this if you don't, so..........\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: I liked this book\nText: I thought this book was very good. It looked at family life and allowed a personal peek into a dysfunctional family. It showed love, fear, anger, betrayal, confusion, loyalty. All the feelings were real.\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: why is the logo different? fake or expired product?\nText: I just bought this shampoo on amazon, because I heard it works well. The logo on the shampoo in the product picture in this link below is suppose to be the official logo. which the two Xs on the shampoo I received is different.http://www.amazon.com/Nexxus-VitaTress-Biotin-Shampoo-32/dp/B000N2MZMQ/ref=pd_sim_hpc_9can anyone tell me why the logo \"NEXXUS\" is different than what Nexxus says their official \"Nexxus\" should look like. The product I get does not have 1 \"solid letter X\" on top and \"hollow X\" at bottom. The Nexxus logo on the product I received is just Two X. one on top and one on the bottom.The logo in this link below is different...is the one I got...why is it different?http://www.amazon.com/Nexxus-VitaTress-Biotin-Shampoo-Liter/dp/B003C5URYY/ref=pd_sim_hpc_4anyway I can tell how old is the product?Shouldn't logo for a product look the same?DId I get fake Nexxus shampoo ?\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Okay Movie\nText: This an okay running movie. There's nothing spectacular here. The only reason I bought is because I'm a runner and I wanted to add it to my collection of running movies. If you're not a runner, I would pass on it. If you're a runner then you might want to take a look at it.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: I'd always read reviews saying these 20 or so books are THE sailing era novels to read. Now I'm convinced!\nText: My uncle first told me about these books over a decade ago. But, I never saw them in a book store--I probably wasn't looking very hard--and I never bothered to order online. So, this was the first book I bought using my iPhone's Kindle app. So glad I did!There is a labeled drawing of a ship at the beginning of the book, necessary because O'Brian doesn't simplify the nautical terms as he spins out his tale. Despite the nautical terms and the manner of speaking--that I assume is accurate to the era--this is a very easy book to read, and the pages flew by. The descriptive writing that describes naval strategy of the era, details of life aboard ship, and the personality quirks that make characters breathe all add up to top quality nautical literature. I wish I had started reading these in my teen years. I can't wait to read the next one!\nAnswer:",
+        "answer": "very positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Definitely gourmet\nText: Originally published in the UK, the terms have not been Americanized. I found it confusing, and I would not recommend it for the average cook.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Americans Love the Underdog!\nText: This is the first Peter Carey book that I have ever read, his winning this year's Booker award sparked my interest or I may have never read this masterful work of storytelling. Be patient with the first 40-50 pages, it takes some practice to become comfortable with Carey's writing style. Once you are beyond the early pages this book will pull you in and it won't let you go until the ending which I would never dare spoil. Ned Kelly, the anti-hero is a true \"Everyman\" and \"Underdog\". In his day he may have been a thorn in the government's backside, but trust me he will soon become one of your favorite characters. Let's call him a humble Robin Hood type. Happy reading!\nAnswer:",
+        "answer": "positive"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: So-so\nText: I bought the model which also has date printing(but is about $10 more). This camera is pretty decent, but I think that it is a bit expensive considering there is no zoom, or date printing. I definitely recommend Sureshot Owl Date camera model. Keep in mind that this camera is for the most basic of camera users. The larger viewfinder is definitely a neat idea. See my review for the date camera.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Returning the seat\nText: I got this seat for my second child after reading the reviews and trying to save a little money over the Graco brand. I found that the seat does not compare to Graco whatsoever, the plastic seems thinner, all the parts kind of wiggle and the head-rest if useless, my little one's head pushes past it when she falls asleep and goes completely sideways. That makes me think seriously about safety. Graco does not have that issue and to make sure it was the chair and not my little one's heave head :) I made her use her big sister's booster seat and she did not have that kind of issues on it. Also, once the child seats, the side trays cannot be opened without adult help (and it is even hard for me to do it). I am returning this Evenflo and shopping for a Graco today and happily paying the difference for safety and comfort's sake.\nAnswer:",
+        "answer": "negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: very upset\nText: Actually I did not mean to order this product. I tried over and over again to find a way to cancel my order but every time I tried it would say that I had no orders placed. I could not find a phone number or even an email address for customer service. I was extremely frustrated. I even contacted the business/seller to tell them I did not want to place the order but of course received no response. I am going to return the product and not order through this website again.Jennifer Miller\nAnswer:",
+        "answer": "very negative"
+    },
+    {
+        "prompt": "What is the sentiment of the following paragraph? Choose one from the option.\nOption: very negative, negative, neutral, positive, very positive \nTitle: Good, but not what I was expecting\nText: I just wanted to throw a slight disclaimer out there; even though the OtRFK novels are Yaoi, the manga is NOT EXPLICIT! It leans on the shounen-ai side of the main characters' relationship. But it's a pretty cute story, and I enjoyed it.\nAnswer:",
+        "answer": "positive"
+    }
+]

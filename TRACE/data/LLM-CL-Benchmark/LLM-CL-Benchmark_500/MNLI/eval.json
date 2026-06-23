@@ -1,0 +1,402 @@
+[
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: One large multinational corporation uses atechnical facilitators- to support its initiatives.\nsentence 2: No corporations use atechnical facilitators.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: In the USPS view of the world, institutional costs are a larger share of total costs and fewer costs can be expected to be shed, if and when, say, transaction mail leaves the system.\nsentence 2: The USPS does not have a view of the world in relation to mail.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: You can alternate lazy days on the beach with some of the Medi?­ter?­ra?­nean's best deep-sea diving, boat excursions around pirate coves, canoeing and fishing on inland rivers, or hikes and picnics in the mountains.\nsentence 2: Outdoor activities range from beach-going, deep-sea diving, boat excursions, canoeing, and fishing, to hikes and picnics out in the wilderness.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Strategic parents might spend a large portion of their tax cuts, causing interest rates to rise.\nsentence 2: If parents who receive tax cuts end up spending more on goods, interest rates could go up.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: There was no longer any  when you wanted some unbridled adult fun, Las Vegas was the place to be.\nsentence 2: Las Vegas was billed as a fun destination for all ages.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Deborah Pryce said Ohio Legal Services in Columbus will receive a $200,000 federal grant toward an online legal self-help center.\nsentence 2: A $200,000 federal grant will be received by Ohio Legal Services, said Deborah Pryce, who could finally say it to the public.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: and uh well if you if you got got him a power mower it'd probably take him a lot less time to do it but i enjoy doing it i feel good doing it uh i i feel a lot better doing it with a power mower with that with a  with a pull tractor on it so i don't have to push so hard\nsentence 2: Keeping the old push mower is the best idea, since it gets the job done as fast as a power mower.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: On Samothrakia you can climb to the summit of Mount Fengari, where the God Poseidon watched the Trojan War reach its tragic climax.\nsentence 2: The summit of Mount Fengari are off limits and you cannot climb to it.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: From the inventories of the initiatives they developed in response to our request, we asked agency officials to identify those agency components and initiatives that, in their view, had successfully involved and empowered employees.\nsentence 2: Agency officials need to identify the components that helped their employees improve their performances.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: yeah TI people yeah and so i just figured no it's just this area you know\nsentence 2: No, I figured is was all areas.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: SSA will consider the comments received by April 14, 1997, and will issue revised regulations if necessary.\nsentence 2: Regulations are not to be revised under any circumstances.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: After considering comments of the Postal Service and other participants, the Commission found the proposal problematical, and declined to pursue it.\nsentence 2: The Commission really liked the proposal and opted to pursue it.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: The technical how-tos for these three strategies will be summarized later in this paper.\nsentence 2: There are seven strategies discussed in the paper.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Very simply. \nsentence 2: Not complicatedly.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: The tree-lined avenue extends less than three blocks to the sea.\nsentence 2: The sea isn't even three blocks away.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Hardly catering to locals, Universal Citys Cityalk attempts to snag tourist dollars with its extensive collection of retail wonders, including magic shops, toy stores, sports shops, and a host of science fiction memorabilia.\nsentence 2: The bulk of footfall in Universal City's retail areas belongs to locals, who are well looked-after by the farmer's markets, hairdressers, and other services there.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Regulation and the Nature of Postal Delivery Services, Ed.\nsentence 2: There is regulation of the postal delivery service by the USPS.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: It's an interesting account of the violent history of modern Israel, and ends in the Scafeld Room where nine Jews were executed.\nsentence 2: The execution of nine Jews was an important turning point in modern Israel's history.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: I understand,\" continued the Coroner deliberately, \"that you were sitting reading on the bench just outside the long window of the boudoir. \nsentence 2: \"Just outside the second window of the boudoir, I understand that you were sitting and reading Moby Dick\", continued the Coroner.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Castlerigg near Keswick is the best example.\nsentence 2: The best example would be Castlerigg, which is near Keswick.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: plus i like to dance you know\nsentence 2: I like to dance.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: They were quite, tetanic in character.\"\nsentence 2: They were tense in how they acted.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: It displays some superb marble sculptures of the second century a.d. , most notably a Venus and the Emperor Hadrian and his wife Sabina.\nsentence 2: Only paintings of 19th century philosophers are on display.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: A museum inside the building gives intriguing insight into the life and heyday of the their rich costumes, their scimitars, and rifles inlaid with bright jewels and silver and a horrible bludgeon with a double serrated edge.\nsentence 2: There is a museum that is inside of the building. \nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Most of Slate will not be published next week, the third and last of our traditional summer weeks off.\nsentence 2: Slate's publishing schedule will be altered next week.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: and i use a one of those black soaker hoses that actually oozes water every where so i lace it up and down there a couple of times and i only have to water about two hours a week\nsentence 2: I takes me just about half an hour to water, and I do it once a week.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: The dramatic cliffs of the Serra de Tramuntana mountain range hug the coastline of the entire northwest and north, from Andratx all the way to the Cape of Formentor.\nsentence 2: Andratx is near to the coast and the Serra de Tramuntana mountains.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: sometimes well there's definitely a lot more hitting\nsentence 2: The man says that there's a lot more hitting.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: In 1099, under their leaders Godfrey de Bouillon and Tancred, the Crusaders captured the Holy City for Christendom by slaughtering both Muslims and Jews.\nsentence 2: The Muslims captured the Holy City.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Revenue is recognized from forfeited property unless the property is distributed to state or local law enforcement agencies or foreign\nsentence 2: Revenue is received from forfeited cars.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: They won't be killing off George Clooney's character at ER like they did to Jimmy Smits at NYPD . Instead, Dr. Doug Ross is being forced out over the next two episodes because the maverick heartthrob gives an unauthorized painkiller to a terminally ill boy (Thursday, 10 p.m.).\nsentence 2: George Clooney will lose his job because the producers don't think he can act. \nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: right oh they've really done uh good job of keeping everybody informed of what's going on sometimes i've wondered if it wasn't almost more than we needed to know\nsentence 2: I think I have shared too much information with everyone, so next year I will share less. \nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Several of the organizations had professional and administrative staffs that provided analytical capabilities and facilitated their members' participation in the organization's activities.\nsentence 2: Many organizations facilitated members' participation in their activities.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: In Japan, Mainichi Shimbun criticized the new Liberal Democratic Party leader Keizo Obuchi for being devoid of fresh ideas for reviving the Japanese economy.\nsentence 2: Mainichi Shimbun approved of Keizo Obuchi's efforts toward improving the economy.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Loire Valley\nsentence 2: A valley in the locality of Loire.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: The opportunity\nsentence 2: The opportunity is what the line states\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Jerusalem was divided into east and west, under the control of Jordan and Israel respectively.\nsentence 2: Jordan controlled East Jerusalem.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Rightly or wrongly, America is seen as globalization's prime mover and head cheerleader and will be blamed for its excesses until we start paying official attention to them.\nsentence 2: America's role in the globalization movement is important whether we agree with it or not. \nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: I still didn't trust the little buggers.\nsentence 2: I had a distrust for the tiny things.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: The cane plantations, increasingly in the hands of American tycoons, found a ready market in the US.\nsentence 2: The US market was ready for the cane plantations.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: On the slopes of the hill you will find Edinburgh Zoo, located just behind Corstorphine Hospital.\nsentence 2: Corstophine hospital is really far fromEdinburgh Zoo\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: We'll be the first to admit we make mistakes, but most of those are bureaucratic.\nsentence 2: We make errors sometimes, and we have no problem admitting it.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: There are no shares of a stock that might someday come back, just piles of options as worthless as those shares of Cook's American Business Alliance.\nsentence 2:  Cook's American Business Alliance caused shares of stock to come back.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: because i don't want to my mother was also a domineering type of personality because she had to take over the things that my dad fell short in\nsentence 2: My mother made me take over the things that my dad fell short it.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: The cane plantations, increasingly in the hands of American tycoons, found a ready market in the US.\nsentence 2: The US market was ready for the cane plantations, according to the economists.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Unsurprisingly, golfing is prohibitively expensive.\nsentence 2: It costs $100 to golf just 9 holes!\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: The loss of technical competence through downsizing was sufficiently pervasive that FFC, in conjunction with TBR and the NAVFAC, conducted the Government/Industry Forum on Capital Facilities and Core Competencies in March 1998.\nsentence 2: The FFC ended the Government/Industry Forum in 1993.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: A conventional siege was useless against such a seemingly impregnable rock, however, and with so much food and water the Zealots could not be starved into submission.\nsentence 2: The siege was very effective, and the Zealots began to starve to death.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Drinks are available and expensive.\nsentence 2: Drinks are each $14.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: The oldest continually occupied settlement on the island is Kastro, where most of the buildings date from the 14th century and were laid out in a circular pattern atop a rocky outcrop 100 m (300 ft) above the east coast.\nsentence 2: The buildings in Kastro are dated back to the 14th century.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: They did this to us.\nsentence 2: They were all sick by what they had done to them.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Corroborating evidence is independent evidence that supports information in the database.\nsentence 2: Corroborating evidence supports the testimonies in the database.\nAnswer:",
+        "answer": "-"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: well we bought this with credit too  well we found it with a clearance uh down in Memphis i guess and uh\nsentence 2: We bought non-sale items in Memphis on credit.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: There's only one thing for me to do.\"\nsentence 2: There's a few things left for me to do.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: yeah uh-huh but we look at it sort of as an investment in the future too\nsentence 2: We also see it as a future investment.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Cultural festivals are one opportunity, but the better way is at a private wedding or feast day when the performances are set in their true context.\nsentence 2: Festivals are a place, but performances at private weddings are more traditional and better due to the correct cultural context.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Brit  Now that would be a good debate!\nsentence 2: They would debate well.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Tommy Thompson of Wisconsin and Mayor Rudolph Giuliani of New York, the conservative vanguard on the issue, show no inclination to exploit research that says, in effect, Why care about day-care quality?\nsentence 2: Thompson and Giuliani don't want to care about day cares.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: yeah yeah uh-huh yeah we we saw that one uh we find that uh that uh if you can get into those dollar movies you know they're uh they're a dollar and a half what is it dollar and a quarter dollar and a half now\nsentence 2: You can get it at the dollar movies.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Technological advances generally come in waves that crest and eventually subside.\nsentence 2: Advances in electronics come in waves.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Barney Frank, D-Mass., will log some of the best sound bites, while Rep.\nsentence 2: Barney Frank is well-known for representing his constituents. \nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: The center had become a hodgepodge of unconnected programs--a day-care center, a library, a nonviolence training school.\nsentence 2: The center was lacking a library.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: The riotous revelry roars right past Mardi Gras (Shrove Tuesday) when red-costumed children star as devils, to its peak on Ash Wednesday.\nsentence 2: Mardi Gras is only the more common name because it is not specifically linked to religion.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Sure enough, there was the chest, a fine old piece, all studded with brass nails, and full to overflowing with every imaginable type of garment. \nsentence 2: There was nothing in the large chest.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Peel Edgerton.\nsentence 2: Take off Edgerton.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: While obviously constrained by their bondage, blacks nonetheless forged a culture rich with religious observances, folk tales, family traditions, song, and so on.\nsentence 2: Clearly are constrained by their folk tales and traditions.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: and the nurses aren't no see you have to pay that\nsentence 2: You have to pay for that if social security won't cover it.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: But the world is not run for the edification of tourists.\nsentence 2: The world does not try and morally subject to tourists.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: If you have any questions regarding this report, please call me at (202) 512-4841.\nsentence 2: I receive three phone calls a day asking about the report. \nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: That example points to an important general  Total expenditure is determined by the value of the prize, whether we're talking about presidential campaigns or state lotteries.\nsentence 2: What the prize was being used for made all the difference in the value.\nAnswer:",
+        "answer": "-"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Other advantages the Postal Service could retain relate to such things as the payment of taxes, the need for a return on investment, the right of eminent domain, and immunity from parking tickets.\nsentence 2: The right of eminent domain is an advantage of the Postal Service.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: and the wind started blowing and it was one of my earlier trips to be really out in the middle of\nsentence 2: I was glad that the wind was calm.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: The central porch is still intact, depicting Jesus's entry into Jerusalem, the Crucifixion, and other scenes from the Bible.\nsentence 2: The central porch was destroyed long ago.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Monday's Question (No.\nsentence 2: There was a question on Tuesday.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: and maybe we'll run across each other again\nsentence 2: Perhaps we will cross paths in the future.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: The great attraction of the church is the splendid exterior, which is crowned by golden onion-shaped cupolas.\nsentence 2: Most people come to the church to see the beautiful exterior.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: We're no nearer to finding Tuppence, and NEXT SUNDAY IS THE 29TH!\"\nsentence 2: If we don't find her soon, she might be left for dead.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: John Kasich dropped his presidential bid.\nsentence 2: John Kasich dropped out of the presidential race.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: I guess he thought you'd turned up your toes.\nsentence 2: I am assuming that he guessed about your situation. \nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: would you barbecue a turkey or a chicken or\nsentence 2: Would you cook a turkey or chicken in a barbecue?\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Eve's Apple turns out to be a sturdier book than it seems.\nsentence 2: Eve's Apple is a great book.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Have you got him?\"\nsentence 2: Did you help him to escape?\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Still, I guess that can be got over.\nsentence 2: It won't be possible to get passed that.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Regulators may not be totally supportive of a more comprehensive business model because they are concerned that the information would be based on a lot of judgment and, therefore, lack of precision, which could make enforcement of reporting standards difficult.\nsentence 2: Being totally supportive of a more comprehensive business model is not something regulators may do.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: These aliens may seek legal assistance at any time during the year, although limited English ability and lack of knowledge of rights and procedures may provide obstacles to seeking and obtaining representation.\nsentence 2: These immigrants never need legal assistance.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: They made little effort, despite the Jesuit presence in Asia, to convert local inhabitants to Christianity or to expand their territory into the interior.\nsentence 2: The Jesuit thought that by converting the Asian people to Christianity, it would help them to expand their territory. \nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: okay movies i've i haven't seen too many lately i have kids and we went and saw The Rescuers Down Under over the the break do do you have kids you take to movies or\nsentence 2: I've never seen a movie.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: The elements of this example, repeated across millions of individual tasks, encapsulates the difference between an advanced industrial economy with a high standard of living and a less developed country with a low standard of living.\nsentence 2: This example includes no elements of developed and developed economies.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: The average MLS ticket costs a mere $13, one-third the price of an NHL or NBA ticket.\nsentence 2: The average cost was lower because the MLS is in a lower league than the NHL and NBA.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Total electricity expenditures increase by about 15% to 30% depending on the year and the scenario (see Table 3, below, and the tables in Appendix 5.2 for more detail on the changing pattern of expenditures).\nsentence 2: They were sad to see the costs go up 80% in a year.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: they just didn't watch him on TV\nsentence 2: They watched him on TV all the time. \nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Each of them was as tough as a thick tree and loyal to the death.\nsentence 2: None of them were loyal to anything.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: This points to a final press-friendly quality of McCain' brilliant flattery.\nsentence 2: This leads to a final press-friendly quality of McCain' brilliant flattery.\nAnswer:",
+        "answer": "entailment"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: San'doro's blood ran over Stark's blade and into Stark's other cupped hand.\nsentence 2: Stark did not cup a hand to catch San'doro's blood.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: A portion of the nation's income, in turn, is saved, allowing for additional investment in domestic factories, equipment, and other forms of capital that workers use to produce more goods and services or for investment abroad.\nsentence 2: All of the nation's income should be spent on construction.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: To see how The Bell Curve tries and fails to get around these inherent problems, see and .\nsentence 2: The Bell Curve tries to get around these problems and fails in many different ways.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: His mother died when he was young, and he was adopted by the Brodkeys.\nsentence 2: He was made to live in an orphanage when his mother died.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: Conspiracy theorists  MasterCard is investing in a chip that can store electronic cash, your medical history, and keys to your home and office.\nsentence 2: Conspiracy theorists have a lot of evidence that Mastercard wants to control all your data.\nAnswer:",
+        "answer": "neutral"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: no never heard of it\nsentence 2: He has definitely heard of it.\nAnswer:",
+        "answer": "contradiction"
+    },
+    {
+        "prompt": "What is the logical relationship between the \"sentence 1\" and the \"sentence 2\"? Choose one from the option.\nOption: neutral, entailment, contradiction \nsentence 1: and he's an engineer so he even came over and set it up for me and had it running for like two hundred dollars so i thought that\nsentence 2: It took me hours to figure out how to set it up myself.\nAnswer:",
+        "answer": "contradiction"
+    }
+]

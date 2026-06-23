@@ -1,0 +1,402 @@
+[
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: breeze\nThe breeze rustled the papers on her desk.\nThe breeze was cooled by the lake.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: afflict\nAfflict with the plague.\nShe was afflicted by the death of her parents.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: succession\nA succession of failures.\nA succession of stalls offering soft drinks.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: manipulation\nHis manipulation of his friends was scandalous.\nHe found that the new manager was known for his Machiavellian manipulations in his last two positions.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: partnership\nThe action teams worked in partnership with the government.\nEffective language learning is a partnership between school, teacher and student.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: hostility\nHe could not conceal his hostility.\nHe could no longer contain his hostility.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: dip\nDip the brush into the paint.\nShe dipped her knee.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: consult\nThey had to consult before arriving at a decision.\nConsult your local broker.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: attitude\nThe airliner had to land with a nose-up attitude after the incident.\nThe actor struck just the right attitude.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: utter\nUtter counterfeit currency.\nHe uttered strange sounds that nobody could understand.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: smoothness\nThe weather system of the Pacific is determined by the uninterrupted smoothness of the ocean.\nHis oily smoothness concealed his guilt from the police.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: stabilize\nThe country will stabilize after the next election ends.\nThe economy stabilized.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: twist\nDon't twist my words.\nTwist the dough into a braid.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: aliyah\nStudents making aliyah.\nHe was called on for an aliyah.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: eliminate\nLet's eliminate the course on Akkadian hieroglyphics.\nThis possibility can be eliminated from our consideration.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: arousal\nTo influence the arousal of brain and behavior.\nThe purpose of art is the arousal of emotions.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: bridge\nHer glasses left marks on the bridge of her nose.\nRugby players often break the bridge of their noses.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: rehearsal\nA rehearsal will be held the day before the wedding.\nHe missed too many rehearsals.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: convey\nTo convey information.\nShe conveyed the message to me.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: cup\nHe put the cup back in the saucer.\nThe handle of the cup was missing.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: tree\nHer dog likes to tree squirrels.\nThis lot should be treed so that the house will be shaded in summer.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: taste\nTo ask at that particular time was the ultimate in bad taste.\nHe got a taste of life on the wild side.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: noise\nHe knew that it was trash day, when the garbage collectors made all the noise.\nThey heard indistinct noises of people talking.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: upgrade\nThe power plant received a new upgrade.\nWith my phone company, I get a free upgrade every twelve months if I keep topping up 10 pounds a month.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: preserve\nPreserve the peace in the family.\nTo preserve silence.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: corner\nHe tripled to the rightfield corner.\nThe southeastern corner of the Mediterranean.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: abridge\nThe new law might abridge our freedom of expression.\nHe had his rights abridged by the crooked sheriff.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: trip\nA pedestrian was able to trip the burglar as he was running away.\nThe questions on the test tripped him up.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: assurance\nAn assurance of help when needed.\nHis assurance in his superiority did not make him popular.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: torture\nIn every war there are acts of torture that cause the world to shudder.\nUsing large dogs to attack bound, hand-cuffed prisoners is clearly torture.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: mire\nTo mire a horse or wagon.\nOur people should not be mired in the past.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: collapse\nCollapse the music stand.\nThe school system is collapsing.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: wateriness\nThe wateriness of his blood.\nThe haziness and wateriness of his disquisitions.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: shoot\nShoot cloth.\nShoot a star.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: wrong\nInjustice is a heinous wrong.\nHe feels that you are in the wrong.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: segment\nSegment a compound word.\nSegment an orange.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: intellect\nHe has a keen intellect.\nSome of the world's leading intellects were meeting there.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: transplant\nThese delicate plants do not transplant easily.\nTransplant the young rice plants.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: whitewash\nLet's not whitewash the crimes of Stalin.\nIn his sermon, the minister didn't try to whitewash over the sins of his church.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: sophistication\nHe practiced the art of sophistication upon reason.\nUnderstanding affine transformations requires considerable mathematical sophistication.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: string\nA string of islands.\nThe strings played superlatively well.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: largeness\nThe might have repercussions of unimaginable largeness.\nA man distinguished by the largeness and scope of his views.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: parade\nThe floats and horses in the parade were impressive, but the marching bands were really amazing.\nShe made a parade of her sorrows.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: lead\nA good lead for a job.\nJoe is a great addition to our sales team, he has numerous leads in the paper industry.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: metadata\nMost websites contain metadata to tell the computer how to lay the words out on the screen.\nA library catalog is metadata because it describes publications.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: probity\nIn a world where financial probity may not be widespread.\nHe enjoys an exaggerated reputation for probity.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: vision\nThe runners emerged from the trees into his clear vision.\nHe had a vision of the Virgin Mary.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: homogenization\nThe homogenization of cream.\nThe network's homogenization of political news.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: love\nI love French food.\nI loved to write.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: canon\nThe neoclassical canon.\nCanons of polite society.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: burn\nBurn a CD.\nMy eyes are burning.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: pinnacle\nPinnacle a pediment.\nHe did not want to be pinnacled.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: muscle\nThe senators used their muscle to get the party leader to resign.\nMuscle consists largely of actin and myosin filaments.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: way\nThey didn't have much in the way of clothing.\nWe went our separate ways.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: vote\nI vote that we all go home.\nShe voted for going to the Chinese restaurant.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: easiness\nThe very easiness of the deed held her back.\nThere was an easiness between them.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: marriage\nA marriage of ideas.\nThe marriage of music and dance.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: toilet\nHe made his morning toilet and went to breakfast.\nPensions are in the toilet.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: board\nThe board has seven members.\nHe got out the board and set up the pieces.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: influence\nHe was a bad influence on the children.\nUsed her parents' influence to get the job.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: ash\nThe woods planted in ash will see a different mix of species.\nThe ash trees are dying off.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: pull\nA zipper pull.\nHe grabbed the pull and opened the drawer.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: hang\nLet's hang this cute animal in the nursery.\nHang wallpaper.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: spread\nThe infection spread.\nOptimism spread among the population.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: plant\nPlant bugs in the dissident's apartment.\nPlant a spy in Moscow.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: snap\nThe infielder's snap and throw was a single motion.\nChildren can manage snaps better than buttons.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: average\nIf you average 10, 20 and 24, you get 18.\nThe number of hours I work per work averages out to 40.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: incorporate\nIncorporate this document with those pertaining to the same case.\nThe company was incorporated in 1980.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: absorb\nAbsorb the costs for something.\nHe absorbed the knowledge or beliefs of his tribe.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: patronage\nThe restaurant had an upper class patronage.\nEven before noon there was a considerable patronage.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: militarize\nMilitarize the Civil Service.\nMilitarize Germany again after the war.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: modify\nPlease modify this letter to make it more polite.\nHe modified his views on same-gender marriage.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: spend\nSpend money.\nHe spends far more on gambling than he does on living proper.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: sound\nThe main body of the sound ran parallel to the coast.\nHe strained to hear the faint sounds.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: seize\nBirds of prey often seize small mammals.\nThe invaders seized the land and property of the inhabitants.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: forbid\nI forbid you to call me late at night.\nThe rules forbid it.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: dinner\nGuests should never be late to a dinner party.\nOn Sundays they had a large dinner when they returned from church.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: distribution\nWorldwide in distribution.\nThe distribution of nerve fibers.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: circulate\nCirculate a rumor.\nThis letter is being circulated among the faculty.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: agency\nShe has free agency.\nCentral Intelligence Agency.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: floss\nShe flossed her teeth.\nThe hygienist flossed my teeth.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: mate\nHe's my best mate.\nI'm going to the pub with a few mates.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: mixture\nHe drank a mixture of beer and lemonade.\nThe mixture of sulphuric acid and water produces heat.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: strike\nStrike an arc.\nThe clock struck midnight.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: wrangle\nWrangle horses.\nThe bar keeper threw them out, but they continued to wrangle on down the street.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: hook\nHook a fish.\nHe hooked a snake accidentally, and was so scared he dropped his rod into the water.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: catch\nI would love to have dinner but I have to catch a plane.\nWe caught something of his theory in the lecture.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: word\nWe had a word or two about it.\nThere was then a long discussion of whether to capitalize words like \"east\".\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: body\nThe whole body filed out of the auditorium.\nThe student body.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: falsity\nThe belief that the world is flat is a falsity.\nArgument could not determine its truth or falsity.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: chemistry\nThe chemistry of indigo.\nThe chemistry of iron.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: stay\nWear gloves so your hands stay warm.\nStay with me, please.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: middle\nI woke up in the middle of the night.\nA whole is that which has beginning, middle, and end -- Aristotle.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: fail\nDid I fail the test?\nShe studied hard but failed nevertheless.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: breed\nGoogle represents a new breed of entrepreneurs.\nA breed of tulip.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: wine\nShe ordered some wine for the meal.\nWine is stronger than beer.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: education\nA girl's education was less important than a boy's.\nEducation is a preparation for life.\nAnswer:"
+    },
+    {
+        "answer": "False",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: wail\nWail in self-pity.\nShe wailed with pain.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: clutch\nTo clutch power.\nShe clutched her purse.\nAnswer:"
+    },
+    {
+        "answer": "True",
+        "prompt": "Given a word and two sentences, whether the word is used with the same sense in both sentence? Choose one from the option.\nOption: True, False \nword: chore\nWashing dishes is a chore, but we can not just stop eating.\nThe farmer's morning chores.\nAnswer:"
+    }
+]

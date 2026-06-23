@@ -1,0 +1,49 @@
+# Environments
+.venv/
+venv/
+ENV/
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Experiment outputs & checkpoints
+TRACE/outputs_LLM-CL/
+XTAIL/rail_ckpt/
+*.pt
+*.pth
+
+# Local runner overrides (keep personal paths out of git)
+TRACE/runner_moram.local.sh
+XTAIL/runner_moram.local.sh
+
+# TRACE temp data indices / caches from training
+TRACE/tmp/
+tmp/
+
+# Caches
+.wandb/
+wandb/
+.pytest_cache/
+.mypy_cache/
+*.log
+
+# Hugging Face (if cloned locally for dev)
+TRACE/PTM/
+
+# Large benchmark archive (too big for git; download separately)
+TRACE/data/LLM-CL-Benchmark/TRACE-Benchmark.zip
