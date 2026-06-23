@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 4D: RAM stick with orange PCB and sparse dot matrix. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="d-pcb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <radialGradient id="d-on" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </radialGradient>
+  </defs>
+
+  <!-- PCB body — orange -->
+  <rect x="6" y="20" width="88" height="48" rx="5" fill="url(#d-pcb)"/>
+
+  <!-- Notch -->
+  <rect x="56" y="64" width="14" height="8" rx="2.5" fill="#ffffff"/>
+
+  <!-- Gold contact pins -->
+  <rect x="10" y="70" width="4" height="11" rx="1" fill="#c9a227"/>
+  <rect x="17" y="70" width="4" height="11" rx="1" fill="#c9a227"/>
+  <rect x="24" y="70" width="4" height="11" rx="1" fill="#c9a227"/>
+  <rect x="31" y="70" width="4" height="11" rx="1" fill="#c9a227"/>
+  <rect x="38" y="70" width="4" height="11" rx="1" fill="#c9a227"/>
+  <rect x="45" y="70" width="4" height="11" rx="1" fill="#c9a227"/>
+  <rect x="52" y="70" width="4" height="11" rx="1" fill="#c9a227"/>
+  <!-- notch gap -->
+  <rect x="74" y="70" width="4" height="11" rx="1" fill="#c9a227"/>
+  <rect x="81" y="70" width="4" height="11" rx="1" fill="#c9a227"/>
+  <rect x="88" y="70" width="4" height="11" rx="1" fill="#c9a227"/>
+
+  <!-- Sparse dot matrix — active = white, inactive = darker orange -->
+  <!-- Row 1 -->
+  <circle cx="16" cy="30" r="2.5" fill="#c2410c" opacity="0.5"/>
+  <circle cx="26" cy="30" r="2.5" fill="url(#d-on)" opacity="0.9"/>
+  <circle cx="36" cy="30" r="2.5" fill="#c2410c" opacity="0.5"/>
+  <circle cx="46" cy="30" r="2.5" fill="url(#d-on)" opacity="0.7"/>
+  <circle cx="56" cy="30" r="2.5" fill="#c2410c" opacity="0.35"/>
+  <circle cx="66" cy="30" r="2.5" fill="url(#d-on)"/>
+  <circle cx="76" cy="30" r="2.5" fill="url(#d-on)" opacity="0.9"/>
+  <circle cx="86" cy="30" r="2.5" fill="#c2410c" opacity="0.2"/>
+
+  <!-- Row 2 -->
+  <circle cx="16" cy="39" r="2.5" fill="url(#d-on)" opacity="0.75"/>
+  <circle cx="26" cy="39" r="2.5" fill="#c2410c" opacity="0.5"/>
+  <circle cx="36" cy="39" r="2.5" fill="url(#d-on)" opacity="0.6"/>
+  <circle cx="46" cy="39" r="2.5" fill="#c2410c" opacity="0.5"/>
+  <circle cx="56" cy="39" r="2.5" fill="url(#d-on)" opacity="0.9"/>
+  <circle cx="66" cy="39" r="2.5" fill="#c2410c" opacity="0.35"/>
+  <circle cx="76" cy="39" r="2.5" fill="url(#d-on)" opacity="0.95"/>
+  <circle cx="86" cy="39" r="2.5" fill="url(#d-on)" opacity="0.3"/>
+
+  <!-- Row 3 -->
+  <circle cx="16" cy="48" r="2.5" fill="#c2410c" opacity="0.5"/>
+  <circle cx="26" cy="48" r="2.5" fill="#c2410c" opacity="0.5"/>
+  <circle cx="36" cy="48" r="2.5" fill="url(#d-on)" opacity="0.7"/>
+  <circle cx="46" cy="48" r="2.5" fill="url(#d-on)" opacity="0.8"/>
+  <circle cx="56" cy="48" r="2.5" fill="#c2410c" opacity="0.5"/>
+  <circle cx="66" cy="48" r="2.5" fill="url(#d-on)" opacity="0.85"/>
+  <circle cx="76" cy="48" r="2.5" fill="#c2410c" opacity="0.35"/>
+  <circle cx="86" cy="48" r="2.5" fill="#c2410c" opacity="0.15"/>
+
+  <!-- Row 4 -->
+  <circle cx="16" cy="57" r="2.5" fill="url(#d-on)" opacity="0.5"/>
+  <circle cx="26" cy="57" r="2.5" fill="url(#d-on)" opacity="0.65"/>
+  <circle cx="36" cy="57" r="2.5" fill="#c2410c" opacity="0.5"/>
+  <circle cx="46" cy="57" r="2.5" fill="#c2410c" opacity="0.35"/>
+  <circle cx="56" cy="57" r="2.5" fill="url(#d-on)" opacity="0.8"/>
+  <circle cx="66" cy="57" r="2.5" fill="url(#d-on)" opacity="0.9"/>
+  <circle cx="76" cy="57" r="2.5" fill="url(#d-on)"/>
+  <circle cx="86" cy="57" r="2.5" fill="#c2410c" opacity="0.1"/>
+</svg>

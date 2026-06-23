@@ -1,14 +1,26 @@
-# MoRAM: Little By Little
+<table align="center"><tr>
+  <td><img src="assets/logo.svg" width="46" alt="MoRAM logo"></td>
+  <td><h1>MoRAM &mdash; Little By Little</h1></td>
+</tr></table>
 
-### Continual Learning via Incremental Mixture of Rank-1 Associative Memory Experts
+<p align="center"><b>Continual Learning via Incremental Mixture of Rank-1 Associative Memory Experts</b></p>
 
-[![Project page](https://img.shields.io/badge/Project-Page-green.svg)](https://jeff024.github.io/projects/moram/)
-[![arXiv](https://img.shields.io/badge/arXiv-2506.21035-b31b1b.svg)](https://arxiv.org/abs/2506.21035)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+<p align="center">
+  <a href="https://jeff024.github.io/projects/moram/"><img src="https://img.shields.io/badge/Project-Page-green.svg" alt="Project page"></a>
+  <a href="https://openreview.net/forum?id=P247k4ELcn"><img src="https://img.shields.io/badge/ICML-2026-8b2be2.svg" alt="ICML 2026"></a>
+  <a href="https://arxiv.org/abs/2506.21035"><img src="https://img.shields.io/badge/arXiv-2506.21035-b31b1b.svg" alt="arXiv"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License"></a>
+</p>
 
-> Official implementation of **Little By Little: Continual Learning via Incremental Mixture of Rank-1 Associative Memory Experts**.
->
-> [Haodong Lu](https://jeff024.github.io/), Chongyang Zhao, Jason Xue, Lina Yao, Kristen Moore, [Dong Gong](https://donggong1.github.io/)
+<p align="center">
+  <a href="https://jeff024.github.io/">Haodong Lu</a>, Chongyang Zhao, Minhui Xue, Lina Yao, Kristen Moore, <a href="https://donggong1.github.io/">Dong Gong</a>
+</p>
+
+<p align="center">
+  <img src="assets/moram_abstract.svg" width="92%" alt="MoRAM overview: an input is routed over a growing rank-1 key-value memory bank via self-activation, with new atoms appended per task">
+</p>
+
+> Official implementation of **Little By Little: Continual Learning via Incremental Mixture of Rank-1 Associative Memory Experts** (ICML 2026).
 
 ---
 
@@ -17,6 +29,11 @@
 Existing LoRA-based Mixture-of-Experts methods for continual learning mitigate forgetting by adding new task-specific adapters and freezing old ones, but often suffer from redundancy, interference, and ambiguous routing. We propose **MoRAM**, which treats weight matrices as **linear associative memories** and decomposes updates into atomic **rank-1 experts**. Rather than relying on explicit routers, MoRAM employs a **self-activation mechanism** where each memory atom evaluates its own relevance via its intrinsic key, enabling content-addressable retrieval. Experiments on CLIP and large language models demonstrate that MoRAM significantly outperforms state-of-the-art baselines, achieving superior plasticity-stability trade-offs while preserving generalization.
 
 ## Overview of Methodology
+
+<p align="center">
+  <img src="assets/moram_explainer.svg" width="95%" alt="MoE-LoRA adds whole rank-r experts per task; MoRAM appends rank-1 key-value atoms with content-addressable self-activation">
+</p>
+<p align="center"><em>Conventional MoE-LoRA (top) adds an indivisible rank-<i>r</i> expert per task; MoRAM (bottom) appends atomic rank-1 key&ndash;value memories with router-free self-activation.</em></p>
 
 <p align="center">
   <img src="assets/framework.png" width="90%">
@@ -78,11 +95,12 @@ MoRAM is released under the Apache License 2.0. See [`LICENSE`](LICENSE) for det
 ## Citation
 
 ```bibtex
-@article{lu2025moram,
+@inproceedings{lu2026little,
   title     = {Little By Little: Continual Learning via Incremental Mixture of Rank-1 Associative Memory Experts},
-  author    = {Lu, Haodong and Zhao, Chongyang and Xue, Jason and Yao, Lina and Moore, Kristen and Gong, Dong},
-  journal   = {arXiv preprint arXiv:2506.21035},
-  year      = {2025}
+  author    = {Lu, Haodong and Zhao, Chongyang and Xue, Minhui and Yao, Lina and Moore, Kristen and Gong, Dong},
+  booktitle = {Forty-third International Conference on Machine Learning},
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=P247k4ELcn}
 }
 ```
 
