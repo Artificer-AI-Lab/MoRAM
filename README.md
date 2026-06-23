@@ -1,9 +1,8 @@
-<table align="center"><tr>
-  <td><img src="assets/logo.svg" width="46" alt="MoRAM logo"></td>
-  <td><h1>MoRAM &mdash; Little By Little</h1></td>
-</tr></table>
+<h1 align="center">
+  <img src="assets/logo.svg" width="38" alt="MoRAM logo">&nbsp; MoRAM &mdash; Little By Little
+</h1>
 
-<p align="center"><b>Continual Learning via Incremental Mixture of Rank-1 Associative Memory Experts</b></p>
+<h3 align="center">Continual Learning via Incremental Mixture of Rank-1 Associative Memory Experts</h3>
 
 <p align="center">
   <a href="https://jeff024.github.io/projects/moram/"><img src="https://img.shields.io/badge/Project-Page-green.svg" alt="Project page"></a>
